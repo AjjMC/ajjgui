@@ -5,7 +5,7 @@
 </p>
 
 <p align = "center">
-  *The above GUI example was made in-game, in less than 5 minutes, using less than 10 commands!*
+  <i>The above GUI example was made in-game, in less than 5 minutes, using less than 10 commands!</i>
 </p>
 
 ## Abstract
