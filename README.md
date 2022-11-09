@@ -2,9 +2,9 @@
 
 <p align = "center">
   <img src="assets/gui.gif" width="350">
-  
-  *The above GUI example was made in-game, in less than 5 minutes, using less than 10 commands!*
 </p>
+
+*The above GUI example was made in-game, in less than 5 minutes, using less than 10 commands!*
 
 ## Abstract
 
