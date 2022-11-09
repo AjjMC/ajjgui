@@ -44,7 +44,7 @@ An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_
 
 ## List of Widgets
 
-> **NOTE:** Some of the following commands are very long and, therefore, need to be executed from a command block or function.
+> **NOTE:** Some of the following commands are very long, and it is recommended to execute them using command blocks.
 
 ### Placeholder
 
