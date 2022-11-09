@@ -4,7 +4,7 @@
   <img src="assets/gui.gif" width="350">
 </p>
 
-*The above GUI example was made in-game, in less than 5 minutes, using less than 10 commands, without a single command block placed or touching any mcfunction files!*
+*The above GUI example was made in-game, in less than 5 minutes, using less than 10 commands, without touching any mcfunction files or a single command block being placed!*
 
 ## Abstract
 
