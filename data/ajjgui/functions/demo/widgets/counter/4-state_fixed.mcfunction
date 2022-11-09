@@ -1,0 +1,1 @@
+give @s minecraft:black_stained_glass_pane{ajjgui:{Widget:"counter",Values:[1,2,3,4],Command:"execute as @a[tag=ajjgui.user] run function ajjgui:demo/outputs/counter/4-state",Fixed:1b},display:{Name:'{"text":"Count:","italic":"false"}'}}

@@ -1,0 +1,1 @@
+give @s minecraft:black_stained_glass_pane{ajjgui:{Widget:"placeholder"},display:{Name:'{"text":""}'}}
