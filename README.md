@@ -4,7 +4,7 @@
   <img src="assets/gui.gif" width="350">
 </p>
 
-*The above example was made in less than 5 minutes, using less than 10 commands and without writing any functions or leaving a trace of command blocks!*
+*The above example was made in-game, in less than 5 minutes, using less than 10 commands and without touching any functions or leaving a trace of command blocks!*
 
 ## Abstract
 
