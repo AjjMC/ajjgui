@@ -1,4 +1,4 @@
-# A Custom GUI Mapmaking Framework Using Vanilla Commands (Minecraft: Java Edition Datapack)
+# A Custom GUI Mapmaking Framework Using In-Game Minecraft Commands (Minecraft: Java Edition Datapack)
 
 <p align = "center">
   <img src="assets/gui.gif" width="350">
