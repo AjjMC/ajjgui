@@ -377,9 +377,9 @@ A *button* staying fixed in its slot when the GUI page is changed:
 
 ## Copyright
 
-Copyright © developed by Ajj in 2021-2022. All rights reserved.
+Copyright © developed by Ajj in 2021-2022.
 
-Users may install the datapack for use in their projects but must not modify any of its files or integrate them into other datapacks. Any work published using this datapack must include credit and the repository link.
+Any work published using this datapack must include credit and the repository link.
 
 ## Frequently Asked Questions
 
