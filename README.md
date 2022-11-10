@@ -400,9 +400,16 @@ Any work published using this datapack must include credit and the repository li
 >
 > In other words, pages and widget states in a GUI are not personalized. Moving to a different page or enabling a *switch* widget, for instance, changes the page or the widget's state for everyone using that GUI. That said, commands themselves can be personalized to the player triggering a GUI widget.
 
+> **Q:** Are there any other limitations?
+
+> **A:** The following:
+>
+> * A limit has been enforced on how close GUIs can be placed to each other to ensure robustness
+> * The datapack does not support bundles due to their unique behavior in the GUI
+
 > **Q:** What version is the datapack made for?
 
-> **A:** It is meant to be used in the latest release of the game and will be updated to be compatible with newer versions. One thing to note, however, is that the datapack does not support bundles due to their unique behavior in the GUI.
+> **A:** It is meant to be used in the latest release of the game and will be updated to be compatible with newer versions.
 
 > **Q:** How do I install an updated version of the datapack?
 
