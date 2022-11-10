@@ -33,8 +33,8 @@ There are 8 types of widgets available:
 
 * [Placeholder](#placeholder)
 * [Button](#button)
-* [Switch](#switch)
 * [Counter](#counter)
+* [Switch](#switch)
 * [Radiobutton](#radiobutton)
 * [Itemslot](#itemslot)
 * [Itembin](#itembin)
