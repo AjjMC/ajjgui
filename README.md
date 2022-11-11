@@ -353,8 +353,8 @@ Each of the above widgets, excluding the the *placeholder*, can be made to run c
 Assume the following commands are located in a function ```name:func```:
 
 ```
-execute if score @s ajjgui.state matches 0 run say disabled the switch!
-execute if score @s ajjgui.state matches 1 run say enabled the switch!
+execute if score @s ajjgui.state matches 0 run say @s disabled the switch!
+execute if score @s ajjgui.state matches 1 run say @s enabled the switch!
 ```
 
 A *switch* running a function as the player that pressed it:
