@@ -16,8 +16,8 @@ Custom user interfaces in Minecraft are very often used by creators to enhance t
 
 * Ability to create advanced GUIs in vanilla Minecraft
 * Very quick and easy to use, and completely in-game
+* Very robust to different user behaviors, without interfering with inventory items
 * Works for both singleplayer and multiplayer
-* Very robust to different user behaviors
 
 ## Downloading and Installing
 
@@ -409,7 +409,7 @@ Any work published using this datapack must include credit and the repository li
 
 > **Q:** What version is the datapack made for?
 
-> **A:** It is meant to be used in the latest release of the game and will be updated to be compatible with newer versions.
+> **A:** It is meant to be used in the latest release of the game and will be updated to be compatible with newer versions once they are released.
 
 > **Q:** How do I install an updated version of the datapack?
 
