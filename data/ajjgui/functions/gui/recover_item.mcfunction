@@ -1,4 +1,4 @@
-execute at @e[type=minecraft:armor_stand,tag=ajjgui.gui,tag=ajjgui.active_gui] run data modify storage ajjgui:gui Temp1 set from block ~ ~ ~ Items
+execute at @e[type=minecraft:marker,tag=ajjgui.gui,tag=ajjgui.active_gui] run data modify storage ajjgui:gui Temp1 set from block ~ ~ ~ Items
 
 execute unless data storage ajjgui:gui Temp1[0].tag.ajjgui.Compiled run data modify storage ajjgui:gui Temp set from storage ajjgui:gui Temp1[0]
 execute unless data storage ajjgui:gui Temp1[1].tag.ajjgui.Compiled run data modify storage ajjgui:gui Temp set from storage ajjgui:gui Temp1[1]

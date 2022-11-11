@@ -1,4 +1,4 @@
-execute at @e[type=minecraft:armor_stand,tag=ajjgui.gui,tag=ajjgui.active_gui] run data modify storage ajjgui:gui Page set from block ~ ~ ~ Items
+execute at @e[type=minecraft:marker,tag=ajjgui.gui,tag=ajjgui.active_gui] run data modify storage ajjgui:gui Page set from block ~ ~ ~ Items
 function ajjgui:gui/search_item
 
 data modify storage ajjgui:itembin In set from storage ajjgui:gui Temp1

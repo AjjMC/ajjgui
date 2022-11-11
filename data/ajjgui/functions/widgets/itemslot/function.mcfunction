@@ -1,5 +1,5 @@
 data modify storage ajjgui:gui Temp set from storage ajjgui:gui Widget
-execute at @e[type=minecraft:armor_stand,tag=ajjgui.gui,tag=ajjgui.active_gui] run data modify storage ajjgui:gui Page set from block ~ ~ ~ Items
+execute at @e[type=minecraft:marker,tag=ajjgui.gui,tag=ajjgui.active_gui] run data modify storage ajjgui:gui Page set from block ~ ~ ~ Items
 function ajjgui:gui/search_item
 
 execute unless data storage ajjgui:gui {Widget:{tag:{ajjgui:{State:1b}}}} run function ajjgui:widgets/itemslot/click_placeholder

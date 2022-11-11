@@ -1,11 +1,11 @@
-kill @e[type=minecraft:armor_stand,tag=ajjgui.gui,distance=..0.1]
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,ArmorItems:[{id:"minecraft:stone",Count:1b},{},{},{}],Tags:["ajjgui.gui"]}
-scoreboard players set @e[type=minecraft:armor_stand,tag=ajjgui.gui,sort=nearest,limit=1] ajjgui.page 0
+kill @e[type=minecraft:marker,tag=ajjgui.gui,distance=..0.1]
+summon minecraft:marker ~ ~ ~ {Tags:["ajjgui.gui"]}
+scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] ajjgui.page 0
 
 data modify storage ajjgui:gui Temp set from block ~ ~1 ~ Items
 setblock ~ ~1 ~ minecraft:air
 
-data modify entity @e[type=minecraft:armor_stand,tag=ajjgui.gui,sort=nearest,limit=1] ArmorItems[0].tag.Boxes set from storage ajjgui:gui Temp
+data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.Boxes set from storage ajjgui:gui Temp
 
 data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[0]
 function ajjgui:gui/compile_page
@@ -115,6 +115,6 @@ data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[26]
 function ajjgui:gui/compile_page
 data modify storage ajjgui:gui Temp[26] set from storage ajjgui:gui Temp1
 
-data modify entity @e[type=minecraft:armor_stand,tag=ajjgui.gui,sort=nearest,limit=1] ArmorItems[0].tag.GUI set from storage ajjgui:gui Temp
+data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.GUI set from storage ajjgui:gui Temp
 
 tellraw @a [{"text":"Compiled "},{"text":"ajjgui","color":"gray"},{"text":" GUI"}]

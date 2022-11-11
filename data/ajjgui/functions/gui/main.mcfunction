@@ -2,10 +2,10 @@ execute as @a run function ajjgui:gui/run_gui
 
 execute as @e[type=minecraft:item] if data entity @s Item.tag.ajjgui.Compiled run kill @s
 
-execute as @e[type=minecraft:armor_stand,tag=ajjgui.gui] at @s run function ajjgui:gui/load_page
-execute as @e[type=minecraft:armor_stand,tag=ajjgui.gui] at @s if block ~ ~ ~ minecraft:air run kill @s
+execute as @e[type=minecraft:marker,tag=ajjgui.gui] at @s run function ajjgui:gui/load_page
+execute as @e[type=minecraft:marker,tag=ajjgui.gui] at @s if block ~ ~ ~ minecraft:air run kill @s
 
-tag @e[type=minecraft:armor_stand,tag=ajjgui.gui,tag=ajjgui.active_gui] remove ajjgui.active_gui
+tag @e[type=minecraft:marker,tag=ajjgui.gui,tag=ajjgui.active_gui] remove ajjgui.active_gui
 
 execute at @e[type=minecraft:marker,tag=ajjgui.cmd1] run setblock ~ ~ ~ minecraft:command_block[facing=up]
 execute at @e[type=minecraft:marker,tag=ajjgui.cmd2] run setblock ~ ~ ~ minecraft:command_block[facing=up]{Command:"tag @a[tag=ajjgui.user] remove ajjgui.user"}

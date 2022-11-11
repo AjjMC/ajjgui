@@ -1,7 +1,7 @@
 execute at @e[type=minecraft:marker,tag=ajjgui.cmd1] run setblock ~ ~ ~ minecraft:air
 execute at @e[type=minecraft:marker,tag=ajjgui.cmd2] run setblock ~ ~ ~ minecraft:air
 execute at @e[type=minecraft:marker,tag=ajjgui.box] run setblock ~ ~ ~ minecraft:air
-execute at @e[type=minecraft:armor_stand,tag=ajjgui.gui] run setblock ~ ~ ~ minecraft:air
+execute at @e[type=minecraft:marker,tag=ajjgui.gui] run setblock ~ ~ ~ minecraft:air
 
 kill @e[type=minecraft:marker,tag=ajjgui.cmd1]
 kill @e[type=minecraft:marker,tag=ajjgui.cmd2]

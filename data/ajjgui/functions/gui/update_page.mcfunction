@@ -26,6 +26,6 @@ execute if score @s ajjgui.slot matches 24 run data modify storage ajjgui:gui Pa
 execute if score @s ajjgui.slot matches 25 run data modify storage ajjgui:gui Page[{Slot:25b}] set from storage ajjgui:gui Widget
 execute if score @s ajjgui.slot matches 26 run data modify storage ajjgui:gui Page[{Slot:26b}] set from storage ajjgui:gui Widget
 
-execute as @e[type=minecraft:armor_stand,tag=ajjgui.gui,tag=ajjgui.active_gui] run function ajjgui:gui/save_page
+execute as @e[type=minecraft:marker,tag=ajjgui.gui,tag=ajjgui.active_gui] run function ajjgui:gui/save_page
 
-execute if data storage ajjgui:gui Widget.tag.ajjgui.Page as @e[type=minecraft:armor_stand,tag=ajjgui.gui,tag=ajjgui.active_gui,limit=1] run function ajjgui:gui/change_page
+execute if data storage ajjgui:gui Widget.tag.ajjgui.Page as @e[type=minecraft:marker,tag=ajjgui.gui,tag=ajjgui.active_gui,limit=1] run function ajjgui:gui/change_page
