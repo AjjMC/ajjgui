@@ -365,7 +365,7 @@ A *switch* running a function as the player that pressed it:
 
 ## Fixed Widgets
 
-Each of the above widgets can be made to stay on display if the GUI page is changed. This is done by setting the ``ajjgui.Fixed`` value to ``1b``. If a slider is made fixed, its widgets also obtain this property.
+Each of the above widgets can be made to stay on display if the GUI page is changed. This is done by setting the ``ajjgui.Fixed`` value to ``1b``. If a *slider* is made fixed, its widgets also obtain this property.
 
 ### Example
 
