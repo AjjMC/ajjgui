@@ -345,7 +345,7 @@ Each of the above widgets, excluding the the *placeholder*, can be made to run c
 1. A *button* running a command referencing the player that pressed it:
 
 ```
-/give @p minecraft:arrow{ajjgui:{Widget:"button",Page:1b,Relative:1b,Command:"execute as @a[tag=ajjgui.user] run say clicked button to Next Page"},display:{Name:'{"text":"Go to Next Page","italic":"false"}'}}
+/give @p minecraft:arrow{ajjgui:{Widget:"button",Page:1b,Relative:1b,Command:"execute as @a[tag=ajjgui.user] run say pressed button to Next Page"},display:{Name:'{"text":"Go to Next Page","italic":"false"}'}}
 ```
 
 2. A *switch* running a command based on its current state:
