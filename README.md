@@ -353,8 +353,8 @@ Each of the above widgets, excluding the the *placeholder*, can be made to run c
 Assume the following commands are located in a function ```name:func```:
 
 ```
-execute if score @s ajjgui.state matches 0 run tellraw @a [{"selector":"@s"},{"text":" set switch to Disabled"}]
-execute if score @s ajjgui.state matches 1 run tellraw @a [{"selector":"@s"},{"text":" set switch to Enabled"}]
+execute if score @s ajjgui.state matches 0 run say set switch to Disabled
+execute if score @s ajjgui.state matches 1 run say set switch to Enabled
 ```
 
 A *switch* running a function as the player that pressed it:
