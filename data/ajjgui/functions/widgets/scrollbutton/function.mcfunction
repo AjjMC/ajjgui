@@ -1,4 +1,4 @@
-function ajjgui:widgets/slider/slide
+function ajjgui:widgets/scrollbutton/scroll
 
 execute store result score #count ajjgui run data get storage ajjgui:gui Widget.tag.ajjgui.State
 execute store result score #length ajjgui run data get storage ajjgui:gui Widget.tag.ajjgui.Widgets[0]

@@ -19,5 +19,5 @@ execute if score #bool ajjgui matches 1 run function ajjgui:widgets/itembin/main
 execute store success score #bool ajjgui run clear @s #ajjgui:all{ajjgui:{Widget:"itemslot",Compiled:1b}}
 execute if score #bool ajjgui matches 1 run function ajjgui:widgets/itemslot/main
 
-execute store success score #bool ajjgui run clear @s #ajjgui:all{ajjgui:{Widget:"slider",Compiled:1b}}
-execute if score #bool ajjgui matches 1 run function ajjgui:widgets/slider/main
+execute store success score #bool ajjgui run clear @s #ajjgui:all{ajjgui:{Widget:"scrollbutton",Compiled:1b}}
+execute if score #bool ajjgui matches 1 run function ajjgui:widgets/scrollbutton/main
