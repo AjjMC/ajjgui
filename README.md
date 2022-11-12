@@ -38,7 +38,7 @@ There are 8 types of widgets available:
 * [Radiobutton](#radiobutton)
 * [Itemslot](#itemslot)
 * [Itembin](#itembin)
-* [Slider](#slider)
+* [Scrollbutton](#scrollbutton)
 
 ## Creating a GUI
 
@@ -272,33 +272,33 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
   <img src="assets/itemslot.gif" width="350">
 </p>
 
-### Slider
+### Scrollbutton
 
-The *slider* is a widget that cycles one or more lists of *static* widgets (see notes) across respective GUI slot lists when clicked. This allows for additional space in the GUI. Each widget list is specified in the ``ajjgui.Widgets`` list. Within each widget list, widgets are added in the order they appear in. The slot list associated with each widget list is specified in the ``ajjgui.Slots`` list. Within each slot list, slots are added in the order they are occupied by the respective widget list. The current state of the first widget list in a *slider* is stored in the ``ajjgui.State`` item tag.
+The *scrollbutton* is a widget that cycles one or more lists of *static* widgets (see notes) across respective GUI slot lists when clicked. This allows for additional space in the GUI. Each widget list is specified in the ``ajjgui.Widgets`` list. Within each widget list, widgets are added in the order they appear in. The slot list associated with each widget list is specified in the ``ajjgui.Slots`` list. Within each slot list, slots are added in the order they are occupied by the respective widget list. The current state of the first widget list in a *scrollbutton* is stored in the ``ajjgui.State`` item tag.
 
 #### Usage
 
 ```
-/give @s <item>{ajjgui:{Widget:"slider",Widgets:[[<widget 1,1>,<widget 1,2>,…,<widget 1,L_1>],[<widget 2,1>,<widget 2,2>,…,<widget 2,L_2>],…,[<widget N,1>,<widget N,2>,…,<widget N,L_N>]],Slots:[[<slot 1,1>,<slot 1,2>,…,<slot 1,M_1>],[<slot 2,1>,<slot 2,2>,…,<slot 2,M_2>],…,[<slot N,1>,<slot N,2>,…,<slot N,M_N>]]},<other tags for item>}
+/give @s <item>{ajjgui:{Widget:"scrollbutton",Widgets:[[<widget 1,1>,<widget 1,2>,…,<widget 1,L_1>],[<widget 2,1>,<widget 2,2>,…,<widget 2,L_2>],…,[<widget N,1>,<widget N,2>,…,<widget N,L_N>]],Slots:[[<slot 1,1>,<slot 1,2>,…,<slot 1,M_1>],[<slot 2,1>,<slot 2,2>,…,<slot 2,M_2>],…,[<slot N,1>,<slot N,2>,…,<slot N,M_N>]]},<other tags for item>}
 ```
 
 where L_x and M_y are the numbers of widgets and slots in each widget list and slot list respectively, and N is the number of widget list and slot list pairs.
 
 #### Example
 
-A *slider* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each button leads to a different page when clicked. There is a single widget list of length 6 and a single slot list of length 4:
+A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each button leads to a different page when clicked. There is a single widget list of length 6 and a single slot list of length 4:
 
 ```
-/give @p minecraft:spectral_arrow{ajjgui:{Widget:"slider",Widgets:[[{id:"minecraft:paper",Count:1b,tag:{ajjgui:{Widget:"button",Page:0b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:2b,tag:{ajjgui:{Widget:"button",Page:1b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:3b,tag:{ajjgui:{Widget:"button",Page:2b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:4b,tag:{ajjgui:{Widget:"button",Page:3b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:5b,tag:{ajjgui:{Widget:"button",Page:4b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:6b,tag:{ajjgui:{Widget:"button",Page:5b},display:{Name:'{"text":"Select","italic":"false"}'}}}]],Slots:[[11b,12b,13b,14b]]},display:{Name:'{"text":"Next","italic":"false"}'}}
+/give @p minecraft:spectral_arrow{ajjgui:{Widget:"scrollbutton",Widgets:[[{id:"minecraft:paper",Count:1b,tag:{ajjgui:{Widget:"button",Page:0b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:2b,tag:{ajjgui:{Widget:"button",Page:1b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:3b,tag:{ajjgui:{Widget:"button",Page:2b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:4b,tag:{ajjgui:{Widget:"button",Page:3b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:5b,tag:{ajjgui:{Widget:"button",Page:4b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:6b,tag:{ajjgui:{Widget:"button",Page:5b},display:{Name:'{"text":"Select","italic":"false"}'}}}]],Slots:[[11b,12b,13b,14b]]},display:{Name:'{"text":"Next","italic":"false"}'}}
 ```
 
 <p align = "center">
-  <img src="assets/slider.gif" width="350">
+  <img src="assets/scrollbutton.gif" width="350">
 </p>
 
-> **NOTE:** The *slider* does not display any of its entries in the GUI by default and needs to be initialized after compilation.
+> **NOTE:** The *scrollbutton* does not display any of its entries in the GUI by default and needs to be initialized after compilation.
 
-> **NOTE:** The *slider* only supports the *placeholder*, *button* and *itembin* widgets.
+> **NOTE:** The *scrollbutton* only supports the *placeholder*, *button* and *itembin* widgets.
 
 > **NOTE:** If the ``ajjgui.Widget`` value of any widget is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional, and no specific tags are required. This, by extension, applies to widgets specified in ``ajjgui.Widgets``.
 
@@ -365,7 +365,7 @@ A *switch* running a function as the player that pressed it:
 
 ## Fixed Widgets
 
-Each of the above widgets can be made to stay on display if the GUI page is changed. This is done by setting the ``ajjgui.Fixed`` value to ``1b``. If a *slider* is made fixed, its widgets also obtain this property.
+Each of the above widgets can be made to stay on display if the GUI page is changed. This is done by setting the ``ajjgui.Fixed`` value to ``1b``. If a *scrollbutton* is made fixed, its widgets also obtain this property.
 
 ### Example
 
