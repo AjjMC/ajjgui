@@ -350,7 +350,7 @@ Each of the above widgets, excluding the the *placeholder*, can be made to run c
 
 2. A *switch* running a command based on its current state:
 
-Assume the following commands are located in a function ```name:func```:
+Assume the following commands are located in a function ```name:func``` within another datapack:
 
 ```
 execute if score @s ajjgui.state matches 0 run say set switch to Disabled
@@ -379,7 +379,7 @@ A *button* staying fixed in its slot when the GUI page is changed:
 
 Copyright © developed by Ajj in 2021-2022.
 
-Any work published using this datapack must include credit and the repository link.
+Please credit this datapack if you use it in your work, and provide a link to the project repository.
 
 ## Frequently Asked Questions
 
