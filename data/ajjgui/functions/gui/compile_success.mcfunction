@@ -7,114 +7,114 @@ setblock ~ ~1 ~ minecraft:air
 
 data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.Boxes set from storage ajjgui:gui Temp
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[0]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[0].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[0] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[0] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[1]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[1].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[1] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[1] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[2]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[2].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[2] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[2] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[3]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[3].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[3] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[3] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[4]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[4].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[4] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[4] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[5]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[5].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[5] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[5] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[6]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[6].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[6] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[6] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[7]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[7].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[7] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[7] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[8]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[8].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[8] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[8] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[9]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[9].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[9] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[9] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[10]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[10].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[10] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[10] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[11]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[11].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[11] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[11] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[12]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[12].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[12] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[12] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[13]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[13].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[13] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[13] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[14]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[14].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[14] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[14] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[15]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[15].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[15] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[15] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[16]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[16].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[16] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[16] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[17]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[17].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[17] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[17] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[18]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[18].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[18] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[18] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[19]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[19].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[19] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[19] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[20]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[20].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[20] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[20] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[21]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[21].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[21] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[21] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[22]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[22].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[22] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[22] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[23]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[23].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[23] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[23] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[24]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[24].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[24] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[24] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[25]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[25].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[25] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[25] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[26]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Temp[26].tag.BlockEntityTag.Items
 function ajjgui:gui/compile_page
-data modify storage ajjgui:gui Temp[26] set from storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Temp[26] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
-data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.GUI set from storage ajjgui:gui Temp
+data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.GUI set from storage ajjgui:gui Temp2
 
 tellraw @a [{"text":"Compiled "},{"text":"ajjgui","color":"gray"},{"text":" GUI"}]
