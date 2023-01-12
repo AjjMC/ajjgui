@@ -336,6 +336,18 @@ Each of the above widgets, excluding the *placeholder*, can be made to change th
   <img src="assets/button.gif" width="350">
 </p>
 
+## Fixed Widgets
+
+Each of the above widgets can be made to stay on display if the GUI page is changed. This is done by setting the ``ajjgui.Fixed`` value to ``1b``. If a *scrollbutton* is made fixed, its widgets also obtain this property.
+
+### Example
+
+A *button* staying fixed in its slot when the GUI page is changed:
+
+```
+/give @p minecraft:arrow{ajjgui:{Widget:"button",Page:1b,Relative:1b,Fixed:1b},display:{Name:'{"text":"Go to Next Page","italic":"false"}'}}
+```
+
 ## Running Commands and Accessing Data
 
 Each of the above widgets, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` item tag. This command is executed by an external command block instead of the player themselves. The ``ajjgui.user`` entity tag can be used to target the player triggering the widget. In this way, it is also possible to access the count, page, slot and state values of the selected widget, stored respectively in the ``ajjgui.count``, ``ajjgui.page``, ``ajjgui.slot`` and ``ajjgui.state`` scores of that player in the scoreboard. Any items added or removed from an *itemslot* are accessible from ``In`` and ``Out`` respectively in the data storage ``ajjgui:itemslot``. Likewise, any items added to an *itembin* are accessible from ``In`` in the data storage ``ajjgui:itembin``.
@@ -363,17 +375,33 @@ A *switch* running a function as the player that pressed it:
 /give @p minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","italic":"false"}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","italic":"false"}'}}}],Command:"execute as @a[tag=ajjgui.user] run function name:func"},display:{Name:'{"text":"Disabled","italic":"false"}'}}
 ```
 
-## Fixed Widgets
+## Manually Modifying GUIs
 
-Each of the above widgets can be made to stay on display if the GUI page is changed. This is done by setting the ``ajjgui.Fixed`` value to ``1b``. If a *scrollbutton* is made fixed, its widgets also obtain this property.
+For every GUI compiled, there is a marker entity located at the container's coordinates. This entity stores the page value in its ``ajjgui.page`` score as well as the widget NBT in its ``data.GUI`` list. Each element in that list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be manually modified to achieve desired results. *It is highly recommended to to read the rest of the documentation before proceeding with this as any existing alternatives may be substantially easier to work with.*
 
-### Example
+### Examples
 
-A *button* staying fixed in its slot when the GUI page is changed:
+1. A command setting the nearest GUI's page to the first one:
 
 ```
-/give @p minecraft:arrow{ajjgui:{Widget:"button",Page:1b,Relative:1b,Fixed:1b},display:{Name:'{"text":"Go to Next Page","italic":"false"}'}}
+scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] ajjgui.page 0
 ```
+
+2. A command setting the nearest GUI's first page's first slot item id to stone:
+
+```
+data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.GUI[0][0].id set value "minecraft:stone"
+```
+
+or
+
+```
+data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.GUI[0][{Slot:0b}].id set value "minecraft:stone"
+```
+
+> **NOTE:** The compiler adds the ``ajjgui.Slot`` and ``ajjgui.Compiled`` values to each widget. These two must not be changed when manually modifying NBT values.
+
+> **NOTE:** Decompiling a GUI reverts any NBT changes to widgets, manual or not.
 
 ## Copyright
 
