@@ -1,0 +1,1 @@
+execute as @e[type=minecraft:marker,tag=ajjgui.gui] at @s run function ajjgui:gui/load_page

@@ -116,5 +116,6 @@ function ajjgui:gui/compile_page
 execute if data storage ajjgui:gui Temp[26] run data modify storage ajjgui:gui Temp2 append from storage ajjgui:gui Temp1
 
 data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.GUI set from storage ajjgui:gui Temp2
+execute as @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] run function ajjgui:gui/load_page
 
 tellraw @a [{"text":"Compiled "},{"text":"ajjgui","color":"gray"},{"text":" GUI"}]

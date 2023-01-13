@@ -5,6 +5,7 @@ tellraw @s {"text":"/function ajjgui:_help","color":"green","clickEvent":{"actio
 tellraw @s {"text":"/function ajjgui:_install","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:_install"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}
 tellraw @s {"text":"/function ajjgui:_kit","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:_kit"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}
 tellraw @s {"text":"/function ajjgui:_manual","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:_manual"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}
+tellraw @s {"text":"/function ajjgui:_reload","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:_reload"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}
 tellraw @s {"text":"/function ajjgui:_tutorial","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:_tutorial"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}
 tellraw @s {"text":"/function ajjgui:_uninstall","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:_uninstall"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}
 tellraw @s {"text":"/function ajjgui:_version","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:_version"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}
