@@ -377,7 +377,7 @@ A *switch* running a function as the player that pressed it:
 
 ## Manually Modifying GUIs
 
-For every GUI compiled, there is a marker entity located at the container's coordinates. This entity stores the page value in its ``ajjgui.page`` score as well as the widget NBT in its ``data.GUI`` list. Each element in that list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be manually modified to achieve desired results. *It is highly recommended to to read the rest of the documentation before proceeding with this as any existing alternatives may be substantially easier to work with.*
+For every GUI compiled, there is a marker entity located at the container's coordinates. This entity stores the page value in its ``ajjgui.page`` score as well as the widget NBT in its ``data.GUI`` list. Each element in that list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be manually modified to achieve desired results. In order for the changes to be applied, ``/function ajjgui:_reload`` needs to be run. Otherwise, the GUI is updated after user interaction. *It is highly recommended to to read the rest of the documentation before proceeding with such modifications as any existing alternatives may be substantially easier to work with.*
 
 ### Examples
 
