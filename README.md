@@ -435,4 +435,4 @@ Please credit this datapack if you use it in your work, and provide a link to th
 
 > **Q:** How do I install an updated version of the datapack?
 
-> **A:** I cannot guarantee that later versions of this datapack will not break any GUIs previously created. It depends on what changes are made to the custom NBT format used. In order to update the datapack, simply replace the existing one with the newer version in the datapacks folder, and, after doing ``/reload``, run ``/function ajjgui:_install``. *Do not use the uninstall command unless you want to remove any existing GUIs previously created!*
+> **A:** I cannot guarantee that later versions of this datapack will not break any GUIs previously created. It depends on what changes are made to the custom NBT format used. In order to update the datapack, simply replace the existing one with the newer version in the datapacks folder, and, after doing ``/reload``, run ``/function ajjgui:_install``. *Do not use the uninstall command unless you want to remove any existing GUIs!*
