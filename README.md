@@ -390,12 +390,6 @@ scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limi
 2. A command setting the nearest GUI's first page's first slot item's id to stone:
 
 ```
-data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.GUI[0][0].id set value "minecraft:stone"
-```
-
-or
-
-```
 data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.GUI[0][{Slot:0b}].id set value "minecraft:stone"
 ```
 
