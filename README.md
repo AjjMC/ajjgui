@@ -231,7 +231,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 #### Usage
 
 ```
-/give @s <default placeholder item>{ajjgui:{Widget:"itemslot",Placeholder:<placeholder item>,Size:<stack size>},<other tags for default placeholder item>}
+/give @s <default item>{ajjgui:{Widget:"itemslot",Placeholder:<placeholder item>,Size:<stack size>},<other tags for default item>}
 ```
 
 #### Examples
@@ -254,15 +254,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 /give @p minecraft:white_stained_glass_pane{ajjgui:{Widget:"itemslot",Placeholder:{id:"minecraft:gray_stained_glass_pane",Count:1b,tag:{display:{Name:'{"text":"Placeholder Item","italic":"false"}'}}},Size:64b},display:{Name:'{"text":"Default Placeholder Item","italic":"false"}'}}
 ```
 
-4. An *itemslot* with an item in it by default and a stack size of ``64b``. The value of ``ajjgui.State`` is set to ``1b``:
-
-#### Usage
-
-```
-/give @s <default item>{ajjgui:{Widget:"itemslot",Placeholder:<placeholder item>,Size:<stack size>,State:1b},<other tags for default item>}
-```
-
-#### Example
+4. An *itemslot* with an item in it by default and a stack size of ``64b``. The value of ``ajjgui.State`` is set to ``1b`` since the slot is occupied:
 
 ```
 /give @p minecraft:diamond_sword{ajjgui:{Widget:"itemslot",Placeholder:{id:"minecraft:gray_stained_glass_pane",Count:1b,tag:{display:{Name:'{"text":"Placeholder Item","italic":"false"}'}}},Size:64b,State:1b},display:{Name:'{"text":"Default Item","italic":"false"}'}}
@@ -274,7 +266,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 
 ### Scrollbutton
 
-The *scrollbutton* is a widget that cycles one or more lists of *static* widgets (see notes) across respective GUI slot lists when clicked. This allows for additional space in the GUI. Each widget list is specified in the ``ajjgui.Widgets`` list. Within each widget list, widgets are added in the order they appear in. The slot list associated with each widget list is specified in the ``ajjgui.Slots`` list. Within each slot list, slots are added in the order they are occupied by the respective widget list. The current state of the first widget list in a *scrollbutton* is stored in the ``ajjgui.State`` item tag.
+The *scrollbutton* is a widget that cycles one or more lists of *static* widgets (see notes) across respective GUI slot lists when clicked. This allows for additional space in the GUI. Each widget list is specified in the ``ajjgui.Widgets`` list. Within each widget list, widgets are added in the order they appear in. The slot list associated with each widget list is specified in the ``ajjgui.Slots`` list. Within each slot list, slots are added in the order they are occupied by the respective widget list. The *scrollbutton* also contains all the functionalities of the *switch*.
 
 #### Usage
 
