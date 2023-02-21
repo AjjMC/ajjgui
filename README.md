@@ -5,7 +5,7 @@
 </p>
 
 <p align = "center">
-  <i>A GUI example demonstrating some of the datapack features, which was made in less than 5 minutes and in-game!</i>
+  <i>A GUI example demonstrating some of the datapack's features, which was made in less than 5 minutes and in-game!</i>
 </p>
 
 ## Abstract
