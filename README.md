@@ -55,7 +55,7 @@ The *placeholder* is a widget that cannot be interacted with and is used to disp
 #### Usage
 
 ```
-/give @s <item>{ajjgui:{Widget:"placeholder"},<other tags for item>}
+/give @s <item id>{ajjgui:{Widget:"placeholder"},<other tags for item>}
 ```
 
 #### Example
@@ -79,7 +79,7 @@ The *button* is a widget that changes the GUI page and/or runs commands when cli
 #### Usage
 
 ```
-/give @s <item>{ajjgui:{Widget:"button"},<other tags for item>}
+/give @s <item id>{ajjgui:{Widget:"button"},<other tags for item>}
 ```
 
 #### Examples
@@ -93,7 +93,7 @@ The *counter* is a widget that changes to a different count of the same item whe
 #### Usage
 
 ```
-/give @s <item>{ajjgui:{Widget:"counter",Values:[<value 1>,<value 2>,…,<value N>]},<other tags for item>} <default value>
+/give @s <item id>{ajjgui:{Widget:"counter",Values:[<value 1>,<value 2>,…,<value N>]},<other tags for item>} <default value>
 ```
 
 where N is the number of states.
@@ -135,7 +135,7 @@ The *switch* is a widget that changes to a different item when clicked, followin
 #### Usage
 
 ```
-/give @s <default item>{ajjgui:{Widget: "switch",Items:[<item 1>,<item 2>,…,<item N>]},<other tags for default item>}
+/give @s <default item id>{ajjgui:{Widget: "switch",Items:[<item 1>,<item 2>,…,<item N>]},<other tags for default item>}
 ```
 
 where N is the number of states.
@@ -177,7 +177,7 @@ The *radiobutton* is a widget that changes between an "OFF" and "ON" state item 
 #### Usage
 
 ```
-/give @s <default item>{ajjgui:{Widget:"radiobutton",OFF:<off item>,ON:<on item>,Group:<group>},<other tags for default item>}
+/give @s <default item id>{ajjgui:{Widget:"radiobutton",OFF:<off item>,ON:<on item>,Group:<group>},<other tags for default item>}
 ```
 
 #### Examples
@@ -211,7 +211,7 @@ The *itembin* is a widget that clears all items inserted by the player in a part
 #### Usage
 
 ```
-/give @s <item>{ajjgui:{Widget:"itembin"},<other tags for item>}
+/give @s <item id>{ajjgui:{Widget:"itembin"},<other tags for item>}
 ```
 
 #### Example
@@ -231,7 +231,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 #### Usage
 
 ```
-/give @s <default item>{ajjgui:{Widget:"itemslot",Placeholder:<placeholder item>,Size:<stack size>},<other tags for default item>}
+/give @s <default item id>{ajjgui:{Widget:"itemslot",Placeholder:<placeholder item>,Size:<stack size>},<other tags for default item>}
 ```
 
 #### Examples
@@ -271,7 +271,7 @@ The *scrollbutton* is a widget that cycles one or more lists of *static* widgets
 #### Usage
 
 ```
-/give @s <item>{ajjgui:{Widget:"scrollbutton",Widgets:[[<widget 1,1>,<widget 1,2>,…,<widget 1,L_1>],[<widget 2,1>,<widget 2,2>,…,<widget 2,L_2>],…,[<widget N,1>,<widget N,2>,…,<widget N,L_N>]],Slots:[[<slot 1,1>,<slot 1,2>,…,<slot 1,M_1>],[<slot 2,1>,<slot 2,2>,…,<slot 2,M_2>],…,[<slot N,1>,<slot N,2>,…,<slot N,M_N>]]},<other tags for item>}
+/give @s <item id>{ajjgui:{Widget:"scrollbutton",Widgets:[[<widget 1,1>,<widget 1,2>,…,<widget 1,L_1>],[<widget 2,1>,<widget 2,2>,…,<widget 2,L_2>],…,[<widget N,1>,<widget N,2>,…,<widget N,L_N>]],Slots:[[<slot 1,1>,<slot 1,2>,…,<slot 1,M_1>],[<slot 2,1>,<slot 2,2>,…,<slot 2,M_2>],…,[<slot N,1>,<slot N,2>,…,<slot N,M_N>]]},<other tags for item>}
 ```
 
 where L_x and M_y are the numbers of widgets and slots in each widget list and slot list respectively, and N is the number of widget list and slot list pairs.
