@@ -401,13 +401,13 @@ Please credit this datapack if you use it in your work, and provide a link to th
 
 > **Q:** Is the datapack multiplayer-friendly?
 
-> **A:** It depends on the exact use. The datapack has the following:
+> **A:** It depends on the exact use. Being restricted to block entities, the datapack has the following:
 >
 > **Multiplayer Features**
 >
 > * Multiple GUIs around the world can be used by different players simultaneously with no issues
 > * The same GUI can be used by different players simultaneously with no issues
-> * Widget commands can be configured to run as the player triggering a GUI widget
+> * Widget commands can be executed as the player triggering a GUI widget
 >
 > **Multiplayer Limitations**
 >
@@ -422,6 +422,7 @@ Please credit this datapack if you use it in your work, and provide a link to th
 >
 > * A limit has been enforced on how close GUIs can be placed to each other to ensure robustness
 > * The datapack does not support bundles due to their unique behavior in the GUI
+> * Hoppers can interact with GUI containers
 
 > **Q:** What version is the datapack made for?
 
