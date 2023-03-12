@@ -288,7 +288,7 @@ A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each butt
   <img src="assets/scrollbutton.gif" width="350">
 </p>
 
-> **NOTE:** The *scrollbutton* does not display any of its entries in the GUI by default and needs to be initialized after compilation.
+> **NOTE:** The *scrollbutton* does not display any of its entries in the GUI by default and needs to be initialized upon compilation.
 
 > **NOTE:** The *scrollbutton* only supports the *placeholder*, *button* and *itembin* widgets.
 
@@ -296,7 +296,7 @@ A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each butt
 
 ## Changing GUI Pages
 
-Each of the above widgets, excluding the *placeholder*, can be made to change the GUI page when clicked. This is done by specifying a page number in the ``ajjgui.Page`` NBT tag. By default, this value is the index of the shulker box in the chest previously used to compile the GUI, where a value of ``0b`` corresponds to the first page. If it is equal to the number of pages, the count resets back to the first page, and negative values may also be used to access pages from the end. If it is not specified, the page does not change. The ``ajjgui.Relative`` NBT tag can be set to ``1b`` in order for the value of ``ajjgui.Page`` to increment the page number from its current value. This, hence, assumes that the current page has an index of ``0b`` and uses that as a reference instead of the first one.
+Each of the above widgets, excluding the *placeholder*, can be made to change the GUI page when clicked. This is done by specifying a page number in the ``ajjgui.Page`` NBT tag. By default, this value is the index of the shulker box in the chest previously used to compile the GUI, where a value of ``0b`` corresponds to the first page. If it is equal to the number of pages, the count resets back to the first page, and negative values may also be used to access pages from the end. If it is not specified, the page does not change. The ``ajjgui.Relative`` NBT tag can be set to ``1b`` in order for the value of ``ajjgui.Page`` to increment the page number from its current value. This, hence, assumes that the current page has an index of ``0b`` and uses this as a reference instead of the first one.
 
 #### Examples
 
@@ -342,7 +342,7 @@ A *button* staying fixed in its slot when the GUI page is changed:
 
 ## Running Commands and Accessing Data
 
-Each of the above widgets, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by an external command block instead of the player themselves. The ``"ajjgui.user"`` tag can be used to target the player triggering the widget. In this way, it is also possible to access the count, page, slot and state values of the selected widget, stored respectively in the ``ajjgui.count``, ``ajjgui.page``, ``ajjgui.slot`` and ``ajjgui.state`` scores of that player. Any items added or removed from an *itemslot* are accessible from the ``In`` and ``Out`` NBT tags respectively in the ``ajjgui:itemslot`` data storage. Likewise, any items added to an *itembin* are accessible from the ``In`` NBT tag in the ``ajjgui:itembin`` data storage.
+Each of the above widgets, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by an external command block instead of the player themselves. The ``"ajjgui.user"`` scoreboard tag can be used to target the player triggering the widget. In this way, it is also possible to access the count, page, slot and state values of the selected widget, stored respectively in the ``ajjgui.count``, ``ajjgui.page``, ``ajjgui.slot`` and ``ajjgui.state`` scores of this player. Any items added or removed from an *itemslot* are accessible from the ``In`` and ``Out`` NBT tags respectively in the ``ajjgui:itemslot`` data storage. Likewise, any items added to an *itembin* are accessible from the ``In`` NBT tag in the ``ajjgui:itembin`` data storage.
 
 ### Examples
 
@@ -371,7 +371,7 @@ A *switch* running a function as the player that pressed it:
 
 ## Manually Modifying GUIs
 
-For every GUI compiled, there is a marker entity located at the container's coordinates. This entity stores the page value in its ``ajjgui.page`` score as well as the widget NBT in its ``data.GUI`` NBT tag. Each element in that list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be manually modified to achieve desired results. In order for the changes to be applied, ``/function ajjgui:_reload`` needs to be run. Otherwise, the GUI is updated after user interaction. *It is highly recommended to to read the rest of the documentation before proceeding with such modifications as any existing alternatives may be substantially easier to work with.*
+For every GUI compiled, there is a marker entity located at the container's coordinates. This entity stores the page value in its ``ajjgui.page`` score as well as the page list in its ``data.GUI`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be manually modified to achieve desired results. In order for the changes to be applied, ``/function ajjgui:_reload`` needs to be run. Otherwise, the GUI is updated upon user interaction. *It is highly recommended to to read the rest of the documentation before proceeding with such modifications as any existing alternatives may be substantially easier to work with.*
 
 ### Examples
 
@@ -414,7 +414,7 @@ Please credit this datapack if you use it in your work, and provide a link to th
 > * Players using the same GUI all see the same page
 > * Changes to a widget's state in a GUI are seen by all players using that GUI
 >
-> In other words, pages and widget states in a GUI are not personalized. Moving to a different page or enabling a *switch* widget, for instance, changes the page or the widget's state for everyone using that GUI. That said, commands themselves can be personalized to the player triggering a GUI widget.
+> In other words, pages and widget states in a GUI are not personalized. Moving to a different page or enabling a *switch* widget, for instance, changes the page or the widget's state for everyone using this GUI. That said, commands themselves can be personalized to the player triggering a GUI widget.
 
 > **Q:** Are there any other limitations?
 
