@@ -421,7 +421,8 @@ Please credit this datapack if you use it in your work, and provide a link to th
 > **A:** The following:
 >
 > * A limit has been enforced on how close GUIs can be placed to each other to ensure robustness
-> * The datapack does not support bundles due to their unique behavior in the GUI
+> * Bundles are not supported due to their unique behavior in the GUI
+> * Large chests are not supported
 > * Hoppers can interact with GUI containers
 
 > **Q:** What version is the datapack made for?
