@@ -393,7 +393,7 @@ data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1]
 
 ## Copyright
 
-Copyright © developed by Ajj in 2021-2022.
+Copyright © 2021 - 2023 Ajj (https://github.com/AjjMC)
 
 Please credit this datapack if you use it in your work, and provide a link to the project repository.
 
