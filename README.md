@@ -403,13 +403,13 @@ Please credit this datapack if you use it in your work, and provide a link to th
 
 > **A:** It depends on the exact use. Being restricted to block entities, the datapack has the following:
 >
-> **Multiplayer Features**
+> Multiplayer Features
 >
 > * Multiple GUIs around the world can be used by different players simultaneously with no issues
 > * The same GUI can be used by different players simultaneously with no issues
 > * Widget commands can be executed as the player triggering a GUI widget
 >
-> **Multiplayer Limitations**
+> Multiplayer Limitations
 >
 > * Players using the same GUI all see the same page
 > * Changes to a widget's state in a GUI are seen by all players using that GUI
