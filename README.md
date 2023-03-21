@@ -10,14 +10,16 @@
 
 ## Abstract
 
-Custom user interfaces in Minecraft are very often used by creators to enhance their servers and maps, providing better player experience and increased product quality. While it is apparent that servers have the convenience of using plugins to base their menus on item-based GUIs, vanilla means, such as datapacks, are hindered by numerous limitations in producing the same results for singleplayer maps. Due to these limitations, creating item-based GUIs with commands is often proven a very difficult task, with chat-based alternatives being typically preferred on singleplayer. The aim of this datapack is to serve as a mapmaking framework standardizing the design of item-based GUIs, allowing the user to easily create them in-game, in vanilla Minecraft, without needing to work on any of the complex backend functionality. This can be achieved by simply dragging and dropping items with custom NBT parameters in containers, which can be translated into functional GUIs. Such containers currently only include block entities, such as chests, barrels, droppers, hoppers or even brewing stands. However, the same principles may be generalized in the future to work with normal entities, such as chest minecarts.
+Custom user interfaces in Minecraft are very often used by creators to enhance their servers and maps, providing better player experience and increased product quality. While it is apparent that servers have the convenience of using plugins to base their menus on item-based GUIs, datapacks are hindered by numerous limitations in producing the same results for singleplayer maps. Due to these limitations, creating item-based GUIs with commands is often proven a very difficult task, with chat-based alternatives being typically preferred on singleplayer. The aim of this datapack is to serve as a mapmaking framework standardizing the design of item-based GUIs, allowing the user to easily create them in-game, without needing to work on any of the complex backend functionality. This can be achieved by simply dragging and dropping items with custom NBT parameters in containers, which can be translated into functional GUIs. Such containers currently only include block entities, such as chests, barrels, droppers, hoppers or even brewing stands. However, the same design may be generalized in the future to work with normal entities, such as chest minecarts.
 
 ### Features
 
-* Ability to create advanced GUIs in vanilla Minecraft
-* Very quick and easy to use, and completely in-game
-* Very robust to different user behaviors, without interfering with inventory items
+* Tools for creating advanced item-based GUIs in-game
+* Quick and easy to use
+* Fully customizable, without needing to access the datapack files
+* Robust to different user behaviors, without interfering with inventory items
 * Works for both singleplayer and multiplayer
+* Complete documentation
 
 ## Downloading and Installing
 
