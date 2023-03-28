@@ -16,7 +16,7 @@ Custom user interfaces in Minecraft are very often used by creators to enhance t
 
 * Tools for creating advanced item-based GUIs in-game
 * Quick and easy to use
-* Fully customizable, without needing to access the datapack files
+* Fully customizable, without needing to access the datapack's files
 * Robust to different user behaviors, without interfering with inventory items
 * Works for both singleplayer and multiplayer
 * Complete documentation
@@ -395,9 +395,9 @@ data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1]
 
 ## Copyright
 
-Copyright © 2021 - 2023 Ajj (https://github.com/AjjMC)
+Copyright © 2021 - 2023 Ajj (https://github.com/AjjMC/ajjgui)
 
-Please credit this datapack if you use it in your work, and provide a link to the project repository.
+This project was released under the MIT License. Please credit this datapack if you use it in your work, and provide a link to the project repository.
 
 ## Frequently Asked Questions
 
