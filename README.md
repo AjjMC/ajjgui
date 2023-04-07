@@ -21,7 +21,7 @@ The datapack comes with the following features:
 * Fully customizable, without needing to access the datapack's files
 * Robust to different user behaviors, without interfering with inventory items
 * Works for both singleplayer and multiplayer
-* Complete documentation
+* Complete documentation, in-game tutorial and demos
 
 ## Downloading and Installing
 
