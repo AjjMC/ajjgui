@@ -50,7 +50,9 @@ An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_
 
 ## List of Widgets
 
-> **NOTE:** Some of the following commands are very long, so they need to be executed using command blocks.
+> **NOTE:** Some of the following commands are too long to fit in the chat box and need to be executed using command blocks.
+
+> **NOTE:** The ``ajjgui.Command``, ``ajjgui.Fixed``, ``ajjgui.Page`` and ``ajjgui.Relative`` NBT tags are covered separately in later sections.
 
 ### Placeholder
 
