@@ -56,6 +56,10 @@ An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_
 
 The *placeholder* is a widget that cannot be interacted with and is used to display an item.
 
+| NBT Tag          | Default |
+|:-----------------|:--------|
+| ``ajjgui.Fixed`` | ``0b``  |
+
 #### Usage
 
 ```
@@ -80,6 +84,13 @@ The *placeholder* is a widget that cannot be interacted with and is used to disp
 
 The *button* is a widget that changes the GUI page and/or runs commands when clicked. More information about changing pages and running commands can be found in the following sections.
 
+| NBT Tag             | Default  |
+|:--------------------|:---------|
+| ``ajjgui.Command``  | N/A      |
+| ``ajjgui.Fixed``    | ``0b``   |
+| ``ajjgui.Page``     | N/A      |
+| ``ajjgui.Relative`` | ``0b``   |
+
 #### Usage
 
 ```
@@ -93,6 +104,15 @@ The *button* is a widget that changes the GUI page and/or runs commands when cli
 ### Counter
 
 The *counter* is a widget that changes to a different count of the same item when clicked, following a value sequence. The value sequence is specified in the ``ajjgui.Values`` NBT tag. The default value is the one initially used upon creation of the widget. Once a *counter* in its default state is clicked, it changes to the second value in the list and so on. Hence, the first one is not used until the end of the first cycle. After one cycle, the first value is always used instead of the default one. The current state of a *counter* is stored in the ``ajjgui.State`` NBT tag.
+
+| NBT Tag             | Default  |
+|:--------------------|:---------|
+| ``ajjgui.Command``  | N/A      |
+| ``ajjgui.Fixed``    | ``0b``   |
+| ``ajjgui.Page``     | N/A      |
+| ``ajjgui.Relative`` | ``0b``   |
+| ``ajjgui.State``    | ``0b``   |
+| ``ajjgui.Values``   | Required |
 
 #### Usage
 
@@ -136,6 +156,15 @@ where N is the number of states.
 
 The *switch* is a widget that changes to a different item when clicked, following an item sequence. The item sequence is specified in the ``ajjgui.Items`` NBT tag. The default item is the one initially used upon creation of the widget. Once a *switch* in its default state is clicked, it changes to the second item in the list and so on. Hence, the first one is not used until the end of the first cycle. After one cycle, the first item is always used instead of the default one. The current state of a *switch* is stored in the ``ajjgui.State`` NBT tag.
 
+| NBT Tag             | Default  |
+|:--------------------|:---------|
+| ``ajjgui.Command``  | N/A      |
+| ``ajjgui.Fixed``    | ``0b``   |
+| ``ajjgui.Items``    | Required |
+| ``ajjgui.Page``     | N/A      |
+| ``ajjgui.Relative`` | ``0b``   |
+| ``ajjgui.State``    | ``0b``   |
+
 #### Usage
 
 ```
@@ -176,7 +205,18 @@ give @s minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dy
 
 ### Radiobutton
 
-The *radiobutton* is a widget that changes between an "OFF" and "ON" state item when clicked. It comes in groups in which only one widget can be toggled on at a time, with the rest being toggled off. Each item is specified in the ``ajjgui.OFF`` and ``ajjgui.ON`` NBT tags. The default item is the one initially used upon creation of the widget. Once a *radiobutton* is clicked, it changes to the item corresponding to its "ON" state, and all the other *radiobutton* widgets with the same group identifier change to their "OFF" state. The group identifier of a *radiobutton* is stored in the ``ajjgui.Group`` NBT tag. If it is not specified, it is set to ``0b``. The current state of a *radiobutton* is stored in the ``ajjgui.State`` NBT tag.
+The *radiobutton* is a widget that changes between an "OFF" and "ON" state item when clicked. It comes in groups in which only one widget can be toggled on at a time, with the rest being toggled off. Each item is specified in the ``ajjgui.OFF`` and ``ajjgui.ON`` NBT tags. The default item is the one initially used upon creation of the widget. Once a *radiobutton* is clicked, it changes to the item corresponding to its "ON" state, and all the other *radiobutton* widgets with the same group identifier change to their "OFF" state. The group identifier of a *radiobutton* is stored in the ``ajjgui.Group`` NBT tag. The current state of a *radiobutton* is stored in the ``ajjgui.State`` NBT tag.
+
+| NBT Tag             | Default  |
+|:--------------------|:---------|
+| ``ajjgui.Command``  | N/A      |
+| ``ajjgui.Fixed``    | ``0b``   |
+| ``ajjgui.Group``    | ``0b``   |
+| ``ajjgui.OFF``      | Required |
+| ``ajjgui.ON``       | Required |
+| ``ajjgui.Page``     | N/A      |
+| ``ajjgui.Relative`` | ``0b``   |
+| ``ajjgui.State``    | ``0b``   |
 
 #### Usage
 
@@ -212,6 +252,13 @@ The *radiobutton* is a widget that changes between an "OFF" and "ON" state item 
 
 The *itembin* is a widget that clears all items inserted by the player in a particular slot in the GUI.
 
+| NBT Tag             | Default  |
+|:--------------------|:---------|
+| ``ajjgui.Command``  | N/A      |
+| ``ajjgui.Fixed``    | ``0b``   |
+| ``ajjgui.Page``     | N/A      |
+| ``ajjgui.Relative`` | ``0b``   |
+
 #### Usage
 
 ```
@@ -230,7 +277,17 @@ The *itembin* is a widget that clears all items inserted by the player in a part
 
 ### Itemslot
 
-The *itemslot* is a widget that stores items inserted by the player in a particular slot in the GUI. Once one or more stacked items are inserted, the current ones occupying the slot (if any) are replaced and returned to the player's inventory. When the *itemslot* is not being used, a placeholder item occupies the slot. This is stored in the ``ajjgui.Placeholder`` NBT tag. The maximum number of items in an *itemslot* is stored in the ``ajjgui.Size`` NBT tag, which cannot be larger than ``64b``. If it is not specified, it is set to ``64b``. Any excess items are returned to the player. Whether an *itemslot* has an item in it is determined by the ``ajjgui.State`` NBT tag.
+The *itemslot* is a widget that stores items inserted by the player in a particular slot in the GUI. Once one or more stacked items are inserted, the current ones occupying the slot (if any) are replaced and returned to the player's inventory. When the *itemslot* is not being used, a placeholder item occupies the slot. This is stored in the ``ajjgui.Placeholder`` NBT tag. The maximum number of items in an *itemslot* is stored in the ``ajjgui.Size`` NBT tag, which cannot be larger than ``64b``. Any excess items are returned to the player. Whether an *itemslot* has an item in it is determined by the ``ajjgui.State`` NBT tag.
+
+| NBT Tag                | Default  |
+|:-----------------------|:---------|
+| ``ajjgui.Command``     | N/A      |
+| ``ajjgui.Fixed``       | ``0b``   |
+| ``ajjgui.Page``        | N/A      |
+| ``ajjgui.Placeholder`` | Required |
+| ``ajjgui.Relative``    | ``0b``   |
+| ``ajjgui.Size``        | ``64b``  |
+| ``ajjgui.State``       | ``0b``   |
 
 #### Usage
 
@@ -272,6 +329,17 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 
 The *scrollbutton* is a widget that cycles one or more lists of *static* widgets (see notes) across respective GUI slot lists when clicked. This allows for additional space in the GUI. Each widget list is specified in the ``ajjgui.Widgets`` NBT tag. Within each widget list, widgets are added in the order they appear in. The slot list associated with each widget list is specified in the ``ajjgui.Slots`` NBT tag. Within each slot list, slots are added in the order they are occupied by the respective widget list. The *scrollbutton* also contains the entire functionality of the *switch*.
 
+| NBT Tag             | Default  |
+|:--------------------|:---------|
+| ``ajjgui.Command``  | N/A      |
+| ``ajjgui.Fixed``    | ``0b``   |
+| ``ajjgui.Items``    | Required |
+| ``ajjgui.Page``     | N/A      |
+| ``ajjgui.Relative`` | ``0b``   |
+| ``ajjgui.Slots``    | Required |
+| ``ajjgui.State``    | ``0b``   |
+| ``ajjgui.Widgets``  | Required |
+
 #### Usage
 
 ```
@@ -300,7 +368,7 @@ A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each butt
 
 ## Changing GUI Pages
 
-Each of the above widgets, excluding the *placeholder*, can be made to change the GUI page when clicked. This is done by specifying a page number in the ``ajjgui.Page`` NBT tag. By default, this value is the index of the shulker box in the chest previously used to compile the GUI, where a value of ``0b`` corresponds to the first page. If it is equal to the number of pages, the count resets back to the first page, and negative values may also be used to access pages from the end. If it is not specified, the page does not change. The ``ajjgui.Relative`` NBT tag can be set to ``1b`` in order for the value of ``ajjgui.Page`` to increment the page number from its current value. This, hence, assumes that the current page has an index of ``0b`` and uses this as a reference instead of the first one.
+Each of the above widgets, excluding the *placeholder*, can be made to change the GUI page when clicked. This is done by specifying a page number in the ``ajjgui.Page`` NBT tag. By default, this value is the index of the shulker box in the chest previously used to compile the GUI, where a value of ``0b`` corresponds to the first page. If it is equal to the number of pages, the count resets back to the first page, and negative values may also be used to access pages from the end. The ``ajjgui.Relative`` NBT tag can be set to ``1b`` in order for the value of ``ajjgui.Page`` to increment the page number from its current value. This, hence, assumes that the current page has an index of ``0b`` and uses this as a reference instead of the first one.
 
 #### Examples
 
