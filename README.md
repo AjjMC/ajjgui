@@ -89,7 +89,7 @@ The *button* is a widget that changes the GUI page and/or runs commands when cli
 | ``ajjgui.Command``  | N/A      | String |
 | ``ajjgui.Fixed``    | ``0b``   | Byte   |
 | ``ajjgui.Page``     | N/A      | Byte   |
-| ``ajjgui.Relative`` | ``0b``   | Bute   |
+| ``ajjgui.Relative`` | ``0b``   | Byte   |
 
 #### Usage
 
