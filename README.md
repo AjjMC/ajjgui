@@ -333,7 +333,7 @@ The *scrollbutton* is a widget that cycles one or more lists of *static* widgets
 |:--------------------|:---------|:--------------|
 | ``ajjgui.Command``  | N/A      | String        |
 | ``ajjgui.Fixed``    | ``0b``   | Byte          |
-| ``ajjgui.Items``    | Required | Compound List |
+| ``ajjgui.Items``    | N/A      | Compound List |
 | ``ajjgui.Page``     | N/A      | Byte          |
 | ``ajjgui.Relative`` | ``0b``   | Byte          |
 | ``ajjgui.Slots``    | Required | Byte List     |
