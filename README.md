@@ -513,7 +513,7 @@ This project was released under the MIT License. Please credit this datapack if 
 >
 > * A limit has been enforced on how close GUIs can be placed to each other to ensure robustness
 > * Bundles are not supported due to their unique behavior in the GUI
-> * Large chests are not supported
+> * Large chests are not supported as GUI containers
 > * Hoppers can interact with GUI containers
 
 > **Q:** What version is the datapack made for?
