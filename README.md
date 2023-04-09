@@ -10,7 +10,7 @@
 
 ## Abstract
 
-Custom user interfaces in Minecraft are very often used by creators to enhance their servers and maps, providing better player experience and increased product quality. While it is apparent that servers have the convenience of using plugins to base their menus on item-based GUIs, datapacks are hindered by numerous limitations in producing the same results for singleplayer maps. Due to these limitations, creating item-based GUIs with commands is often proven a very difficult task, with chat-based alternatives being typically preferred on singleplayer. The aim of this datapack is to serve as a mapmaking framework standardizing the design of item-based GUIs, allowing the user to easily create them in-game, without needing to work on any of the complex backend functionality *or modify the datapack itself*. This can be achieved by simply dragging and dropping items with custom NBT parameters in containers, which can be translated into functional GUIs. Such containers currently only include block entities, such as chests, barrels, droppers, hoppers or even brewing stands. However, the same design may be generalized in the future to work with normal entities, such as chest minecarts.
+Custom user interfaces in Minecraft are very often used by creators to enhance their servers and maps, providing better player experience and increased product quality. While it is apparent that servers have the convenience of using plugins to base their menus on item-based GUIs, datapacks are hindered by numerous limitations in producing the same results for singleplayer maps. Due to these limitations, creating item-based GUIs with commands is often proven a very difficult task, with easier alternatives being typically preferred on singleplayer. The aim of this datapack is to serve as a mapmaking framework standardizing the design of item-based GUIs, allowing the user to easily create them in-game, without needing to work on any of the complex backend functionality *or modify the datapack itself*. This can be achieved by simply dragging and dropping items with custom NBT parameters in containers, which can be translated into functional GUIs. Such containers currently only include block entities, such as chests, barrels, droppers, hoppers or even brewing stands. However, the same design may be generalized in the future to work with normal entities, such as chest minecarts.
 
 ### Features
 
@@ -27,7 +27,7 @@ The datapack comes with the following features:
 
 The datapack can be downloaded from this repository by clicking on "Code" and then "Download ZIP". The folder inside the ZIP file is the datapack. After this folder has been added to the datapacks folder of a Minecraft world, ``/reload`` needs to be run in-game. A list of the datapack's commands is available via ``/function ajjgui:_help``. By convention, all user functions begin with an underscore, "_", to be distinguished from the backend ones.
 
-| User Command                    | Description                                  |
+| User Function                   | Description                                  |
 |:--------------------------------|:---------------------------------------------|
 | ``/function ajjgui:_compile``   | Compiles GUI                                 |
 | ``/function ajjgui:_copyright`` | Displays datapack copyright information      |
