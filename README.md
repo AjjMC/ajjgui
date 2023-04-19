@@ -10,7 +10,7 @@
 
 ## Abstract
 
-Custom user interfaces in Minecraft are very often used by creators to enhance their servers and maps, providing better player experience and increased product quality. While it is apparent that servers have the convenience of using plugins to base their menus on item-based GUIs, datapacks are hindered by numerous limitations in producing the same results for singleplayer maps. Due to these limitations, creating item-based GUIs with commands is often proven a very difficult task, with easier alternatives being typically preferred on singleplayer. The aim of this datapack is to serve as a mapmaking framework standardizing the design of item-based GUIs, allowing the user to easily create them in-game, without needing to work on any of the complex backend functionality *or modify the datapack itself*. This can be achieved by simply dragging and dropping items with custom NBT parameters in containers, which can be translated into functional GUIs. Such containers currently only include block entities, such as chests, barrels, droppers, hoppers or even brewing stands. However, the same design may be generalized in the future to work with normal entities, such as chest minecarts.
+Custom user interfaces are very often used to enhance player experience in Minecraft servers and maps, as well as increase overall quality. While servers have the convenience of using plugins to base their menus on item-based GUIs, datapacks are hindered by numerous limitations in producing the same results for singleplayer maps. Due to these limitations, creating item-based GUIs with commands is often proven a very difficult task, with easier alternatives being typically preferred on singleplayer. The aim of this datapack is to serve as a mapmaking framework standardizing the design of item-based GUIs, allowing the user to easily create them in-game, without needing to work on any of the complex backend functionality *or modify the datapack itself*. This can be achieved by simply dragging and dropping items with custom NBT parameters in containers, which can be translated into functional GUIs. Such containers currently only include block entities, such as chests, barrels, droppers, hoppers or even brewing stands. However, the same design may be generalized in the future to work with normal entities, such as chest minecarts.
 
 ### Features
 
@@ -201,7 +201,7 @@ where N is the number of states.
 2. A *switch* changing between a "Disabled", an "Enabled" and a "Neutral" state, starting with "Disabled". The default item is the same as the first item in ``ajjgui.Items``:
 
 ```
-give @s minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","italic":"false"}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","italic":"false"}'}}},{id:"minecraft:purple_dye",Count:1b,tag:{display:{Name:'{"text":"Neutral","italic":"false"}'}}}]},display:{Name:'{"text":"Disabled","italic":"false"}'}}
+/give @s minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","italic":"false"}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","italic":"false"}'}}},{id:"minecraft:purple_dye",Count:1b,tag:{display:{Name:'{"text":"Neutral","italic":"false"}'}}}]},display:{Name:'{"text":"Disabled","italic":"false"}'}}
 ```
 
 3. A *switch* beginning with a default state, "Default", that continues by changing between a "Disabled" and an "Enabled" state, starting with "Enabled":
@@ -467,15 +467,15 @@ For every GUI compiled, there is a marker entity located at the container's coor
 1. A command setting the nearest GUI's page to the first one:
 
 ```
-scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] ajjgui.page 0
-function ajjgui:_reload
+/scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] ajjgui.page 0
+/function ajjgui:_reload
 ```
 
 2. A command setting the nearest GUI's first page's first slot item's id to stone:
 
 ```
-data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.GUI[0][{Slot:0b}].id set value "minecraft:stone"
-function ajjgui:_reload
+/data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.GUI[0][{Slot:0b}].id set value "minecraft:stone"
+/function ajjgui:_reload
 ```
 
 > **NOTE:** The compiler adds the ``ajjgui.Slot`` and ``ajjgui.Compiled`` NBT tags to each widget. These two must not be changed when manually modifying NBT values.
