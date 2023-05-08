@@ -478,7 +478,7 @@ For every GUI compiled, there is a marker entity located at the container's coor
 /function ajjgui:_reload
 ```
 
-> **NOTE:** The compiler adds the ``ajjgui.Slot`` and ``ajjgui.Compiled`` NBT tags to each widget. These two must not be changed when manually modifying NBT values.
+> **NOTE:** The compiler adds the ``ajjgui.Slot`` and ``ajjgui.Compiled`` NBT tags to each widget. These two must not be changed when manually modifying NBT.
 
 > **NOTE:** Decompiling a GUI reverts any NBT changes to widgets, manual or not.
 
