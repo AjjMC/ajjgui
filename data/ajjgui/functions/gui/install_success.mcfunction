@@ -37,4 +37,4 @@ execute as @a run function ajjgui:_copyright
 
 tellraw @a [{"text":"\nType "},{"text":"/function ajjgui:_help","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:_help"},"hoverEvent":{"action":"show_text","contents":"Click Here"}},{"text":" for help\n"}]
 tellraw @a {"text":"Three block entities were generated; these are needed for the datapack to be fully functional and, as such, cannot be destroyed\n"}
-tellraw @a [{"text":"If you would like to change the tower's position, "},{"text":"reinstall on a different location","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:_install"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}]
+tellraw @a [{"text":"If you would like to change the tower's position, "},{"text":"reinstall at a different location","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:_install"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}]
