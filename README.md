@@ -346,16 +346,16 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 
 The *scrollbutton* is a widget that cycles one or more lists of *static* widgets (see notes) across respective GUI slot lists when clicked. This allows for additional space in the GUI. Each widget list is specified in the ``ajjgui.Widgets`` NBT tag. Within each widget list, widgets are added in the order they appear in. The slot list associated with each widget list is specified in the ``ajjgui.Slots`` NBT tag. Within each slot list, slots are added in the order they are occupied by the respective widget list. The *scrollbutton* also contains the entire functionality of the *switch*, including the ``ajjgui.Items`` and ``ajjgui.State`` NBT tags.
 
-| NBT Tag             | Default  | Type           |
-|:--------------------|:---------|:---------------|
-| ``ajjgui.Command``  | N/A      | String         |
-| ``ajjgui.Fixed``    | ``0b``   | Boolean (Byte) |
-| ``ajjgui.Items``    | N/A      | Compound List  |
-| ``ajjgui.Page``     | N/A      | Byte           |
-| ``ajjgui.Relative`` | ``0b``   | Boolean (Byte) |
-| ``ajjgui.Slots``    | Required | Byte List      |
-| ``ajjgui.State``    | ``0b``   | Byte           |
-| ``ajjgui.Widgets``  | Required | Compound List  |
+| NBT Tag             | Default  | Type               |
+|:--------------------|:---------|:-------------------|
+| ``ajjgui.Command``  | N/A      | String             |
+| ``ajjgui.Fixed``    | ``0b``   | Boolean (Byte)     |
+| ``ajjgui.Items``    | N/A      | Compound List      |
+| ``ajjgui.Page``     | N/A      | Byte               |
+| ``ajjgui.Relative`` | ``0b``   | Boolean (Byte)     |
+| ``ajjgui.Slots``    | Required | Byte List List     |
+| ``ajjgui.State``    | ``0b``   | Byte               |
+| ``ajjgui.Widgets``  | Required | Compound List List |
 
 #### Usage
 
@@ -522,4 +522,4 @@ For every GUI compiled, there is a marker entity located at the container's coor
 
 Copyright © 2021 - 2023 Ajj (https://github.com/AjjMC/ajjgui)
 
-This project was released under the MIT License. Please credit this datapack if you use it in your work, and provide a link to the project repository.
+This project was released under the MIT License. Please credit this datapack if you use it in your work by providing a link to the project repository.
