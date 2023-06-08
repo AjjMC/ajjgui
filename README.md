@@ -516,7 +516,7 @@ For every GUI compiled, there is a marker entity located at the container's coor
 
 > **Q:** How do I install an updated version of the datapack?
 
-> **A:** I cannot guarantee that later versions of this datapack will not break any GUIs previously created. In order to update the datapack, simply replace the existing one with the newer version in the datapacks folder, and, after doing ``/reload``, run ``/function ajjgui:_install``. *Only uninstall the datapack if you are okay with removing any existing GUIs from your world!*
+> **A:** I cannot guarantee that later versions of this datapack will not break any GUIs previously created. In order to update the datapack, simply replace the existing one with the newer version in the datapacks folder, and, after doing ``/reload``, run ``/function ajjgui:_install``. *Do not uninstall the datapack unless you are okay with removing any existing GUIs from your world!*
 
 ## Copyright
 
