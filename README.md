@@ -497,7 +497,7 @@ For every GUI compiled, there is a marker entity located at the container's coor
 > Multiplayer Limitations
 >
 > * Players using the same GUI all see the same page
-> * Changes to a widget's state in a GUI are seen by all players using that GUI
+> * Changes to a widget's state in a GUI are seen by all players using this GUI
 >
 > In other words, pages and widget states in a GUI are not personalized. Moving to a different page or enabling a *switch* widget, for instance, changes the page or the widget's state for everyone using this GUI. That said, commands themselves can be personalized to the player triggering a GUI widget.
 
@@ -512,7 +512,7 @@ For every GUI compiled, there is a marker entity located at the container's coor
 
 > **Q:** What version is the datapack made for?
 
-> **A:** It is meant to be used in the latest release of the game and will be updated to be compatible with newer versions once they are released.
+> **A:** It is meant to be used in the latest Minecraft release and will be updated to be compatible with newer game versions once they are out. Newer versions of the datapack are not compatible with older versions of the game.
 
 > **Q:** How do I install an updated version of the datapack?
 
