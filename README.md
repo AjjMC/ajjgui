@@ -44,7 +44,7 @@ The datapack can be downloaded from this repository by clicking on "Code" and th
 
 The datapack can be installed by running ``/function ajjgui:_install`` at any location in the world, which generates a 3x1 tower consisting of two command blocks and a shulker box. These block entities are needed for the datapack to be fully functional and, as such, cannot be destroyed. *They must also be placed in a chunk that is constantly loaded.* The tower can be relocated by repeating the installation command, and the previous one generated is automatically removed. The datapack can be uninstalled using ``/function ajjgui:_uninstall``, which removes all data associated with it from the world, *including any GUIs made with it*.
 
-## Widgets
+## GUI Widgets
 
 Every item in a GUI corresponds to a user interface element with a predefined functionality. This is referred to as a *widget*. Depending on their type, widgets exhibit different properties when interacted with (e.g., the *button* widget may change the GUI page and run commands).
 
@@ -63,7 +63,7 @@ There are 8 types of widgets available:
 
 An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_tutorial``. The tutorial provides the player with premade demo widgets to experiment with. Multiple examples are given, both here and in-game, to help provide a better understanding of their custom NBT. The following section explains all the different types of widgets available and how they can be customized. Once obtained, these items can be placed inside shulker boxes, with each shulker box corresponding to a different GUI page. The shulker boxes can be arranged based on their page number and compiled to build a functional GUI in-game. This manual can be accessed with ``/function ajjgui:_manual``.
 
-## List of Widgets
+## List of GUI Widgets
 
 > **NOTE:** Some of the following commands are too long to fit in the chat box and need to be executed using command blocks.
 
@@ -417,7 +417,7 @@ Each of the above widgets, excluding the *placeholder*, can be made to change th
   <img src="assets/button.gif" width="350">
 </p>
 
-## Fixed Widgets
+## Fixed GUI Widgets
 
 Each of the above widgets can be made to stay on display if the GUI page is changed. This is done by setting the ``ajjgui.Fixed`` NBT tag to ``1b``. If a *scrollbutton* is made fixed, its widgets also obtain this property.
 
@@ -429,7 +429,7 @@ A *button* staying fixed in its slot when the GUI page is changed:
 /give @p minecraft:arrow{ajjgui:{Widget:"button",Page:1b,Relative:1b,Fixed:1b},display:{Name:'{"text":"Go to Next Page","italic":"false"}'}}
 ```
 
-## Running Commands and Accessing Data
+## Running GUI Commands and Accessing Data
 
 Each of the above widgets, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by an external command block instead of the player themselves. The ``"ajjgui.user"`` scoreboard tag can be used to target the player triggering the widget. In this way, it is also possible to access the count, page, slot and state values of the selected widget, stored respectively in the ``ajjgui.count``, ``ajjgui.page``, ``ajjgui.slot`` and ``ajjgui.state`` scores of this player. The NBT of the selected widget is accessible from the ``Widget`` NBT tag in the ``ajjgui:gui`` data storage. Any items added or removed from an *itemslot* are accessible from the ``In`` and ``Out`` NBT tags respectively in the ``ajjgui:itemslot`` data storage. Likewise, any items added to an *itembin* are accessible from the ``In`` NBT tag in the ``ajjgui:itembin`` data storage.
 
