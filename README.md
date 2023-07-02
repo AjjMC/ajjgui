@@ -116,7 +116,7 @@ The *button* is a widget that changes the GUI page and/or runs commands when cli
 
 #### Examples
 
-Examples for [changing GUI pages](#changing-gui-pages) and [running commands](#running-commands-and-accessing-data).
+[Changing GUI pages](#changing-gui-pages) and [running commands](#running-commands-and-accessing-data).
 
 ### Counter
 
