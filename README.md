@@ -116,7 +116,7 @@ The *button* is a widget that changes the GUI page and/or runs commands when cli
 
 #### Examples
 
-> **NOTE:** Examples for [changing GUI pages](#changing-gui-pages) and [running commands](#running-commands-and-accessing-data).
+Examples for [changing GUI pages](#changing-gui-pages) and [running commands](#running-commands-and-accessing-data).
 
 ### Counter
 
@@ -456,8 +456,6 @@ A *switch* running a function as the player that pressed it:
 /give @p minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","italic":"false"}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","italic":"false"}'}}}],Command:"execute as @a[tag=ajjgui.user] run function name:func"},display:{Name:'{"text":"Disabled","italic":"false"}'}}
 ```
 
-> **NOTE:** Command blocks need to be enabled on the server in order to use this feature.
-
 ## Manually Modifying GUIs
 
 For every GUI compiled, there is a marker entity located at the container's coordinates with the ``"ajjgui.gui"`` scoreboard tag. This entity stores the page value in its ``ajjgui.page`` score as well as the page list in its ``data.GUI`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be manually modified to achieve desired results. In order for the changes to be applied, ``/function ajjgui:_reload`` needs to be run. Otherwise, the GUI is updated upon user interaction. *It is highly recommended to to read the rest of the documentation before proceeding with such modifications as any existing alternatives may be substantially easier to work with.*
@@ -481,42 +479,6 @@ For every GUI compiled, there is a marker entity located at the container's coor
 > **NOTE:** The compiler adds the ``ajjgui.Slot`` and ``ajjgui.Compiled`` NBT tags to each widget. These two must not be changed when manually modifying NBT.
 
 > **NOTE:** Decompiling a GUI reverts any NBT changes to widgets, manual or not.
-
-## Frequently Asked Questions
-
-> **Q:** Is the datapack multiplayer-friendly?
-
-> **A:** It depends on the exact use. Being restricted to block entities, the datapack has the following:
->
-> Multiplayer Features
->
-> * Multiple GUIs around the world can be used by different players simultaneously with no issues
-> * The same GUI can be used by different players simultaneously with no issues
-> * Widget commands can be executed as the player triggering a GUI widget
->
-> Multiplayer Limitations
->
-> * Players using the same GUI all see the same page
-> * Changes to a widget's state in a GUI are seen by all players using this GUI
->
-> In other words, pages and widget states in a GUI are not personalized. Moving to a different page or enabling a *switch* widget, for instance, changes the page or the widget's state for everyone using this GUI. That said, commands themselves can be personalized to the player triggering a GUI widget.
-
-> **Q:** Are there any other limitations?
-
-> **A:** The following:
->
-> * A limit has been enforced on how close GUIs can be placed to each other to ensure robustness
-> * Bundles are not supported due to their unique behavior in the GUI
-> * Large chests are not supported as GUI containers
-> * Hoppers can interact with GUI containers
-
-> **Q:** What version is the datapack made for?
-
-> **A:** It is meant to be used in the latest Minecraft release and will be updated to be compatible with newer game versions once they are out. Newer versions of the datapack are not compatible with older versions of the game.
-
-> **Q:** How do I install an updated version of the datapack?
-
-> **A:** I cannot guarantee that later versions of this datapack will not break any GUIs previously created. In order to update the datapack, simply replace the existing one with the newer version in the datapacks folder, and, after doing ``/reload``, run ``/function ajjgui:_install``. *Do not uninstall the datapack unless you are okay with removing any existing GUIs from your world!*
 
 ## Copyright
 
