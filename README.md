@@ -67,7 +67,7 @@ An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_
 
 > **NOTE:** Some of the following commands are too long to fit in the chat box and need to be executed using command blocks.
 
-> **NOTE:** The ``ajjgui.Command``, ``ajjgui.Fixed``, ``ajjgui.Page`` and ``ajjgui.Relative`` NBT tags are covered separately in later sections.
+> **NOTE:** The ``ajjgui.Command``, ``ajjgui.Exit``, ``ajjgui.Fixed``, ``ajjgui.Page`` and ``ajjgui.Relative`` NBT tags are covered separately in later sections.
 
 ### Placeholder
 
@@ -99,11 +99,12 @@ The *placeholder* is a widget that cannot be interacted with and is used to disp
 
 ### Button
 
-The *button* is a widget that changes the GUI page and/or runs commands when clicked. More information about changing pages and running commands can be found in the following sections.
+The *button* is a widget that changes the GUI page, exits the GUI and/or runs a GUI command when clicked. More information can be found in the following sections.
 
 | NBT Tag             | Default  | Type           |
 |:--------------------|:---------|:---------------|
 | ``ajjgui.Command``  | N/A      | String         |
+| ``ajjgui.Exit``     | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Fixed``    | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Page``     | N/A      | Byte           |
 | ``ajjgui.Relative`` | ``0b``   | Boolean (Byte) |
@@ -116,7 +117,7 @@ The *button* is a widget that changes the GUI page and/or runs commands when cli
 
 #### Examples
 
-More information about [changing pages](#changing-gui-pages) and [running commands](#running-gui-commands-and-accessing-data).
+More information about [changing GUI pages](#changing-gui-pages), [exiting GUIs](#exiting-guis) and [running GUI commands](#running-gui-commands-and-accessing-data).
 
 ### Counter
 
@@ -125,6 +126,7 @@ The *counter* is a widget that changes to a different count of the same item whe
 | NBT Tag             | Default  | Type           |
 |:--------------------|:---------|:---------------|
 | ``ajjgui.Command``  | N/A      | String         |
+| ``ajjgui.Exit``     | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Fixed``    | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Page``     | N/A      | Byte           |
 | ``ajjgui.Relative`` | ``0b``   | Boolean (Byte) |
@@ -176,6 +178,7 @@ The *switch* is a widget that changes to a different item when clicked, followin
 | NBT Tag             | Default  | Type           |
 |:--------------------|:---------|:---------------|
 | ``ajjgui.Command``  | N/A      | String         |
+| ``ajjgui.Exit``     | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Fixed``    | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Items``    | Required | Compound List  |
 | ``ajjgui.Page``     | N/A      | Byte           |
@@ -227,6 +230,7 @@ The *radiobutton* is a widget that changes between an "OFF" and "ON" state item 
 | NBT Tag             | Default  | Type           |
 |:--------------------|:---------|:---------------|
 | ``ajjgui.Command``  | N/A      | String         |
+| ``ajjgui.Exit``     | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Fixed``    | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Group``    | ``0b``   | Byte           |
 | ``ajjgui.OFF``      | Required | Compound       |
@@ -272,6 +276,7 @@ The *itembin* is a widget that clears all items inserted by the player in a part
 | NBT Tag             | Default  | Type           |
 |:--------------------|:---------|:---------------|
 | ``ajjgui.Command``  | N/A      | String         |
+| ``ajjgui.Exit``     | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Fixed``    | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Page``     | N/A      | Byte           |
 | ``ajjgui.Relative`` | ``0b``   | Boolean (Byte) |
@@ -299,6 +304,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 | NBT Tag                | Default  | Type           |
 |:-----------------------|:---------|:---------------|
 | ``ajjgui.Command``     | N/A      | String         |
+| ``ajjgui.Exit``        | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Fixed``       | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Page``        | N/A      | Byte           |
 | ``ajjgui.Placeholder`` | Required | Compound       |
@@ -349,6 +355,7 @@ The *scrollbutton* is a widget that cycles one or more lists of *static* widgets
 | NBT Tag             | Default  | Type               |
 |:--------------------|:---------|:-------------------|
 | ``ajjgui.Command``  | N/A      | String             |
+| ``ajjgui.Exit``     | ``0b``   | Boolean (Byte)     |
 | ``ajjgui.Fixed``    | ``0b``   | Boolean (Byte)     |
 | ``ajjgui.Items``    | N/A      | Compound List      |
 | ``ajjgui.Page``     | N/A      | Byte               |
@@ -419,7 +426,7 @@ Each of the above widgets, excluding the *placeholder*, can be made to change th
 
 ## Fixed GUI Widgets
 
-Each of the above widgets can be made to stay on display if the GUI page is changed. This is done by setting the ``ajjgui.Fixed`` NBT tag to ``1b``. If a *scrollbutton* is made fixed, its widgets also obtain this property.
+Each of the above widgets can be made to stay on display when the GUI page is changed. This is done by setting the ``ajjgui.Fixed`` NBT tag to ``1b``. If a *scrollbutton* is made fixed, its widgets also obtain this property.
 
 ### Example
 
@@ -427,6 +434,18 @@ A *button* staying fixed in its slot when the GUI page is changed:
 
 ```
 /give @p minecraft:arrow{ajjgui:{Widget:"button",Page:1b,Relative:1b,Fixed:1b},display:{Name:'{"text":"Go to Next Page","italic":"false"}'}}
+```
+
+## Exiting GUIs
+
+Each of the above widgets, excluding the *placeholder*, can be made to exit the GUI when clicked. This is done by setting the ``ajjgui.Exit`` NBT tag to ``1b``.
+
+### Example
+
+A *button* exiting the GUI:
+
+```
+/give @p minecraft:barrier{ajjgui:{Widget:"button",Exit:1b},display:{Name:'{"text":"Exit","color":"white","italic":"false"}'}}
 ```
 
 ## Running GUI Commands and Accessing Data
