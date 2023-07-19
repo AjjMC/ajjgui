@@ -1,0 +1,4 @@
+execute if data storage ajjgui:gui {Widget:{tag:{ajjgui:{Exit:1b}}}} at @e[type=minecraft:marker,tag=ajjgui.gui,tag=ajjgui.active_gui] run clone ~ ~ ~ ~ ~ ~ ~ ~1 ~
+execute if data storage ajjgui:gui {Widget:{tag:{ajjgui:{Exit:1b}}}} at @e[type=minecraft:marker,tag=ajjgui.gui,tag=ajjgui.active_gui] run setblock ~ ~ ~ minecraft:air
+execute if data storage ajjgui:gui {Widget:{tag:{ajjgui:{Exit:1b}}}} at @e[type=minecraft:marker,tag=ajjgui.gui,tag=ajjgui.active_gui] run clone ~ ~1 ~ ~ ~1 ~ ~ ~ ~
+execute if data storage ajjgui:gui {Widget:{tag:{ajjgui:{Exit:1b}}}} at @e[type=minecraft:marker,tag=ajjgui.gui,tag=ajjgui.active_gui] run setblock ~ ~1 ~ minecraft:air

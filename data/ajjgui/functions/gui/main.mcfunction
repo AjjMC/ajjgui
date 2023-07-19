@@ -1,7 +1,7 @@
 execute as @a run function ajjgui:gui/run_gui
 
-execute as @e[type=minecraft:item] if data entity @s Item.tag.ajjgui.Compiled as @e[type=minecraft:marker,tag=ajjgui.gui] at @s run function ajjgui:gui/load_page
-execute as @e[type=minecraft:item] if data entity @s Item.tag.ajjgui.Compiled run kill @s
+execute as @e[type=minecraft:item] if data entity @s {Item:{tag:{ajjgui:{Compiled:1b}}}} as @e[type=minecraft:marker,tag=ajjgui.gui] at @s run function ajjgui:gui/load_page
+execute as @e[type=minecraft:item] if data entity @s {Item:{tag:{ajjgui:{Compiled:1b}}}} run kill @s
 
 execute as @e[type=minecraft:marker,tag=ajjgui.gui] at @s unless block ~ ~ ~ #ajjgui:guis run kill @s
 
