@@ -13,7 +13,7 @@ execute align xyz run summon minecraft:marker ~0.5 ~1 ~0.5 {Tags:["ajjgui.cmd2"]
 execute align xyz run summon minecraft:marker ~0.5 ~2 ~0.5 {Tags:["ajjgui.box"]}
 
 execute at @e[type=minecraft:marker,tag=ajjgui.cmd1] run setblock ~ ~ ~ minecraft:command_block[facing=up]
-execute at @e[type=minecraft:marker,tag=ajjgui.cmd2] run setblock ~ ~ ~ minecraft:command_block[facing=up]{Command:"tag @a[tag=ajjgui.user] remove ajjgui.user"}
+execute at @e[type=minecraft:marker,tag=ajjgui.cmd2] run setblock ~ ~ ~ minecraft:chain_command_block[facing=up]{auto:1b,Command:"tag @a[tag=ajjgui.user] remove ajjgui.user"}
 execute at @e[type=minecraft:marker,tag=ajjgui.box] run setblock ~ ~ ~ minecraft:yellow_shulker_box
 
 scoreboard objectives add ajjgui dummy

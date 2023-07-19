@@ -1,1 +1,1 @@
-data modify storage ajjgui:gui Version set value "m1.20v1"
+data modify storage ajjgui:gui Version set value "m1.20.1v1"
