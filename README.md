@@ -390,7 +390,7 @@ A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each butt
 
 > **NOTE:** The *scrollbutton* only supports the *placeholder*, *button* and *itembin* widgets.
 
-> **NOTE:** If the ``ajjgui.Widget`` NBT tag of any widget is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional, and no specific tags are required. This, by extension, applies to widgets specified in the ``ajjgui.Widgets`` NBT tag of the *scrollbutton*.
+> **NOTE:** If the ``ajjgui.Widget`` NBT tag of any widget is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional, and no specific tags are required. This, by extension, applies to a *placeholder* widget specified in the ``ajjgui.Widgets`` NBT tag of the *scrollbutton*.
 
 ## Changing GUI Pages
 
