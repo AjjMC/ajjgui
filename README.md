@@ -462,17 +462,15 @@ Each of the above widgets, excluding the the *placeholder*, can be made to run c
 
 2. A *switch* running a command based on its current state:
 
-Assume the following commands are located in a function ```name:func``` within another datapack:
+```
+/give @p minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","italic":"false"}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","italic":"false"}'}}}],Command:"execute as @a[tag=ajjgui.user] run function name:func"},display:{Name:'{"text":"Disabled","italic":"false"}'}}
+```
+
+where the following commands are located in a function ```name:func``` within another datapack:
 
 ```
 execute if score @s ajjgui.state matches 0 run say set switch to Disabled
 execute if score @s ajjgui.state matches 1 run say set switch to Enabled
-```
-
-A *switch* running a function as the player that pressed it:
-
-```
-/give @p minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","italic":"false"}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","italic":"false"}'}}}],Command:"execute as @a[tag=ajjgui.user] run function name:func"},display:{Name:'{"text":"Disabled","italic":"false"}'}}
 ```
 
 ## Manually Modifying GUIs
