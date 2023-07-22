@@ -14,7 +14,7 @@ Minecraft servers frequently use custom user interfaces where the player accesse
 
 The aim of this datapack is to serve as an advanced mapmaking framework for item-based GUIs, allowing developers to easily create them in-game, without needing to consider any of the complex, low-level functionality or involving access to any of the files within the datapack. This is achieved by simply dragging and dropping items with custom NBT tags in containers, which the datapack compiles into functional GUIs. At the moment, the datapack is limited to block entities, such as barrels, droppers, hoppers or even brewing stands. However, the same design may be generalized in the future to work with entities such as chest minecarts.
 
-### Datapack Features
+The datapack has the following features:
 
 * NBT-based standard for quick and easy creation of advanced item-based GUIs
 * Completely in-game workflow, with the entire datapack being a black box that the developer can ignore
