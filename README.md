@@ -42,11 +42,11 @@ The datapack can be downloaded from this repository by clicking on "Code" and th
 
 The datapack can be installed by running ``/function ajjgui:_install`` at any location in the world, which generates a 3x1 tower consisting of two command blocks and a shulker box. These block entities are needed for the datapack to be fully functional and, as such, cannot be destroyed. *They must also be placed in a chunk that is constantly loaded.* The tower can be relocated by repeating the installation command, and the previous one generated is automatically removed. The datapack must be reinstalled if an updated version of it has been downloaded. It can be uninstalled using ``/function ajjgui:_uninstall``, which removes all data associated with it from the world, *including any GUIs made with it*.
 
-## GUI Widgets
+## Creating a GUI
 
-Every item in a GUI corresponds to a user interface element with a predefined functionality. This is referred to as a *widget*. Depending on their type, widgets exhibit different properties when interacted with (e.g., the *button* widget may change the GUI page and run commands).
+The datapack adopts the concept of *[graphical widgets](https://en.wikipedia.org/wiki/Graphical_widget)* present in real-world user interfaces. Within the scope of Minecraft's item-based GUIs, and this datapack specifically, every item in a GUI corresponds to an interactive element (e.g., a button).
 
-There are 8 types of widgets available:
+There are 8 types of GUI widgets available:
 
 * [Placeholder](#placeholder)
 * [Button](#button)
@@ -56,8 +56,6 @@ There are 8 types of widgets available:
 * [Itemslot](#itemslot)
 * [Itembin](#itembin)
 * [Scrollbutton](#scrollbutton)
-
-## Creating a GUI
 
 An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_tutorial``. The tutorial provides the player with premade demo widgets to experiment with. Multiple examples are given, both here and in-game, to help provide a better understanding of their custom NBT. The following section explains all the different types of widgets available and how they can be customized. Once obtained, these items can be placed inside shulker boxes, with each shulker box corresponding to a different GUI page. The shulker boxes can be arranged based on their page number and compiled to build a functional GUI in-game. This manual can be accessed with ``/function ajjgui:_manual``.
 
