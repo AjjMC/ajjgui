@@ -430,7 +430,7 @@ Each of the above widgets, excluding the *placeholder*, can be made to change th
 
 Each of the above widgets can be made to stay on display when the GUI page is changed. This is done by setting the ``ajjgui.Fixed`` NBT tag to ``1b``. If a *scrollbutton* is made fixed, its widgets also obtain this property.
 
-### Example
+#### Example
 
 A *button* staying fixed in its slot when the GUI page is changed:
 
@@ -442,7 +442,7 @@ A *button* staying fixed in its slot when the GUI page is changed:
 
 Each of the above widgets, excluding the *placeholder*, can be made to exit the GUI when clicked. This is done by setting the ``ajjgui.Exit`` NBT tag to ``1b``.
 
-### Example
+#### Example
 
 A *button* exiting the GUI:
 
@@ -454,7 +454,7 @@ A *button* exiting the GUI:
 
 Each of the above widgets, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by an external command block instead of the player themselves. The ``"ajjgui.user"`` scoreboard tag can be used to target the player triggering the widget. In this way, it is also possible to access the count, page, slot and state values of the selected widget, stored respectively in the ``ajjgui.count``, ``ajjgui.page``, ``ajjgui.slot`` and ``ajjgui.state`` scores of this player. The NBT of the selected widget is accessible from the ``Widget`` NBT tag in the ``ajjgui:gui`` data storage. Any items added or removed from an *itemslot* are accessible from the ``In`` and ``Out`` NBT tags respectively in the ``ajjgui:itemslot`` data storage. Likewise, any items added to an *itembin* are accessible from the ``In`` NBT tag in the ``ajjgui:itembin`` data storage.
 
-### Examples
+#### Examples
 
 1. A *button* running a command referencing the player that pressed it:
 
@@ -479,7 +479,7 @@ execute if score @s ajjgui.state matches 1 run say set switch to Enabled
 
 For every GUI compiled, there is a marker entity located at the container's coordinates with the ``"ajjgui.gui"`` scoreboard tag. This entity stores the page value in its ``ajjgui.page`` score as well as the page list in its ``data.GUI`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be manually modified to achieve desired results. In order for the changes to be applied, ``/function ajjgui:_reload`` needs to be run. Otherwise, the GUI is updated upon user interaction. *It is highly recommended to to read the rest of the documentation before proceeding with such modifications as any existing alternatives may be substantially easier to work with.*
 
-### Examples
+#### Examples
 
 1. A command setting the nearest GUI's page to the first one:
 
