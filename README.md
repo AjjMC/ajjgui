@@ -85,6 +85,8 @@ The *placeholder* is a widget that cannot be interacted with and is used to disp
 
 #### Example
 
+A *placeholder*:
+
 ```
 /give @p minecraft:light_gray_stained_glass_pane{ajjgui:{Widget:"placeholder"},display:{Name:'{"text":"","italic":"false"}'}}
 ```
@@ -288,6 +290,8 @@ The *itembin* is a widget that clears all items inserted by the player in a part
 ```
 
 #### Example
+
+An *itembin*:
 
 ```
 /give @p minecraft:bucket{ajjgui:{Widget:"itembin"},display:{Name:'{"text":"Recycle Bin","italic":"false"}'}}
