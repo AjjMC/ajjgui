@@ -483,6 +483,11 @@ For every GUI compiled, there is a marker entity located at the container's coor
 
 ```
 /scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] ajjgui.page 0
+```
+
+Then:
+
+```
 /function ajjgui:_reload
 ```
 
@@ -490,6 +495,11 @@ For every GUI compiled, there is a marker entity located at the container's coor
 
 ```
 /data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.GUI[0][{Slot:0b}].id set value "minecraft:stone"
+```
+
+Then:
+
+```
 /function ajjgui:_reload
 ```
 
