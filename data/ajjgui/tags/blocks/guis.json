@@ -1,15 +1,15 @@
 {
   "values": [
     "minecraft:chest",
-	  "minecraft:trapped_chest",
-	  "minecraft:dispenser",
-	  "minecraft:furnace",
+    "minecraft:trapped_chest",
+    "minecraft:dispenser",
+    "minecraft:furnace",
     "minecraft:brewing_stand",
-	  "minecraft:hopper",
+    "minecraft:hopper",
     "minecraft:dropper",
-	  "#minecraft:shulker_boxes",
+    "#minecraft:shulker_boxes",
     "minecraft:barrel",
-	  "minecraft:smoker",
+    "minecraft:smoker",
     "minecraft:blast_furnace"
   ]
 }
