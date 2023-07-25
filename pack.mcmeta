@@ -1,6 +1,6 @@
 {
-    "pack": {
-        "pack_format": 15,
-        "description": "A custom GUI mapmaking framework using in-game Minecraft commands"
-    }
+  "pack": {
+    "pack_format": 15,
+    "description": "A custom GUI mapmaking framework using in-game Minecraft commands"
+  }
 }
