@@ -53,8 +53,8 @@ There are 8 types of GUI widgets available:
 * [Counter](#counter)
 * [Switch](#switch)
 * [Radiobutton](#radiobutton)
-* [Itemslot](#itemslot)
 * [Itembin](#itembin)
+* [Itemslot](#itemslot)
 * [Scrollbutton](#scrollbutton)
 
 An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_tutorial``. The tutorial provides the player with premade demo widgets to experiment with. Multiple examples are given, both here and in-game, to help provide a better understanding of their custom NBT. The following section explains all the different types of widgets available and how they can be customized. Once obtained, these items can be placed inside shulker boxes, with each shulker box corresponding to a different GUI page. The shulker boxes can be arranged based on their page number and compiled to build a functional GUI in-game. This manual can be accessed with ``/function ajjgui:_manual``.
