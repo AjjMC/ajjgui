@@ -5,7 +5,7 @@
 </p>
 
 <p align = "center">
-  <i>A GUI example demonstrating some of the datapack's features, which was made in less than 5 minutes and in-game!</i>
+  <i>A GUI example demonstrating some of the datapack's capabilities, which was made in less than 5 minutes and in-game!</i>
 </p>
 
 ## Overview
@@ -16,7 +16,7 @@ The aim of this datapack is to serve as an advanced mapmaking framework for item
 
 The datapack has the following features:
 
-* NBT-based standard for quick and easy creation of advanced item-based GUIs
+* NBT standard for quick and easy creation of advanced item-based GUIs
 * Completely in-game workflow, with the entire datapack being a black box that the developer can ignore
 * Robust design, support for multiplayer and no interference with player inventories
 * Complete documentation, in-game tutorial and demos
@@ -78,7 +78,7 @@ The *placeholder* is a widget that cannot be interacted with and is used to disp
 #### Usage
 
 ```
-/give @s <item id>{ajjgui:{Widget:"placeholder"},<other tags for item>}
+/give @s <item id>{ajjgui:{Widget:"placeholder",<optional ajjgui tags>}}
 ```
 
 #### Example
@@ -112,7 +112,7 @@ The *button* is a widget that changes the GUI page, exits the GUI and/or runs a 
 #### Usage
 
 ```
-/give @s <item id>{ajjgui:{Widget:"button"},<other tags for item>}
+/give @s <item id>{ajjgui:{Widget:"button",<optional ajjgui tags>}}
 ```
 
 #### Examples
@@ -136,7 +136,7 @@ The *counter* is a widget that changes to a different count of the same item whe
 #### Usage
 
 ```
-/give @s <item id>{ajjgui:{Widget:"counter",Values:[<value 1>,<value 2>,…,<value N>]},<other tags for item>} <default value>
+/give @s <item id>{ajjgui:{Widget:"counter",Values:[<value 1>,<value 2>,…,<value N>],<optional ajjgui tags>}} <default value>
 ```
 
 where N is the number of states.
@@ -188,7 +188,7 @@ The *switch* is a widget that changes to a different item when clicked, followin
 #### Usage
 
 ```
-/give @s <default item id>{ajjgui:{Widget: "switch",Items:[<item 1>,<item 2>,…,<item N>]},<other tags for default item>}
+/give @s <default item id>{ajjgui:{Widget: "switch",Items:[<item 1>,<item 2>,…,<item N>],<optional ajjgui tags>}}
 ```
 
 where N is the number of states.
@@ -242,7 +242,7 @@ The *radiobutton* is a widget that changes between an "OFF" and "ON" state item 
 #### Usage
 
 ```
-/give @s <default item id>{ajjgui:{Widget:"radiobutton",OFF:<off item>,ON:<on item>,Group:<group>},<other tags for default item>}
+/give @s <default item id>{ajjgui:{Widget:"radiobutton",OFF:<off item>,ON:<on item>,<optional ajjgui tags>}}
 ```
 
 #### Examples
@@ -284,7 +284,7 @@ The *itembin* is a widget that clears all items inserted by the player in a part
 #### Usage
 
 ```
-/give @s <item id>{ajjgui:{Widget:"itembin"},<other tags for item>}
+/give @s <item id>{ajjgui:{Widget:"itembin",<optional ajjgui tags>}}
 ```
 
 #### Example
@@ -317,7 +317,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 #### Usage
 
 ```
-/give @s <default item id>{ajjgui:{Widget:"itemslot",Placeholder:<placeholder item>,Size:<stack size>},<other tags for default item>}
+/give @s <default item id>{ajjgui:{Widget:"itemslot",Placeholder:<placeholder item>,<optional ajjgui tags>}}
 ```
 
 #### Examples
@@ -369,7 +369,7 @@ The *scrollbutton* is a widget that cycles one or more lists of *static* widgets
 #### Usage
 
 ```
-/give @s <item id>{ajjgui:{Widget:"scrollbutton",Widgets:[[<widget 1,1>,<widget 1,2>,…,<widget 1,L_1>],[<widget 2,1>,<widget 2,2>,…,<widget 2,L_2>],…,[<widget N,1>,<widget N,2>,…,<widget N,L_N>]],Slots:[[<slot 1,1>,<slot 1,2>,…,<slot 1,M_1>],[<slot 2,1>,<slot 2,2>,…,<slot 2,M_2>],…,[<slot N,1>,<slot N,2>,…,<slot N,M_N>]]},<other tags for item>}
+/give @s <item id>{ajjgui:{Widget:"scrollbutton",Widgets:[[<widget 1,1>,<widget 1,2>,…,<widget 1,L_1>],[<widget 2,1>,<widget 2,2>,…,<widget 2,L_2>],…,[<widget N,1>,<widget N,2>,…,<widget N,L_N>]],Slots:[[<slot 1,1>,<slot 1,2>,…,<slot 1,M_1>],[<slot 2,1>,<slot 2,2>,…,<slot 2,M_2>],…,[<slot N,1>,<slot N,2>,…,<slot N,M_N>]],<optional ajjgui tags>}}
 ```
 
 where L_x and M_y are the numbers of widgets and slots in each widget list and slot list respectively, and N is the number of widget list and slot list pairs.
