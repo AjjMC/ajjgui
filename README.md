@@ -71,10 +71,10 @@ An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_
 
 The *placeholder* is a widget that cannot be interacted with and is used to display an item.
 
-| NBT Tag           | Default           | Type           |
-|:------------------|:------------------|:---------------|
-| ``ajjgui.Fixed``  | ``0b``            | Boolean (Byte) |
-| ``ajjgui.Widget`` | ``"placeholder"`` | String         |
+| NBT Tag           | Default                             | Type           |
+|:------------------|:------------------------------------|:---------------|
+| ``ajjgui.Fixed``  | ``0b``                              | Boolean (Byte) |
+| ``ajjgui.Widget`` | Required (``"placeholder"`` or N/A) | String         |
 
 #### Usage
 
