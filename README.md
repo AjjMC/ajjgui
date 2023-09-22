@@ -305,6 +305,8 @@ An *itembin*:
   <img src="assets/itembin.gif" width="350">
 </p>
 
+> **NOTE:** The *itembin* has a built-in cooldown of 0.4s.
+
 ### Itemslot
 
 The *itemslot* is a widget that stores items inserted by the player in a particular slot in the GUI. Once one or more stacked items are inserted, the current ones occupying the slot (if any) are replaced and returned to the player's inventory. When the *itemslot* is not being used, a placeholder item occupies the slot. This is stored in the ``ajjgui.Placeholder`` NBT tag. The maximum number of items in an *itemslot* is stored in the ``ajjgui.Size`` NBT tag, which cannot be larger than ``64b``. Any excess items are returned to the player. Whether an *itemslot* has an item in it is determined by the ``ajjgui.State`` NBT tag.
@@ -356,6 +358,8 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 <p align = "center">
   <img src="assets/itemslot.gif" width="350">
 </p>
+
+> **NOTE:** The *itemslot* has a built-in cooldown of 0.4s.
 
 ### Scrollbutton
 
