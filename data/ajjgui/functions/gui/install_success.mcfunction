@@ -21,6 +21,7 @@ scoreboard objectives add ajjgui.page dummy
 scoreboard objectives add ajjgui.slot dummy
 scoreboard objectives add ajjgui.state dummy
 scoreboard objectives add ajjgui.count dummy
+scoreboard objectives add ajjgui.cooldown dummy
 
 scoreboard players set #two ajjgui 2
 

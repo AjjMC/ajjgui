@@ -22,6 +22,7 @@ scoreboard objectives remove ajjgui.page
 scoreboard objectives remove ajjgui.slot
 scoreboard objectives remove ajjgui.state
 scoreboard objectives remove ajjgui.count
+scoreboard objectives remove ajjgui.cooldown
 
 data remove storage ajjgui:gui Page
 data remove storage ajjgui:gui Version
