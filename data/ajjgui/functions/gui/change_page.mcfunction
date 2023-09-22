@@ -32,113 +32,33 @@ execute if score @s ajjgui.page matches 24 run data modify storage ajjgui:gui Te
 execute if score @s ajjgui.page matches 25 run data modify storage ajjgui:gui Temp set from entity @s data.GUI[25]
 execute if score @s ajjgui.page matches 26 run data modify storage ajjgui:gui Temp set from entity @s data.GUI[26]
 
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:0b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:0b}] set from storage ajjgui:gui Page[{Slot:0b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:1b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:1b}] set from storage ajjgui:gui Page[{Slot:1b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:2b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:2b}] set from storage ajjgui:gui Page[{Slot:2b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:3b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:3b}] set from storage ajjgui:gui Page[{Slot:3b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:4b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:4b}] set from storage ajjgui:gui Page[{Slot:4b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:5b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:5b}] set from storage ajjgui:gui Page[{Slot:5b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:6b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:6b}] set from storage ajjgui:gui Page[{Slot:6b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:7b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:7b}] set from storage ajjgui:gui Page[{Slot:7b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:8b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:8b}] set from storage ajjgui:gui Page[{Slot:8b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:9b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:9b}] set from storage ajjgui:gui Page[{Slot:9b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:10b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:10b}] set from storage ajjgui:gui Page[{Slot:10b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:11b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:11b}] set from storage ajjgui:gui Page[{Slot:11b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:12b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:12b}] set from storage ajjgui:gui Page[{Slot:12b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:13b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:13b}] set from storage ajjgui:gui Page[{Slot:13b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:14b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:14b}] set from storage ajjgui:gui Page[{Slot:14b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:15b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:15b}] set from storage ajjgui:gui Page[{Slot:15b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:16b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:16b}] set from storage ajjgui:gui Page[{Slot:16b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:17b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:17b}] set from storage ajjgui:gui Page[{Slot:17b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:18b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:18b}] set from storage ajjgui:gui Page[{Slot:18b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:19b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:19b}] set from storage ajjgui:gui Page[{Slot:19b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:20b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:20b}] set from storage ajjgui:gui Page[{Slot:20b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:21b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:21b}] set from storage ajjgui:gui Page[{Slot:21b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:22b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:22b}] set from storage ajjgui:gui Page[{Slot:22b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:23b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:23b}] set from storage ajjgui:gui Page[{Slot:23b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:24b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:24b}] set from storage ajjgui:gui Page[{Slot:24b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:25b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:25b}] set from storage ajjgui:gui Page[{Slot:25b}]
-data remove storage ajjgui:gui Temp1
-
-data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Page[{Slot:26b}].tag.ajjgui.Fixed
-execute if data storage ajjgui:gui {Temp1:1b} run data modify storage ajjgui:gui Temp[{Slot:26b}] set from storage ajjgui:gui Page[{Slot:26b}]
-data remove storage ajjgui:gui Temp1
+execute if data storage ajjgui:gui Page[{Slot:0b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:0b}] set from storage ajjgui:gui Page[{Slot:0b}]
+execute if data storage ajjgui:gui Page[{Slot:1b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:1b}] set from storage ajjgui:gui Page[{Slot:1b}]
+execute if data storage ajjgui:gui Page[{Slot:2b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:2b}] set from storage ajjgui:gui Page[{Slot:2b}]
+execute if data storage ajjgui:gui Page[{Slot:3b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:3b}] set from storage ajjgui:gui Page[{Slot:3b}]
+execute if data storage ajjgui:gui Page[{Slot:4b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:4b}] set from storage ajjgui:gui Page[{Slot:4b}]
+execute if data storage ajjgui:gui Page[{Slot:5b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:5b}] set from storage ajjgui:gui Page[{Slot:5b}]
+execute if data storage ajjgui:gui Page[{Slot:6b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:6b}] set from storage ajjgui:gui Page[{Slot:6b}]
+execute if data storage ajjgui:gui Page[{Slot:7b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:7b}] set from storage ajjgui:gui Page[{Slot:7b}]
+execute if data storage ajjgui:gui Page[{Slot:8b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:8b}] set from storage ajjgui:gui Page[{Slot:8b}]
+execute if data storage ajjgui:gui Page[{Slot:9b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:9b}] set from storage ajjgui:gui Page[{Slot:9b}]
+execute if data storage ajjgui:gui Page[{Slot:10b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:10b}] set from storage ajjgui:gui Page[{Slot:10b}]
+execute if data storage ajjgui:gui Page[{Slot:11b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:11b}] set from storage ajjgui:gui Page[{Slot:11b}]
+execute if data storage ajjgui:gui Page[{Slot:12b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:12b}] set from storage ajjgui:gui Page[{Slot:12b}]
+execute if data storage ajjgui:gui Page[{Slot:13b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:13b}] set from storage ajjgui:gui Page[{Slot:13b}]
+execute if data storage ajjgui:gui Page[{Slot:14b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:14b}] set from storage ajjgui:gui Page[{Slot:14b}]
+execute if data storage ajjgui:gui Page[{Slot:15b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:15b}] set from storage ajjgui:gui Page[{Slot:15b}]
+execute if data storage ajjgui:gui Page[{Slot:16b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:16b}] set from storage ajjgui:gui Page[{Slot:16b}]
+execute if data storage ajjgui:gui Page[{Slot:17b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:17b}] set from storage ajjgui:gui Page[{Slot:17b}]
+execute if data storage ajjgui:gui Page[{Slot:18b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:18b}] set from storage ajjgui:gui Page[{Slot:18b}]
+execute if data storage ajjgui:gui Page[{Slot:19b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:19b}] set from storage ajjgui:gui Page[{Slot:19b}]
+execute if data storage ajjgui:gui Page[{Slot:20b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:20b}] set from storage ajjgui:gui Page[{Slot:20b}]
+execute if data storage ajjgui:gui Page[{Slot:21b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:21b}] set from storage ajjgui:gui Page[{Slot:21b}]
+execute if data storage ajjgui:gui Page[{Slot:22b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:22b}] set from storage ajjgui:gui Page[{Slot:22b}]
+execute if data storage ajjgui:gui Page[{Slot:23b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:23b}] set from storage ajjgui:gui Page[{Slot:23b}]
+execute if data storage ajjgui:gui Page[{Slot:24b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:24b}] set from storage ajjgui:gui Page[{Slot:24b}]
+execute if data storage ajjgui:gui Page[{Slot:25b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:25b}] set from storage ajjgui:gui Page[{Slot:25b}]
+execute if data storage ajjgui:gui Page[{Slot:26b,tag:{ajjgui:{Fixed:1b}}}] run data modify storage ajjgui:gui Temp[{Slot:26b}] set from storage ajjgui:gui Page[{Slot:26b}]
 
 execute if score @s ajjgui.page matches 0 run data modify entity @s data.GUI[0] set from storage ajjgui:gui Temp
 execute if score @s ajjgui.page matches 1 run data modify entity @s data.GUI[1] set from storage ajjgui:gui Temp
