@@ -30,6 +30,7 @@ execute store result score #y ajjgui run data get block ~ ~ ~ y
 execute store result score #z ajjgui run data get block ~ ~ ~ z
 
 function ajjgui:gui/set_version
+data modify storage ajjgui:gui Version set from storage ajjgui:gui Temp
 
 tellraw @a [{"text":"Installed "},{"text":"ajjgui","color":"gray"},{"text":" at "},{"score":{"name":"#x","objective":"ajjgui"}},{"text":", "},{"score":{"name":"#y","objective":"ajjgui"}},{"text":", "},{"score":{"name":"#z","objective":"ajjgui"}}]
 tellraw @a [{"text":"Version: "},{"nbt":"Version","storage":"ajjgui:gui","color":"gray"},{"text":"\n"}]
