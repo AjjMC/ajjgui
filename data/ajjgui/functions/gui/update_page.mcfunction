@@ -28,4 +28,4 @@ execute if score @s ajjgui.slot matches 26 run data modify storage ajjgui:gui Pa
 
 execute as @e[type=minecraft:marker,tag=ajjgui.gui,tag=ajjgui.active_gui] run function ajjgui:gui/save_page
 
-execute if data storage ajjgui:gui Widget.tag.ajjgui.Page as @e[type=minecraft:marker,tag=ajjgui.gui,tag=ajjgui.active_gui,limit=1] run function ajjgui:gui/change_page
+execute if data storage ajjgui:gui Widget.tag.ajjgui.Page as @e[type=minecraft:marker,tag=ajjgui.gui,tag=ajjgui.active_gui] run function ajjgui:gui/change_page
