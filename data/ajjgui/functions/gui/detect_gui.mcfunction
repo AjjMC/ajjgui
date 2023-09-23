@@ -33,55 +33,81 @@ execute if score #temp ajjgui matches ..26 run tag @s add ajjgui.active_gui
 
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:0b}] set from storage ajjgui:gui Temp1[{Slot:0b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:1b}] set from storage ajjgui:gui Temp1[{Slot:1b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:2b}] set from storage ajjgui:gui Temp1[{Slot:2b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:3b}] set from storage ajjgui:gui Temp1[{Slot:3b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:4b}] set from storage ajjgui:gui Temp1[{Slot:4b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:5b}] set from storage ajjgui:gui Temp1[{Slot:5b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:6b}] set from storage ajjgui:gui Temp1[{Slot:6b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:7b}] set from storage ajjgui:gui Temp1[{Slot:7b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:8b}] set from storage ajjgui:gui Temp1[{Slot:8b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:9b}] set from storage ajjgui:gui Temp1[{Slot:9b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:10b}] set from storage ajjgui:gui Temp1[{Slot:10b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:11b}] set from storage ajjgui:gui Temp1[{Slot:11b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:12b}] set from storage ajjgui:gui Temp1[{Slot:12b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:13b}] set from storage ajjgui:gui Temp1[{Slot:13b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:14b}] set from storage ajjgui:gui Temp1[{Slot:14b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:15b}] set from storage ajjgui:gui Temp1[{Slot:15b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:16b}] set from storage ajjgui:gui Temp1[{Slot:16b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:17b}] set from storage ajjgui:gui Temp1[{Slot:17b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:18b}] set from storage ajjgui:gui Temp1[{Slot:18b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:19b}] set from storage ajjgui:gui Temp1[{Slot:19b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:20b}] set from storage ajjgui:gui Temp1[{Slot:20b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:21b}] set from storage ajjgui:gui Temp1[{Slot:21b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:22b}] set from storage ajjgui:gui Temp1[{Slot:22b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:23b}] set from storage ajjgui:gui Temp1[{Slot:23b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:24b}] set from storage ajjgui:gui Temp1[{Slot:24b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:25b}] set from storage ajjgui:gui Temp1[{Slot:25b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
+
 execute store success score #temp ajjgui run data modify storage ajjgui:gui Temp[{Slot:26b}] set from storage ajjgui:gui Temp1[{Slot:26b}]
 execute if score #temp ajjgui matches 1 run tag @s add ajjgui.active_gui
