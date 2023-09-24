@@ -517,7 +517,7 @@ Then:
 /function ajjgui:_reload
 ```
 
-> **NOTE:** The compiler adds the ``ajjgui.Slot`` and ``ajjgui.Compiled`` NBT tags to each widget. These two must not be changed when manually modifying NBT.
+> **NOTE:** The compiler adds the ``ajjgui.Slot`` and ``ajjgui.Compiled`` NBT tags to each widget. These two must not be changed when directly modifying NBT.
 
 > **NOTE:** Decompiling a GUI resets it to the state it was in when compiled.
 
