@@ -23,7 +23,7 @@ The datapack has the following features:
 
 ## Downloading, Installing and Updating
 
-The datapack can be downloaded from this repository by clicking on "Code" and then "Download ZIP". The folder inside the ZIP file is the datapack. After this folder has been added to the datapacks folder of a Minecraft world, ``/reload`` needs to be run in-game. A list of the datapack's commands is available via ``/function ajjgui:_help``. By convention, all user functions begin with an underscore, "_", to be distinguished from the backend ones.
+The datapack can be downloaded from this repository by clicking on "Code" and then "Download ZIP". The folder inside the ZIP file is the datapack. After this folder has been added to the "datapacks" folder of a Minecraft world, ``/reload`` needs to be run in-game. A list of the datapack's commands is available via ``/function ajjgui:_help``. By convention, all user functions begin with an underscore, ``_``, to be distinguished from the backend ones.
 
 | User Function                   | Description                                  |
 |:--------------------------------|:---------------------------------------------|
@@ -40,7 +40,7 @@ The datapack can be downloaded from this repository by clicking on "Code" and th
 | ``/function ajjgui:_version``   | Displays datapack version                    |
 | ``/function ajjgui:_widget/``   | Gives GUI demo widgets                       |
 
-The datapack can be installed by running ``/function ajjgui:_install`` at any location in the world, which generates a 3x1 tower consisting of two command blocks and a shulker box. These block entities are needed for the datapack to be fully functional and, as such, cannot be destroyed. *They must also be placed in a chunk that is constantly loaded.* The tower can be relocated by repeating the installation command, and the previous one generated is automatically removed. The datapack must be reinstalled if an updated version of it has been downloaded. It can be uninstalled using ``/function ajjgui:_uninstall``, which removes all data associated with it from the world, *including any GUIs made with it*.
+The datapack can be installed by running ``/function ajjgui:_install`` at any location in the world, which generates a 3x1 tower consisting of two command blocks and a shulker box. These block entities are needed for the datapack to be fully functional and, as such, cannot be destroyed. *They must also be placed in a chunk that is constantly loaded.* The tower can be relocated by repeating the installation command elsewhere. Any updated versions of the datapack are automatically installed at the same location upon reloading the world. The datapack can be uninstalled using ``/function ajjgui:_uninstall``, which removes all data associated with it from the world and decompiles any existing GUIs.
 
 ## Creating a GUI
 
