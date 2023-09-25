@@ -1,5 +1,5 @@
 execute at @e[type=minecraft:marker,tag=ajjgui.gui] positioned ~ ~1 ~ run setblock ~ ~ ~ minecraft:chest
-execute as @e[type=minecraft:marker,tag=ajjgui.gui] at @s positioned ~ ~1 ~ run function ajjgui:_decompile
+execute at @e[type=minecraft:marker,tag=ajjgui.gui] positioned ~ ~1 ~ run function ajjgui:_decompile
 
 execute at @e[type=minecraft:marker,tag=ajjgui.cmd1] run setblock ~ ~ ~ minecraft:air
 execute at @e[type=minecraft:marker,tag=ajjgui.cmd2] run setblock ~ ~ ~ minecraft:air
