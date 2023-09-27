@@ -1,4 +1,4 @@
-# A Custom GUI Mapmaking Framework Using In-Game Minecraft Commands (Minecraft: Java Edition Datapack)
+# A GUI Framework for Minecraft Mapmaking Using In-Game Commands
 
 <p align = "center">
   <img src="assets/gui.gif" width="350">
@@ -10,9 +10,9 @@
 
 ## Overview
 
-Minecraft servers frequently use custom user interfaces that utilize the inventory of a container (e.g., a chest), the items of which serve as interactable elements. While there are plugins making the design of such menus trivial to developers, Minecraft commands and, by extension, datapacks are much harder to work with, and their limitations often make it difficult to replicate these item-based GUIs usually seen on servers. Certain datapacks as well as datapack generators have been made with the intent to provide developers with a GUI framework. However, these are often restricted to essential features that rarely go beyond the creation of buttons and page navigation. Furthermore, existing approaches are based on adaptation of a datapack template in which the logic of specific GUIs is hard-coded, hindering scalability for large projects.
+Minecraft servers frequently use custom user interfaces that utilize the inventory of a container (e.g., a chest), the items of which serve as interactable elements. While there are plugins making the design of such menus trivial to server developers, Minecraft commands and, by extension, datapacks are much harder to work with, and their limitations often make it difficult to replicate these item-based GUIs in places where plugins are not available. Certain datapacks as well as datapack generators have been made with the intent to provide command developers with a GUI framework. However, these are often restricted to essential features that rarely go beyond the creation of buttons and page navigation. Furthermore, existing approaches are based on adaptation of a datapack template, in which the logic of specific GUIs is hard-coded, hindering scalability and maintenance for large projects.
 
-The aim of this datapack is to serve as an advanced mapmaking framework for item-based GUIs, allowing developers to easily create them in-game, without needing to consider any of the complex, low-level functionality or involving access to any of the files within the datapack. This is achieved by simply dragging and dropping items with custom NBT tags in containers, which the datapack compiles into functional GUIs. At the moment, the datapack is limited to block entities, such as barrels, droppers, hoppers or even brewing stands. However, there are future plans for personalized GUIs (i.e., using chest boats) that involve storing individual players' GUI instances in a database.
+The aim of this datapack is to serve as an advanced framework allowing users to easily create item-based GUIs in-game, without needing to consider any of the complex, low-level functionality or involving access to any of the files within the datapack. This is achieved by simply dragging and dropping items with custom NBT tags in containers, which the datapack compiles into functional GUIs. At the moment, the datapack is limited to block entities, such as barrels, droppers, hoppers or even brewing stands. However, there are future plans for personalized GUIs (i.e., using chest boats) that involve storing individual players' GUI instances in a database.
 
 The datapack has the following features:
 
