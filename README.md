@@ -192,7 +192,7 @@ The *switch* is a widget that changes to a different item when clicked, followin
 #### Usage
 
 ```
-/give @s <default item id>{ajjgui:{Widget: "switch",Items:[<item 1>,<item 2>,…,<item N>],<optional ajjgui tags>}}
+/give @s <default item id>{ajjgui:{Widget:"switch",Items:[<item 1>,<item 2>,…,<item N>],<optional ajjgui tags>}}
 ```
 
 where N is the number of states.
