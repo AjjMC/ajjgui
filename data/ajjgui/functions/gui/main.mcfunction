@@ -11,8 +11,6 @@ execute as @e[type=minecraft:marker,tag=ajjgui.gui] at @s unless block ~ ~ ~ #aj
 
 tag @e[type=minecraft:marker,tag=ajjgui.gui,tag=ajjgui.active_gui] remove ajjgui.active_gui
 
-execute at @e[type=minecraft:marker,tag=ajjgui.cmd1] run setblock ~ ~ ~ minecraft:command_block[facing=up]
-execute at @e[type=minecraft:marker,tag=ajjgui.cmd2] run setblock ~ ~ ~ minecraft:chain_command_block[facing=up]{auto:1b,Command:"tag @a[tag=ajjgui.user] remove ajjgui.user"}
 execute at @e[type=minecraft:marker,tag=ajjgui.box] run setblock ~ ~ ~ minecraft:yellow_shulker_box
 
 scoreboard players reset #bool ajjgui

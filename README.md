@@ -40,7 +40,7 @@ The datapack can be downloaded from this repository by clicking on "Code" and th
 | ``/function ajjgui:_version``   | Displays datapack version                    |
 | ``/function ajjgui:_widget/``   | Gives GUI demo widgets                       |
 
-The datapack can be installed by running ``/function ajjgui:_install`` at any location in the world, which generates a 3x1 tower consisting of two command blocks and a shulker box. These block entities are needed for the datapack to be fully functional and cannot be destroyed. *They must also be placed in a chunk that is constantly loaded.* The tower can be relocated by repeating the installation command elsewhere. Any updated versions of the datapack are automatically installed at the same location upon reloading the world. The datapack can be uninstalled using ``/function ajjgui:_uninstall``, which removes all data associated with it from the world and decompiles any existing GUIs.
+The datapack can be installed by running ``/function ajjgui:_install`` at any location in the world, which generates a shulker box. This needs to be located in a loaded chunk for the datapack to be fully functional and cannot be destroyed. The shulker box can be relocated by repeating the installation command elsewhere. Any updated versions of the datapack are automatically installed at the same location upon reloading the world. The datapack can be uninstalled using ``/function ajjgui:_uninstall``, which removes all data associated with it from the world and decompiles any existing GUIs.
 
 ## Creating a GUI
 
@@ -464,20 +464,20 @@ A *button* exiting the GUI:
 
 ## Running GUI Commands and Accessing Data
 
-Each of the above widgets, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by an external command block instead of the player themselves. The ``"ajjgui.user"`` scoreboard tag can be used to target the player triggering the widget. In this way, it is also possible to access the count, page, slot and state values of the selected widget, stored respectively in the ``ajjgui.count``, ``ajjgui.page``, ``ajjgui.slot`` and ``ajjgui.state`` scores of this player. The NBT of the selected widget is accessible from the ``Widget`` NBT tag in the ``ajjgui:gui`` data storage. Any items added or removed from an *itemslot* are accessible from the ``In`` and ``Out`` NBT tags respectively in the ``ajjgui:itemslot`` data storage. Likewise, any items added to an *itembin* are accessible from the ``In`` NBT tag in the ``ajjgui:itembin`` data storage.
+Each of the above widgets, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by the player triggering the widget. In this way, it is possible to access the count, page, slot and state values of the selected widget, stored respectively in the ``ajjgui.count``, ``ajjgui.page``, ``ajjgui.slot`` and ``ajjgui.state`` scores of this player. The NBT of the selected widget is accessible from the ``Widget`` NBT tag in the ``ajjgui:gui`` data storage. Any items added or removed from an *itemslot* are accessible from the ``In`` and ``Out`` NBT tags respectively in the ``ajjgui:itemslot`` data storage. Likewise, any items added to an *itembin* are accessible from the ``In`` NBT tag in the ``ajjgui:itembin`` data storage.
 
 #### Examples
 
 1. A *button* running a command referencing the player that pressed it:
 
 ```
-/give @p minecraft:arrow{ajjgui:{Widget:"button",Page:1b,Relative:1b,Command:"execute as @a[tag=ajjgui.user] run say pressed button to Next Page"},display:{Name:'{"text":"Go to Next Page","italic":"false"}'}}
+/give @p minecraft:arrow{ajjgui:{Widget:"button",Page:1b,Relative:1b,Command:"say @s pressed button to Next Page"},display:{Name:'{"text":"Go to Next Page","italic":"false"}'}}
 ```
 
 2. A *switch* running a command based on its current state:
 
 ```
-/give @p minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","italic":"false"}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","italic":"false"}'}}}],Command:"execute as @a[tag=ajjgui.user] run function name:func"},display:{Name:'{"text":"Disabled","italic":"false"}'}}
+/give @p minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","italic":"false"}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","italic":"false"}'}}}],Command:"function name:func"},display:{Name:'{"text":"Disabled","italic":"false"}'}}
 ```
 
 where the following commands are located in a function ```name:func``` within another datapack:

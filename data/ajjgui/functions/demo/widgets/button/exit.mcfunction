@@ -1,1 +1,1 @@
-give @s minecraft:barrier{ajjgui:{Widget:"button",Exit:1b,Command:"execute as @a[tag=ajjgui.user] run function ajjgui:demo/outputs/button/exit"},display:{Name:'{"text":"Exit","color":"white","italic":"false"}'}}
+give @s minecraft:barrier{ajjgui:{Widget:"button",Exit:1b,Command:"function ajjgui:demo/outputs/button/exit"},display:{Name:'{"text":"Exit","color":"white","italic":"false"}'}}
