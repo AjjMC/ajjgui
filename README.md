@@ -63,7 +63,7 @@ An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_
 
 > **NOTE:** Some of the following commands are too long to fit in the chat box and need to be executed using a command block.
 
-> **NOTE:** The right data types must be used. Where a byte list is specified, an integer list is also supported for simplicity.
+> **NOTE:** For custom NBT, it is important to check that the right data types are being used (e.g., ``{ajjgui:{Exit:1b}}`` and not ``{ajjgui:{Exit:1}}``), that values are within the specified range (e.g., ``{ajjgui:{Exit:1b}}`` and not ``{ajjgui:{Exit:2b}}``, where ``ajjgui.Exit`` here can only be ``0b`` or ``1b``) and that there are no errors (e.g., forgetting to set an item's ``Count`` value within the commonly used format ``{id:<item id>,Count:<item count>,tag:<item tags>}`` sets it to zero, which is not immediately noticeable when the compound is nested in custom tags such as the ``ajjgui.Items`` list for post-compiler use). The GUI compiler is only capable of initializing required NBT with default values and does not detect errors or adjust data, unlike the game, which often does this with its own NBT (e.g., changing types, removing redundancy). While there are cases where errors in custom NBT, such as incorrect data types, may be internally resolved by the datapack at later stages, this behavior is inconsistent and must not be assumed.
 
 > **NOTE:** The ``ajjgui.Command``, ``ajjgui.Exit``, ``ajjgui.Fixed``, ``ajjgui.Page`` and ``ajjgui.Relative`` NBT tags are covered separately in later sections.
 
@@ -94,7 +94,7 @@ A *placeholder*:
   <img src="assets/placeholder.gif" width="350">
 </p>
 
-> **NOTE:** If a GUI slot is empty, the compiler adds a light gray stained glass pane *placeholder* with a blank name in its place.
+> **NOTE:** If a GUI slot is empty, the GUI compiler adds a light gray stained glass pane *placeholder* with a blank name in its place.
 
 > **NOTE:** If the ``ajjgui.Widget`` NBT tag of any item is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional, and no specific tags are required.
 
@@ -149,25 +149,25 @@ where N is the number of states.
 1. A *counter* repeating the sequence 1 to 16, starting with 1. The default value is the same as the first value in ``ajjgui.Values``:
 
 ```
-/give @p minecraft:black_stained_glass_pane{ajjgui:{Widget:"counter",Values:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]},display:{Name:'{"text":"Count:","italic":"false"}'}}
+/give @p minecraft:black_stained_glass_pane{ajjgui:{Widget:"counter",Values:[1b,2b,3b,4b,5b,6b,7b,8b,9b,10b,11b,12b,13b,14b,15b,16b]},display:{Name:'{"text":"Count:","italic":"false"}'}}
 ```
 
 2. A *counter* repeating the sequence 1 to 4, starting with 1. The default value is the same as the first value in ``ajjgui.Values``:
 
 ```
-/give @p minecraft:black_stained_glass_pane{ajjgui:{Widget:"counter",Values:[1,2,3,4]},display:{Name:'{"text":"Count:","italic":"false"}'}}
+/give @p minecraft:black_stained_glass_pane{ajjgui:{Widget:"counter",Values:[1b,2b,3b,4b]},display:{Name:'{"text":"Count:","italic":"false"}'}}
 ```
 
 3. A *counter* beginning with a default value of 64, followed by the sequence 2 to 16, that continues by repeating the sequence 1 to 16:
 
 ```
-/give @p minecraft:black_stained_glass_pane{ajjgui:{Widget:"counter",Values:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]},display:{Name:'{"text":"Count:","italic":"false"}'}} 64
+/give @p minecraft:black_stained_glass_pane{ajjgui:{Widget:"counter",Values:[1b,2b,3b,4b,5b,6b,7b,8b,9b,10b,11b,12b,13b,14b,15b,16b]},display:{Name:'{"text":"Count:","italic":"false"}'}} 64
 ```
 
 4. A *counter* repeating the sequence 1 to 16, starting with 16. The default value is the same as the first value in ``ajjgui.Values`` (now rearranged). The value of ``ajjgui.State`` is set to ``1b`` to match the states:
 
 ```
-/give @p minecraft:black_stained_glass_pane{ajjgui:{Widget:"counter",Values:[16,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],State:15b},display:{Name:'{"text":"Count:","italic":"false"}'}} 16
+/give @p minecraft:black_stained_glass_pane{ajjgui:{Widget:"counter",Values:[16b,1b,2b,3b,4b,5b,6b,7b,8b,9b,10b,11b,12b,13b,14b,15b],State:15b},display:{Name:'{"text":"Count:","italic":"false"}'}} 16
 ```
 
 <p align = "center">
@@ -391,7 +391,7 @@ where L_x and M_y are the numbers of widgets and slots in each widget list and s
 A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each button leads to a different page when clicked. There is a single widget list of length 6 and a single slot list of length 4:
 
 ```
-/give @p minecraft:spectral_arrow{ajjgui:{Widget:"scrollbutton",Widgets:[[{id:"minecraft:paper",Count:1b,tag:{ajjgui:{Widget:"button",Page:0b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:2b,tag:{ajjgui:{Widget:"button",Page:1b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:3b,tag:{ajjgui:{Widget:"button",Page:2b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:4b,tag:{ajjgui:{Widget:"button",Page:3b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:5b,tag:{ajjgui:{Widget:"button",Page:4b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:6b,tag:{ajjgui:{Widget:"button",Page:5b},display:{Name:'{"text":"Select","italic":"false"}'}}}]],Slots:[[11,12,13,14]]},display:{Name:'{"text":"Next","italic":"false"}'}}
+/give @p minecraft:spectral_arrow{ajjgui:{Widget:"scrollbutton",Widgets:[[{id:"minecraft:paper",Count:1b,tag:{ajjgui:{Widget:"button",Page:0b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:2b,tag:{ajjgui:{Widget:"button",Page:1b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:3b,tag:{ajjgui:{Widget:"button",Page:2b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:4b,tag:{ajjgui:{Widget:"button",Page:3b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:5b,tag:{ajjgui:{Widget:"button",Page:4b},display:{Name:'{"text":"Select","italic":"false"}'}}},{id:"minecraft:paper",Count:6b,tag:{ajjgui:{Widget:"button",Page:5b},display:{Name:'{"text":"Select","italic":"false"}'}}}]],Slots:[[11b,12b,13b,14b]]},display:{Name:'{"text":"Next","italic":"false"}'}}
 ```
 
 <p align = "center">
@@ -517,7 +517,7 @@ Then:
 /function ajjgui:_reload
 ```
 
-> **NOTE:** The compiler adds the ``ajjgui.Slot`` and ``ajjgui.Compiled`` NBT tags to each widget. These two must not be changed when directly modifying NBT.
+> **NOTE:** The GUI compiler adds the ``ajjgui.Slot`` and ``ajjgui.Compiled`` NBT tags to each widget. These two must not be changed when directly modifying NBT.
 
 > **NOTE:** Decompiling a GUI resets it to the state it was in when compiled.
 
