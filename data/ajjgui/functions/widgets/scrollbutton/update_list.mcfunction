@@ -1,7 +1,7 @@
 execute store result score #length ajjgui run data get storage ajjgui:gui Temp1
 
 data modify storage ajjgui:gui Temp2 set from storage ajjgui:gui Temp[0]
-execute store result storage ajjgui:gui Temp3 byte 1 run data get storage ajjgui:gui Temp1[0]
+data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[0]
 
 function ajjgui:widgets/scrollbutton/add_entry
 

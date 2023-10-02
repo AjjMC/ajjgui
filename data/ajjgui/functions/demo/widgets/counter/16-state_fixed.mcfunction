@@ -1,1 +1,1 @@
-give @s minecraft:black_stained_glass_pane{ajjgui:{Widget:"counter",Values:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],Command:"execute as @a[tag=ajjgui.user] run function ajjgui:demo/outputs/counter/16-state",Fixed:1b},display:{Name:'{"text":"Count:","italic":"false"}'}}
+give @s minecraft:black_stained_glass_pane{ajjgui:{Widget:"counter",Values:[1b,2b,3b,4b,5b,6b,7b,8b,9b,10b,11b,12b,13b,14b,15b,16b],Command:"execute as @a[tag=ajjgui.user] run function ajjgui:demo/outputs/counter/16-state",Fixed:1b},display:{Name:'{"text":"Count:","italic":"false"}'}}
