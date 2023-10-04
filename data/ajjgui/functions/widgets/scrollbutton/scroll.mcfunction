@@ -76,6 +76,9 @@ data remove storage ajjgui:gui Widget.tag.ajjgui.Widgets[24][0]
 data modify storage ajjgui:gui Widget.tag.ajjgui.Widgets[25] append from storage ajjgui:gui Widget.tag.ajjgui.Widgets[25][0]
 data remove storage ajjgui:gui Widget.tag.ajjgui.Widgets[25][0]
 
+data modify storage ajjgui:gui Widget.tag.ajjgui.Widgets[26] append from storage ajjgui:gui Widget.tag.ajjgui.Widgets[26][0]
+data remove storage ajjgui:gui Widget.tag.ajjgui.Widgets[26][0]
+
 data modify storage ajjgui:gui Temp set from storage ajjgui:gui Widget.tag.ajjgui.Widgets[0]
 data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Widget.tag.ajjgui.Slots[0]
 execute if data storage ajjgui:gui Widget.tag.ajjgui.Widgets[0] if data storage ajjgui:gui Widget.tag.ajjgui.Slots[0] run function ajjgui:widgets/scrollbutton/update_list
@@ -179,3 +182,7 @@ execute if data storage ajjgui:gui Widget.tag.ajjgui.Widgets[24] if data storage
 data modify storage ajjgui:gui Temp set from storage ajjgui:gui Widget.tag.ajjgui.Widgets[25]
 data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Widget.tag.ajjgui.Slots[25]
 execute if data storage ajjgui:gui Widget.tag.ajjgui.Widgets[25] if data storage ajjgui:gui Widget.tag.ajjgui.Slots[25] run function ajjgui:widgets/scrollbutton/update_list
+
+data modify storage ajjgui:gui Temp set from storage ajjgui:gui Widget.tag.ajjgui.Widgets[26]
+data modify storage ajjgui:gui Temp1 set from storage ajjgui:gui Widget.tag.ajjgui.Slots[26]
+execute if data storage ajjgui:gui Widget.tag.ajjgui.Widgets[26] if data storage ajjgui:gui Widget.tag.ajjgui.Slots[26] run function ajjgui:widgets/scrollbutton/update_list
