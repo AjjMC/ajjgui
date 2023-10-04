@@ -462,7 +462,7 @@ A *button* exiting the GUI:
 
 ## Running GUI Commands and Accessing Data
 
-Each of the above widgets, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by the player triggering the widget. In this way, it is possible to access the count, page, slot and state values of the selected widget, stored respectively in the ``ajjgui.count``, ``ajjgui.page``, ``ajjgui.slot`` and ``ajjgui.state`` scores of this player. The NBT of the selected widget is accessible from the ``Widget`` NBT tag in the ``ajjgui:gui`` data storage. Any items added or removed from an *itemslot* are accessible from the ``In`` and ``Out`` NBT tags respectively in the ``ajjgui:itemslot`` data storage. Likewise, any items added to an *itembin* are accessible from the ``In`` NBT tag in the ``ajjgui:itembin`` data storage.
+Each of the above widgets, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by the player interacting with the widget. In this way, it is possible to access the count, page, slot and state values of the selected widget, stored respectively in the ``ajjgui.count``, ``ajjgui.page``, ``ajjgui.slot`` and ``ajjgui.state`` scores of this player. The NBT of the selected widget is accessible from the ``Widget`` NBT tag in the ``ajjgui:gui`` data storage. Any items added or removed from an *itemslot* are accessible from the ``In`` and ``Out`` NBT tags respectively in the ``ajjgui:itemslot`` data storage. Likewise, any items added to an *itembin* are accessible from the ``In`` NBT tag in the ``ajjgui:itembin`` data storage.
 
 #### Examples
 
@@ -487,7 +487,7 @@ execute if score @s ajjgui.state matches 1 run say set switch to Enabled
 
 ## Directly Modifying GUIs
 
-For every GUI compiled, there is a marker entity located at the container's coordinates with the ``"ajjgui.gui"`` scoreboard tag. This entity stores the page value in its ``ajjgui.page`` score as well as the page list in its ``data.GUI`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be directly modified to achieve desired results. This would, for example, be needed if one wanted to modify a GUI without prior user interaction. In order for the changes to be applied, ``/function ajjgui:_reload`` needs to be run. Otherwise, the GUI is updated upon user interaction.
+For every GUI compiled, there is a marker entity located at the container's coordinates with the ``"ajjgui.gui"`` scoreboard tag. This entity stores the page value in its ``ajjgui.page`` score as well as the page list in its ``data.GUI`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be directly modified to achieve desired results. This would, for example, be needed if one wanted to modify a GUI without prior user interaction. In order for changes to be reflected in the container itself, ``/function ajjgui:_reload`` must be run in the same tick. Otherwise, the mismatch in NBT between the marker entity and the container can trick the datapack into assuming that a player is interacting indefinitely with this GUI and lead to corruption of other active GUIs.
 
 #### Examples
 
@@ -497,7 +497,7 @@ For every GUI compiled, there is a marker entity located at the container's coor
 /scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] ajjgui.page 0
 ```
 
-Then:
+Then, in the same tick:
 
 ```
 /function ajjgui:_reload
@@ -509,13 +509,15 @@ Then:
 /data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.GUI[0][{Slot:0b}].id set value "minecraft:stone"
 ```
 
-Then:
+Then, in the same tick:
 
 ```
 /function ajjgui:_reload
 ```
 
 > **NOTE:** The GUI compiler adds the ``ajjgui.Slot`` and ``ajjgui.Compiled`` NBT tags to each widget. These two must not be changed when directly modifying NBT.
+
+> **NOTE:** Widgets with the ``ajjgui.Fixed`` NBT tag set to ``1b`` appear in a new page only when the page is loaded by clicking on widget that has the ``ajjgui.Page`` NBT tag. Directly changing a page therefore does not preserve fixed widgets unless they were already cached in the destination page from a previous interaction.
 
 > **NOTE:** Decompiling a GUI resets it to the state it was in when compiled.
 
