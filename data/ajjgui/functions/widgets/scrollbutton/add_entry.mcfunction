@@ -3,7 +3,7 @@ data modify storage ajjgui:gui Temp4.Slot set from storage ajjgui:gui Temp3
 
 execute if data storage ajjgui:gui {Widget:{tag:{ajjgui:{Fixed:1b}}}} run data modify storage ajjgui:gui Temp4.tag.ajjgui.Fixed set value 1b
 
-execute unless data storage ajjgui:gui Temp4.tag.ajjgui.Widget run data modify storage ajjgui:gui Temp4.tag.ajjgui.Widget set value "placeholder"
+execute unless data storage ajjgui:gui {Temp4:{tag:{ajjgui:{Widget:"placeholder"}}}} unless data storage ajjgui:gui {Temp4:{tag:{ajjgui:{Widget:"button"}}}} unless data storage ajjgui:gui {Temp4:{tag:{ajjgui:{Widget:"itembin"}}}} run data modify storage ajjgui:gui Temp4.tag.ajjgui.Widget set value "placeholder"
 execute unless data storage ajjgui:gui {Temp4:{tag:{ajjgui:{Widget:"placeholder"}}}} if data storage ajjgui:gui Temp4.tag.ajjgui.Page unless data storage ajjgui:gui Temp4.tag.ajjgui.Relative run data modify storage ajjgui:gui Temp4.tag.ajjgui.Relative set value 0b
 execute unless data storage ajjgui:gui {Temp4:{tag:{ajjgui:{Widget:"placeholder"}}}} unless data storage ajjgui:gui Temp4.tag.ajjgui.Exit run data modify storage ajjgui:gui Temp4.tag.ajjgui.Exit set value 0b
 execute unless data storage ajjgui:gui Temp4.tag.ajjgui.Fixed run data modify storage ajjgui:gui Temp4.tag.ajjgui.Fixed set value 0b

@@ -3,6 +3,8 @@ data modify storage ajjgui:gui Temp8.Slot set from storage ajjgui:gui Temp7
 
 execute if data storage ajjgui:gui {Temp3:{tag:{ajjgui:{Fixed:1b}}}} run data modify storage ajjgui:gui Temp8.tag.ajjgui.Fixed set value 1b
 
+execute unless data storage ajjgui:gui {Temp8:{tag:{ajjgui:{Widget:"placeholder"}}}} unless data storage ajjgui:gui {Temp8:{tag:{ajjgui:{Widget:"button"}}}} unless data storage ajjgui:gui {Temp8:{tag:{ajjgui:{Widget:"itembin"}}}} run data modify storage ajjgui:gui Temp8.tag.ajjgui.Widget set value "placeholder"
+
 execute if data storage ajjgui:gui {Temp7:0b} run data modify storage ajjgui:gui Temp1[{Slot:0b}] set from storage ajjgui:gui Temp8
 execute if data storage ajjgui:gui {Temp7:1b} run data modify storage ajjgui:gui Temp1[{Slot:1b}] set from storage ajjgui:gui Temp8
 execute if data storage ajjgui:gui {Temp7:2b} run data modify storage ajjgui:gui Temp1[{Slot:2b}] set from storage ajjgui:gui Temp8
