@@ -24,3 +24,7 @@ data remove storage ajjgui:gui Temp1
 data remove storage ajjgui:gui Temp2
 data remove storage ajjgui:gui Temp3
 data remove storage ajjgui:gui Temp4
+data remove storage ajjgui:gui Temp5
+data remove storage ajjgui:gui Temp6
+data remove storage ajjgui:gui Temp7
+data remove storage ajjgui:gui Temp8

@@ -26,6 +26,87 @@ execute unless data storage ajjgui:gui Temp1[{Slot:24b}] run data modify storage
 execute unless data storage ajjgui:gui Temp1[{Slot:25b}] run data modify storage ajjgui:gui Temp1 append value {Slot:25b,id:"minecraft:light_gray_stained_glass_pane",Count:1b,tag:{ajjgui:{Widget:"placeholder"},display:{Name:'{"text":""}'}}}
 execute unless data storage ajjgui:gui Temp1[{Slot:26b}] run data modify storage ajjgui:gui Temp1 append value {Slot:26b,id:"minecraft:light_gray_stained_glass_pane",Count:1b,tag:{ajjgui:{Widget:"placeholder"},display:{Name:'{"text":""}'}}}
 
+execute if data storage ajjgui:gui Temp1[{Slot:0b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:0b}]
+execute if data storage ajjgui:gui Temp1[{Slot:0b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:1b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:1b}]
+execute if data storage ajjgui:gui Temp1[{Slot:1b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:2b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:2b}]
+execute if data storage ajjgui:gui Temp1[{Slot:2b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:3b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:3b}]
+execute if data storage ajjgui:gui Temp1[{Slot:3b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:4b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:4b}]
+execute if data storage ajjgui:gui Temp1[{Slot:4b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:5b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:5b}]
+execute if data storage ajjgui:gui Temp1[{Slot:5b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:6b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:6b}]
+execute if data storage ajjgui:gui Temp1[{Slot:6b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:7b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:7b}]
+execute if data storage ajjgui:gui Temp1[{Slot:7b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:8b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:8b}]
+execute if data storage ajjgui:gui Temp1[{Slot:8b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:9b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:9b}]
+execute if data storage ajjgui:gui Temp1[{Slot:9b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:10b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:10b}]
+execute if data storage ajjgui:gui Temp1[{Slot:10b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:11b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:11b}]
+execute if data storage ajjgui:gui Temp1[{Slot:11b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:12b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:12b}]
+execute if data storage ajjgui:gui Temp1[{Slot:12b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:13b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:13b}]
+execute if data storage ajjgui:gui Temp1[{Slot:13b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:14b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:14b}]
+execute if data storage ajjgui:gui Temp1[{Slot:14b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:15b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:15b}]
+execute if data storage ajjgui:gui Temp1[{Slot:15b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:16b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:16b}]
+execute if data storage ajjgui:gui Temp1[{Slot:16b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:17b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:17b}]
+execute if data storage ajjgui:gui Temp1[{Slot:17b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:18b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:18b}]
+execute if data storage ajjgui:gui Temp1[{Slot:18b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:19b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:19b}]
+execute if data storage ajjgui:gui Temp1[{Slot:19b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:20b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:20b}]
+execute if data storage ajjgui:gui Temp1[{Slot:20b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:21b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:21b}]
+execute if data storage ajjgui:gui Temp1[{Slot:21b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:22b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:22b}]
+execute if data storage ajjgui:gui Temp1[{Slot:22b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:23b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:23b}]
+execute if data storage ajjgui:gui Temp1[{Slot:23b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:24b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:24b}]
+execute if data storage ajjgui:gui Temp1[{Slot:24b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:25b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:25b}]
+execute if data storage ajjgui:gui Temp1[{Slot:25b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
+execute if data storage ajjgui:gui Temp1[{Slot:26b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run data modify storage ajjgui:gui Temp3 set from storage ajjgui:gui Temp1[{Slot:26b}]
+execute if data storage ajjgui:gui Temp1[{Slot:26b,tag:{ajjgui:{Widget:"scrollbutton"}}}] run function ajjgui:gui/load_scrollbuttons
+
 execute unless data storage ajjgui:gui Temp1[0].tag.ajjgui.Widget run data modify storage ajjgui:gui Temp1[0].tag.ajjgui.Widget set value "placeholder"
 execute unless data storage ajjgui:gui Temp1[1].tag.ajjgui.Widget run data modify storage ajjgui:gui Temp1[1].tag.ajjgui.Widget set value "placeholder"
 execute unless data storage ajjgui:gui Temp1[2].tag.ajjgui.Widget run data modify storage ajjgui:gui Temp1[2].tag.ajjgui.Widget set value "placeholder"
