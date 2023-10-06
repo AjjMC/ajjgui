@@ -1,6 +1,6 @@
-function ajjgui:gui/begin_widget
+function ajjgui:utils/begin_widget
 
-function ajjgui:gui/recover_item
-function ajjgui:gui/export_data
+function ajjgui:utils/recover_item
+function ajjgui:utils/export_data
 
-function ajjgui:gui/end_widget
+function ajjgui:utils/end_widget

@@ -1,9 +1,9 @@
-function ajjgui:gui/begin_widget
+function ajjgui:utils/begin_widget
 
-function ajjgui:gui/recover_item
-function ajjgui:gui/export_data
-function ajjgui:gui/set_command
-function ajjgui:gui/update_page
-function ajjgui:gui/exit_gui
+function ajjgui:utils/recover_item
+function ajjgui:utils/export_data
+function ajjgui:utils/set_command
+function ajjgui:utils/update_page
+function ajjgui:utils/exit_gui
 
-function ajjgui:gui/end_widget
+function ajjgui:utils/end_widget
