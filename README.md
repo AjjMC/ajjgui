@@ -79,7 +79,7 @@ The *placeholder* is a widget that cannot be interacted with and is used to disp
 #### Usage
 
 ```
-/give @s <item id>{ajjgui:{Widget:"placeholder",<optional ajjgui tags>}}
+/give @p <item id>{ajjgui:{Widget:"placeholder",<optional ajjgui tags>}}
 ```
 
 #### Example
@@ -114,7 +114,7 @@ The *button* is a widget that changes the GUI page, exits the GUI and/or runs a 
 #### Usage
 
 ```
-/give @s <item id>{ajjgui:{Widget:"button",<optional ajjgui tags>}}
+/give @p <item id>{ajjgui:{Widget:"button",<optional ajjgui tags>}}
 ```
 
 #### Examples
@@ -139,7 +139,7 @@ The *counter* is a widget that changes to a different count of the same item whe
 #### Usage
 
 ```
-/give @s <item id>{ajjgui:{Widget:"counter",Values:[<value 1>,<value 2>,…,<value N>],<optional ajjgui tags>}} <default value>
+/give @p <item id>{ajjgui:{Widget:"counter",Values:[<value 1>,<value 2>,…,<value N>],<optional ajjgui tags>}} <default value>
 ```
 
 where N is the number of states.
@@ -192,7 +192,7 @@ The *switch* is a widget that changes to a different item when clicked, followin
 #### Usage
 
 ```
-/give @s <default item id>{ajjgui:{Widget:"switch",Items:[<item 1>,<item 2>,…,<item N>],<optional ajjgui tags>}}
+/give @p <default item id>{ajjgui:{Widget:"switch",Items:[<item 1>,<item 2>,…,<item N>],<optional ajjgui tags>}}
 ```
 
 where N is the number of states.
@@ -208,7 +208,7 @@ where N is the number of states.
 2. A *switch* changing between a "Disabled", an "Enabled" and a "Neutral" state, starting with "Disabled". The default item is the same as the first item in ``ajjgui.Items``:
 
 ```
-/give @s minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","italic":false}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","italic":false}'}}},{id:"minecraft:purple_dye",Count:1b,tag:{display:{Name:'{"text":"Neutral","italic":false}'}}}]},display:{Name:'{"text":"Disabled","italic":false}'}}
+/give @p minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","italic":false}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","italic":false}'}}},{id:"minecraft:purple_dye",Count:1b,tag:{display:{Name:'{"text":"Neutral","italic":false}'}}}]},display:{Name:'{"text":"Disabled","italic":false}'}}
 ```
 
 3. A *switch* beginning with a default state, "Default", that continues by changing between a "Disabled" and an "Enabled" state, starting with "Enabled":
@@ -247,7 +247,7 @@ The *radiobutton* is a widget that changes between an "OFF" and "ON" state item 
 #### Usage
 
 ```
-/give @s <default item id>{ajjgui:{Widget:"radiobutton",OFF:<off item>,ON:<on item>,<optional ajjgui tags>}}
+/give @p <default item id>{ajjgui:{Widget:"radiobutton",OFF:<off item>,ON:<on item>,<optional ajjgui tags>}}
 ```
 
 #### Examples
@@ -290,7 +290,7 @@ The *itembin* is a widget that clears all items inserted by the player in a part
 #### Usage
 
 ```
-/give @s <item id>{ajjgui:{Widget:"itembin",<optional ajjgui tags>}}
+/give @p <item id>{ajjgui:{Widget:"itembin",<optional ajjgui tags>}}
 ```
 
 #### Example
@@ -326,7 +326,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 #### Usage
 
 ```
-/give @s <default item id>{ajjgui:{Widget:"itemslot",Placeholder:<placeholder item>,<optional ajjgui tags>}}
+/give @p <default item id>{ajjgui:{Widget:"itemslot",Placeholder:<placeholder item>,<optional ajjgui tags>}}
 ```
 
 #### Examples
@@ -349,7 +349,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 /give @p minecraft:white_stained_glass_pane{ajjgui:{Widget:"itemslot",Placeholder:{id:"minecraft:gray_stained_glass_pane",Count:1b,tag:{display:{Name:'{"text":"Placeholder Item","italic":false}'}}},Size:64b},display:{Name:'{"text":"Default Placeholder Item","italic":false}'}}
 ```
 
-4. An *itemslot* with an item in it by default and a stack size of ``64b``. The value of ``ajjgui.State`` is set to ``1b`` since the slot is occupied:
+4. An *itemslot* with an item in it by default and a stack size of ``64b``. The value of ``ajjgui.State`` is set to ``1b`` as the slot is occupied:
 
 ```
 /give @p minecraft:diamond_sword{ajjgui:{Widget:"itemslot",Placeholder:{id:"minecraft:gray_stained_glass_pane",Count:1b,tag:{display:{Name:'{"text":"Placeholder Item","italic":false}'}}},Size:64b,State:1b},display:{Name:'{"text":"Default Item","italic":false}'}}
@@ -381,7 +381,7 @@ The *scrollbutton* is a widget that cycles one or more lists of *static* widgets
 #### Usage
 
 ```
-/give @s <item id>{ajjgui:{Widget:"scrollbutton",Widgets:[[<widget 1,1>,<widget 1,2>,…,<widget 1,L_1>],[<widget 2,1>,<widget 2,2>,…,<widget 2,L_2>],…,[<widget N,1>,<widget N,2>,…,<widget N,L_N>]],Slots:[[<slot 1,1>,<slot 1,2>,…,<slot 1,M_1>],[<slot 2,1>,<slot 2,2>,…,<slot 2,M_2>],…,[<slot N,1>,<slot N,2>,…,<slot N,M_N>]],<optional ajjgui tags>}}
+/give @p <item id>{ajjgui:{Widget:"scrollbutton",Widgets:[[<widget 1,1>,<widget 1,2>,…,<widget 1,L_1>],[<widget 2,1>,<widget 2,2>,…,<widget 2,L_2>],…,[<widget N,1>,<widget N,2>,…,<widget N,L_N>]],Slots:[[<slot 1,1>,<slot 1,2>,…,<slot 1,M_1>],[<slot 2,1>,<slot 2,2>,…,<slot 2,M_2>],…,[<slot N,1>,<slot N,2>,…,<slot N,M_N>]],<optional ajjgui tags>}}
 ```
 
 where L_x and M_y are the numbers of widgets and slots in each widget list and slot list respectively, and N is the number of widget list and slot list pairs.
