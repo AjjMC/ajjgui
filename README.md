@@ -404,7 +404,7 @@ A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each butt
 
 ## Changing GUI Pages
 
-Each of the above widgets, excluding the *placeholder*, can be made to change the GUI page when clicked. This is done by specifying a page number in the ``ajjgui.Page`` NBT tag. By default, this value is the index of the shulker box in the chest previously used to compile the GUI, where a value of ``0b`` corresponds to the first page. If it is equal to the number of pages, the count resets back to the first page, and negative values may also be used to access pages from the end. The ``ajjgui.Relative`` NBT tag can be set to ``1b`` in order for the value of ``ajjgui.Page`` to increment the page number from its current value. This, hence, assumes that the current page has an index of ``0b`` and uses this as a reference instead of the first one.
+Each of the widgets discussed previously, excluding the *placeholder*, can be made to change the GUI page when clicked. This is done by specifying a page number in the ``ajjgui.Page`` NBT tag. By default, this value is the index of the shulker box in the chest previously used to compile the GUI, where a value of ``0b`` corresponds to the first page. If it is equal to the number of pages, the count resets back to the first page, and negative values may also be used to access pages from the end. The ``ajjgui.Relative`` NBT tag can be set to ``1b`` in order for the value of ``ajjgui.Page`` to increment the page number from its current value. This, hence, assumes that the current page has an index of ``0b`` and uses this as a reference instead of the first one.
 
 #### Examples
 
@@ -438,7 +438,7 @@ Each of the above widgets, excluding the *placeholder*, can be made to change th
 
 ## Fixed GUI Widgets
 
-Each of the above widgets can be made to stay on display when the GUI page is changed. This is done by setting the ``ajjgui.Fixed`` NBT tag to ``1b``. If a *scrollbutton* is made fixed, its widgets also obtain this property.
+Each of the widgets discussed previously can be made to stay on display when the GUI page is changed. This is done by setting the ``ajjgui.Fixed`` NBT tag to ``1b``. If a *scrollbutton* is made fixed, its widgets also obtain this property.
 
 #### Example
 
@@ -450,7 +450,7 @@ A *button* staying fixed in its slot when the GUI page is changed:
 
 ## Exiting GUIs
 
-Each of the above widgets, excluding the *placeholder*, can be made to exit the GUI when clicked. This is done by setting the ``ajjgui.Exit`` NBT tag to ``1b``.
+Each of the widgets discussed previously, excluding the *placeholder*, can be made to exit the GUI when clicked. This is done by setting the ``ajjgui.Exit`` NBT tag to ``1b``.
 
 #### Example
 
@@ -462,7 +462,21 @@ A *button* exiting the GUI:
 
 ## Running GUI Commands and Accessing Data
 
-Each of the above widgets, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by the player interacting with the widget. In this way, it is possible to access the count, page, slot and state values of the selected widget, stored respectively in the ``ajjgui.count``, ``ajjgui.page``, ``ajjgui.slot`` and ``ajjgui.state`` scores of this player. The NBT of the selected widget is accessible from the ``Widget`` NBT tag in the ``ajjgui:gui`` data storage. Any items added or removed from an *itemslot* are accessible from the ``In`` and ``Out`` NBT tags respectively in the ``ajjgui:itemslot`` data storage. Likewise, any items added to an *itembin* are accessible from the ``In`` NBT tag in the ``ajjgui:itembin`` data storage.
+| Scoreboard Score      | Widget Data                 | Type               |
+|:----------------------|:----------------------------|:-------------------|
+| ``@s ajjgui.count``   | Count                       | Integer            |
+| ``@s ajjgui.page``    | Page                        | Integer            |
+| ``@s ajjgui.slot``    | Slot                        | Integer            |
+| ``@s ajjgui.state``   | State                       | Integer            |
+
+| Data Storage          | Widget Data                 | Type               |
+|:----------------------|:----------------------------|:-------------------|
+| ``ajjgui:gui Widget`` | All NBT of compiled widget  | Compound           |
+| ``ajjgui.itembin In`` | Most recently inserted item | Compound           |
+| ``ajjgui.slot In``    | Most recently inserted item | Compound           |
+| ``ajjgui.slot Out``   | Most recently removed item  | Compound           |
+
+Each of the widgets discussed previously, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by the player interacting with the widget. Within the command's execution, it is possible to access data related to the GUI and use it to make decisions (e.g., depending on whether a *switch* is toggled on).
 
 #### Examples
 
@@ -478,7 +492,7 @@ Each of the above widgets, excluding the the *placeholder*, can be made to run c
 /give @p minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","italic":false}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","italic":false}'}}}],Command:"function name:func"},display:{Name:'{"text":"Disabled","italic":false}'}}
 ```
 
-where the following commands are located in a function ```name:func``` within another datapack:
+where the following commands are located in a function ```name:func``` within a map's datapack:
 
 ```
 execute if score @s ajjgui.state matches 0 run say set switch to Disabled
