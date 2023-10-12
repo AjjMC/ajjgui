@@ -476,7 +476,7 @@ A *button* exiting the GUI:
 | ``ajjgui.slot In``    | Most recently inserted item | Compound           |
 | ``ajjgui.slot Out``   | Most recently removed item  | Compound           |
 
-Each of the widgets discussed previously, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by the player interacting with the widget. Within the command's execution, it is possible to access data related to the GUI and use it to make decisions (e.g., depending on whether a *switch* is toggled on).
+Each of the widgets discussed previously, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by the player interacting with the widget. Within the command's execution, it is possible to access data from the GUI interaction (e.g., whether a *switch* is toggled on) and use it to make decisions.
 
 #### Examples
 
