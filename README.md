@@ -464,19 +464,20 @@ A *button* exiting the GUI:
 
 ## Running GUI Commands and Accessing Data
 
-| Scoreboard Score    | Widget Data |
-|:--------------------|:------------|
-| ``@s ajjgui.count`` | Count       |
-| ``@s ajjgui.page``  | Page        |
-| ``@s ajjgui.slot``  | Slot        |
-| ``@s ajjgui.state`` | State       |
+| Scoreboard Score    | Widget Data            |
+|:--------------------|:-----------------------|
+| ``@s ajjgui.count`` | Count of widget's item |
+| ``@s ajjgui.page``  | Page of widget         |
+| ``@s ajjgui.slot``  | Slot of widget         |
+| ``@s ajjgui.state`` | State of widget        |
 
-| Data Storage NBT        | Widget Data                 | Type     |
-|:------------------------|:----------------------------|:---------|
-| ``ajjgui:gui Widget``   | NBT of compiled widget      | Compound |
-| ``ajjgui:itembin In``   | Most recently inserted item | Compound |
-| ``ajjgui:itemslot In``  | Most recently inserted item | Compound |
-| ``ajjgui:itemslot Out`` | Most recently removed item  | Compound |
+| Data Storage NBT        | Widget Data                 | Type          |
+|:------------------------|:----------------------------|:--------------|
+| ``ajjgui:gui Widget``   | NBT of widget's page        | Compound List |
+| ``ajjgui:gui Widget``   | NBT of widget               | Compound      |
+| ``ajjgui:itembin In``   | Most recently inserted item | Compound      |
+| ``ajjgui:itemslot In``  | Most recently inserted item | Compound      |
+| ``ajjgui:itemslot Out`` | Most recently removed item  | Compound      |
 
 Each of the widgets discussed previously, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by the player interacting with the widget. Within the command's execution, it is possible to access data from the GUI interaction (e.g., whether a *switch* is toggled on) and use it to make decisions.
 
