@@ -46,7 +46,7 @@ The datapack can be installed by running ``/function ajjgui:_install`` at any lo
 
 ## Creating a GUI
 
-The datapack adopts the concept of *[graphical widgets](https://en.wikipedia.org/wiki/Graphical_widget)* present in real-world user interfaces. Within the scope of Minecraft's item-based GUIs, and this datapack specifically, every item in a GUI corresponds to an interactive element (e.g., a button).
+The datapack adopts the concept of [graphical widgets](https://en.wikipedia.org/wiki/Graphical_widget), present in real-world user interfaces. Within the scope of Minecraft's item-based GUIs, and this datapack specifically, every item in a GUI corresponds to an interactive element (e.g., a button).
 
 There are 8 types of GUI widgets available:
 
@@ -464,22 +464,21 @@ A *button* exiting the GUI:
 
 ## Running GUI Commands and Accessing Data
 
-| Scoreboard Score    | Widget Data            |
-|:--------------------|:-----------------------|
-| ``@s ajjgui.count`` | Count of widget's item |
-| ``@s ajjgui.page``  | Page of widget         |
-| ``@s ajjgui.slot``  | Slot of widget         |
-| ``@s ajjgui.state`` | State of widget        |
+| Scoreboard Score    | Exported Data     |
+|:--------------------|:------------------|
+| ``@s ajjgui.count`` | Widget item count |
+| ``@s ajjgui.page``  | Page number       |
+| ``@s ajjgui.slot``  | Widget slot       |
+| ``@s ajjgui.state`` | Widget state      |
 
-| Data Storage NBT        | Widget Data                 | Type          |
-|:------------------------|:----------------------------|:--------------|
-| ``ajjgui:gui Page``     | NBT of widget's page        | Compound List |
-| ``ajjgui:gui Widget``   | NBT of widget               | Compound      |
-| ``ajjgui:itembin In``   | Most recently inserted item | Compound      |
-| ``ajjgui:itemslot In``  | Most recently inserted item | Compound      |
-| ``ajjgui:itemslot Out`` | Most recently removed item  | Compound      |
+| Data Storage NBT        | Exported Data                         | Type          |
+|:------------------------|:--------------------------------------|:--------------|
+| ``ajjgui:gui In``       | *Itembin* or *itemslot* item inserted | Compound      |
+| ``ajjgui:gui Out``      | *Itemslot* item removed               | Compound      |
+| ``ajjgui:gui Page``     | Page                                  | Compound List |
+| ``ajjgui:gui Widget``   | Widget                                | Compound      |
 
-Each of the widgets discussed previously, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by the player interacting with the widget. Within the command's execution, it is possible to access data from the GUI interaction (e.g., whether a *switch* is toggled on) and use it to make decisions.
+Each of the widgets discussed previously, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by the player interacting with the widget. Within the command's execution, it is possible to access data exported from the GUI interaction (e.g., whether a *switch* is toggled on) and use it to make decisions.
 
 #### Examples
 
