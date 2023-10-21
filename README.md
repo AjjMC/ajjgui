@@ -473,7 +473,7 @@ A *button* exiting the GUI:
 
 | Data Storage NBT        | Widget Data                 | Type          |
 |:------------------------|:----------------------------|:--------------|
-| ``ajjgui:gui Widget``   | NBT of widget's page        | Compound List |
+| ``ajjgui:gui Page``     | NBT of widget's page        | Compound List |
 | ``ajjgui:gui Widget``   | NBT of widget               | Compound      |
 | ``ajjgui:itembin In``   | Most recently inserted item | Compound      |
 | ``ajjgui:itemslot In``  | Most recently inserted item | Compound      |
