@@ -503,7 +503,7 @@ execute if score @s ajjgui.state matches 1 run say set switch to Enabled
 
 ## Directly Modifying GUIs
 
-For every GUI compiled, there is a marker entity located at the container's coordinates with the ``"ajjgui.gui"`` scoreboard tag. This entity stores the page value in its ``ajjgui.page`` score as well as the page list in its ``data.GUI`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be directly modified to achieve desired results. This would, for example, be needed if one wanted to modify a GUI without prior user interaction. In order for changes to be reflected in the container itself, ``/function ajjgui:_reload`` must be run in the same tick. Otherwise, the mismatch in NBT between the marker entity and the container can trick the datapack into assuming that a player is interacting indefinitely with this GUI and lead to corruption of other active GUIs.
+For every GUI compiled, there is a marker entity located at the container's coordinates with the ``"ajjgui.gui"`` scoreboard tag. This entity stores the page value in its ``ajjgui.page`` score as well as the page list in its ``data.GUI`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be directly modified to achieve desired results. This would, for example, be needed if one wanted to modify a GUI without prior user interaction. If the modification command is not triggered by a player using a GUI, ``/function ajjgui:_reload`` must follow in the same tick for any changes to be reflected on the GUI. If this is omitted, the mismatch in NBT between the marker entity and the container makes the datapack assume that a player is interacting indefinitely with this GUI and results in malfunction of other active GUIs.
 
 #### Examples
 
@@ -513,7 +513,7 @@ For every GUI compiled, there is a marker entity located at the container's coor
 /scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] ajjgui.page 0
 ```
 
-Then, in the same tick:
+Then, in the same tick (not required if the above command is run from a widget):
 
 ```
 /function ajjgui:_reload
@@ -525,7 +525,7 @@ Then, in the same tick:
 /data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.GUI[0][{Slot:0b}].id set value "minecraft:stone"
 ```
 
-Then, in the same tick:
+Then, in the same tick (not required if the above command is run from a widget):
 
 ```
 /function ajjgui:_reload
