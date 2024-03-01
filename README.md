@@ -6,7 +6,7 @@
 
 
 <p align = "center">
-  <img src="assets/gui.gif" width="350">
+  <img src="repo/gui.gif" width="350">
 </p>
 
 <p align = "center">
@@ -98,7 +98,7 @@ A *placeholder*:
 ```
 
 <p align = "center">
-  <img src="assets/placeholder.gif" width="350">
+  <img src="repo/placeholder.gif" width="350">
 </p>
 
 > **NOTE:** If a GUI slot is empty, the GUI compiler adds a light gray stained glass pane *placeholder* with a blank name in its place.
@@ -178,7 +178,7 @@ where N is the number of states.
 ```
 
 <p align = "center">
-  <img src="assets/counter.gif" width="350">
+  <img src="repo/counter.gif" width="350">
 </p>
 
 ### Switch
@@ -231,7 +231,7 @@ where N is the number of states.
 ```
 
 <p align = "center">
-  <img src="assets/switch.gif" width="350">
+  <img src="repo/switch.gif" width="350">
 </p>
 
 ### Radiobutton
@@ -278,7 +278,7 @@ The *radiobutton* is a widget that changes between an "OFF" and "ON" state item 
 ```
 
 <p align = "center">
-  <img src="assets/radiobutton.gif" width="350">
+  <img src="repo/radiobutton.gif" width="350">
 </p>
 
 ### Itembin
@@ -309,7 +309,7 @@ An *itembin*:
 ```
 
 <p align = "center">
-  <img src="assets/itembin.gif" width="350">
+  <img src="repo/itembin.gif" width="350">
 </p>
 
 > **NOTE:** The *itembin* has a built-in cooldown of 0.4s.
@@ -363,7 +363,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 ```
 
 <p align = "center">
-  <img src="assets/itemslot.gif" width="350">
+  <img src="repo/itemslot.gif" width="350">
 </p>
 
 > **NOTE:** The *itemslot* has a built-in cooldown of 0.4s.
@@ -402,7 +402,7 @@ A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each butt
 ```
 
 <p align = "center">
-  <img src="assets/scrollbutton.gif" width="350">
+  <img src="repo/scrollbutton.gif" width="350">
 </p>
 
 > **NOTE:** The *scrollbutton* only supports the *placeholder*, *button* and *itembin* widgets.
@@ -440,7 +440,7 @@ Each of the widgets discussed previously, excluding the *placeholder*, can be ma
 ```
 
 <p align = "center">
-  <img src="assets/button.gif" width="350">
+  <img src="repo/button.gif" width="350">
 </p>
 
 ## Fixed GUI Widgets
