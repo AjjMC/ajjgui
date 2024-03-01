@@ -1,5 +1,10 @@
 # A GUI Framework for Minecraft Mapmaking Using In-Game Commands
 
+> **CURRENTLY INCOMPATIBLE WITH VERSIONS 1.20.5 AND ABOVE!**
+>
+> **Minecraft 24w09a has brought [significant changes to the way in which item properties are stored and represented](https://www.minecraft.net/en-us/article/minecraft-snapshot-24w09a). As a result, the datapack at its current state will no longer function in versions 1.20.5 and above. There will be a major update to support future versions, but this is expected to take some time due to the project's nature.**
+
+
 <p align = "center">
   <img src="assets/gui.gif" width="350">
 </p>
@@ -539,6 +544,6 @@ Then, in the same tick (not required if the above command is run from a widget):
 
 ## Copyright
 
-Copyright © 2021 - 2023 Ajj (https://github.com/AjjMC/ajjgui)
+Copyright © 2021 - 2024 Ajj (https://github.com/AjjMC/ajjgui)
 
 This project was released under the MIT License. Please credit this datapack if you use it in your work by providing a link to the project repository.
