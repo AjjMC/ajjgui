@@ -21,7 +21,7 @@ Certain datapacks as well as datapack generators have been made with the intent 
 
 The aim of this datapack is to serve as an advanced framework allowing users to easily create and maintain complex and robust item-based GUIs in-game, without writing any code or ever touching the datapack. This is achieved by simply dragging and dropping items with custom NBT tags in containers within a world, which the datapack can use to generate GUIs according to users' specifications. At the moment, the datapack is limited to block entities, such as barrels, droppers, hoppers or even brewing stands.
 
-The datapack has the following features:
+The datapack provides the following features:
 
 * NBT standard for quick and easy creation of advanced item-based GUIs
 * Completely in-game workflow, with the entire datapack being a black box that the developer can ignore
@@ -546,4 +546,4 @@ Then, in the same tick (not required if the above command is run from a widget):
 
 Copyright © 2021 - 2024 Ajj (https://github.com/AjjMC/ajjgui)
 
-This project was released under the MIT License. Please credit this datapack if you use it in your work by providing a link to the project repository.
+This project was released under the MIT License. Please credit this datapack in your creations by including a link to the project repository.
