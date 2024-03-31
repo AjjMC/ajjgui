@@ -10,7 +10,7 @@
 </p>
 
 <p align = "center">
-  <i>A GUI example demonstrating some of the datapack's capabilities, which was made in less than 5 minutes and in-game!</i>
+  <i>A GUI made entirely in-game in under 5 minutes.</i>
 </p>
 
 ## Overview
@@ -594,7 +594,7 @@ For every GUI, there is a marker entity located at the container's coordinates w
     /give @p minecraft:pink_dye[minecraft:custom_data={ajjgui:{widget:"button",command:'data modify entity @e[type=minecraft:marker,tag=ajjgui.gui_active,limit=1] data.GUI[0][{Slot:0b}].id set value "minecraft:stone"'}},minecraft:custom_name='{"text":"Command Button","italic":false}']
     ```
 
-    In this example, ``/function ajjgui:_reload`` is not required
+    In this example, ``/function ajjgui:_reload`` is not required.
 
 > **NOTE:** The GUI compiler adds the ``ajjgui.meta`` NBT tag to each widget. This must not be changed when directly modifying NBT.
 
