@@ -1,3 +1,3 @@
-data remove storage ajjgui:gui Temp
-data modify storage ajjgui:gui Temp.Command set from storage ajjgui:gui Widget.tag.ajjgui.Command
-function ajjgui:gui/run_command with storage ajjgui:gui Temp
+data remove storage ajjgui:data temp
+data modify storage ajjgui:data temp.command set from storage ajjgui:data widget.components.minecraft:custom_data.ajjgui.command
+function ajjgui:control/run_command with storage ajjgui:data temp

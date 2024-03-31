@@ -1,1 +1,1 @@
-give @s minecraft:arrow{ajjgui:{Widget:"button",Page:-1b,Command:"function ajjgui:demo/outputs/button/last_page",Fixed:1b},display:{Name:'{"text":"Go to Last Page","italic":false}'}}
+give @s minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:-1b,fixed:1b,command:"function ajjgui:demo/outputs/button/last_page"}},minecraft:custom_name='{"text":"Go to Last Page","italic":false}']

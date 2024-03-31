@@ -1,40 +1,40 @@
-data modify storage ajjgui:gui Temp4 set from storage ajjgui:gui Temp2
-data modify storage ajjgui:gui Temp4.Slot set from storage ajjgui:gui Temp3
+data modify storage ajjgui:data temp4 set from storage ajjgui:data temp2
+data modify storage ajjgui:data temp4.Slot set from storage ajjgui:data temp3
 
-execute if data storage ajjgui:gui {Widget:{tag:{ajjgui:{Fixed:1b}}}} run data modify storage ajjgui:gui Temp4.tag.ajjgui.Fixed set value 1b
+execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{fixed:1b}}}}} run data modify storage ajjgui:data temp4.components.minecraft:custom_data.ajjgui.fixed set value 1b
 
-execute unless data storage ajjgui:gui {Temp4:{tag:{ajjgui:{Widget:"placeholder"}}}} unless data storage ajjgui:gui {Temp4:{tag:{ajjgui:{Widget:"button"}}}} unless data storage ajjgui:gui {Temp4:{tag:{ajjgui:{Widget:"itembin"}}}} run data modify storage ajjgui:gui Temp4.tag.ajjgui.Widget set value "placeholder"
-execute unless data storage ajjgui:gui {Temp4:{tag:{ajjgui:{Widget:"placeholder"}}}} if data storage ajjgui:gui Temp4.tag.ajjgui.Page unless data storage ajjgui:gui Temp4.tag.ajjgui.Relative run data modify storage ajjgui:gui Temp4.tag.ajjgui.Relative set value 0b
-execute unless data storage ajjgui:gui {Temp4:{tag:{ajjgui:{Widget:"placeholder"}}}} unless data storage ajjgui:gui Temp4.tag.ajjgui.Exit run data modify storage ajjgui:gui Temp4.tag.ajjgui.Exit set value 0b
-execute unless data storage ajjgui:gui Temp4.tag.ajjgui.Fixed run data modify storage ajjgui:gui Temp4.tag.ajjgui.Fixed set value 0b
+execute unless data storage ajjgui:data {temp4:{components:{"minecraft:custom_data":{ajjgui:{widget:"placeholder"}}}}} unless data storage ajjgui:data {temp4:{components:{"minecraft:custom_data":{ajjgui:{widget:"button"}}}}} unless data storage ajjgui:data {temp4:{components:{"minecraft:custom_data":{ajjgui:{widget:"itembin"}}}}} run data modify storage ajjgui:data temp4.components.minecraft:custom_data.ajjgui.widget set value "placeholder"
+execute unless data storage ajjgui:data {temp4:{components:{"minecraft:custom_data":{ajjgui:{widget:"placeholder"}}}}} if data storage ajjgui:data temp4.components.minecraft:custom_data.ajjgui.page unless data storage ajjgui:data temp4.components.minecraft:custom_data.ajjgui.relative run data modify storage ajjgui:data temp4.components.minecraft:custom_data.ajjgui.relative set value 0b
+execute unless data storage ajjgui:data {temp4:{components:{"minecraft:custom_data":{ajjgui:{widget:"placeholder"}}}}} unless data storage ajjgui:data temp4.components.minecraft:custom_data.ajjgui.exit run data modify storage ajjgui:data temp4.components.minecraft:custom_data.ajjgui.exit set value 0b
+execute unless data storage ajjgui:data temp4.components.minecraft:custom_data.ajjgui.fixed run data modify storage ajjgui:data temp4.components.minecraft:custom_data.ajjgui.fixed set value 0b
 
-data modify storage ajjgui:gui Temp4.tag.ajjgui.Slot set from storage ajjgui:gui Temp3
-data modify storage ajjgui:gui Temp4.tag.ajjgui.Compiled set value 1b
+data modify storage ajjgui:data temp4.components.minecraft:custom_data.ajjgui.meta.slot set from storage ajjgui:data temp3
+data modify storage ajjgui:data temp4.components.minecraft:custom_data.ajjgui.meta.compiled set value 1b
 
-execute if data storage ajjgui:gui {Temp3:0b} run data modify storage ajjgui:gui Page[{Slot:0b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:1b} run data modify storage ajjgui:gui Page[{Slot:1b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:2b} run data modify storage ajjgui:gui Page[{Slot:2b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:3b} run data modify storage ajjgui:gui Page[{Slot:3b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:4b} run data modify storage ajjgui:gui Page[{Slot:4b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:5b} run data modify storage ajjgui:gui Page[{Slot:5b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:6b} run data modify storage ajjgui:gui Page[{Slot:6b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:7b} run data modify storage ajjgui:gui Page[{Slot:7b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:8b} run data modify storage ajjgui:gui Page[{Slot:8b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:9b} run data modify storage ajjgui:gui Page[{Slot:9b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:10b} run data modify storage ajjgui:gui Page[{Slot:10b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:11b} run data modify storage ajjgui:gui Page[{Slot:11b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:12b} run data modify storage ajjgui:gui Page[{Slot:12b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:13b} run data modify storage ajjgui:gui Page[{Slot:13b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:14b} run data modify storage ajjgui:gui Page[{Slot:14b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:15b} run data modify storage ajjgui:gui Page[{Slot:15b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:16b} run data modify storage ajjgui:gui Page[{Slot:16b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:17b} run data modify storage ajjgui:gui Page[{Slot:17b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:18b} run data modify storage ajjgui:gui Page[{Slot:18b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:19b} run data modify storage ajjgui:gui Page[{Slot:19b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:20b} run data modify storage ajjgui:gui Page[{Slot:20b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:21b} run data modify storage ajjgui:gui Page[{Slot:21b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:22b} run data modify storage ajjgui:gui Page[{Slot:22b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:23b} run data modify storage ajjgui:gui Page[{Slot:23b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:24b} run data modify storage ajjgui:gui Page[{Slot:24b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:25b} run data modify storage ajjgui:gui Page[{Slot:25b}] set from storage ajjgui:gui Temp4
-execute if data storage ajjgui:gui {Temp3:26b} run data modify storage ajjgui:gui Page[{Slot:26b}] set from storage ajjgui:gui Temp4
+execute if data storage ajjgui:data {temp3:0b} run data modify storage ajjgui:data page[{Slot:0b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:1b} run data modify storage ajjgui:data page[{Slot:1b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:2b} run data modify storage ajjgui:data page[{Slot:2b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:3b} run data modify storage ajjgui:data page[{Slot:3b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:4b} run data modify storage ajjgui:data page[{Slot:4b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:5b} run data modify storage ajjgui:data page[{Slot:5b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:6b} run data modify storage ajjgui:data page[{Slot:6b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:7b} run data modify storage ajjgui:data page[{Slot:7b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:8b} run data modify storage ajjgui:data page[{Slot:8b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:9b} run data modify storage ajjgui:data page[{Slot:9b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:10b} run data modify storage ajjgui:data page[{Slot:10b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:11b} run data modify storage ajjgui:data page[{Slot:11b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:12b} run data modify storage ajjgui:data page[{Slot:12b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:13b} run data modify storage ajjgui:data page[{Slot:13b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:14b} run data modify storage ajjgui:data page[{Slot:14b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:15b} run data modify storage ajjgui:data page[{Slot:15b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:16b} run data modify storage ajjgui:data page[{Slot:16b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:17b} run data modify storage ajjgui:data page[{Slot:17b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:18b} run data modify storage ajjgui:data page[{Slot:18b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:19b} run data modify storage ajjgui:data page[{Slot:19b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:20b} run data modify storage ajjgui:data page[{Slot:20b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:21b} run data modify storage ajjgui:data page[{Slot:21b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:22b} run data modify storage ajjgui:data page[{Slot:22b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:23b} run data modify storage ajjgui:data page[{Slot:23b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:24b} run data modify storage ajjgui:data page[{Slot:24b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:25b} run data modify storage ajjgui:data page[{Slot:25b}] set from storage ajjgui:data temp4
+execute if data storage ajjgui:data {temp3:26b} run data modify storage ajjgui:data page[{Slot:26b}] set from storage ajjgui:data temp4

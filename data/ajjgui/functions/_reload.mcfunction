@@ -1,1 +1,2 @@
-execute as @e[type=minecraft:marker,tag=ajjgui.gui] at @s run function ajjgui:gui/load_page
+execute as @e[type=minecraft:marker,tag=ajjgui.gui_origin] at @s run function ajjgui:control/load_page_origin
+execute as @e[type=minecraft:marker,tag=ajjgui.gui_ported] at @s run function ajjgui:control/load_page_ported

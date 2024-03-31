@@ -1,3 +1,0 @@
-execute unless block ~ ~ ~ minecraft:chest run tellraw @s {"text":"Unable to decompile; ensure that you are standing on top of a chest and are not flying","color":"red"}
-execute if block ~ ~ ~ minecraft:chest align xyz positioned ~0.5 ~-1 ~0.5 unless entity @e[type=minecraft:marker,tag=ajjgui.gui,distance=..0.1] run tellraw @s {"text":"Unable to decompile; ensure that there is a valid GUI below the chest","color":"red"}
-execute if block ~ ~ ~ minecraft:chest align xyz positioned ~0.5 ~-1 ~0.5 if entity @e[type=minecraft:marker,tag=ajjgui.gui,distance=..0.1] run function ajjgui:gui/decompile_success

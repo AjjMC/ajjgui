@@ -1,2 +1,0 @@
-execute if block ~ ~ ~ minecraft:air run function ajjgui:gui/install_success
-execute align xyz positioned ~0.5 ~ ~0.5 unless entity @e[type=minecraft:marker,tag=ajjgui.box,distance=..0.1] run tellraw @s [{"text":"Unable to install; ensure that there is a block of space available and ","color":"red"},{"text":"reinstall at a different location","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:_install"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}]

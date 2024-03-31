@@ -1,7 +1,9 @@
-execute at @e[type=minecraft:marker,tag=ajjgui.gui,tag=ajjgui.active_gui] run data modify storage ajjgui:gui Page set from block ~ ~ ~ Items
-function ajjgui:gui/search_item
+execute at @e[type=minecraft:marker,tag=ajjgui.gui_origin,tag=ajjgui.gui_active] run data modify storage ajjgui:data page set from block ~ ~ ~ Items
+execute as @e[type=minecraft:marker,tag=ajjgui.gui_ported,tag=ajjgui.gui_active] on vehicle run data modify storage ajjgui:data page set from entity @s Items
 
-data modify storage ajjgui:gui In set from storage ajjgui:gui Temp1
-execute unless data storage ajjgui:gui Temp1 run data modify storage ajjgui:gui In set value {}
+function ajjgui:control/get_item
 
-execute unless data storage ajjgui:gui Temp1 run data modify storage ajjgui:gui Page append from storage ajjgui:gui Widget
+data modify storage ajjgui:data in set from storage ajjgui:data temp1
+execute unless data storage ajjgui:data temp1 run data modify storage ajjgui:data in set value {}
+
+execute unless data storage ajjgui:data temp1 run data modify storage ajjgui:data page append from storage ajjgui:data widget
