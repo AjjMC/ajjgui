@@ -1,6 +1,6 @@
 # A GUI Framework for Minecraft Mapmaking Using In-Game Commands
 
-> **NOW AVAILABLE FOR 1.20.5 SNAPSHOT 24W13A!**
+> **NOW AVAILABLE FOR 1.20.5 SNAPSHOT 24W14A**
 >
 > **Please report any bugs in the issues section.**
 
