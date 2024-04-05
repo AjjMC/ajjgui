@@ -29,4 +29,4 @@ execute unless data storage ajjgui:data temp1[24].components.minecraft:custom_da
 execute unless data storage ajjgui:data temp1[25].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp set from storage ajjgui:data temp1[25]
 execute unless data storage ajjgui:data temp1[26].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp set from storage ajjgui:data temp1[26]
 
-execute at @e[type=minecraft:marker,tag=ajjgui.box] run function ajjgui:control/give_item
+execute at @e[type=minecraft:marker,tag=ajjgui.box] run function ajjgui:control/return_item
