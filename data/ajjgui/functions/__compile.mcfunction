@@ -4,8 +4,8 @@ execute unless data storage ajjgui:data version run return fail
 execute unless block ~ ~ ~ minecraft:chest run tellraw @s {"text":"Unable to compile GUI; you must be standing on top of a chest and are not flying","color":"red"}
 execute unless block ~ ~ ~ minecraft:chest run return fail
 
-execute unless data block ~ ~ ~ Items[0] run tellraw @s {"text":"Unable to compile GUI; the chest is empty","color":"red"}
-execute unless data block ~ ~ ~ Items[0] run return fail
+execute unless items block ~ ~ ~ container.* * run tellraw @s {"text":"Unable to compile GUI; the chest is empty","color":"red"}
+execute unless items block ~ ~ ~ container.* * run return fail
 
 execute unless block ~ ~-1 ~ #ajjgui:containers run tellraw @s {"text":"Unable to compile GUI; there must be a container below the chest","color":"red"}
 execute unless block ~ ~-1 ~ #ajjgui:containers run return fail

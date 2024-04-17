@@ -1,6 +1,6 @@
 # A GUI Framework for Minecraft Mapmaking Using In-Game Commands
 
-> **NOW AVAILABLE FOR 1.20.5 SNAPSHOT 24W14A**
+> **AVAILABLE ON 1.20.5+**
 >
 > **Please report any bugs in the issues section.**
 
@@ -15,11 +15,11 @@
 
 ## Overview
 
-Minecraft servers frequently use custom user interfaces utilizing the inventory of a container (e.g., a chest), the items of which serve as interactable elements. While plugins have made the design of such menus trivial to server developers, Minecraft commands and datapacks are much harder to work with, and their limitations often make it difficult to replicate these item-based GUIs in situations where plugins are not available.
+Large Minecraft servers often use custom user interfaces in which the inventory of a container (e.g., a chest) is used to display interactive elements to players as in-game items. While plugins have made the design of such menus trivial to server developers, the limitations of Minecraft commands and datapacks make it difficult to replicate these item-based GUIs in situations where plugins are not available.
 
-Certain datapacks as well as datapack generators have been made with the intent to provide mapmakers with a GUI framework. However, these are usually basic, being restricted to essential features that rarely go beyond the creation of buttons and page navigation, while they may often not be designed with robustness into account. Furthermore, existing approaches involve datapack templates in which the logic of specific GUIs is hard-coded, requiring users to understand and modify part of the code. As such, the use of such datapacks may be unreasonable for large projects, either due to their limitations or lack of convenience.
+Various datapacks as well as datapack generators have been made with the intent to provide mapmakers with a GUI framework. However, these are usually basic, being restricted to essential features that rarely go beyond the creation of buttons and page navigation, and they may often not be designed with reliability into account. Furthermore, existing approaches involve datapack templates in which the logic of specific GUIs is hard-coded, requiring mapmakers to understand and modify part of the code.
 
-The aim of this datapack is to serve as an advanced framework allowing users to easily create and maintain complex and robust item-based GUIs in-game, without writing any code or ever touching the datapack. This is achieved by simply dragging and dropping items with custom NBT tags in containers within a world, which the datapack can use to generate GUIs according to users' specifications.
+This framework aims to be the ultimate mapmaking tool for creating and managing complex and robust item-based GUIs in-game, removing the need to write code or ever touch the datapack. This is achieved by simply dragging and dropping items with custom NBT tags in containers within a world, which the datapack can use to generate GUIs according to mapmakers' specifications.
 
 The datapack provides the following features:
 
@@ -28,7 +28,7 @@ The datapack provides the following features:
 * Robust design, support for multiplayer, including personalized GUIs, and no interference with player inventories
 * Complete documentation, in-game tutorial and demos
 
-## Downloading, Installing and Updating
+## Downloading and Installing
 
 The datapack can be downloaded from this repository by clicking on "Code" and then "Download ZIP". The folder inside the ZIP file is the datapack. After this folder has been added to the "datapacks" folder of a Minecraft world, ``/reload`` needs to be run in-game. A list of the datapack's commands is available via ``/function ajjgui:__help``. By convention, all functions run directly by the mapmaker start with two underscores. Functions starting with a single underscore are aliases that do not give any feedback messages in the chat. These are meant to be used by the mapmaker as part of their own map's datapack. Any functions not listed here are internal and are not meant to be used.
 
