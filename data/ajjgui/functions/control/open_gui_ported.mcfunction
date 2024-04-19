@@ -1,5 +1,5 @@
 $execute unless data storage ajjgui:data database[{player:$(player),id:$(id)}] run tellraw @s {"text":"Unable to open GUI; the specified GUI was not found","color":"red"}
-$execute unless data storage ajjgui:data database[{player:$(player),id:$(id)}] run tellraw @a {"text":"(Use a single underscore to hide feedback)","color":"yellow"}
+$execute unless data storage ajjgui:data database[{player:$(player),id:$(id)}] run tellraw @s {"text":"(Use a single underscore to hide feedback)","color":"yellow"}
 $execute unless data storage ajjgui:data database[{player:$(player),id:$(id)}] run data remove storage ajjgui:data temp
 $execute unless data storage ajjgui:data database[{player:$(player),id:$(id)}] run return fail
 

@@ -1,5 +1,5 @@
 execute unless entity @e[type=minecraft:marker,tag=ajjgui.gui_origin] run tellraw @s {"text":"Unable to port GUI; no GUIs were found","color":"red"}
-execute unless entity @e[type=minecraft:marker,tag=ajjgui.gui_origin] run tellraw @a {"text":"(Use a single underscore to hide feedback)","color":"yellow"}
+execute unless entity @e[type=minecraft:marker,tag=ajjgui.gui_origin] run tellraw @s {"text":"(Use a single underscore to hide feedback)","color":"yellow"}
 execute unless entity @e[type=minecraft:marker,tag=ajjgui.gui_origin] run data remove storage ajjgui:data temp
 execute unless entity @e[type=minecraft:marker,tag=ajjgui.gui_origin] run return fail
 
