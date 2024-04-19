@@ -1,3 +1,3 @@
 function ajjgui:demo/widgets/radiobutton/group0_fixed
 
-tellraw @a [{"text":"Gave "},{"text":"ajjgui","color":"gray"},{"text":" demo widget to "},{"selector":"@s"}]
+tellraw @s {"text":"Gave GUI demo widget"}
