@@ -12,4 +12,5 @@ ride @s mount @e[type=minecraft:chest_boat,tag=ajjgui.gui_ported,tag=ajjgui.gui_
 
 execute as @e[type=minecraft:marker,tag=ajjgui.gui_ported,tag=ajjgui.gui_new] at @s run function ajjgui:control/load_page_ported
 
+tag @e[type=minecraft:chest_boat,tag=ajjgui.gui_ported,tag=ajjgui.gui_new] remove ajjgui.gui_new
 tag @e[type=minecraft:marker,tag=ajjgui.gui_ported,tag=ajjgui.gui_new] remove ajjgui.gui_new
