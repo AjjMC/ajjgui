@@ -4,7 +4,7 @@ $execute unless data storage ajjgui:data database[{player:$(player),id:$(id)}] r
 execute on vehicle if entity @s[type=minecraft:chest_boat,tag=ajjgui.gui_ported] run function ajjgui:control/close_gui_ported
 
 data modify storage ajjgui:data temp.rotation set from entity @s Rotation
-execute at @s align xyz positioned ~0.5 ~ ~0.5 run function ajjgui:control/create_gui_ported with storage ajjgui:data temp
+execute at @s align xyz positioned ~0.5 ~0.5 ~0.5 run function ajjgui:control/create_gui_ported with storage ajjgui:data temp
 
 scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui_ported,tag=ajjgui.gui_new] ajjgui.page 0
 execute as @e[type=minecraft:marker,tag=ajjgui.gui_ported,tag=ajjgui.gui_new] run function ajjgui:control/load_gui_ported with storage ajjgui:data temp
