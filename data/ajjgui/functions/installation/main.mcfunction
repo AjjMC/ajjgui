@@ -8,9 +8,11 @@ execute as @e[type=minecraft:item] if data entity @s {Item:{components:{"minecra
 execute as @e[type=minecraft:marker,tag=ajjgui.gui_origin] at @s unless block ~ ~ ~ #ajjgui:containers run tellraw @a {"text":"Removed GUI"}
 execute as @e[type=minecraft:marker,tag=ajjgui.gui_origin] at @s unless block ~ ~ ~ #ajjgui:containers run kill @s
 
-execute as @e[type=minecraft:chest_boat,tag=ajjgui.gui_ported] on controller run title @s actionbar {"text":"Open inventory to view menu | Dismount to cancel"}
+execute as @e[type=minecraft:chest_boat,tag=ajjgui.gui_ported] store result score @s ajjgui at @s positioned ~-0.75 ~-0.75 ~-0.75 if entity @a[dx=0.5,dy=0.5,dz=0.5]
+execute as @e[type=minecraft:chest_boat,tag=ajjgui.gui_ported] unless score @s ajjgui matches 1 run function ajjgui:control/close_gui_ported
 execute as @e[type=minecraft:chest_boat,tag=ajjgui.gui_ported] at @s unless entity @a[distance=..0.5] run function ajjgui:control/close_gui_ported
 execute as @e[type=minecraft:chest_boat,tag=ajjgui.gui_ported] at @s if block ~ ~ ~ minecraft:water run function ajjgui:control/close_gui_ported
+execute as @e[type=minecraft:chest_boat,tag=ajjgui.gui_ported] on controller run title @s actionbar {"text":"Open inventory to view menu | Dismount to cancel"}
 
 execute at @e[type=minecraft:marker,tag=ajjgui.box] run setblock ~ ~ ~ minecraft:yellow_shulker_box
 
