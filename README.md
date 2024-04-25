@@ -478,11 +478,11 @@ A *button* exiting the GUI:
 
 ## Porting GUIs to Players
 
-Once a GUI is compiled into a block entity, it is possible to port it to a specific player in a database using their UUID and assign to it an identifier unique to each GUI associated with this player. Porting the nearest GUI is achieved with ``/function ajjgui:__port`` using the macro arguments "player" for the UUID integer array and "id" for the GUI identifier. Using the same arguments, ``/function ajjgui:__open`` gives a player access to a GUI from the database. The executing player can use their own UUID with ``/function ajjgui:__portself`` and ``/function ajjgui:__openself``, which only require a GUI identifier as argument.
+Once a GUI is compiled into a block entity, it is possible to port it to a specific player in a database using their UUID and an identifier unique to each GUI associated with them. This allows for personalized menus based on chest boats. Porting the nearest GUI is achieved with ``/function ajjgui:__port`` using the macro arguments "player" for the UUID integer array and "id" for the GUI identifier. Using the same arguments, ``/function ajjgui:__open`` gives a player access to a GUI from the database. The executing player can use their own UUID with ``/function ajjgui:__portself`` and ``/function ajjgui:__openself``, which only require a GUI identifier as an argument.
 
 #### Example
 
-1. A mapmaker compiles a GUI for a personalized settings menu at coordinates ``10`` ``10`` ``10``. They intend for each player in their map to have their own instance of the settings menu. The following command can be used to port this GUI to all online players. A single underscore is used to hide command feedback:
+1. A mapmaker compiles a GUI for a settings menu at coordinates ``10`` ``10`` ``10``. It is intended for each player in the map to have their own settings menu. The following command can be used to port this GUI to all online players. A single underscore is used to hide command feedback:
 
     ```
     /execute positioned 10 10 10 as @a run function ajjgui:_portself {id:"settings"}
