@@ -4,7 +4,6 @@
 >
 > **Please report any bugs in the issues section.**
 
-
 <p align = "center">
   <img src="repo/gui.gif" width="350">
 </p>
