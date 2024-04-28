@@ -477,7 +477,7 @@ A *button* exiting the GUI:
 
 ## Porting GUIs to Players
 
-Once a GUI is compiled into a block entity, it is possible to port it to a specific player in a database using their UUID and an identifier unique to each GUI associated with them. This allows for personalized menus based on chest boats. Porting the nearest GUI is achieved with ``/function ajjgui:__port`` using the macro arguments "player" for the UUID integer array and "id" for the GUI identifier. Using the same arguments, ``/function ajjgui:__open`` gives a player access to a GUI from the database. The executing player can use their own UUID with ``/function ajjgui:__portself`` and ``/function ajjgui:__openself``, which only require a GUI identifier as an argument.
+Once a GUI is compiled, it is possible to port it to a specific player in a database using their UUID and an identifier unique to each GUI associated with them. This allows for personalized menus based on chest boats. Porting the nearest GUI is achieved with ``/function ajjgui:__port`` using the macro arguments "player" for the UUID integer array and "id" for the GUI identifier. Using the same arguments, ``/function ajjgui:__open`` gives a player access to a GUI from the database. The executing player can use their own UUID with ``/function ajjgui:__portself`` and ``/function ajjgui:__openself``, which only require a GUI identifier as an argument.
 
 #### Example
 
@@ -504,6 +504,8 @@ Once a GUI is compiled into a block entity, it is possible to port it to a speci
     ```
     /function ajjgui:_open {player:[I;-1547620582,-1960489320,-1638997249,1765947055],id:"settings"}
     ```
+
+> **NOTE:** Chest boat GUIs automatically close if another player comes in contact with them.
 
 ## Running GUI Commands and Accessing Data
 
@@ -597,7 +599,9 @@ For every GUI, there is a marker entity located at the container's coordinates w
 
 > **NOTE:** The GUI compiler adds the ``ajjgui.meta`` NBT tag to each widget. This must not be changed when directly modifying NBT.
 
-> **NOTE:** Widgets with the ``ajjgui.fixed`` NBT tag set to ``1b`` appear in a new page only when the page is loaded by clicking on widget that has the ``ajjgui.page`` NBT tag. Directly changing a page therefore does not preserve fixed widgets unless they were already cached in the destination page from a previous interaction.
+> **NOTE:** This section explains how widget NBT can be modified post-compilation, after required NBT has been initialized with default values. As such, creating widget NBT from scratch or changing the ``ajjgui.widget`` NBT tag is not supported behavior.
+
+> **NOTE:** Widgets with the ``ajjgui.fixed`` NBT tag set to ``1b`` are passed on to a new page only when it is loaded by clicking on a widget that has the ``ajjgui.page`` NBT tag. Directly changing a page therefore does not properly handle fixed widgets.
 
 > **NOTE:** Decompiling a GUI resets it to the state it was in when compiled.
 
