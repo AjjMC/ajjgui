@@ -591,7 +591,7 @@ For every GUI, there is a marker entity located at the container's coordinates w
 
 > **NOTE:** The GUI compiler adds the ``ajjgui.meta`` NBT tag to each widget. This must not be changed when directly modifying NBT.
 
-> **NOTE:** This section explains how widget NBT can be modified post-compilation, after required NBT has been initialized with default values. As such, creating widget NBT from scratch or changing the ``ajjgui.widget`` NBT tag is not supported behavior.
+> **NOTE:** This section explains how widget NBT can be modified post-compilation, after required NBT has been initialized with default values. As such, creating widget NBT from scratch or changing the ``ajjgui.widget`` NBT tag is not recommended.
 
 > **NOTE:** Widgets with the ``ajjgui.fixed`` NBT tag set to ``1b`` are passed on to a new page only when it is loaded by clicking on a widget that has the ``ajjgui.page`` NBT tag. Directly changing a page therefore does not properly handle fixed widgets.
 
