@@ -105,10 +105,6 @@ A *placeholder*:
 /give @p minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"placeholder"}},minecraft:hide_tooltip={}]
 ```
 
-<p align = "center">
-  <img src="repo/placeholder.gif" width="350">
-</p>
-
 > **NOTE:** If a GUI slot is empty, the GUI compiler adds a light gray stained glass pane *placeholder* with a blank name in its place.
 
 > **NOTE:** If the ``ajjgui.widget`` NBT tag of any item is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional, and no specific tags are required.
@@ -446,10 +442,6 @@ Each of the widgets discussed previously, excluding the *placeholder*, can be ma
     ```
     /give @p minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:-1b,relative:1b}},minecraft:custom_name='{"text":"Go to Previous Page","italic":false}']
     ```
-
-<p align = "center">
-  <img src="repo/button.gif" width="350">
-</p>
 
 ## Fixed GUI Widgets
 
