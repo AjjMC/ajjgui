@@ -185,6 +185,10 @@ where N is the number of states.
   <img src="repo/counter.gif" width="350">
 </p>
 
+<p align = "center">
+  <i>Widget shown in Example 1.</i>
+</p>
+
 ### Switch
 
 The *switch* is a widget that changes to a different item when clicked, following an item sequence. The item sequence is specified in the ``ajjgui.items`` NBT tag. The default item is the one initially used upon creation of the widget. Once a *switch* in its default state is clicked, it changes to the second item in the list and so on. Hence, the first one is not used until the end of the first cycle. After one cycle, the first item is always used instead of the default one. The current state of a *switch* is stored in the ``ajjgui.state`` NBT tag.
@@ -238,6 +242,10 @@ where N is the number of states.
   <img src="repo/switch.gif" width="350">
 </p>
 
+<p align = "center">
+  <i>Widget shown in Example 1.</i>
+</p>
+
 ### Radiobutton
 
 The *radiobutton* is a widget that changes between a disabled and an enabled state item when clicked. It comes in groups in which only one widget can be enabled at a time, with the rest being disabled. Each item is specified in the ``ajjgui.disabled`` and ``ajjgui.enabled`` NBT tags. The default item is the one initially used upon creation of the widget. Once a *radiobutton* is clicked, it changes to the item corresponding to its enabled state, and all the other *radiobutton* widgets with the same group identifier change to their disabled state. The group identifier of a *radiobutton* is stored in the ``ajjgui.group`` NBT tag. The current state of a *radiobutton* is stored in the ``ajjgui.state`` NBT tag.
@@ -285,6 +293,10 @@ The *radiobutton* is a widget that changes between a disabled and an enabled sta
   <img src="repo/radiobutton.gif" width="350">
 </p>
 
+<p align = "center">
+  <i>Widget shown in Example 1.</i>
+</p>
+
 ### Itembin
 
 The *itembin* is a widget that clears all items inserted by the player in a particular slot in the GUI.
@@ -314,6 +326,10 @@ An *itembin*:
 
 <p align = "center">
   <img src="repo/itembin.gif" width="350">
+</p>
+
+<p align = "center">
+  <i>Widget shown in Example.</i>
 </p>
 
 > **NOTE:** The *itembin* has a built-in cooldown of 0.4s.
@@ -370,6 +386,10 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
   <img src="repo/itemslot.gif" width="350">
 </p>
 
+<p align = "center">
+  <i>Widget shown in Example 1.</i>
+</p>
+
 > **NOTE:** The *itemslot* has a built-in cooldown of 0.4s.
 
 ### Scrollbutton
@@ -407,6 +427,10 @@ A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each butt
 
 <p align = "center">
   <img src="repo/scrollbutton.gif" width="350">
+</p>
+
+<p align = "center">
+  <i>Widget shown in Example.</i>
 </p>
 
 > **NOTE:** The *scrollbutton* only supports the *placeholder*, *button* and *itembin* widgets.
@@ -591,7 +615,7 @@ For every GUI, there is a marker entity located at the container's coordinates w
 
 > **NOTE:** The GUI compiler adds the ``ajjgui.meta`` NBT tag to each widget. This must not be changed when directly modifying NBT.
 
-> **NOTE:** This section explains how widget NBT can be modified post-compilation, after required NBT has been initialized with default values. As such, creating widget NBT from scratch or changing the ``ajjgui.widget`` NBT tag is not recommended.
+> **NOTE:** This section explains how widget NBT can be modified post-compilation, after required NBT has been initialized with default values. Creating widget NBT from scratch or changing the ``ajjgui.widget`` NBT tag is therefore not recommended.
 
 > **NOTE:** Widgets with the ``ajjgui.fixed`` NBT tag set to ``1b`` are passed on to a new page only when it is loaded by clicking on a widget that has the ``ajjgui.page`` NBT tag. Directly changing a page therefore does not properly handle fixed widgets.
 
