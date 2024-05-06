@@ -521,7 +521,7 @@ Once a GUI is compiled, it is possible to port it to a specific player in a data
     /function ajjgui:_open {player:[I;-1547620582,-1960489320,-1638997249,1765947055],id:"settings"}
     ```
 
-> **NOTE:** Chest boat GUIs automatically close if another player comes in contact with them.
+> **NOTE:** These chest boats ride an interaction entity surrounding their hitbox and preventing other players from accessing them. If players come too close, the GUI is closed. This minor inconvenience is for ensuring complete robustness.
 
 ## Running GUI Commands and Accessing Data
 
@@ -577,7 +577,7 @@ Each of the widgets discussed previously, excluding the the *placeholder*, can b
 
 ## Directly Modifying GUIs
 
-For every GUI, there is a marker entity located at the container's coordinates with the scoreboard tag ``"ajjgui.gui_origin"`` for block entities or ``"ajjgui.gui_ported"`` for chest boats. Active GUIs additionally have the ``"ajjgui.gui_active"`` scoreboard tag. This marker stores the page value in its ``ajjgui.page`` score, the container name in its ``data.custom_name`` NBT tag and the page list in its ``data.gui`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be directly modified to achieve desired results. This would, for example, be needed if one wanted to modify a GUI without prior user interaction (i.e., without triggering a widget with the ``ajjgui.page`` or ``ajjgui.command`` NBT tags). If the modification command is not triggered by a player using a GUI (i.e., with the ``ajjgui.command`` NBT tag), ``/function ajjgui:_reload`` must follow in the same tick for any changes to be reflected in the GUI. If this is omitted, the datapack assumes that a player is interacting indefinitely with this GUI and causes other active GUIs to break.
+There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for block entity GUIs, located at the container coordinates, and ``"ajjgui.gui_ported"`` for chest boat GUIs, riding the chest boat. GUIs used at a specific tick temporarily have the ``"ajjgui.gui_active"`` scoreboard tag on their marker. This marker stores the page value in its ``ajjgui.page`` score, the container name in its ``data.custom_name`` NBT tag and the page list in its ``data.gui`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be directly modified to achieve desired results. This would, for example, be needed if one wanted to modify a GUI without prior user interaction (i.e., without triggering a widget with the ``ajjgui.page`` or ``ajjgui.command`` NBT tags). If the modification command is not triggered by a player using a GUI (i.e., with the ``ajjgui.command`` NBT tag), ``/function ajjgui:_reload`` must follow in the same tick for any changes to be reflected in the GUI. If this is omitted, the datapack assumes that a player is interacting indefinitely with this GUI and causes other active GUIs to break.
 
 #### Examples
 
