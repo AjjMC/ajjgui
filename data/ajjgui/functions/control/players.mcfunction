@@ -91,3 +91,5 @@ execute if items entity @s hotbar.7 *[minecraft:custom_data~{ajjgui:{meta:{compi
 execute if items entity @s hotbar.8 *[minecraft:custom_data~{ajjgui:{meta:{compiled:1b}}}] run scoreboard players set @s ajjgui.slot_returned 8
 
 execute at @s run function ajjgui:widgets/main
+
+execute if score @s ajjgui.cooldown matches 1.. run scoreboard players remove @s ajjgui.cooldown 1
