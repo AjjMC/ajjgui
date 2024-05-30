@@ -76,11 +76,14 @@ An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_
 
 ## List of GUI Widgets
 
-> **NOTE:** Some of the following commands are too long to fit in the chat box and need to be executed using a command block.
+> [!TIP]
+> Some of the following commands are too long to fit in the chat box and need to be executed using a command block.
 
-> **NOTE:** For custom NBT, it is important to check that the right data types are being used (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:1}}``), that values are within the specified range (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:2b}}``, where ``ajjgui.exit`` here can only be ``0b`` or ``1b``). The GUI compiler is only capable of initializing required NBT with default values and does not correct errors. While there are cases where errors in custom NBT, such as incorrect data types, may be internally resolved by the datapack at later stages, this behavior is inconsistent and must not be assumed.
+> [!WARNING]
+> For custom NBT, it is important to check that the right data types are being used (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:1}}``), that values are within the specified range (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:2b}}``, where ``ajjgui.exit`` here can only be ``0b`` or ``1b``). The GUI compiler is only capable of initializing required NBT with default values and does not correct errors. While there are cases where errors in custom NBT, such as incorrect data types, may be internally resolved by the datapack at later stages, this behavior is inconsistent and must not be assumed.
 
-> **NOTE:** The ``ajjgui.command``, ``ajjgui.exit``, ``ajjgui.fixed``, ``ajjgui.page`` and ``ajjgui.relative`` NBT tags are covered separately in later sections.
+> [!NOTE]
+> The ``ajjgui.command``, ``ajjgui.exit``, ``ajjgui.fixed``, ``ajjgui.page`` and ``ajjgui.relative`` NBT tags are covered separately in later sections.
 
 ### Placeholder
 
@@ -105,9 +108,11 @@ A *placeholder*:
 /give @p minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"placeholder"}},minecraft:hide_tooltip={}]
 ```
 
-> **NOTE:** If a GUI slot is empty, the GUI compiler adds a light gray stained glass pane *placeholder* with a blank name in its place.
+> [!TIP]
+> If a GUI slot is empty, it is set to a light gray stained glass pane *placeholder* with a hidden tooltip.
 
-> **NOTE:** If the ``ajjgui.widget`` NBT tag of any item is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional, and no specific tags are required.
+> [!TIP]
+> If the ``ajjgui.widget`` NBT tag of any item is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional.
 
 ### Button
 
@@ -332,7 +337,8 @@ An *itembin*:
   <i>Widget shown in Example.</i>
 </p>
 
-> **NOTE:** The *itembin* has a built-in cooldown of 0.4s.
+> [!IMPORTANT]
+> The *itembin* has a built-in cooldown of 0.4s.
 
 ### Itemslot
 
@@ -390,7 +396,8 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
   <i>Widget shown in Example 1.</i>
 </p>
 
-> **NOTE:** The *itemslot* has a built-in cooldown of 0.4s.
+> [!IMPORTANT]
+> The *itemslot* has a built-in cooldown of 0.4s.
 
 ### Scrollbutton
 
@@ -433,9 +440,11 @@ A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each butt
   <i>Widget shown in Example.</i>
 </p>
 
-> **NOTE:** The *scrollbutton* only supports the *placeholder*, *button* and *itembin* widgets.
+> [!IMPORTANT]
+> The *scrollbutton* only supports the *placeholder*, *button* and *itembin* widgets.
 
-> **NOTE:** If the ``ajjgui.widget`` NBT tag of any widget is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional, and no specific tags are required. This, by extension, applies to a *placeholder* widget specified in the ``ajjgui.widgets`` NBT tag of the *scrollbutton*.
+> [!TIP]
+> If the ``ajjgui.widget`` NBT tag of any widget is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional. This, by extension, applies to a *placeholder* widget specified in the ``ajjgui.widgets`` NBT tag of the *scrollbutton*.
 
 ## Changing GUI Pages
 
@@ -521,7 +530,8 @@ Once a GUI is compiled, it is possible to port it to a specific player in a data
     /function ajjgui:_open {player:[I;-1547620582,-1960489320,-1638997249,1765947055],id:"settings"}
     ```
 
-> **NOTE:** These chest boats ride an interaction entity surrounding their hitbox and preventing other players from accessing them. If players come too close, the GUI is closed. This minor inconvenience is for ensuring complete robustness.
+> [!IMPORTANT]
+> These chest boats ride an interaction entity surrounding their hitbox and preventing other players from accessing them. If players come too close, the GUI is closed. This minor inconvenience is for ensuring complete robustness.
 
 ## Running GUI Commands and Accessing Data
 
@@ -577,7 +587,7 @@ Each of the widgets discussed previously, excluding the the *placeholder*, can b
 
 ## Directly Modifying GUIs
 
-There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for block entity GUIs, located at the container coordinates, and ``"ajjgui.gui_ported"`` for chest boat GUIs, riding the chest boat. GUIs used at a specific tick temporarily have the ``"ajjgui.gui_active"`` scoreboard tag on their marker. This marker stores the page value in its ``ajjgui.page`` score, the container name in its ``data.custom_name`` NBT tag and the page list in its ``data.gui`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be directly modified to achieve desired results. This would, for example, be needed if one wanted to modify a GUI without prior user interaction (i.e., without triggering a widget with the ``ajjgui.page`` or ``ajjgui.command`` NBT tags). If the modification command is not triggered by a player using a GUI (i.e., with the ``ajjgui.command`` NBT tag), ``/function ajjgui:_reload`` must follow in the same tick for any changes to be reflected in the GUI. If this is omitted, the datapack assumes that a player is interacting indefinitely with this GUI and causes other active GUIs to break.
+There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for block entity GUIs, located at the container coordinates, and ``"ajjgui.gui_ported"`` for chest boat GUIs, riding the chest boat. GUIs used at a specific tick temporarily have the ``"ajjgui.gui_active"`` scoreboard tag on their marker. This marker stores the page value in its ``ajjgui.page`` score, the container name in its ``data.custom_name`` NBT tag and the page list in its ``data.gui`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be directly modified to achieve desired results. This would, for example, be needed if one wanted to modify a GUI without prior user interaction (i.e., without triggering a widget with the ``ajjgui.page`` or ``ajjgui.command`` NBT tags). If the modification command is not triggered by a player using a GUI (i.e., with the ``ajjgui.command`` NBT tag), ``/function ajjgui:_reload`` must follow in the same tick for any changes to be reflected in the GUI.
 
 #### Examples
 
@@ -613,13 +623,20 @@ There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for blo
 
     In this example, ``/function ajjgui:_reload`` is not required.
 
-> **NOTE:** The GUI compiler adds the ``ajjgui.meta`` NBT tag to each widget. This must not be changed when directly modifying NBT.
+> [!WARNING]
+> If a GUI is not reloaded as specified above, the datapack assumes that a player is interacting indefinitely with it, causing other active GUIs to malfunction.
 
-> **NOTE:** This section explains how widget NBT can be modified post-compilation, after required NBT has been initialized with default values. Creating widget NBT from scratch or changing the ``ajjgui.widget`` NBT tag is therefore not recommended.
+> [!WARNING]
+> The GUI compiler adds the ``ajjgui.meta`` NBT tag to each widget. This must not be changed when directly modifying NBT.
 
-> **NOTE:** Widgets with the ``ajjgui.fixed`` NBT tag set to ``1b`` are passed on to a new page only when it is loaded by clicking on a widget that has the ``ajjgui.page`` NBT tag. Directly changing a page therefore does not properly handle fixed widgets.
+> [!WARNING]
+> This section explains how widget NBT can be modified post-compilation, after required NBT has been initialized with default values. Creating widget NBT from scratch or changing the ``ajjgui.widget`` NBT tag is therefore not recommended.
 
-> **NOTE:** Decompiling a GUI resets it to the state it was in when compiled.
+> [!IMPORTANT]
+> Widgets with the ``ajjgui.fixed`` NBT tag set to ``1b`` are passed on to a new page only when it is loaded by clicking on a widget that has the ``ajjgui.page`` NBT tag. Directly changing a page therefore does not properly handle fixed widgets.
+
+> [!NOTE]
+> Decompiling a GUI resets it to the state in which it was when compiled.
 
 ## Copyright
 
