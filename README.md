@@ -594,7 +594,7 @@ There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for blo
 1. A command setting the nearest block entity GUI's page to the first one:
 
     ```
-    /scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui_origin,sort=nearest,limit=1] ajjgui.page 0
+    /scoreboard players set @n[type=minecraft:marker,tag=ajjgui.gui_origin] ajjgui.page 0
     ```
 
     Then, in the same tick (not required if the above command is run from a widget):
@@ -606,7 +606,7 @@ There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for blo
 2. A command setting the nearest block entity GUI's first page's first slot item's id to stone:
 
     ```
-    /data modify entity @e[type=minecraft:marker,tag=ajjgui.gui_origin,sort=nearest,limit=1] data.GUI[0][{Slot:0b}].id set value "minecraft:stone"
+    /data modify entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.GUI[0][{Slot:0b}].id set value "minecraft:stone"
     ```
 
     Then, in the same tick (not required if the above command is run from a widget):

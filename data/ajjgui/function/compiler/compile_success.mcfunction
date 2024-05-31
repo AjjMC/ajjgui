@@ -1,11 +1,11 @@
 kill @e[type=minecraft:marker,tag=ajjgui.gui_origin,distance=..0.1]
 summon minecraft:marker ~ ~ ~ {Tags:["ajjgui.gui_origin"]}
-scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui_origin,sort=nearest,limit=1] ajjgui.page 0
+scoreboard players set @n[type=minecraft:marker,tag=ajjgui.gui_origin] ajjgui.page 0
 
 data modify storage ajjgui:data temp set from block ~ ~1 ~ Items
 setblock ~ ~1 ~ minecraft:air
 
-data modify entity @e[type=minecraft:marker,tag=ajjgui.gui_origin,sort=nearest,limit=1] data.meta.boxes set from storage ajjgui:data temp
+data modify entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.meta.boxes set from storage ajjgui:data temp
 
 data modify storage ajjgui:data temp1 set from storage ajjgui:data temp[0].components.minecraft:container
 execute if data storage ajjgui:data temp[0] run function ajjgui:compiler/compile_page
@@ -115,9 +115,9 @@ data modify storage ajjgui:data temp1 set from storage ajjgui:data temp[26].comp
 execute if data storage ajjgui:data temp[26] run function ajjgui:compiler/compile_page
 execute if data storage ajjgui:data temp[26] run data modify storage ajjgui:data temp2 append from storage ajjgui:data temp1
 
-data modify entity @e[type=minecraft:marker,tag=ajjgui.gui_origin,sort=nearest,limit=1] data.gui set from storage ajjgui:data temp2
-data modify entity @e[type=minecraft:marker,tag=ajjgui.gui_origin,sort=nearest,limit=1] data.custom_name set from block ~ ~ ~ CustomName
+data modify entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.gui set from storage ajjgui:data temp2
+data modify entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.custom_name set from block ~ ~ ~ CustomName
 
-execute as @e[type=minecraft:marker,tag=ajjgui.gui_origin,sort=nearest,limit=1] run function ajjgui:control/load_page_origin
+execute as @n[type=minecraft:marker,tag=ajjgui.gui_origin] run function ajjgui:control/load_page_origin
 
 tellraw @a {"text":"Compiled GUI"}
