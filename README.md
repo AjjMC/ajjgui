@@ -1,8 +1,8 @@
-# A GUI Framework for Minecraft Mapmaking Using In-Game Commands
+# A Data-Driven GUI Framework for Minecraft Mapmaking
 
 > **AVAILABLE ON 1.21**
 >
-> **Please report any bugs in the issues section.**
+> **Please report any bugs in the issue section.**
 
 <p align = "center">
   <img src="repo/gui.gif" width="350">
