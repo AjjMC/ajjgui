@@ -20,7 +20,7 @@ Various datapacks as well as datapack generators have been made with the intent 
 
 This framework aims to be the ultimate mapmaking tool for creating and managing complex and robust item-based GUIs in-game, removing the need to write code or ever touch the datapack. This is achieved by simply dragging and dropping items with custom NBT tags in containers within a world, which the datapack can use to generate GUIs according to mapmakers' specifications:
 
-* **Block Entity GUIs:** Placed at a fixed position and accessible to all players. These are generated upon compilation.
+* **Block Entity GUIs:** Placed at a fixed position and shared by all players. These are generated upon compilation.
 * **Chest Boat GUIs:** Retrieved from a database and accessible anywhere by specified players only. These are obtained directly from the above by [porting GUIs to players](#porting-guis-to-players).
 
 The datapack provides the following features:
