@@ -2,7 +2,7 @@
 
 > **AVAILABLE ON 1.21**
 >
-> **Please report any bugs in the issue section.**
+> **Please report any bugs in the issues section.**
 
 <p align = "center">
   <img src="repo/gui.gif" width="350">
@@ -18,7 +18,10 @@ Large Minecraft servers often use custom user interfaces in which the inventory 
 
 Various datapacks as well as datapack generators have been made with the intent to provide mapmakers with a GUI framework. However, these are usually basic, being restricted to essential features that rarely go beyond the creation of buttons and page navigation, and they may often not be designed with reliability into account. Furthermore, existing approaches involve datapack templates in which the logic of specific GUIs is hard-coded, requiring mapmakers to understand and modify part of the code.
 
-This framework aims to be the ultimate mapmaking tool for creating and managing complex and robust item-based GUIs in-game, removing the need to write code or ever touch the datapack. This is achieved by simply dragging and dropping items with custom NBT tags in containers within a world, which the datapack can use to generate GUIs according to mapmakers' specifications.
+This framework aims to be the ultimate mapmaking tool for creating and managing complex and robust item-based GUIs in-game, removing the need to write code or ever touch the datapack. This is achieved by simply dragging and dropping items with custom NBT tags in containers within a world, which the datapack can use to generate GUIs according to mapmakers' specifications:
+
+* **Block Entity GUIs:** Placed at a fixed position and accessible to all players. These are generated upon compilation.
+* **Chest Boat GUIs:** Retrieved from a database and accessible anywhere by specified players only. These are obtained directly from the above by [porting GUIs to players](#porting-guis-to-players).
 
 The datapack provides the following features:
 
@@ -502,11 +505,11 @@ A *button* exiting the GUI:
 
 ## Porting GUIs to Players
 
-Once a GUI is compiled, it is possible to port it to a specific player in a database using their UUID and an identifier unique to each GUI associated with them. This allows for personalized menus based on chest boats. Porting the nearest GUI is achieved with ``/function ajjgui:__port`` using the macro arguments "player" for the UUID integer array and "id" for the GUI identifier. Using the same arguments, ``/function ajjgui:__open`` gives a player access to a GUI from the database. The executing player can use their own UUID with ``/function ajjgui:__portself`` and ``/function ajjgui:__openself``, which only require a GUI identifier as an argument.
+Once a GUI is compiled, it is possible to port instances of it to a specific player in a database using their UUID and an identifier unique to each GUI associated with them. This allows for personalized menus based on chest boats. Porting the nearest GUI is achieved with ``/function ajjgui:__port`` using the macro arguments "player" for the UUID integer array and "id" for the GUI identifier. Using the same arguments, ``/function ajjgui:__open`` gives a player access to a GUI from the database. The executing player can use their own UUID with ``/function ajjgui:__portself`` and ``/function ajjgui:__openself``, which only require a GUI identifier as an argument.
 
 #### Example
 
-1. A mapmaker compiles a GUI for a settings menu at coordinates ``10`` ``10`` ``10``. It is intended for each player in the map to have their own settings menu. The following command can be used to port this GUI to all online players. A single underscore is used to hide command feedback:
+1. A mapmaker compiles a GUI for a settings menu at coordinates ``10`` ``10`` ``10``. It is intended for each player in the map to have their own settings menu. The following command can be used to port instances of this GUI to all online players. A single underscore is used to hide command feedback:
 
     ```
     /execute positioned 10 10 10 as @a run function ajjgui:_portself {id:"settings"}
@@ -515,7 +518,7 @@ Once a GUI is compiled, it is possible to port it to a specific player in a data
     Then, a player can open their own GUI with:
 
     ```
-    /function ajjgui:gui_openself {id:"settings"}
+    /function ajjgui:_openself {id:"settings"}
     ```
 
 2. By specifying a UUID, offline players can be targeted, and a player can be allowed to open someone else's GUI. For example, the UUID of the player "Ajj" is ``[I; -1547620582, -1960489320, -1638997249, 1765947055]``. The following command can be used to port the nearest GUI to Ajj. A single underscore is used to hide command feedback:
@@ -531,7 +534,7 @@ Once a GUI is compiled, it is possible to port it to a specific player in a data
     ```
 
 > [!IMPORTANT]
-> These chest boats ride an interaction entity surrounding their hitbox and preventing other players from accessing them. If players come too close, the GUI is closed. This minor inconvenience is for ensuring complete robustness.
+> These chest boats ride an interaction entity surrounding their hitbox and preventing other players from accessing them. If other players come close enough to bypass this, the chest boat is removed (and the user needs to reopen the GUI). These measures are essential in ensuring that GUIs can only be accessed by their specified player.
 
 ## Running GUI Commands and Accessing Data
 
