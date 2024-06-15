@@ -505,7 +505,7 @@ A *button* exiting the GUI:
 
 ## Porting GUIs to Players
 
-Once a GUI is compiled, it is possible to port instances of it to a specific player in a database using their UUID and an identifier unique to each GUI associated with them. This allows for personalized menus based on chest boats. Porting the nearest GUI is achieved with ``/function ajjgui:__port`` using the macro arguments "player" for the UUID integer array and "id" for the GUI identifier. Using the same arguments, ``/function ajjgui:__open`` gives a player access to a GUI from the database. The executing player can use their own UUID with ``/function ajjgui:__portself`` and ``/function ajjgui:__openself``, which only require a GUI identifier as an argument.
+Once a GUI is compiled, it is possible to port a copy of it to a specific player in a database using their UUID and an identifier unique to each GUI associated with them. This allows for personalized menus based on chest boats. Porting the nearest GUI is achieved with ``/function ajjgui:__port`` using the macro arguments "player" for the UUID integer array and "id" for the GUI identifier. Using the same arguments, ``/function ajjgui:__open`` gives a player access to a GUI from the database. The executing player can use their own UUID with ``/function ajjgui:__portself`` and ``/function ajjgui:__openself``, which only require a GUI identifier as an argument.
 
 #### Example
 
