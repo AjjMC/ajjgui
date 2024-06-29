@@ -7,12 +7,12 @@ execute align xyz run summon minecraft:marker ~0.5 ~ ~0.5 {Tags:["ajjgui.box"]}
 execute at @e[type=minecraft:marker,tag=ajjgui.box] run setblock ~ ~ ~ minecraft:yellow_shulker_box
 
 scoreboard objectives add ajjgui dummy
+scoreboard objectives add ajjgui.cooldown dummy
+scoreboard objectives add ajjgui.count dummy
 scoreboard objectives add ajjgui.page dummy
 scoreboard objectives add ajjgui.slot dummy
 scoreboard objectives add ajjgui.slot_returned dummy
 scoreboard objectives add ajjgui.state dummy
-scoreboard objectives add ajjgui.count dummy
-scoreboard objectives add ajjgui.cooldown dummy
 
 scoreboard players set #two ajjgui 2
 

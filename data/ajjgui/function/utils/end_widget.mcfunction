@@ -6,10 +6,10 @@ tag @e[type=minecraft:marker,tag=ajjgui.gui_ported,tag=ajjgui.gui_active] remove
 
 scoreboard players set @s ajjgui.cooldown 8
 
+scoreboard players reset @s ajjgui.count
 scoreboard players reset @s ajjgui.page
 scoreboard players reset @s ajjgui.slot
 scoreboard players reset @s ajjgui.state
-scoreboard players reset @s ajjgui.count
 
 data remove storage ajjgui:data in
 data remove storage ajjgui:data out
