@@ -94,7 +94,7 @@ The *placeholder* is a widget that cannot be interacted with and is used to disp
 
 | NBT Tag           | Default                             | Type           |
 |:------------------|:------------------------------------|:---------------|
-| ``ajjgui.fixed``  | ``0b``                              | Boolean (Byte) |
+| ``ajjgui.fixed``  | ``0b``                              | Byte (Boolean) |
 | ``ajjgui.widget`` | Required (``"placeholder"`` or N/A) | String         |
 
 #### Usage
@@ -124,10 +124,10 @@ The *button* is a widget that changes the GUI page, exits the GUI and/or runs a 
 | NBT Tag             | Default                 | Type           |
 |:--------------------|:------------------------|:---------------|
 | ``ajjgui.command``  | N/A                     | String         |
-| ``ajjgui.exit``     | ``0b``                  | Boolean (Byte) |
-| ``ajjgui.fixed``    | ``0b``                  | Boolean (Byte) |
+| ``ajjgui.exit``     | ``0b``                  | Byte (Boolean) |
+| ``ajjgui.fixed``    | ``0b``                  | Byte (Boolean) |
 | ``ajjgui.page``     | N/A                     | Byte           |
-| ``ajjgui.relative`` | ``0b``                  | Boolean (Byte) |
+| ``ajjgui.relative`` | ``0b``                  | Byte (Boolean) |
 | ``ajjgui.widget``   | Required (``"button"``) | String         |
 
 #### Usage
@@ -147,10 +147,10 @@ The *counter* is a widget that changes to a different count of the same item whe
 | NBT Tag             | Default                  | Type           |
 |:--------------------|:-------------------------|:---------------|
 | ``ajjgui.command``  | N/A                      | String         |
-| ``ajjgui.exit``     | ``0b``                   | Boolean (Byte) |
-| ``ajjgui.fixed``    | ``0b``                   | Boolean (Byte) |
+| ``ajjgui.exit``     | ``0b``                   | Byte (Boolean) |
+| ``ajjgui.fixed``    | ``0b``                   | Byte (Boolean) |
 | ``ajjgui.page``     | N/A                      | Byte           |
-| ``ajjgui.relative`` | ``0b``                   | Boolean (Byte) |
+| ``ajjgui.relative`` | ``0b``                   | Byte (Boolean) |
 | ``ajjgui.state``    | ``0``                    | Integer        |
 | ``ajjgui.values``   | Required                 | Integer List   |
 | ``ajjgui.widget``   | Required (``"counter"``) | String         |
@@ -204,11 +204,11 @@ The *switch* is a widget that changes to a different item when clicked, followin
 | NBT Tag             | Default                 | Type           |
 |:--------------------|:------------------------|:---------------|
 | ``ajjgui.command``  | N/A                     | String         |
-| ``ajjgui.exit``     | ``0b``                  | Boolean (Byte) |
-| ``ajjgui.fixed``    | ``0b``                  | Boolean (Byte) |
+| ``ajjgui.exit``     | ``0b``                  | Byte (Boolean) |
+| ``ajjgui.fixed``    | ``0b``                  | Byte (Boolean) |
 | ``ajjgui.items``    | Required                | Compound List  |
 | ``ajjgui.page``     | N/A                     | Byte           |
-| ``ajjgui.relative`` | ``0b``                  | Boolean (Byte) |
+| ``ajjgui.relative`` | ``0b``                  | Byte (Boolean) |
 | ``ajjgui.state``    | ``0``                   | Integer        |
 | ``ajjgui.widget``   | Required (``"switch"``) | String         |
 
@@ -263,11 +263,11 @@ The *radiobutton* is a widget that changes between a disabled and an enabled sta
 | ``ajjgui.command``  | N/A                          | String         |
 | ``ajjgui.disabled`` | Required                     | Compound       |
 | ``ajjgui.enabled``  | Required                     | Compound       |
-| ``ajjgui.exit``     | ``0b``                       | Boolean (Byte) |
-| ``ajjgui.fixed``    | ``0b``                       | Boolean (Byte) |
+| ``ajjgui.exit``     | ``0b``                       | Byte (Boolean) |
+| ``ajjgui.fixed``    | ``0b``                       | Byte (Boolean) |
 | ``ajjgui.group``    | ``0b``                       | Byte           |
 | ``ajjgui.page``     | N/A                          | Byte           |
-| ``ajjgui.relative`` | ``0b``                       | Boolean (Byte) |
+| ``ajjgui.relative`` | ``0b``                       | Byte (Boolean) |
 | ``ajjgui.state``    | ``0``                        | Integer        |
 | ``ajjgui.widget``   | Required (``"radiobutton"``) | String         |
 
@@ -312,10 +312,10 @@ The *itembin* is a widget that clears all items inserted by the player in a part
 | NBT Tag             | Default                  | Type           |
 |:--------------------|:-------------------------|:---------------|
 | ``ajjgui.command``  | N/A                      | String         |
-| ``ajjgui.exit``     | ``0b``                   | Boolean (Byte) |
-| ``ajjgui.fixed``    | ``0b``                   | Boolean (Byte) |
+| ``ajjgui.exit``     | ``0b``                   | Byte (Boolean) |
+| ``ajjgui.fixed``    | ``0b``                   | Byte (Boolean) |
 | ``ajjgui.page``     | N/A                      | Byte           |
-| ``ajjgui.relative`` | ``0b``                   | Boolean (Byte) |
+| ``ajjgui.relative`` | ``0b``                   | Byte (Boolean) |
 | ``ajjgui.widget``   | Required (``"itembin"``) | String         |
 
 #### Usage
@@ -350,11 +350,11 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 | NBT Tag                | Default                   | Type           |
 |:-----------------------|:--------------------------|:---------------|
 | ``ajjgui.command``     | N/A                       | String         |
-| ``ajjgui.exit``        | ``0b``                    | Boolean (Byte) |
-| ``ajjgui.fixed``       | ``0b``                    | Boolean (Byte) |
+| ``ajjgui.exit``        | ``0b``                    | Byte (Boolean) |
+| ``ajjgui.fixed``       | ``0b``                    | Byte (Boolean) |
 | ``ajjgui.page``        | N/A                       | Byte           |
 | ``ajjgui.placeholder`` | Required                  | Compound       |
-| ``ajjgui.relative``    | ``0b``                    | Boolean (Byte) |
+| ``ajjgui.relative``    | ``0b``                    | Byte (Boolean) |
 | ``ajjgui.size``        | ``99``                    | Intege         |
 | ``ajjgui.state``       | ``0``                     | Integer        |
 | ``ajjgui.widget``      | Required (``"itemslot"``) | String         |
@@ -409,11 +409,11 @@ The *scrollbutton* is a widget that cycles one or more lists of *static* widgets
 | NBT Tag             | Default                       | Type               |
 |:--------------------|:------------------------------|:-------------------|
 | ``ajjgui.command``  | N/A                           | String             |
-| ``ajjgui.exit``     | ``0b``                        | Boolean (Byte)     |
-| ``ajjgui.fixed``    | ``0b``                        | Boolean (Byte)     |
+| ``ajjgui.exit``     | ``0b``                        | Byte (Boolean)     |
+| ``ajjgui.fixed``    | ``0b``                        | Byte (Boolean)     |
 | ``ajjgui.items``    | N/A                           | Compound List      |
 | ``ajjgui.page``     | N/A                           | Byte               |
-| ``ajjgui.relative`` | ``0b``                        | Boolean (Byte)     |
+| ``ajjgui.relative`` | ``0b``                        | Byte (Boolean)     |
 | ``ajjgui.slots``    | Required                      | Byte List List     |
 | ``ajjgui.state``    | ``0``                         | Integer            |
 | ``ajjgui.widget``   | Required (``"scrollbutton"``) | String             |
@@ -533,6 +533,9 @@ Once a GUI is compiled, it is possible to port a copy of it to a specific player
     /function ajjgui:_open {player:[I;-1547620582,-1960489320,-1638997249,1765947055],id:"settings"}
     ```
 
+> [!NOTE]
+> There is a persistent actionbar prompt instructing the user to open their inventory to view the chest boat menu and dismount to cancel. This can be modified or removed using the data storage NBT ``ajjgui:data prompt``.
+
 > [!IMPORTANT]
 > These chest boats ride an interaction entity surrounding their hitbox and preventing other players from accessing them. If other players come close enough to bypass this, the chest boat is removed (and the user needs to reopen the GUI). These measures are essential in ensuring that GUIs can only be accessed by their specified player.
 
@@ -564,6 +567,10 @@ Once a GUI is compiled, it is possible to port a copy of it to a specific player
 |:-------------------------------------------------------|:-------------------|:--------------|
 | ``@e[tag=ajjgui.gui_active,limit=1] data.custom_name`` | GUI container name | String        |
 | ``@e[tag=ajjgui.gui_active,limit=1] data.gui``         | GUI page list      | Compound List |
+
+| Data Storage NBT       | Description                          | Type          |
+|:-----------------------|:-------------------------------------|:--------------|
+| ``ajjgui:data prompt`` | Actionbar prompt for all ported GUIs | String (JSON) |
 
 Each of the widgets discussed previously, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.command`` NBT tag. This command is executed by the player interacting with the widget. Within the command's execution, it is possible to access data exported from the GUI interaction (e.g., whether a *switch* is toggled on) and use it to make decisions.
 
