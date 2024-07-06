@@ -1,4 +1,7 @@
-execute on controller run title @s actionbar {"text":"Open inventory to view menu | Dismount to cancel"}
+data remove storage ajjgui:data temp
+data modify storage ajjgui:data temp.prompt set from storage ajjgui:data prompt
+execute on controller run function ajjgui:control/display_prompt_ported with storage ajjgui:data temp
+
 scoreboard players set @s ajjgui 0
 
 execute on passengers if entity @s[type=minecraft:player] on vehicle run scoreboard players set @s ajjgui 1

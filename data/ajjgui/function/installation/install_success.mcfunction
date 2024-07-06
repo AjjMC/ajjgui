@@ -23,6 +23,8 @@ execute store result score #z ajjgui run data get block ~ ~ ~ z
 function ajjgui:installation/set_version
 data modify storage ajjgui:data version set from storage ajjgui:data temp
 
+data modify storage ajjgui:data prompt set value '{"text":"Open Inventory to View Menu | Dismount to Cancel"}'
+
 tellraw @a [{"text":"Installed "},{"text":"ajjgui","color":"gray"},{"text":" at "},{"score":{"name":"#x","objective":"ajjgui"}},{"text":", "},{"score":{"name":"#y","objective":"ajjgui"}},{"text":", "},{"score":{"name":"#z","objective":"ajjgui"}}]
 tellraw @a [{"text":"Version: "},{"nbt":"version","storage":"ajjgui:data","color":"gray"},{"text":"\n"}]
 

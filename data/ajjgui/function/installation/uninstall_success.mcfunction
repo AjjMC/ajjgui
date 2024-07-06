@@ -25,4 +25,5 @@ scoreboard objectives remove ajjgui.slot_returned
 scoreboard objectives remove ajjgui.state
 
 data remove storage ajjgui:data database
+data remove storage ajjgui:data prompt
 data remove storage ajjgui:data version
