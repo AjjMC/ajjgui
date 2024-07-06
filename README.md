@@ -25,7 +25,7 @@ This framework aims to be the ultimate mapmaking tool for creating and managing 
 
 The datapack provides the following features:
 
-* NBT standard for quick and easy creation of advanced item-based GUIs
+* NBT tag standard for quick and easy creation of advanced item-based GUIs
 * Completely in-game workflow, with the entire datapack being a black box that the mapmaker can ignore
 * Robust design, support for multiplayer, including personalized GUIs, and no interference with player inventories
 * Complete documentation, in-game tutorial and demos
@@ -75,7 +75,7 @@ There are 8 types of GUI widgets available:
 * [Itemslot](#itemslot)
 * [Scrollbutton](#scrollbutton)
 
-An in-game tutorial on how to create a GUI is available via ``/function ajjgui:__tutorial``. The tutorial provides the player with premade demo widgets to experiment with. Multiple examples are given, both here and in-game, to help provide a better understanding of their custom NBT. The following section explains all the different types of widgets available and how they can be customized. Once obtained, these items can be placed inside shulker boxes, with each shulker box corresponding to a different GUI page. The shulker boxes can be arranged based on their page number and compiled to build a functional GUI in-game. This manual can be accessed with ``/function ajjgui:__manual``.
+An in-game tutorial on how to create a GUI is available via ``/function ajjgui:__tutorial``. The tutorial provides the player with premade demo widgets to experiment with. Multiple examples are given, both here and in-game, to help provide a better understanding of their custom NBT tags. The following section explains all the different types of widgets available and how they can be customized. Once obtained, these items can be placed inside shulker boxes, with each shulker box corresponding to a different GUI page. The shulker boxes can be arranged based on their page number and compiled to build a functional GUI in-game. This manual can be accessed with ``/function ajjgui:__manual``.
 
 ## List of GUI Widgets
 
@@ -83,7 +83,7 @@ An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_
 > Some of the following commands are too long to fit in the chat box and need to be executed using a command block.
 
 > [!WARNING]
-> For custom NBT, it is important to check that the right data types are being used (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:1}}``), that values are within the specified range (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:2b}}``, where ``ajjgui.exit`` here can only be ``0b`` or ``1b``). The GUI compiler is only capable of initializing required NBT with default values and does not correct errors. While there are cases where errors in custom NBT, such as incorrect data types, may be internally resolved by the datapack at later stages, this behavior is inconsistent and must not be assumed.
+> For custom NBT tags, it is important to check that the right data types are being used (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:1}}``), that values are within the specified range (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:2b}}``, where ``ajjgui.exit`` here can only be ``0b`` or ``1b``). The GUI compiler is only capable of initializing required NBT tags with default values and does not correct errors. While there are cases where errors in custom NBT tags, such as incorrect data types, may be internally resolved by the datapack at later stages, this behavior is inconsistent and must not be assumed.
 
 > [!NOTE]
 > The ``ajjgui.command``, ``ajjgui.exit``, ``ajjgui.fixed``, ``ajjgui.page`` and ``ajjgui.relative`` NBT tags are covered separately in later sections.
@@ -534,7 +534,7 @@ Once a GUI is compiled, it is possible to port a copy of it to a specific player
     ```
 
 > [!NOTE]
-> There is a persistent actionbar prompt instructing the user to open their inventory to view the chest boat menu and dismount to cancel. This can be modified or removed using the data storage NBT ``ajjgui:data prompt``.
+> There is a persistent actionbar prompt instructing the user to open their inventory to view the chest boat menu and dismount to cancel. This can be modified or removed using the ``ajjgui:data prompt`` data storage NBT tag.
 
 > [!IMPORTANT]
 > These chest boats ride an interaction entity surrounding their hitbox and preventing other players from accessing them. If other players come close enough to bypass this, the chest boat is removed (and the user needs to reopen the GUI). These measures are essential in ensuring that GUIs can only be accessed by their specified player.
@@ -550,7 +550,7 @@ Once a GUI is compiled, it is possible to port a copy of it to a specific player
 | ``@s ajjgui.slot``  | Widget slot       | Integer |
 | ``@s ajjgui.state`` | Widget state      | Integer |
 
-| Data Storage NBT       | Description                           | Type          |
+| Data Storage NBT Tag   | Description                           | Type          |
 |:-----------------------|:--------------------------------------|:--------------|
 | ``ajjgui:data in``     | *Itembin* or *itemslot* item inserted | Compound      |
 | ``ajjgui:data out``    | *Itemslot* item removed               | Compound      |
@@ -563,12 +563,12 @@ Once a GUI is compiled, it is possible to port a copy of it to a specific player
 |:-------------------------------------------------------|:------------|:--------------|
 | ``@e[tag=ajjgui.gui_active,limit=1] ajjgui.page``      | Page number | Integer       |
 
-| GUI Marker Entity NBT                                  | Description        | Type          |
+| GUI Marker Entity NBT Tag                              | Description        | Type          |
 |:-------------------------------------------------------|:-------------------|:--------------|
 | ``@e[tag=ajjgui.gui_active,limit=1] data.custom_name`` | GUI container name | String        |
 | ``@e[tag=ajjgui.gui_active,limit=1] data.gui``         | GUI page list      | Compound List |
 
-| Data Storage NBT       | Description                          | Type          |
+| Data Storage NBT Tag   | Description                          | Type          |
 |:-----------------------|:-------------------------------------|:--------------|
 | ``ajjgui:data prompt`` | Actionbar prompt for all ported GUIs | String (JSON) |
 
@@ -597,7 +597,7 @@ Each of the widgets discussed previously, excluding the the *placeholder*, can b
 
 ## Directly Modifying GUIs
 
-There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for block entity GUIs, located at the container coordinates, and ``"ajjgui.gui_ported"`` for chest boat GUIs, riding the chest boat. GUIs used at a specific tick temporarily have the ``"ajjgui.gui_active"`` scoreboard tag on their marker. This marker stores the page value in its ``ajjgui.page`` score, the container name in its ``data.custom_name`` NBT tag and the page list in its ``data.gui`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be directly modified to achieve desired results. This would, for example, be needed if one wanted to modify a GUI without prior user interaction (i.e., without triggering a widget with the ``ajjgui.page`` or ``ajjgui.command`` NBT tags). If the modification command is not triggered by a player using a GUI (i.e., with the ``ajjgui.command`` NBT tag), ``/function ajjgui:_reload`` must follow in the same tick for any changes to be reflected in the GUI.
+There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for block entity GUIs, located at the container coordinates, and ``"ajjgui.gui_ported"`` for chest boat GUIs, riding the chest boat. GUIs used at a specific tick temporarily have the ``"ajjgui.gui_active"`` scoreboard tag on their marker. This marker stores the page value in its ``ajjgui.page`` score, the container name in its ``data.custom_name`` NBT tag and the page list in its ``data.gui`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT tags may be directly modified to achieve desired results. This would, for example, be needed if one wanted to modify a GUI without prior user interaction (i.e., without triggering a widget with the ``ajjgui.page`` or ``ajjgui.command`` NBT tags). If the modification command is not triggered by a player using a GUI (i.e., with the ``ajjgui.command`` NBT tag), ``/function ajjgui:_reload`` must follow in the same tick for any changes to be reflected in the GUI.
 
 #### Examples
 
@@ -637,10 +637,10 @@ There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for blo
 > If a GUI is not reloaded as specified above, the datapack assumes that a player is interacting indefinitely with it, causing other active GUIs to malfunction.
 
 > [!WARNING]
-> The GUI compiler adds the ``ajjgui.meta`` NBT tag to each widget. This must not be changed when directly modifying NBT.
+> The GUI compiler adds the ``ajjgui.meta`` NBT tag to each widget. This must not be changed when directly modifying NBT tags.
 
 > [!WARNING]
-> This section explains how widget NBT can be modified post-compilation, after required NBT has been initialized with default values. Creating widget NBT from scratch or changing the ``ajjgui.widget`` NBT tag is therefore not recommended.
+> This section explains how widgets can be modified post-compilation, after required NBT tags have been initialized with default values. Creating widget NBT tags from scratch or changing the ``ajjgui.widget`` NBT tag is therefore not recommended.
 
 > [!IMPORTANT]
 > Widgets with the ``ajjgui.fixed`` NBT tag set to ``1b`` are passed on to a new page only when it is loaded by clicking on a widget that has the ``ajjgui.page`` NBT tag. Directly changing a page therefore does not properly handle fixed widgets.
