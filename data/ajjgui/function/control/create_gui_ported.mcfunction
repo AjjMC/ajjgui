@@ -1,1 +1,2 @@
-$summon minecraft:interaction ~ ~ ~ {width:2.0f,Tags:["ajjgui.gui_ported"],Passengers:[{id:"minecraft:chest_boat",Invulnerable:1b,Silent:1b,Tags:["ajjgui.gui_ported","ajjgui.gui_new"],Rotation:$(rotation),Passengers:[{id:"minecraft:marker",Tags:["ajjgui.gui_ported","ajjgui.gui_new"]}]}]}
+$summon minecraft:interaction ~ ~ ~ {height:0.0f,Tags:["ajjgui.gui_base"],Passengers:[{id:"minecraft:chest_boat",Silent:1b,Invulnerable:1b,Tags:["ajjgui.gui_boat","ajjgui.gui_new"],Rotation:$(rotation),Passengers:[{id:"minecraft:marker",Tags:["ajjgui.gui_ported","ajjgui.gui_new"]}]}]}
+summon minecraft:interaction ~ ~-0.1 ~ {width:2.0f,Tags:["ajjgui.gui_barrier"]}

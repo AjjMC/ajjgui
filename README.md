@@ -537,7 +537,7 @@ Once a GUI is compiled, it is possible to port a copy of it to a specific player
 > There is a persistent actionbar prompt instructing the user to open their inventory to view the chest boat menu and dismount to cancel. This can be modified or removed using the ``ajjgui:data prompt`` data storage NBT tag.
 
 > [!IMPORTANT]
-> These chest boats ride an interaction entity surrounding their hitbox and preventing other players from accessing them. If other players come close enough to bypass this, the chest boat is removed (and the user needs to reopen the GUI). These measures are essential in ensuring that GUIs can only be accessed by their specified player.
+> These chest boats have an interaction entity surrounding their hitbox and preventing other players from accessing them. If other players come close enough to bypass this, the chest boat is removed (and the user needs to reopen the GUI). These measures are essential in ensuring that GUIs can only be accessed by their specified player.
 
 ## Running GUI Commands and Accessing Data
 

@@ -1,7 +1,7 @@
 execute as @a run function ajjgui:control/players
 execute as @e[type=minecraft:item] if data entity @s {Item:{components:{"minecraft:custom_data":{ajjgui:{meta:{compiled:1b}}}}}} run function ajjgui:control/items
 execute as @e[type=minecraft:marker] at @s run function ajjgui:control/markers
-execute as @e[type=minecraft:chest_boat,tag=ajjgui.gui_ported] run function ajjgui:control/chest_boats
+execute as @e[type=minecraft:chest_boat,tag=ajjgui.gui_boat] run function ajjgui:control/chest_boats
 
 scoreboard players reset #bool ajjgui
 scoreboard players reset #count ajjgui
