@@ -616,7 +616,7 @@ There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for blo
 2. A command setting the nearest block entity GUI's first page's first slot item's id to stone:
 
     ```
-    /data modify entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.GUI[0][{Slot:0b}].id set value "minecraft:stone"
+    /data modify entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.gui[0][{Slot:0b}].id set value "minecraft:stone"
     ```
 
     Then, in the same tick (not required if the above command is run from a widget):
@@ -628,7 +628,7 @@ There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for blo
 3. A button running a command setting its GUI's first page's first slot item's id to stone:
 
     ```
-    /give @p minecraft:pink_dye[minecraft:custom_data={ajjgui:{widget:"button",command:'data modify entity @e[type=minecraft:marker,tag=ajjgui.gui_active,limit=1] data.GUI[0][{Slot:0b}].id set value "minecraft:stone"'}},minecraft:custom_name='{"text":"Command Button","italic":false}']
+    /give @p minecraft:pink_dye[minecraft:custom_data={ajjgui:{widget:"button",command:'data modify entity @e[type=minecraft:marker,tag=ajjgui.gui_active,limit=1] data.gui[0][{Slot:0b}].id set value "minecraft:stone"'}},minecraft:custom_name='{"text":"Command Button","italic":false}']
     ```
 
     In this example, ``/function ajjgui:_reload`` is not required.
