@@ -1,6 +1,6 @@
 # A Data-Driven GUI Framework for Minecraft Mapmaking
 
-> **AVAILABLE ON 1.21**
+> **AVAILABLE ON 1.21.2**
 >
 > **Please report any bugs in the issues section.**
 
@@ -151,8 +151,8 @@ The *counter* is a widget that changes to a different count of the same item whe
 | ``ajjgui.fixed``    | ``0b``                   | Byte (Boolean) |
 | ``ajjgui.page``     | N/A                      | Byte           |
 | ``ajjgui.relative`` | ``0b``                   | Byte (Boolean) |
-| ``ajjgui.state``    | ``0``                    | Integer        |
-| ``ajjgui.values``   | Required                 | Integer List   |
+| ``ajjgui.state``    | ``0``                    | Int            |
+| ``ajjgui.values``   | Required                 | Int List       |
 | ``ajjgui.widget``   | Required (``"counter"``) | String         |
 
 #### Usage
@@ -209,7 +209,7 @@ The *switch* is a widget that changes to a different item when clicked, followin
 | ``ajjgui.items``    | Required                | Compound List  |
 | ``ajjgui.page``     | N/A                     | Byte           |
 | ``ajjgui.relative`` | ``0b``                  | Byte (Boolean) |
-| ``ajjgui.state``    | ``0``                   | Integer        |
+| ``ajjgui.state``    | ``0``                   | Int            |
 | ``ajjgui.widget``   | Required (``"switch"``) | String         |
 
 #### Usage
@@ -268,7 +268,7 @@ The *radiobutton* is a widget that changes between a disabled and an enabled sta
 | ``ajjgui.group``    | ``0b``                       | Byte           |
 | ``ajjgui.page``     | N/A                          | Byte           |
 | ``ajjgui.relative`` | ``0b``                       | Byte (Boolean) |
-| ``ajjgui.state``    | ``0``                        | Integer        |
+| ``ajjgui.state``    | ``0``                        | Int            |
 | ``ajjgui.widget``   | Required (``"radiobutton"``) | String         |
 
 #### Usage
@@ -355,8 +355,8 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 | ``ajjgui.page``        | N/A                       | Byte           |
 | ``ajjgui.placeholder`` | Required                  | Compound       |
 | ``ajjgui.relative``    | ``0b``                    | Byte (Boolean) |
-| ``ajjgui.size``        | ``99``                    | Intege         |
-| ``ajjgui.state``       | ``0``                     | Integer        |
+| ``ajjgui.size``        | ``99``                    | Int            |
+| ``ajjgui.state``       | ``0``                     | Int            |
 | ``ajjgui.widget``      | Required (``"itemslot"``) | String         |
 
 #### Usage
@@ -415,7 +415,7 @@ The *scrollbutton* is a widget that cycles one or more lists of *static* widgets
 | ``ajjgui.page``     | N/A                           | Byte               |
 | ``ajjgui.relative`` | ``0b``                        | Byte (Boolean)     |
 | ``ajjgui.slots``    | Required                      | Byte List List     |
-| ``ajjgui.state``    | ``0``                         | Integer            |
+| ``ajjgui.state``    | ``0``                         | Int                |
 | ``ajjgui.widget``   | Required (``"scrollbutton"``) | String             |
 | ``ajjgui.widgets``  | Required                      | Compound List List |
 
@@ -505,7 +505,7 @@ A *button* exiting the GUI:
 
 ## Porting GUIs to Players
 
-Once a GUI is compiled, it is possible to port a copy of it to a specific player in a database using their UUID and an identifier unique to each GUI associated with them. This allows for personalized menus based on chest boats. Porting the nearest GUI is achieved with ``/function ajjgui:__port`` using the macro arguments "player" for the UUID integer array and "id" for the GUI identifier. Using the same arguments, ``/function ajjgui:__open`` gives a player access to a GUI from the database. The executing player can use their own UUID with ``/function ajjgui:__portself`` and ``/function ajjgui:__openself``, which only require a GUI identifier as an argument.
+Once a GUI is compiled, it is possible to port a copy of it to a specific player in a database using their UUID and an identifier unique to each GUI associated with them. This allows for personalized menus based on chest boats. Porting the nearest GUI is achieved with ``/function ajjgui:__port`` using the macro arguments "player" for the UUID Int array and "id" for the GUI identifier. Using the same arguments, ``/function ajjgui:__open`` gives a player access to a GUI from the database. The executing player can use their own UUID with ``/function ajjgui:__portself`` and ``/function ajjgui:__openself``, which only require a GUI identifier as an argument.
 
 #### Example
 
@@ -543,12 +543,12 @@ Once a GUI is compiled, it is possible to port a copy of it to a specific player
 
 ### Read-Only Data
 
-| Scoreboard Score    | Description       | Type    |
-|:--------------------|:------------------|:--------|
-| ``@s ajjgui.count`` | Widget item count | Integer |
-| ``@s ajjgui.page``  | Page number       | Integer |
-| ``@s ajjgui.slot``  | Widget slot       | Integer |
-| ``@s ajjgui.state`` | Widget state      | Integer |
+| Scoreboard Score    | Description       | Type |
+|:--------------------|:------------------|:-----|
+| ``@s ajjgui.count`` | Widget item count | Int  |
+| ``@s ajjgui.page``  | Page number       | Int  |
+| ``@s ajjgui.slot``  | Widget slot       | Int  |
+| ``@s ajjgui.state`` | Widget state      | Int  |
 
 | Data Storage NBT Tag   | Description                           | Type          |
 |:-----------------------|:--------------------------------------|:--------------|
@@ -559,9 +559,9 @@ Once a GUI is compiled, it is possible to port a copy of it to a specific player
 
 ### Modifiable Data
 
-| Scoreboard Score                                       | Description | Type          |
-|:-------------------------------------------------------|:------------|:--------------|
-| ``@e[tag=ajjgui.gui_active,limit=1] ajjgui.page``      | Page number | Integer       |
+| Scoreboard Score                                       | Description | Type |
+|:-------------------------------------------------------|:------------|:-----|
+| ``@e[tag=ajjgui.gui_active,limit=1] ajjgui.page``      | Page number | Int  |
 
 | GUI Marker Entity NBT Tag                              | Description        | Type          |
 |:-------------------------------------------------------|:-------------------|:--------------|
@@ -650,4 +650,4 @@ There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for blo
 
 ## Copyright
 
-Copyright © 2021 - 2024 Ajj (https://github.com/AjjMC/ajjgui)
+Copyright © 2021 - 2025 Ajj (https://github.com/AjjMC/ajjgui)

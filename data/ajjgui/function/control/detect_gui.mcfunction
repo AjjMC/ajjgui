@@ -55,7 +55,7 @@ execute unless data storage ajjgui:data temp[{Slot:25b}].count run data modify s
 execute unless data storage ajjgui:data temp[{Slot:26b}].count run data modify storage ajjgui:data temp[{Slot:26b}].count set value 1
 
 execute if entity @s[type=minecraft:marker,tag=ajjgui.gui_origin] run data modify storage ajjgui:data temp1 set from block ~ ~ ~ Items
-execute if entity @s[type=minecraft:marker,tag=ajjgui.gui_ported] run data modify storage ajjgui:data temp1 set from entity @n[type=minecraft:chest_boat] Items
+execute if entity @s[type=minecraft:marker,tag=ajjgui.gui_ported] run data modify storage ajjgui:data temp1 set from entity @n[type=minecraft:oak_chest_boat] Items
 
 execute store result score #temp ajjgui run data get storage ajjgui:data temp1
 execute if score #temp ajjgui matches ..26 run tag @s add ajjgui.gui_active

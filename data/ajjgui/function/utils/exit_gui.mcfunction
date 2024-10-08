@@ -2,4 +2,4 @@ execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data"
 execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{exit:1b}}}}} at @e[type=minecraft:marker,tag=ajjgui.gui_origin,tag=ajjgui.gui_active] run setblock ~ ~ ~ minecraft:air
 execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{exit:1b}}}}} at @e[type=minecraft:marker,tag=ajjgui.gui_origin,tag=ajjgui.gui_active] run clone ~ ~1 ~ ~ ~1 ~ ~ ~ ~
 execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{exit:1b}}}}} at @e[type=minecraft:marker,tag=ajjgui.gui_origin,tag=ajjgui.gui_active] run setblock ~ ~1 ~ minecraft:air
-execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{exit:1b}}}}} on vehicle if entity @s[type=minecraft:chest_boat,tag=ajjgui.gui_boat] run function ajjgui:control/close_gui_ported
+execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{exit:1b}}}}} on vehicle if entity @s[type=minecraft:oak_chest_boat,tag=ajjgui.gui_boat] run function ajjgui:control/close_gui_ported
