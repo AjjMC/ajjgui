@@ -2,6 +2,8 @@
 
 > **AVAILABLE ON 1.21.3**
 >
+> **[CLICK HERE TO DOWNLOAD](https://github.com/AjjMC/ajjgui/archive/refs/heads/main.zip)**
+>
 > **Please report any bugs in the issues section.**
 
 <p align = "center">
@@ -30,9 +32,9 @@ The datapack provides the following features:
 * Robust design, support for multiplayer, including personalized GUIs, and no interference with player inventories
 * Complete documentation, in-game tutorial and demos
 
-## Downloading and Installing
+## Installing
 
-The datapack can be downloaded from this repository by clicking on "Code" and then "Download ZIP". The folder inside the ZIP file is the datapack. After this folder has been added to the "datapacks" folder of a Minecraft world, ``/reload`` needs to be run in-game. A list of the datapack's commands is available via ``/function ajjgui:__help``. By convention, all functions run directly by the mapmaker start with two underscores. Functions starting with a single underscore are aliases that do not give any feedback messages in the chat. These are meant to be used by the mapmaker as part of their own map's datapack. Any functions not listed here are internal and are not meant to be used.
+After this folder has been added to the "datapacks" folder of a Minecraft world, ``/reload`` needs to be run in-game. A list of the datapack's commands is available via ``/function ajjgui:__help``. By convention, all functions run directly by the mapmaker start with two underscores. Functions starting with a single underscore are aliases that do not give any feedback messages in the chat. These are meant to be used by the mapmaker as part of their own map's datapack. Any functions not listed here are internal and are not meant to be used.
 
 | Function                           | Description                                             |
 |:-----------------------------------|:--------------------------------------------------------|
