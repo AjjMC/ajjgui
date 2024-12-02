@@ -1,5 +1,5 @@
 tellraw @s {"text":"/function ajjgui:__compile","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:__compile"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}
-tellraw @s {"text":"/function ajjgui:__copyright","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:__copyright"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}
+tellraw @s {"text":"/function ajjgui:__crediting","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:__crediting"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}
 tellraw @s {"text":"/function ajjgui:__decompile","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:__decompile"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}
 tellraw @s {"text":"/function ajjgui:__help","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:__help"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}
 tellraw @s {"text":"/function ajjgui:__install","color":"green","clickEvent":{"action":"suggest_command","value":"/function ajjgui:__install"},"hoverEvent":{"action":"show_text","contents":"Click Here"}}

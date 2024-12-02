@@ -1,6 +1,6 @@
 MIT License
 
-Copyright © 2021 - 2025 Ajj (https://github.com/AjjMC/ajjgui)
+Made by Ajj (https://github.com/AjjMC/ajjgui)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,8 +1,10 @@
 # A Data-Driven GUI Framework for Minecraft Mapmaking
 
-> **AVAILABLE ON 1.21.3**
+> **AVAILABLE ON 1.21.4**
 >
 > **[CLICK HERE TO DOWNLOAD](https://github.com/AjjMC/ajjgui/archive/refs/heads/main.zip)**
+>
+> **Also available on [Modrinth](https://modrinth.com/datapack/ajjgui) and [Planet Minecraft](https://www.planetminecraft.com/data-pack/ajjgui/). Please support the project by starring, following, etc. on the respective platforms!**
 >
 > **Please report any bugs in the issues section.**
 
@@ -16,11 +18,7 @@
 
 ## Overview
 
-Large Minecraft servers often use custom user interfaces in which the inventory of a container (e.g., a chest) is used to display interactive elements to players as in-game items. While plugins have made the design of such menus trivial to server developers, the limitations of Minecraft commands and datapacks make it difficult to replicate these item-based GUIs in situations where plugins are not available.
-
-Various datapacks as well as datapack generators have been made with the intent to provide mapmakers with a GUI framework. However, these are usually basic, being restricted to essential features that rarely go beyond the creation of buttons and page navigation, and they may often not be designed with reliability into account. Furthermore, existing approaches involve datapack templates in which the logic of specific GUIs is hard-coded, requiring mapmakers to understand and modify part of the code.
-
-This framework aims to be the ultimate mapmaking tool for creating and managing complex and robust item-based GUIs in-game, removing the need to write code or ever touch the datapack. This is achieved by simply dragging and dropping items with custom NBT tags in containers within a world, which the datapack can use to generate GUIs according to mapmakers' specifications:
+This datapack allows mapmakers to create and maintain complex and robust item-based GUIs in-game. This is achieved by simply dragging and dropping items with custom NBT tags in containers within a world, which the datapack can use to generate GUIs. It functions as a black box that allows each item to act as a graphical widget with predefined properties, without requiring any modifications to be made or additional code to be implemented. Two types of GUIs can be created:
 
 * **Block Entity GUIs:** Placed at a fixed position and shared by all players. These are generated upon compilation.
 * **Chest Boat GUIs:** Retrieved from a database and accessible anywhere by specified players only. These are obtained directly from the above by [porting GUIs to players](#porting-guis-to-players).
@@ -39,7 +37,7 @@ After this folder has been added to the "datapacks" folder of a Minecraft world,
 | Function                           | Description                                             |
 |:-----------------------------------|:--------------------------------------------------------|
 | ``/function ajjgui:__compile``     | Compiles GUI                                            |
-| ``/function ajjgui:__copyright``   | Displays datapack copyright information                 |
+| ``/function ajjgui:__crediting``   | Displays datapack crediting information                 |
 | ``/function ajjgui:__decompile``   | Decompiles nearest GUI                                  |
 | ``/function ajjgui:__help``        | Displays datapack command list                          |
 | ``/function ajjgui:__install``     | Installs datapack                                       |
@@ -597,9 +595,9 @@ Each of the widgets discussed previously, excluding the the *placeholder*, can b
     execute if score @s ajjgui.state matches 1 run say set switch to State 1
     ```
 
-## Directly Modifying GUIs
+## Advanced: Modifying GUIs Post-Compilation
 
-There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for block entity GUIs, located at the container coordinates, and ``"ajjgui.gui_ported"`` for chest boat GUIs, riding the chest boat. GUIs used at a specific tick temporarily have the ``"ajjgui.gui_active"`` scoreboard tag on their marker. This marker stores the page value in its ``ajjgui.page`` score, the container name in its ``data.custom_name`` NBT tag and the page list in its ``data.gui`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT tags may be directly modified to achieve desired results. This would, for example, be needed if one wanted to modify a GUI without prior user interaction (i.e., without triggering a widget with the ``ajjgui.page`` or ``ajjgui.command`` NBT tags). If the modification command is not triggered by a player using a GUI (i.e., with the ``ajjgui.command`` NBT tag), ``/function ajjgui:_reload`` must follow in the same tick for any changes to be reflected in the GUI.
+There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for block entity GUIs, located at the container coordinates, and ``"ajjgui.gui_ported"`` for chest boat GUIs, riding the chest boat. GUIs used at a specific tick temporarily have the ``"ajjgui.gui_active"`` scoreboard tag on their marker. This marker stores the page value in its ``ajjgui.page`` score, the container name in its ``data.custom_name`` NBT tag and the page list in its ``data.gui`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT tags may be modified post-compilation to achieve desired results. This would, for example, be needed if one wanted to modify a GUI without prior user interaction (i.e., without triggering a widget with the ``ajjgui.page`` or ``ajjgui.command`` NBT tags). If the modification command is not triggered by a player using a GUI (i.e., with the ``ajjgui.command`` NBT tag), ``/function ajjgui:_reload`` must follow in the same tick for any changes to be reflected in the GUI.
 
 #### Examples
 
@@ -639,17 +637,17 @@ There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for blo
 > If a GUI is not reloaded as specified above, the datapack assumes that a player is interacting indefinitely with it, causing other active GUIs to malfunction.
 
 > [!WARNING]
-> The GUI compiler adds the ``ajjgui.meta`` NBT tag to each widget. This must not be changed when directly modifying NBT tags.
+> The GUI compiler adds the ``ajjgui.meta`` NBT tag to each widget. This must not be changed when modifying NBT tags post-compilation.
 
 > [!WARNING]
-> This section explains how widgets can be modified post-compilation, after required NBT tags have been initialized with default values. Creating widget NBT tags from scratch or changing the ``ajjgui.widget`` NBT tag is therefore not recommended.
+> This section explains how widgets can be modified after compilation, when required NBT tags have already been initialized with default values. Creating widget NBT tags from scratch or changing the ``ajjgui.widget`` NBT tag is therefore not recommended.
 
 > [!IMPORTANT]
-> Widgets with the ``ajjgui.fixed`` NBT tag set to ``1b`` are passed on to a new page only when it is loaded by clicking on a widget that has the ``ajjgui.page`` NBT tag. Directly changing a page therefore does not properly handle fixed widgets.
+> Widgets with the ``ajjgui.fixed`` NBT tag set to ``1b`` are passed on to a new page only when it is loaded by clicking on a widget that has the ``ajjgui.page`` NBT tag. Changing a page post-compilation therefore does not properly handle fixed widgets.
 
 > [!NOTE]
-> Decompiling a GUI resets it to the state in which it was when compiled.
+> Decompiling a GUI resets it to its state before compilation.
 
-## Copyright
+## Crediting
 
-Copyright © 2021 - 2025 Ajj (https://github.com/AjjMC/ajjgui)
+Made by Ajj and published under the MIT license. Please share the repository link.
