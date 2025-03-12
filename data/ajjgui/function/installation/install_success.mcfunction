@@ -25,7 +25,7 @@ execute unless data storage ajjgui:data version run data modify storage ajjgui:d
 function ajjgui:installation/set_version
 data modify storage ajjgui:data version set from storage ajjgui:data temp
 
-tellraw @a [{text:"Installed "},{text:"ajjgui",color:"gray"},{text:" at "},{score:{"name":"#x",objective:"ajjgui"}},{text:", "},{score:{"name":"#y",objective:"ajjgui"}},{text:", "},{score:{"name":"#z",objective:"ajjgui"}}]
+tellraw @a [{text:"Installed "},{text:"ajjgui",color:"gray"},{text:" at "},{score:{name:"#x",objective:"ajjgui"}},{text:", "},{score:{name:"#y",objective:"ajjgui"}},{text:", "},{score:{name:"#z",objective:"ajjgui"}}]
 tellraw @a [{text:"Version: "},{nbt:"version",storage:"ajjgui:data",color:"gray"},{text:"\n"}]
 
 execute as @a run function ajjgui:__crediting
