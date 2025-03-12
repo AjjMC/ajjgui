@@ -563,14 +563,14 @@ Once a GUI is compiled, it is possible to port a copy of it to a specific player
 |:-------------------------------------------------------|:------------|:-----|
 | ``@e[tag=ajjgui.gui_active,limit=1] ajjgui.page``      | Page number | Int  |
 
-| GUI Marker Entity NBT Tag                              | Description        | Type          |
-|:-------------------------------------------------------|:-------------------|:--------------|
-| ``@e[tag=ajjgui.gui_active,limit=1] data.custom_name`` | GUI container name | String        |
-| ``@e[tag=ajjgui.gui_active,limit=1] data.gui``         | GUI page list      | Compound List |
+| GUI Marker Entity NBT Tag                              | Description        | Type                      |
+|:-------------------------------------------------------|:-------------------|:--------------------------|
+| ``@e[tag=ajjgui.gui_active,limit=1] data.custom_name`` | GUI container name | Compound or Compound List |
+| ``@e[tag=ajjgui.gui_active,limit=1] data.gui``         | GUI page list      | Compound List             |
 
-| Data Storage NBT Tag   | Description                          | Type          |
-|:-----------------------|:-------------------------------------|:--------------|
-| ``ajjgui:data prompt`` | Actionbar prompt for all ported GUIs | String (JSON) |
+| Data Storage NBT Tag   | Description                          | Type                      |
+|:-----------------------|:-------------------------------------|:--------------------------|
+| ``ajjgui:data prompt`` | Actionbar prompt for all ported GUIs | Compound or Compound List |
 
 Each of the widgets discussed previously, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.command`` NBT tag. This command is executed by the player interacting with the widget. Within the command's execution, it is possible to access data exported from the GUI interaction (e.g., whether a *switch* is toggled on) and use it to make decisions.
 
