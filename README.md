@@ -108,7 +108,7 @@ The *placeholder* is a widget that cannot be interacted with and is used to disp
 A *placeholder*:
 
 ```
-/give @p minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"placeholder"}},minecraft:hide_tooltip={}]
+/give @p minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"placeholder"}},minecraft:tooltip_display={hide_tooltip:1b}]
 ```
 
 > [!TIP]
