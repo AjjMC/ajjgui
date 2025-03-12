@@ -1,1 +1,1 @@
-give @s minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"placeholder",fixed:1b}},minecraft:hide_tooltip={}]
+give @s minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"placeholder",fixed:1b}},minecraft:tooltip_display={hide_tooltip:1b}]

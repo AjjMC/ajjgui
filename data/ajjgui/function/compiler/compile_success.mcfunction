@@ -120,4 +120,4 @@ data modify entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.custom_n
 
 execute as @n[type=minecraft:marker,tag=ajjgui.gui_origin] run function ajjgui:control/load_page_origin
 
-tellraw @a {"text":"Compiled GUI"}
+tellraw @a {text:"Compiled GUI"}
