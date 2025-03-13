@@ -1,1 +1,1 @@
-give @s minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:1b,relative:1b,fixed:1b,command:"function ajjgui:demo/outputs/button/next_page"}},minecraft:custom_name={text:"Go to Next Page",italic:false}]
+give @s minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:1b,relative:1b,fixed:1b,command:"function ajjgui:demo/outputs/button/next_page"}},minecraft:custom_name={text:"Go to Next Page",italic:0b}]
