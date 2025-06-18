@@ -34,29 +34,29 @@ The datapack provides the following features:
 
 After this datapack has been added to the "datapacks" folder of a Minecraft world, ``/reload`` needs to be run in-game. A list of the datapack's commands is available via ``/function ajjgui:__help``. By convention, all functions run directly by the mapmaker start with two underscores. Functions starting with a single underscore are aliases that do not give any feedback messages in the chat. These are meant to be used by the mapmaker as part of their own map's datapack. Any functions not listed here are internal and are not meant to be used.
 
-| Function                           | Description                                             |
-|:-----------------------------------|:--------------------------------------------------------|
-| ``/function ajjgui:__compile``     | Compiles GUI                                            |
-| ``/function ajjgui:__crediting``   | Displays datapack crediting information                 |
-| ``/function ajjgui:__decompile``   | Decompiles nearest GUI                                  |
-| ``/function ajjgui:__help``        | Displays datapack command list                          |
-| ``/function ajjgui:__install``     | Installs datapack                                       |
-| ``/function ajjgui:__kit``         | Gives GUI design and compilation kit                    |
-| ``/function ajjgui:__manual``      | Displays datapack manual link                           |
-| ``/function ajjgui:__open``        | Opens ported GUI with player UUID and GUI ID            |
-| ``/function ajjgui:__openself``    | Opens ported GUI of executing player with GUI ID        |
-| ``/function ajjgui:__port``        | Ports nearest GUI to player with player UUID and GUI ID |
-| ``/function ajjgui:__portself``    | Ports nearest GUI to executing player with GUI ID       |
-| ``/function ajjgui:__reload``      | Reloads GUIs                                            |
-| ``/function ajjgui:__tutorial``    | Displays GUI design and compilation tutorial            |
-| ``/function ajjgui:__uninstall``   | Uninstalls datapack                                     |
-| ``/function ajjgui:__version``     | Displays datapack version                               |
-| ``/function ajjgui:__widgetdemo/`` | Gives GUI demo widgets                                  |
-| ``/function ajjgui:_open``         | Runs ``/function ajjgui:__open`` without feedback       |
-| ``/function ajjgui:_openself``     | Runs ``/function ajjgui:__openself`` without feedback   |
-| ``/function ajjgui:_port``         | Runs ``/function ajjgui:__port`` without feedback       |
-| ``/function ajjgui:_portself``     | Runs ``/function ajjgui:__portself`` without feedback   |
-| ``/function ajjgui:_reload``       | Runs ``/function ajjgui:__reload`` without feedback     |
+| Function                                                       | Description                                           |
+|:---------------------------------------------------------------|:------------------------------------------------------|
+| ``/function ajjgui:__compile``                                 | Compiles GUI                                          |
+| ``/function ajjgui:__crediting``                               | Displays datapack crediting information               |
+| ``/function ajjgui:__decompile``                               | Decompiles nearest GUI                                |
+| ``/function ajjgui:__help``                                    | Displays datapack command list                        |
+| ``/function ajjgui:__install``                                 | Installs datapack                                     |
+| ``/function ajjgui:__kit``                                     | Gives GUI design and compilation kit                  |
+| ``/function ajjgui:__manual``                                  | Displays datapack manual link                         |
+| ``/function ajjgui:__open {player:<player_uuid>,id:<gui_id>}`` | Opens ported GUI                                      |
+| ``/function ajjgui:__openself {id:<gui_id>}``                  | Opens ported GUI of executing player                  |
+| ``/function ajjgui:__port {player:<player_uuid>,id:<gui_id>}`` | Ports nearest GUI                                     |
+| ``/function ajjgui:__portself {id:<gui_id>}``                  | Ports nearest GUI to executing player                 |
+| ``/function ajjgui:__reload``                                  | Reloads GUIs                                          |
+| ``/function ajjgui:__tutorial``                                | Displays GUI design and compilation tutorial          |
+| ``/function ajjgui:__uninstall``                               | Uninstalls datapack                                   |
+| ``/function ajjgui:__version``                                 | Displays datapack version                             |
+| ``/function ajjgui:__widgetdemo/``                             | Gives GUI demo widgets                                |
+| ``/function ajjgui:_open {player:<player_uuid>,id:<gui_id>}``  | Runs ``/function ajjgui:__open`` without feedback     |
+| ``/function ajjgui:_openself {id:<gui_id>}``                   | Runs ``/function ajjgui:__openself`` without feedback |
+| ``/function ajjgui:_port {player:<player_uuid>,id:<gui_id>}``  | Runs ``/function ajjgui:__port`` without feedback     |
+| ``/function ajjgui:_portself {id:<gui_id>}``                   | Runs ``/function ajjgui:__portself`` without feedback |
+| ``/function ajjgui:_reload``                                   | Runs ``/function ajjgui:__reload`` without feedback   |
 
 The datapack can be installed by running ``/function ajjgui:__install`` at any location in the world, which generates a shulker box. This needs to be located in a loaded chunk for the datapack to be fully functional and cannot be destroyed. The shulker box can be relocated by repeating the installation command elsewhere. Any updated versions of the datapack are automatically installed at the same location upon reloading the world. The datapack can be uninstalled using ``/function ajjgui:__uninstall``, which removes all data associated with it from the world and decompiles any existing GUIs.
 
@@ -256,7 +256,7 @@ where N is the number of states.
 
 ### Radiobutton
 
-The *radiobutton* is a widget that changes between a disabled and an enabled state item when clicked. It comes in groups in which only one widget can be enabled at a time, with the rest being disabled. Each item is specified in the ``ajjgui.disabled`` and ``ajjgui.enabled`` NBT tags. The default item is the one initially used upon creation of the widget. Once a *radiobutton* is clicked, it changes to the item corresponding to its enabled state, and all the other *radiobutton* widgets with the same group identifier change to their disabled state. The group identifier of a *radiobutton* is stored in the ``ajjgui.group`` NBT tag. The current state of a *radiobutton* is stored in the ``ajjgui.state`` NBT tag.
+The *radiobutton* is a widget that changes between a disabled and an enabled state item when clicked. It comes in groups in which only one widget can be enabled at a time, with the rest being disabled. Each item is specified in the ``ajjgui.disabled`` and ``ajjgui.enabled`` NBT tags. The default item is the one initially used upon creation of the widget. Once a *radiobutton* is clicked, it changes to the item corresponding to its enabled state, and all the other *radiobutton* widgets with the same group ID change to their disabled state. The group ID of a *radiobutton* is stored in the ``ajjgui.group`` NBT tag. The current state of a *radiobutton* is stored in the ``ajjgui.state`` NBT tag.
 
 | NBT Tag             | Default                      | Type           |
 |:--------------------|:-----------------------------|:---------------|
@@ -505,7 +505,7 @@ A *button* exiting the GUI:
 
 ## Porting GUIs to Players
 
-Once a GUI is compiled, it is possible to port a copy of it to a specific player in a database using their UUID and an identifier unique to each GUI associated with them. This allows for personalized menus based on chest boats. Porting the nearest GUI is achieved with ``/function ajjgui:__port`` using the macro arguments "player" for the UUID Int array and "id" for the GUI identifier. Using the same arguments, ``/function ajjgui:__open`` gives a player access to a GUI from the database. The executing player can use their own UUID with ``/function ajjgui:__portself`` and ``/function ajjgui:__openself``, which only require a GUI identifier as an argument.
+Compiled GUIs can create copies for specific players. ``/function ajjgui:__port {player:<player_uuid>,id:<gui_id>}`` ports the nearest GUI to a player, to be accessed using ``/function ajjgui:__open {player:<player_uuid>,id:<gui_id>}``. Both commands receive two macro arguments: a player UUID "player", as an Int array, and a GUI ID "id", different for each GUI of the same player. The UUID of the executing player is instead used with ``/function ajjgui:__portself {id:<gui_id>}`` and ``/function ajjgui:__openself {id:<gui_id>}``, which only require a GUI ID.
 
 #### Example
 
