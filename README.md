@@ -92,7 +92,7 @@ An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_
 
 The *placeholder* is a widget that cannot be interacted with and is used to display an item.
 
-| NBT Tag           | Default                             | Type           |
+| Item NBT Tag      | Default                             | Type           |
 |:------------------|:------------------------------------|:---------------|
 | ``ajjgui.fixed``  | ``0b``                              | Byte (Boolean) |
 | ``ajjgui.widget`` | Required (``"placeholder"`` or N/A) | String         |
@@ -121,7 +121,7 @@ A *placeholder*:
 
 The *button* is a widget that changes the GUI page, exits the GUI and/or runs a GUI command when clicked. More information can be found in the following sections.
 
-| NBT Tag             | Default                 | Type           |
+| Item NBT Tag        | Default                 | Type           |
 |:--------------------|:------------------------|:---------------|
 | ``ajjgui.command``  | N/A                     | String         |
 | ``ajjgui.exit``     | ``0b``                  | Byte (Boolean) |
@@ -144,7 +144,7 @@ More information about [changing GUI pages](#changing-gui-pages), [exiting GUIs]
 
 The *counter* is a widget that changes to a different count of the same item when clicked, following a value sequence. The value sequence is specified in the ``ajjgui.values`` NBT tag. The default value is the one initially used upon creation of the widget. Once a *counter* in its default state is clicked, it changes to the second value in the list and so on. Hence, the first one is not used until the end of the first cycle. After one cycle, the first value is always used instead of the default one. The current state of a *counter* is stored in the ``ajjgui.state`` NBT tag.
 
-| NBT Tag             | Default                  | Type           |
+| Item NBT Tag        | Default                  | Type           |
 |:--------------------|:-------------------------|:---------------|
 | ``ajjgui.command``  | N/A                      | String         |
 | ``ajjgui.exit``     | ``0b``                   | Byte (Boolean) |
@@ -201,7 +201,7 @@ where N is the number of states.
 
 The *switch* is a widget that changes to a different item when clicked, following an item sequence. The item sequence is specified in the ``ajjgui.items`` NBT tag. The default item is the one initially used upon creation of the widget. Once a *switch* in its default state is clicked, it changes to the second item in the list and so on. Hence, the first one is not used until the end of the first cycle. After one cycle, the first item is always used instead of the default one. The current state of a *switch* is stored in the ``ajjgui.state`` NBT tag.
 
-| NBT Tag             | Default                 | Type           |
+| Item NBT Tag        | Default                 | Type           |
 |:--------------------|:------------------------|:---------------|
 | ``ajjgui.command``  | N/A                     | String         |
 | ``ajjgui.exit``     | ``0b``                  | Byte (Boolean) |
@@ -258,7 +258,7 @@ where N is the number of states.
 
 The *radiobutton* is a widget that changes between a disabled and an enabled state item when clicked. It comes in groups in which only one widget can be enabled at a time, with the rest being disabled. Each item is specified in the ``ajjgui.disabled`` and ``ajjgui.enabled`` NBT tags. The default item is the one initially used upon creation of the widget. Once a *radiobutton* is clicked, it changes to the item corresponding to its enabled state, and all the other *radiobutton* widgets with the same group ID change to their disabled state. The group ID of a *radiobutton* is stored in the ``ajjgui.group`` NBT tag. The current state of a *radiobutton* is stored in the ``ajjgui.state`` NBT tag.
 
-| NBT Tag             | Default                      | Type           |
+| Item NBT Tag        | Default                      | Type           |
 |:--------------------|:-----------------------------|:---------------|
 | ``ajjgui.command``  | N/A                          | String         |
 | ``ajjgui.disabled`` | Required                     | Compound       |
@@ -309,7 +309,7 @@ The *radiobutton* is a widget that changes between a disabled and an enabled sta
 
 The *itembin* is a widget that clears all items inserted by the player in a particular slot in the GUI.
 
-| NBT Tag             | Default                  | Type           |
+| Item NBT Tag        | Default                  | Type           |
 |:--------------------|:-------------------------|:---------------|
 | ``ajjgui.command``  | N/A                      | String         |
 | ``ajjgui.exit``     | ``0b``                   | Byte (Boolean) |
@@ -347,7 +347,7 @@ An *itembin*:
 
 The *itemslot* is a widget that stores items inserted by the player in a particular slot in the GUI. Once one or more stacked items are inserted, the current ones occupying the slot (if any) are replaced and returned to the player's inventory. When the *itemslot* is not being used, a placeholder item occupies the slot. This is stored in the ``ajjgui.placeholder`` NBT tag. The maximum number of items in an *itemslot* is stored in the ``ajjgui.size`` NBT tag, which cannot be larger than ``99``. Any excess items are returned to the player. Whether an *itemslot* has an item in it is determined by the ``ajjgui.state`` NBT tag.
 
-| NBT Tag                | Default                   | Type           |
+| Item NBT Tag           | Default                   | Type           |
 |:-----------------------|:--------------------------|:---------------|
 | ``ajjgui.command``     | N/A                       | String         |
 | ``ajjgui.exit``        | ``0b``                    | Byte (Boolean) |
@@ -406,7 +406,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 
 The *scrollbutton* is a widget that cycles one or more lists of *static* widgets (see notes) across respective GUI slot lists when clicked. This allows for additional space in the GUI. Each widget list is specified in the ``ajjgui.widgets`` NBT tag. Within each widget list, widgets are added in the order they appear in. The slot list associated with each widget list is specified in the ``ajjgui.slots`` NBT tag. Within each slot list, slots are added in the order they are occupied by the respective widget list. The *scrollbutton* also contains the entire functionality of the *switch*, including the ``ajjgui.items`` and ``ajjgui.state`` NBT tags.
 
-| NBT Tag             | Default                       | Type               |
+| Item NBT Tag        | Default                       | Type               |
 |:--------------------|:------------------------------|:-------------------|
 | ``ajjgui.command``  | N/A                           | String             |
 | ``ajjgui.exit``     | ``0b``                        | Byte (Boolean)     |
@@ -534,7 +534,7 @@ Compiled GUIs can create copies for specific players. ``/function ajjgui:__port 
     ```
 
 > [!NOTE]
-> There is a persistent actionbar prompt instructing the user to open their inventory to view the chest boat menu and dismount to cancel. This can be modified or removed using the ``ajjgui:data prompt`` data storage NBT tag.
+> There is a persistent actionbar prompt instructing the user to open their inventory to view the chest boat menu and dismount to cancel. This can be modified or removed using the ``ajjgui:data prompt`` NBT tag.
 
 > [!IMPORTANT]
 > These chest boats have an interaction entity surrounding their hitbox and preventing other players from accessing them. If other players come close enough to bypass this, the chest boat is removed (and the user needs to reopen the GUI). These measures are essential in ensuring that GUIs can only be accessed by their specified player.
