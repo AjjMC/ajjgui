@@ -28,3 +28,5 @@ scoreboard objectives remove ajjgui.state
 data remove storage ajjgui:data database
 data remove storage ajjgui:data prompt
 data remove storage ajjgui:data version
+
+tellraw @a [{text:"Uninstalled "},{text:"ajjgui",color:"gray"}]
