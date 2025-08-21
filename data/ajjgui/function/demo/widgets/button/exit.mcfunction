@@ -1,1 +1,0 @@
-give @s minecraft:barrier[minecraft:custom_data={ajjgui:{widget:"button",exit:1b,command:"function ajjgui:demo/outputs/button/exit"}},minecraft:custom_name={text:"Exit",italic:0b},minecraft:rarity=common]

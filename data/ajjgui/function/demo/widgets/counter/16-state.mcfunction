@@ -1,1 +1,0 @@
-give @s minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"counter",values:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],command:"function ajjgui:demo/outputs/counter/16-state"}},minecraft:custom_name={text:"Counter Value",italic:0b}]

@@ -108,85 +108,85 @@ execute unless data storage ajjgui:data temp1[{Slot:25b}] run data modify storag
 execute unless data storage ajjgui:data temp1[{Slot:26b}] run data modify storage ajjgui:data temp1 append value {Slot:26b,id:"minecraft:light_gray_stained_glass_pane",count:1,components:{"minecraft:custom_data":{ajjgui:{widget:"placeholder"}},"minecraft:tooltip_display":{hide_tooltip:1b}}}
 
 execute if data storage ajjgui:data temp1[{Slot:0b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:0b}]
-execute if data storage ajjgui:data temp1[{Slot:0b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:0b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:1b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:1b}]
-execute if data storage ajjgui:data temp1[{Slot:1b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:1b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:2b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:2b}]
-execute if data storage ajjgui:data temp1[{Slot:2b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:2b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:3b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:3b}]
-execute if data storage ajjgui:data temp1[{Slot:3b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:3b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:4b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:4b}]
-execute if data storage ajjgui:data temp1[{Slot:4b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:4b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:5b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:5b}]
-execute if data storage ajjgui:data temp1[{Slot:5b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:5b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:6b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:6b}]
-execute if data storage ajjgui:data temp1[{Slot:6b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:6b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:7b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:7b}]
-execute if data storage ajjgui:data temp1[{Slot:7b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:7b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:8b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:8b}]
-execute if data storage ajjgui:data temp1[{Slot:8b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:8b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:9b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:9b}]
-execute if data storage ajjgui:data temp1[{Slot:9b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:9b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:10b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:10b}]
-execute if data storage ajjgui:data temp1[{Slot:10b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:10b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:11b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:11b}]
-execute if data storage ajjgui:data temp1[{Slot:11b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:11b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:12b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:12b}]
-execute if data storage ajjgui:data temp1[{Slot:12b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:12b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:13b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:13b}]
-execute if data storage ajjgui:data temp1[{Slot:13b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:13b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:14b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:14b}]
-execute if data storage ajjgui:data temp1[{Slot:14b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:14b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:15b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:15b}]
-execute if data storage ajjgui:data temp1[{Slot:15b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:15b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:16b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:16b}]
-execute if data storage ajjgui:data temp1[{Slot:16b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:16b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:17b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:17b}]
-execute if data storage ajjgui:data temp1[{Slot:17b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:17b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:18b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:18b}]
-execute if data storage ajjgui:data temp1[{Slot:18b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:18b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:19b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:19b}]
-execute if data storage ajjgui:data temp1[{Slot:19b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:19b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:20b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:20b}]
-execute if data storage ajjgui:data temp1[{Slot:20b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:20b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:21b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:21b}]
-execute if data storage ajjgui:data temp1[{Slot:21b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:21b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:22b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:22b}]
-execute if data storage ajjgui:data temp1[{Slot:22b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:22b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:23b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:23b}]
-execute if data storage ajjgui:data temp1[{Slot:23b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:23b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:24b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:24b}]
-execute if data storage ajjgui:data temp1[{Slot:24b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:24b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:25b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:25b}]
-execute if data storage ajjgui:data temp1[{Slot:25b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:25b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute if data storage ajjgui:data temp1[{Slot:26b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run data modify storage ajjgui:data temp3 set from storage ajjgui:data temp1[{Slot:26b}]
-execute if data storage ajjgui:data temp1[{Slot:26b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/load_scrollbuttons
+execute if data storage ajjgui:data temp1[{Slot:26b,components:{"minecraft:custom_data":{ajjgui:{widget:"scrollbutton"}}}}] run function ajjgui:compiler/scrollbutton/begin
 
 execute unless data storage ajjgui:data temp1[0].components.minecraft:custom_data.ajjgui.widget run data modify storage ajjgui:data temp1[0].components.minecraft:custom_data.ajjgui.widget set value "placeholder"
 execute unless data storage ajjgui:data temp1[1].components.minecraft:custom_data.ajjgui.widget run data modify storage ajjgui:data temp1[1].components.minecraft:custom_data.ajjgui.widget set value "placeholder"

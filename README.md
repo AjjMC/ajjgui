@@ -51,7 +51,7 @@ After this datapack has been added to the "datapacks" folder of a Minecraft worl
 | ``/function ajjgui:__tutorial``                                | Displays GUI design and compilation tutorial          |
 | ``/function ajjgui:__uninstall``                               | Uninstalls datapack                                   |
 | ``/function ajjgui:__version``                                 | Displays datapack version                             |
-| ``/function ajjgui:__widgetdemo/``                             | Gives GUI demo widgets                                |
+| ``/function ajjgui:__widget/``                                 | Gives GUI demo widgets                                |
 | ``/function ajjgui:_open {player:<player_uuid>,id:<gui_id>}``  | Runs ``/function ajjgui:__open`` without feedback     |
 | ``/function ajjgui:_openself {id:<gui_id>}``                   | Runs ``/function ajjgui:__openself`` without feedback |
 | ``/function ajjgui:_port {player:<player_uuid>,id:<gui_id>}``  | Runs ``/function ajjgui:__port`` without feedback     |

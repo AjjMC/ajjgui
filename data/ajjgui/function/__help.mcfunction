@@ -13,7 +13,7 @@ tellraw @s {text:"/function ajjgui:__reload",color:"green",click_event:{action:"
 tellraw @s {text:"/function ajjgui:__tutorial",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__tutorial"},hover_event:{action:"show_text",value:"Click Here"}}
 tellraw @s {text:"/function ajjgui:__uninstall",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__uninstall"},hover_event:{action:"show_text",value:"Click Here"}}
 tellraw @s {text:"/function ajjgui:__version",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__version"},hover_event:{action:"show_text",value:"Click Here"}}
-tellraw @s {text:"/function ajjgui:__widgetdemo/",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__widgetdemo/"},hover_event:{action:"show_text",value:"Click Here"}}
+tellraw @s {text:"/function ajjgui:__widget/",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__widget/"},hover_event:{action:"show_text",value:"Click Here"}}
 tellraw @s {text:"/function ajjgui:_open {player:<player_uuid>,id:<gui_id>}",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:_open"},hover_event:{action:"show_text",value:"Click Here"}}
 tellraw @s {text:"/function ajjgui:_openself {id:<gui_id>}",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:_openself"},hover_event:{action:"show_text",value:"Click Here"}}
 tellraw @s {text:"/function ajjgui:_port {player:<player_uuid>,id:<gui_id>}",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:_port"},hover_event:{action:"show_text",value:"Click Here"}}

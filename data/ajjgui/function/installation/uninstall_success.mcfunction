@@ -3,18 +3,19 @@ execute at @e[type=minecraft:marker,tag=ajjgui.gui_origin] positioned ~ ~ ~ run 
 execute at @e[type=minecraft:marker,tag=ajjgui.box] run setblock ~ ~ ~ minecraft:air
 execute at @e[type=minecraft:marker,tag=ajjgui.gui_origin] run data remove block ~ ~ ~ Items
 
-execute as @a on vehicle if entity @s[type=minecraft:oak_chest_boat,tag=ajjgui.gui_boat] run function ajjgui:control/close_gui_ported
+execute as @a on vehicle if entity @s[type=minecraft:oak_chest_boat,tag=ajjgui.gui_boat] run function ajjgui:gui/ported/close
 
 kill @e[type=minecraft:marker,tag=ajjgui.box]
 kill @e[type=minecraft:marker,tag=ajjgui.gui_origin]
-
-scoreboard players reset @a ajjgui.cooldown
 
 scoreboard players reset #temp ajjgui
 scoreboard players reset #two ajjgui
 scoreboard players reset #x ajjgui
 scoreboard players reset #y ajjgui
 scoreboard players reset #z ajjgui
+
+scoreboard players reset @a ajjgui.cooldown
+scoreboard players reset @a ajjgui.slot_returned
 
 scoreboard objectives remove ajjgui
 scoreboard objectives remove ajjgui.cooldown

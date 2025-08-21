@@ -118,6 +118,6 @@ execute if data storage ajjgui:data temp[26] run data modify storage ajjgui:data
 data modify entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.gui set from storage ajjgui:data temp2
 data modify entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.custom_name set from block ~ ~ ~ CustomName
 
-execute as @n[type=minecraft:marker,tag=ajjgui.gui_origin] run function ajjgui:control/load_page_origin
+execute as @n[type=minecraft:marker,tag=ajjgui.gui_origin] run function ajjgui:gui/origin/load_page
 
 tellraw @a {text:"Compiled GUI"}
