@@ -100,7 +100,7 @@ The *placeholder* is a widget that cannot be interacted with and is used to disp
 #### Usage
 
 ```
-/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"placeholder",<optional_ajjguisnbt>}}]
+/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"placeholder",<optional_ajjgui_snbt>}}]
 ```
 
 #### Example
@@ -133,7 +133,7 @@ The *button* is a widget that changes the GUI page, exits the GUI and/or runs a 
 #### Usage
 
 ```
-/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"button",<optional_ajjguisnbt>}}]
+/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"button",<optional_ajjgui_snbt>}}]
 ```
 
 #### Examples
@@ -158,7 +158,7 @@ The *counter* is a widget that changes to a different count of the same item whe
 #### Usage
 
 ```
-/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"counter",values:[<value_1>,<value_2>,…,<value_N>],<optional_ajjguisnbt>}}] <default_value>
+/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"counter",values:[<value_1>,<value_2>,…,<value_N>],<optional_ajjgui_snbt>}}] <default_value>
 ```
 
 where N is the number of states.
@@ -215,7 +215,7 @@ The *switch* is a widget that changes to a different item when clicked, followin
 #### Usage
 
 ```
-/give @p <default_item_id>[minecraft:custom_data={ajjgui:{widget:"switch",items:[<item_1>,<item_2>,…,<item_N>],<optional_ajjguisnbt>}}]
+/give @p <default_item_id>[minecraft:custom_data={ajjgui:{widget:"switch",items:[<item_1>,<item_2>,…,<item_N>],<optional_ajjgui_snbt>}}]
 ```
 
 where N is the number of states.
@@ -274,7 +274,7 @@ The *radiobutton* is a widget that changes between a disabled and an enabled sta
 #### Usage
 
 ```
-/give @p <default_item_id>[minecraft:custom_data={ajjgui:{widget:"radiobutton",off:<off_item>,on:<on_item>,<optional_ajjguisnbt>}}]
+/give @p <default_item_id>[minecraft:custom_data={ajjgui:{widget:"radiobutton",off:<off_item>,on:<on_item>,<optional_ajjgui_snbt>}}]
 ```
 
 #### Examples
@@ -321,7 +321,7 @@ The *itembin* is a widget that clears all items inserted by the player in a part
 #### Usage
 
 ```
-/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"itembin",<optional_ajjguisnbt>}}]
+/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"itembin",<optional_ajjgui_snbt>}}]
 ```
 
 #### Example
@@ -362,7 +362,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 #### Usage
 
 ```
-/give @p (<default_placeholder_item_id>|<default_item_id>)[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:<placeholder_item>,<optional_ajjguisnbt>}}]
+/give @p (<default_placeholder_item_id>|<default_item_id>)[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:<placeholder_item>,<optional_ajjgui_snbt>}}]
 ```
 
 #### Examples
@@ -422,7 +422,7 @@ The *scrollbutton* is a widget that cycles one or more lists of *static* widgets
 #### Usage
 
 ```
-/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"scrollbutton",widgets:[[<widget_1,1>,<widget_1,2>,…,<widget_1,L_1>],[<widget_2,1>,<widget_2,2>,…,<widget_2,L_2>],…,[<widget_N,1>,<widget_N,2>,…,<widget_N,L_N>]],slots:[[<slot_1,1>,<slot_1,2>,…,<slot_1,M_1>],[<slot_2,1>,<slot_2,2>,…,<slot_2,M_2>],…,[<slot_N,1>,<slot_N,2>,…,<slot_N,M_N>]],<optional_ajjguisnbt>}}]
+/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"scrollbutton",widgets:[[<widget_1,1>,<widget_1,2>,…,<widget_1,L_1>],[<widget_2,1>,<widget_2,2>,…,<widget_2,L_2>],…,[<widget_N,1>,<widget_N,2>,…,<widget_N,L_N>]],slots:[[<slot_1,1>,<slot_1,2>,…,<slot_1,M_1>],[<slot_2,1>,<slot_2,2>,…,<slot_2,M_2>],…,[<slot_N,1>,<slot_N,2>,…,<slot_N,M_N>]],<optional_ajjgui_snbt>}}]
 ```
 
 where L_x and M_y are the numbers of widgets and slots in each widget list and slot list respectively, and N is the number of widget list and slot list pairs.
