@@ -1,4 +1,4 @@
-# A Data-Driven GUI Framework for Minecraft Mapmaking
+# A Data-Driven GUI Library for Minecraft Mapmaking
 
 > **AVAILABLE ON 1.21.8**
 >
@@ -18,14 +18,14 @@
 
 ## Overview
 
-This datapack allows mapmakers to create and maintain complex and robust item-based GUIs in-game. This is achieved by simply dragging and dropping items with custom NBT tags in containers within a world, which the datapack can use to generate GUIs. It functions as a black box that allows each item to act as a graphical widget with predefined properties, without requiring any modifications to be made or additional code to be implemented. Two types of GUIs can be created:
+This datapack allows mapmakers to create and maintain complex and robust item-based GUIs in-game. This is achieved by simply dragging and dropping items with custom SNBT in containers within a world, which the datapack can use to generate GUIs. It functions as a black box that allows each item to act as a graphical widget with predefined properties, without requiring any modifications to be made or additional code to be implemented. Two types of GUIs can be created:
 
 * **Block Entity GUIs:** Placed at a fixed position and shared by all players. These are generated upon compilation.
 * **Chest Boat GUIs:** Retrieved from a database and accessible anywhere by specified players only. These are obtained directly from the above by [porting GUIs to players](#porting-guis-to-players).
 
 The datapack provides the following features:
 
-* NBT tag standard for quick and easy creation of advanced item-based GUIs
+* SNBT standard for quick and easy creation of advanced item-based GUIs
 * Completely in-game workflow, with the entire datapack being a black box that the mapmaker can ignore
 * Robust design, support for multiplayer, including personalized GUIs, and no interference with player inventories
 * Complete documentation, in-game tutorial and demos
@@ -75,7 +75,7 @@ There are 8 types of GUI widgets available:
 * [Itemslot](#itemslot)
 * [Scrollbutton](#scrollbutton)
 
-An in-game tutorial on how to create a GUI is available via ``/function ajjgui:__tutorial``. The tutorial provides the player with premade demo widgets to experiment with. Multiple examples are given, both here and in-game, to help provide a better understanding of their custom NBT tags. The following section explains all the different types of widgets available and how they can be customized. Once obtained, these items can be placed inside shulker boxes, with each shulker box corresponding to a different GUI page. The shulker boxes can be arranged based on their page number and compiled to build a functional GUI in-game. This manual can be accessed with ``/function ajjgui:__manual``.
+An in-game tutorial on how to create a GUI is available via ``/function ajjgui:__tutorial``. The tutorial provides the player with premade demo widgets to experiment with. Multiple examples are given, both here and in-game, to help provide a better understanding of their custom SNBT. The following section explains all the different types of widgets available and how they can be customized. Once obtained, these items can be placed inside shulker boxes, with each shulker box corresponding to a different GUI page. The shulker boxes can be arranged based on their page number and compiled to build a functional GUI in-game. This manual can be accessed with ``/function ajjgui:__manual``.
 
 ## List of GUI Widgets
 
@@ -83,16 +83,16 @@ An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_
 > Some of the following commands are too long to fit in the chat box and need to be executed using a command block.
 
 > [!WARNING]
-> For custom NBT tags, it is important to check that the right data types are being used (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:1}}``), that values are within the specified range (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:2b}}``, where ``ajjgui.exit`` here can only be ``0b`` or ``1b``). The GUI compiler is only capable of initializing required NBT tags with default values and does not correct errors. While there are cases where errors in custom NBT tags, such as incorrect data types, may be internally resolved by the datapack at later stages, this behavior is inconsistent and must not be assumed.
+> For custom SNBT, it is important to check that the right data types are being used (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:1}}``), that values are within the specified range (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:2b}}``, where ``ajjgui.exit`` here can only be ``0b`` or ``1b``). The GUI compiler is only capable of initializing required SNBT with default values and does not correct errors. While there are cases where errors in custom SNBT, such as incorrect data types, may be internally resolved by the datapack at later stages, this behavior is inconsistent and must not be assumed.
 
 > [!NOTE]
-> The ``ajjgui.command``, ``ajjgui.exit``, ``ajjgui.fixed``, ``ajjgui.page`` and ``ajjgui.relative`` NBT tags are covered separately in later sections.
+> The ``ajjgui.command``, ``ajjgui.exit``, ``ajjgui.fixed``, ``ajjgui.page`` and ``ajjgui.relative`` SNBT are covered separately in later sections.
 
 ### Placeholder
 
 The *placeholder* is a widget that cannot be interacted with and is used to display an item.
 
-| Item NBT Tag      | Default                             | Type           |
+| Item SNBT         | Default                             | Type           |
 |:------------------|:------------------------------------|:---------------|
 | ``ajjgui.fixed``  | ``0b``                              | Byte (Boolean) |
 | ``ajjgui.widget`` | Required (``"placeholder"`` or N/A) | String         |
@@ -100,7 +100,7 @@ The *placeholder* is a widget that cannot be interacted with and is used to disp
 #### Usage
 
 ```
-/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"placeholder",<optional_ajjgui_tags>}}]
+/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"placeholder",<optional_ajjguisnbt>}}]
 ```
 
 #### Example
@@ -115,13 +115,13 @@ A *placeholder*:
 > If a GUI slot is empty, it is set to a light gray stained glass pane *placeholder* with a hidden tooltip.
 
 > [!TIP]
-> If the ``ajjgui.widget`` NBT tag of any item is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional.
+> If the ``ajjgui.widget`` SNBT of any item is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional.
 
 ### Button
 
 The *button* is a widget that changes the GUI page, exits the GUI and/or runs a GUI command when clicked. More information can be found in the following sections.
 
-| Item NBT Tag        | Default                 | Type           |
+| Item SNBT           | Default                 | Type           |
 |:--------------------|:------------------------|:---------------|
 | ``ajjgui.command``  | N/A                     | String         |
 | ``ajjgui.exit``     | ``0b``                  | Byte (Boolean) |
@@ -133,7 +133,7 @@ The *button* is a widget that changes the GUI page, exits the GUI and/or runs a 
 #### Usage
 
 ```
-/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"button",<optional_ajjgui_tags>}}]
+/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"button",<optional_ajjguisnbt>}}]
 ```
 
 #### Examples
@@ -142,9 +142,9 @@ More information about [changing GUI pages](#changing-gui-pages), [exiting GUIs]
 
 ### Counter
 
-The *counter* is a widget that changes to a different count of the same item when clicked, following a value sequence. The value sequence is specified in the ``ajjgui.values`` NBT tag. The default value is the one initially used upon creation of the widget. Once a *counter* in its default state is clicked, it changes to the second value in the list and so on. Hence, the first one is not used until the end of the first cycle. After one cycle, the first value is always used instead of the default one. The current state of a *counter* is stored in the ``ajjgui.state`` NBT tag.
+The *counter* is a widget that changes to a different count of the same item when clicked, following a value sequence. The value sequence is specified in the ``ajjgui.values`` SNBT. The default value is the one initially used upon creation of the widget. Once a *counter* in its default state is clicked, it changes to the second value in the list and so on. Hence, the first one is not used until the end of the first cycle. After one cycle, the first value is always used instead of the default one. The current state of a *counter* is stored in the ``ajjgui.state`` SNBT.
 
-| Item NBT Tag        | Default                  | Type           |
+| Item SNBT           | Default                  | Type           |
 |:--------------------|:-------------------------|:---------------|
 | ``ajjgui.command``  | N/A                      | String         |
 | ``ajjgui.exit``     | ``0b``                   | Byte (Boolean) |
@@ -158,7 +158,7 @@ The *counter* is a widget that changes to a different count of the same item whe
 #### Usage
 
 ```
-/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"counter",values:[<value_1>,<value_2>,…,<value_N>],<optional_ajjgui_tags>}}] <default_value>
+/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"counter",values:[<value_1>,<value_2>,…,<value_N>],<optional_ajjguisnbt>}}] <default_value>
 ```
 
 where N is the number of states.
@@ -199,9 +199,9 @@ where N is the number of states.
 
 ### Switch
 
-The *switch* is a widget that changes to a different item when clicked, following an item sequence. The item sequence is specified in the ``ajjgui.items`` NBT tag. The default item is the one initially used upon creation of the widget. Once a *switch* in its default state is clicked, it changes to the second item in the list and so on. Hence, the first one is not used until the end of the first cycle. After one cycle, the first item is always used instead of the default one. The current state of a *switch* is stored in the ``ajjgui.state`` NBT tag.
+The *switch* is a widget that changes to a different item when clicked, following an item sequence. The item sequence is specified in the ``ajjgui.items`` SNBT. The default item is the one initially used upon creation of the widget. Once a *switch* in its default state is clicked, it changes to the second item in the list and so on. Hence, the first one is not used until the end of the first cycle. After one cycle, the first item is always used instead of the default one. The current state of a *switch* is stored in the ``ajjgui.state`` SNBT.
 
-| Item NBT Tag        | Default                 | Type           |
+| Item SNBT           | Default                 | Type           |
 |:--------------------|:------------------------|:---------------|
 | ``ajjgui.command``  | N/A                     | String         |
 | ``ajjgui.exit``     | ``0b``                  | Byte (Boolean) |
@@ -215,7 +215,7 @@ The *switch* is a widget that changes to a different item when clicked, followin
 #### Usage
 
 ```
-/give @p <default_item_id>[minecraft:custom_data={ajjgui:{widget:"switch",items:[<item_1>,<item_2>,…,<item_N>],<optional_ajjgui_tags>}}]
+/give @p <default_item_id>[minecraft:custom_data={ajjgui:{widget:"switch",items:[<item_1>,<item_2>,…,<item_N>],<optional_ajjguisnbt>}}]
 ```
 
 where N is the number of states.
@@ -256,9 +256,9 @@ where N is the number of states.
 
 ### Radiobutton
 
-The *radiobutton* is a widget that changes between a disabled and an enabled state item when clicked. It comes in groups in which only one widget can be enabled at a time, with the rest being disabled. Each item is specified in the ``ajjgui.disabled`` and ``ajjgui.enabled`` NBT tags. The default item is the one initially used upon creation of the widget. Once a *radiobutton* is clicked, it changes to the item corresponding to its enabled state, and all the other *radiobutton* widgets with the same group ID change to their disabled state. The group ID of a *radiobutton* is stored in the ``ajjgui.group`` NBT tag. The current state of a *radiobutton* is stored in the ``ajjgui.state`` NBT tag.
+The *radiobutton* is a widget that changes between a disabled and an enabled state item when clicked. It comes in groups in which only one widget can be enabled at a time, with the rest being disabled. Each item is specified in the ``ajjgui.disabled`` and ``ajjgui.enabled`` SNBT. The default item is the one initially used upon creation of the widget. Once a *radiobutton* is clicked, it changes to the item corresponding to its enabled state, and all the other *radiobutton* widgets with the same group ID change to their disabled state. The group ID of a *radiobutton* is stored in the ``ajjgui.group`` SNBT. The current state of a *radiobutton* is stored in the ``ajjgui.state`` SNBT.
 
-| Item NBT Tag        | Default                      | Type           |
+| Item SNBT           | Default                      | Type           |
 |:--------------------|:-----------------------------|:---------------|
 | ``ajjgui.command``  | N/A                          | String         |
 | ``ajjgui.disabled`` | Required                     | Compound       |
@@ -274,7 +274,7 @@ The *radiobutton* is a widget that changes between a disabled and an enabled sta
 #### Usage
 
 ```
-/give @p <default_item_id>[minecraft:custom_data={ajjgui:{widget:"radiobutton",off:<off_item>,on:<on_item>,<optional_ajjgui_tags>}}]
+/give @p <default_item_id>[minecraft:custom_data={ajjgui:{widget:"radiobutton",off:<off_item>,on:<on_item>,<optional_ajjguisnbt>}}]
 ```
 
 #### Examples
@@ -309,7 +309,7 @@ The *radiobutton* is a widget that changes between a disabled and an enabled sta
 
 The *itembin* is a widget that clears all items inserted by the player in a particular slot in the GUI.
 
-| Item NBT Tag        | Default                  | Type           |
+| Item SNBT           | Default                  | Type           |
 |:--------------------|:-------------------------|:---------------|
 | ``ajjgui.command``  | N/A                      | String         |
 | ``ajjgui.exit``     | ``0b``                   | Byte (Boolean) |
@@ -321,7 +321,7 @@ The *itembin* is a widget that clears all items inserted by the player in a part
 #### Usage
 
 ```
-/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"itembin",<optional_ajjgui_tags>}}]
+/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"itembin",<optional_ajjguisnbt>}}]
 ```
 
 #### Example
@@ -345,9 +345,9 @@ An *itembin*:
 
 ### Itemslot
 
-The *itemslot* is a widget that stores items inserted by the player in a particular slot in the GUI. Once one or more stacked items are inserted, the current ones occupying the slot (if any) are replaced and returned to the player's inventory. When the *itemslot* is not being used, a placeholder item occupies the slot. This is stored in the ``ajjgui.placeholder`` NBT tag. The maximum number of items in an *itemslot* is stored in the ``ajjgui.size`` NBT tag, which cannot be larger than ``99``. Any excess items are returned to the player. Whether an *itemslot* has an item in it is determined by the ``ajjgui.state`` NBT tag.
+The *itemslot* is a widget that stores items inserted by the player in a particular slot in the GUI. Once one or more stacked items are inserted, the current ones occupying the slot (if any) are replaced and returned to the player's inventory. When the *itemslot* is not being used, a placeholder item occupies the slot. This is stored in the ``ajjgui.placeholder`` SNBT. The maximum number of items in an *itemslot* is stored in the ``ajjgui.size`` SNBT, which cannot be larger than ``99``. Any excess items are returned to the player. Whether an *itemslot* has an item in it is determined by the ``ajjgui.state`` SNBT.
 
-| Item NBT Tag           | Default                   | Type           |
+| Item SNBT              | Default                   | Type           |
 |:-----------------------|:--------------------------|:---------------|
 | ``ajjgui.command``     | N/A                       | String         |
 | ``ajjgui.exit``        | ``0b``                    | Byte (Boolean) |
@@ -362,7 +362,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 #### Usage
 
 ```
-/give @p (<default_placeholder_item_id>|<default_item_id>)[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:<placeholder_item>,<optional_ajjgui_tags>}}]
+/give @p (<default_placeholder_item_id>|<default_item_id>)[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:<placeholder_item>,<optional_ajjguisnbt>}}]
 ```
 
 #### Examples
@@ -404,9 +404,9 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 
 ### Scrollbutton
 
-The *scrollbutton* is a widget that cycles one or more lists of *static* widgets (see notes) across respective GUI slot lists when clicked. This allows for additional space in the GUI. Each widget list is specified in the ``ajjgui.widgets`` NBT tag. Within each widget list, widgets are added in the order they appear in. The slot list associated with each widget list is specified in the ``ajjgui.slots`` NBT tag. Within each slot list, slots are added in the order they are occupied by the respective widget list. The *scrollbutton* also contains the entire functionality of the *switch*, including the ``ajjgui.items`` and ``ajjgui.state`` NBT tags.
+The *scrollbutton* is a widget that cycles one or more lists of *static* widgets (see notes) across respective GUI slot lists when clicked. This allows for additional space in the GUI. Each widget list is specified in the ``ajjgui.widgets`` SNBT. Within each widget list, widgets are added in the order they appear in. The slot list associated with each widget list is specified in the ``ajjgui.slots`` SNBT. Within each slot list, slots are added in the order they are occupied by the respective widget list. The *scrollbutton* also contains the entire functionality of the *switch*, including the ``ajjgui.items`` and ``ajjgui.state`` SNBT.
 
-| Item NBT Tag        | Default                       | Type               |
+| Item SNBT           | Default                       | Type               |
 |:--------------------|:------------------------------|:-------------------|
 | ``ajjgui.command``  | N/A                           | String             |
 | ``ajjgui.exit``     | ``0b``                        | Byte (Boolean)     |
@@ -422,7 +422,7 @@ The *scrollbutton* is a widget that cycles one or more lists of *static* widgets
 #### Usage
 
 ```
-/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"scrollbutton",widgets:[[<widget_1,1>,<widget_1,2>,…,<widget_1,L_1>],[<widget_2,1>,<widget_2,2>,…,<widget_2,L_2>],…,[<widget_N,1>,<widget_N,2>,…,<widget_N,L_N>]],slots:[[<slot_1,1>,<slot_1,2>,…,<slot_1,M_1>],[<slot_2,1>,<slot_2,2>,…,<slot_2,M_2>],…,[<slot_N,1>,<slot_N,2>,…,<slot_N,M_N>]],<optional_ajjgui_tags>}}]
+/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"scrollbutton",widgets:[[<widget_1,1>,<widget_1,2>,…,<widget_1,L_1>],[<widget_2,1>,<widget_2,2>,…,<widget_2,L_2>],…,[<widget_N,1>,<widget_N,2>,…,<widget_N,L_N>]],slots:[[<slot_1,1>,<slot_1,2>,…,<slot_1,M_1>],[<slot_2,1>,<slot_2,2>,…,<slot_2,M_2>],…,[<slot_N,1>,<slot_N,2>,…,<slot_N,M_N>]],<optional_ajjguisnbt>}}]
 ```
 
 where L_x and M_y are the numbers of widgets and slots in each widget list and slot list respectively, and N is the number of widget list and slot list pairs.
@@ -447,11 +447,11 @@ A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each butt
 > The *scrollbutton* only supports the *placeholder*, *button* and *itembin* widgets.
 
 > [!TIP]
-> If the ``ajjgui.widget`` NBT tag of any widget is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional. This, by extension, applies to a *placeholder* widget specified in the ``ajjgui.widgets`` NBT tag of the *scrollbutton*.
+> If the ``ajjgui.widget`` SNBT of any widget is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional. This, by extension, applies to a *placeholder* widget specified in the ``ajjgui.widgets`` SNBT of the *scrollbutton*.
 
 ## Changing GUI Pages
 
-Each of the widgets discussed previously, excluding the *placeholder*, can be made to change the GUI page when clicked. This is done by specifying a page number in the ``ajjgui.page`` NBT tag. By default, this value is the index of the shulker box in the chest previously used to compile the GUI, where a value of ``0b`` corresponds to the first page. If it is equal to the number of pages, the count resets back to the first page, and negative values may also be used to access pages from the end. The ``ajjgui.relative`` NBT tag can be set to ``1b`` in order for the value of ``ajjgui.page`` to increment the page number from its current value. This, hence, assumes that the current page has an index of ``0b`` and uses this as a reference instead of the first one.
+Each of the widgets discussed previously, excluding the *placeholder*, can be made to change the GUI page when clicked. This is done by specifying a page number in the ``ajjgui.page`` SNBT. By default, this value is the index of the shulker box in the chest previously used to compile the GUI, where a value of ``0b`` corresponds to the first page. If it is equal to the number of pages, the count resets back to the first page, and negative values may also be used to access pages from the end. The ``ajjgui.relative`` SNBT can be set to ``1b`` in order for the value of ``ajjgui.page`` to increment the page number from its current value. This, hence, assumes that the current page has an index of ``0b`` and uses this as a reference instead of the first one.
 
 #### Examples
 
@@ -481,7 +481,7 @@ Each of the widgets discussed previously, excluding the *placeholder*, can be ma
 
 ## Fixed GUI Widgets
 
-Each of the widgets discussed previously can be made to stay on display when the GUI page is changed. This is done by setting the ``ajjgui.fixed`` NBT tag to ``1b``. If a *scrollbutton* is made fixed, its widgets also obtain this property.
+Each of the widgets discussed previously can be made to stay on display when the GUI page is changed. This is done by setting the ``ajjgui.fixed`` SNBT to ``1b``. If a *scrollbutton* is made fixed, its widgets also obtain this property.
 
 #### Example
 
@@ -493,7 +493,7 @@ A *button* staying fixed in its slot when the GUI page is changed:
 
 ## Exiting GUIs
 
-Each of the widgets discussed previously, excluding the *placeholder*, can be made to exit the GUI when clicked. This is done by setting the ``ajjgui.exit`` NBT tag to ``1b``.
+Each of the widgets discussed previously, excluding the *placeholder*, can be made to exit the GUI when clicked. This is done by setting the ``ajjgui.exit`` SNBT to ``1b``.
 
 #### Example
 
@@ -534,7 +534,7 @@ Compiled GUIs can create copies for specific players. ``/function ajjgui:__port 
     ```
 
 > [!NOTE]
-> There is a persistent actionbar prompt instructing the user to open their inventory to view the chest boat menu and dismount to cancel. This can be modified or removed using the ``ajjgui:data prompt`` NBT tag.
+> There is a persistent actionbar prompt instructing the user to open their inventory to view the chest boat menu and dismount to cancel. This can be modified or removed using the ``ajjgui:data prompt`` SNBT.
 
 > [!IMPORTANT]
 > These chest boats have an interaction entity surrounding their hitbox and preventing other players from accessing them. If other players come close enough to bypass this, the chest boat is removed (and the user needs to reopen the GUI). These measures are essential in ensuring that GUIs can only be accessed by their specified player.
@@ -550,7 +550,7 @@ Compiled GUIs can create copies for specific players. ``/function ajjgui:__port 
 | ``@s ajjgui.slot``  | Widget slot       | Int  |
 | ``@s ajjgui.state`` | Widget state      | Int  |
 
-| Data Storage NBT Tag   | Description                           | Type          |
+| Data Storage SNBT      | Description                           | Type          |
 |:-----------------------|:--------------------------------------|:--------------|
 | ``ajjgui:data in``     | *Itembin* or *itemslot* item inserted | Compound      |
 | ``ajjgui:data out``    | *Itemslot* item removed               | Compound      |
@@ -563,16 +563,16 @@ Compiled GUIs can create copies for specific players. ``/function ajjgui:__port 
 |:-------------------------------------------------------|:------------|:-----|
 | ``@e[tag=ajjgui.gui_active,limit=1] ajjgui.page``      | Page number | Int  |
 
-| GUI Marker Entity NBT Tag                              | Description        | Type                              |
+| GUI Marker Entity SNBT                                 | Description        | Type                              |
 |:-------------------------------------------------------|:-------------------|:----------------------------------|
 | ``@e[tag=ajjgui.gui_active,limit=1] data.custom_name`` | GUI container name | String, Compound or Compound List |
 | ``@e[tag=ajjgui.gui_active,limit=1] data.gui``         | GUI page list      | Compound List                     |
 
-| Data Storage NBT Tag   | Description                          | Type                      |
+| Data Storage SNBT      | Description                          | Type                      |
 |:-----------------------|:-------------------------------------|:--------------------------|
 | ``ajjgui:data prompt`` | Actionbar prompt for all ported GUIs | Compound or Compound List |
 
-Each of the widgets discussed previously, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.command`` NBT tag. This command is executed by the player interacting with the widget. Within the command's execution, it is possible to access data exported from the GUI interaction (e.g., whether a *switch* is toggled on) and use it to make decisions.
+Each of the widgets discussed previously, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.command`` SNBT. This command is executed by the player interacting with the widget. Within the command's execution, it is possible to access data exported from the GUI interaction (e.g., whether a *switch* is toggled on) and use it to make decisions.
 
 #### Examples
 
@@ -597,7 +597,7 @@ Each of the widgets discussed previously, excluding the the *placeholder*, can b
 
 ## Advanced: Modifying GUIs Post-Compilation
 
-There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for block entity GUIs, located at the container coordinates, and ``"ajjgui.gui_ported"`` for chest boat GUIs, riding the chest boat. GUIs used at a specific tick temporarily have the ``"ajjgui.gui_active"`` scoreboard tag on their marker. This marker stores the page value in its ``ajjgui.page`` score, the container name in its ``data.custom_name`` NBT tag and the page list in its ``data.gui`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT tags may be modified post-compilation to achieve desired results. This would, for example, be needed if one wanted to modify a GUI without prior user interaction (i.e., without triggering a widget with the ``ajjgui.page`` or ``ajjgui.command`` NBT tags). If the modification command is not triggered by a player using a GUI (i.e., with the ``ajjgui.command`` NBT tag), ``/function ajjgui:_reload`` must follow in the same tick for any changes to be reflected in the GUI.
+There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for block entity GUIs, located at the container coordinates, and ``"ajjgui.gui_ported"`` for chest boat GUIs, riding the chest boat. GUIs used at a specific tick temporarily have the ``"ajjgui.gui_active"`` scoreboard tag on their marker. This marker stores the page value in its ``ajjgui.page`` score, the container name in its ``data.custom_name`` SNBT and the page list in its ``data.gui`` SNBT. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widgets do not already support a particular functionality, the page number and widget SNBT may be modified post-compilation to achieve desired results. This would, for example, be needed if one wanted to modify a GUI without prior user interaction (i.e., without triggering a widget with the ``ajjgui.page`` or ``ajjgui.command`` SNBT). If the modification command is not triggered by a player using a GUI (i.e., with the ``ajjgui.command`` SNBT), ``/function ajjgui:_reload`` must follow in the same tick for any changes to be reflected in the GUI.
 
 #### Examples
 
@@ -637,13 +637,13 @@ There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for blo
 > If a GUI is not reloaded as specified above, the datapack assumes that a player is interacting indefinitely with it, causing other active GUIs to malfunction.
 
 > [!WARNING]
-> The GUI compiler adds the ``ajjgui.meta`` NBT tag to each widget. This must not be changed when modifying NBT tags post-compilation.
+> The GUI compiler adds the ``ajjgui.meta`` SNBT to each widget. This must not be changed when modifying SNBT post-compilation.
 
 > [!WARNING]
-> This section explains how widgets can be modified after compilation, when required NBT tags have already been initialized with default values. Creating widget NBT tags from scratch or changing the ``ajjgui.widget`` NBT tag is therefore not recommended.
+> This section explains how widgets can be modified after compilation, when required SNBT have already been initialized with default values. Creating widget SNBT from scratch or changing the ``ajjgui.widget`` SNBT is therefore not recommended.
 
 > [!IMPORTANT]
-> Widgets with the ``ajjgui.fixed`` NBT tag set to ``1b`` are passed on to a new page only when it is loaded by clicking on a widget that has the ``ajjgui.page`` NBT tag. Changing a page post-compilation therefore does not properly handle fixed widgets.
+> Widgets with the ``ajjgui.fixed`` SNBT set to ``1b`` are passed on to a new page only when it is loaded by clicking on a widget that has the ``ajjgui.page`` SNBT. Changing a page post-compilation therefore does not properly handle fixed widgets.
 
 > [!NOTE]
 > Decompiling a GUI resets it to its state before compilation.

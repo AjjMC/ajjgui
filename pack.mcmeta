@@ -1,6 +1,6 @@
 {
   "pack": {
     "pack_format": 81,
-    "description": "A data-driven GUI framework for mapmaking"
+    "description": "A data-driven GUI library for mapmaking"
   }
 }
