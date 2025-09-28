@@ -4,3 +4,5 @@ $data modify storage ajjgui:data temp.player set value $(player)
 $data modify storage ajjgui:data temp.id set value $(id)
 
 function ajjgui:gui/origin/init_port with storage ajjgui:data temp
+
+execute unless entity @e[type=minecraft:marker,tag=ajjgui.gui_origin] run return fail
