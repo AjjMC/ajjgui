@@ -1,4 +1,4 @@
-execute unless data storage ajjgui:data version run tellraw @a [{text:"ajjgui ",color:"gray"},{text:"is not installed",color:"red"}]
+execute unless data storage ajjgui:data version run tellraw @a [{text:""},{text:"ajjgui",color:"gray"},{text:" is not "},{text:"installed",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__install"},hover_event:{action:"show_text",value:"Click Here"}}]
 execute unless data storage ajjgui:data version run tellraw @a [{text:"Type "},{text:"/function ajjgui:__install",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__install"},hover_event:{action:"show_text",value:"Click Here"}},{text:" to install"}]
 
 function ajjgui:installation/set_version

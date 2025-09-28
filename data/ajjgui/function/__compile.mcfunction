@@ -1,4 +1,4 @@
-execute unless data storage ajjgui:data version run tellraw @s [{text:"Unable to compile the GUI; ",color:"red"},{text:"ajjgui ",color:"gray"},{text:"is not installed",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__install"},hover_event:{action:"show_text",value:"Click Here"}}]
+execute unless data storage ajjgui:data version run tellraw @s [{text:""},{text:"Unable to compile the GUI; ",color:"red"},{text:"ajjgui",color:"gray"},{text:" is not ",color:"red"},{text:"installed",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__install"},hover_event:{action:"show_text",value:"Click Here"}}]
 execute unless data storage ajjgui:data version run return fail
 
 execute unless block ~ ~ ~ minecraft:chest run tellraw @s {text:"Unable to compile the GUI; you are not standing above a chest",color:"red"}

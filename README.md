@@ -58,7 +58,7 @@ After this datapack has been added to the "datapacks" folder of a Minecraft worl
 | ``/function ajjgui:_portself {id:<gui_id>}``                   | Runs ``/function ajjgui:__portself`` without feedback |
 | ``/function ajjgui:_reload``                                   | Runs ``/function ajjgui:__reload`` without feedback   |
 
-The datapack can be installed by running ``/function ajjgui:__install`` at any location in the world, which generates a shulker box. This needs to be located in a loaded chunk for the datapack to be fully functional and cannot be destroyed. The shulker box can be relocated by repeating the installation command elsewhere. Any updated versions of the datapack are automatically installed at the same location upon reloading the world. The datapack can be uninstalled using ``/function ajjgui:__uninstall``, which removes all data associated with it from the world and decompiles any existing GUIs.
+The datapack can be installed by running ``/function ajjgui:__install`` at any location in the world, which generates a shulker box. This needs to be located in a loaded chunk and cannot be destroyed. The shulker box can be relocated by repeating the installation command elsewhere. Any updated versions of the datapack are automatically installed at the same location upon reloading the world. The datapack can be uninstalled using ``/function ajjgui:__uninstall``, which removes all data associated with it from the world and decompiles any existing GUIs.
 
 ## Creating a GUI
 
