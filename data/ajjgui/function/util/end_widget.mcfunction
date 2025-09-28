@@ -1,8 +1,7 @@
 execute as @e[type=minecraft:marker,tag=ajjgui.gui_origin,tag=ajjgui.gui_active] at @s run function ajjgui:gui/origin/load_page
-tag @e[type=minecraft:marker,tag=ajjgui.gui_origin,tag=ajjgui.gui_active] remove ajjgui.gui_active
-
 execute as @e[type=minecraft:marker,tag=ajjgui.gui_ported,tag=ajjgui.gui_active] at @s run function ajjgui:gui/ported/load_page
-tag @e[type=minecraft:marker,tag=ajjgui.gui_ported,tag=ajjgui.gui_active] remove ajjgui.gui_active
+
+tag @e[type=minecraft:marker,tag=ajjgui.gui_active] remove ajjgui.gui_active
 
 scoreboard players set @s ajjgui.cooldown 8
 

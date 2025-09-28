@@ -1,7 +1,9 @@
 execute store result score #count ajjgui run data get storage ajjgui:data widget.components.minecraft:custom_data.ajjgui.page
 execute store result score #length ajjgui run data get entity @s data.gui
+
 execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{relative:1b}}}}} run scoreboard players operation #count ajjgui += @s ajjgui.page
 scoreboard players operation #count ajjgui %= #length ajjgui
+
 execute store result score @s ajjgui.page run scoreboard players get #count ajjgui
 
 execute if score @s ajjgui.page matches 0 run data modify storage ajjgui:data temp set from entity @s data.gui[0]

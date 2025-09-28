@@ -10,6 +10,7 @@ execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data"
 
 data modify storage ajjgui:data in set from storage ajjgui:data temp1
 execute unless data storage ajjgui:data temp1 run data modify storage ajjgui:data in set value {}
+
 data modify storage ajjgui:data out set from storage ajjgui:data temp
 execute unless data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{state:1}}}}} run data modify storage ajjgui:data out set value {}
 
