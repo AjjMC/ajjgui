@@ -1,5 +1,5 @@
-execute as @e[type=minecraft:marker,tag=ajjgui.gui_origin] at @s run function ajjgui:gui/detect
-execute as @e[type=minecraft:marker,tag=ajjgui.gui_ported] at @s run function ajjgui:gui/detect
+execute as @e[type=minecraft:marker,tag=ajjgui.gui_origin] run function ajjgui:gui/detect
+execute as @e[type=minecraft:marker,tag=ajjgui.gui_ported] run function ajjgui:gui/detect
 
 execute as @e[type=minecraft:marker,tag=ajjgui.gui_active] run function ajjgui:gui/get_page
 
