@@ -18,7 +18,7 @@
 
 ## Overview
 
-This datapack allows mapmakers to create and maintain complex and robust item-based GUIs in-game. This is achieved by simply dragging and dropping items with custom SNBT in containers within a world, which the datapack can use to generate GUIs. It functions as a black box that treats each item as a graphical widget with predefined properties, and the user is not expected to modify any files. Two types of GUIs can be created:
+This datapack allows mapmakers to create and maintain complex and robust item-based GUIs in-game. This is achieved by dragging and dropping items with custom SNBT in containers within a world, which the datapack can use to generate GUIs. It functions as a black box that treats each item as a graphical widget with predefined properties, and the user is not expected to modify any files. Two types of GUIs can be created:
 
 * **Block Entity GUIs:** Placed at a fixed position and shared by all players. These are generated upon compilation.
 * **Chest Boat GUIs:** Retrieved from a database and accessible anywhere by specified players only. These are obtained directly from the above by [porting GUIs to players](#porting-guis-to-players).
