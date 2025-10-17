@@ -18,17 +18,18 @@
 
 ## Overview
 
-This datapack allows mapmakers to create and maintain complex and robust item-based GUIs in-game. This is achieved by simply dragging and dropping items with custom SNBT in containers within a world, which the datapack can use to generate GUIs. It functions as a black box that allows each item to act as a graphical widget with predefined properties, without requiring any modifications to be made or additional code to be implemented. Two types of GUIs can be created:
+This datapack allows mapmakers to create and maintain complex and robust item-based GUIs in-game. This is achieved by simply dragging and dropping items with custom SNBT in containers within a world, which the datapack can use to generate GUIs. It functions as a black box that treats each item as a graphical widget with predefined properties, without requiring any modifications to be made. Two types of GUIs can be created:
 
 * **Block Entity GUIs:** Placed at a fixed position and shared by all players. These are generated upon compilation.
 * **Chest Boat GUIs:** Retrieved from a database and accessible anywhere by specified players only. These are obtained directly from the above by [porting GUIs to players](#porting-guis-to-players).
 
-The datapack provides the following features:
+Benefits:
 
 * SNBT standard for quick and easy creation of advanced item-based GUIs
 * Completely in-game workflow, with the entire datapack being a black box that the mapmaker can ignore
 * Robust design, support for multiplayer, including personalized GUIs, and no interference with player inventories
-* Complete documentation, in-game tutorial and demos
+* Complete documentation, in-game tutorial, and demos
+* 4+ years of continuous maintenance, built with the most up-to-date practices, and powering prominent maps officially featured on Minecraft Realms.
 
 ## Installing
 
