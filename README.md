@@ -25,10 +25,10 @@ This datapack allows mapmakers to create and maintain complex and robust item-ba
 
 Benefits:
 
-* SNBT standard for quick and easy creation of advanced item-based GUIs
-* Completely in-game workflow, with the entire datapack being a black box that the mapmaker can ignore
-* Robust design, support for multiplayer, including personalized GUIs, and no interference with player inventories
-* Complete documentation, in-game tutorial, and demos
+* SNBT standard for quick and easy creation of advanced item-based GUIs.
+* Completely in-game workflow, with the entire datapack being a black box that the mapmaker can ignore.
+* Robust design, support for multiplayer, including personalized GUIs, and no interference with player inventories.
+* Complete documentation, in-game tutorial, and demos.
 * 4+ years of continuous maintenance, built with the most up-to-date practices, and powering prominent maps officially featured on Minecraft Realms.
 
 ## Installing
