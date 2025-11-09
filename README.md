@@ -184,10 +184,10 @@ where N is the number of states.
     /give @p minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"counter",values:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}},minecraft:custom_name={text:"Counter Value",italic:0b}] 64
     ```
 
-4. A *counter* repeating the sequence 1 to 16, starting with 16. The default value is the same as the first value in ``ajjgui.values`` (now rearranged). The value of ``ajjgui.state`` is set to ``1`` to match the states:
+4. A *counter* repeating the sequence 1 to 16, starting with 16. The default value is the same as the first value in ``ajjgui.values`` (now rearranged). The value of ``ajjgui.state`` is set to ``15`` to match the state:
 
     ```
-    /give @p minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"counter",values:[16,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],state:1}},minecraft:custom_name={text:"Counter Value",italic:0b}] 16
+    /give @p minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"counter",values:[16,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],state:15}},minecraft:custom_name={text:"Counter Value",italic:0b}] 16
     ```
 
 <p align = "center">
@@ -241,7 +241,7 @@ where N is the number of states.
     /give @p minecraft:magenta_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}}]}},minecraft:custom_name={text:"Default",italic:0b}]
     ```
 
-4. A *switch* changing between a "State 0" and a "State 1" state, starting with "State 1". The default item is the same as the first item in ``ajjgui.items`` (now rearranged). The value of ``ajjgui.state`` is set to ``1`` to match the states:
+4. A *switch* changing between a "State 0" and a "State 1" state, starting with "State 1". The default item is the same as the first item in ``ajjgui.items`` (now rearranged). The value of ``ajjgui.state`` is set to ``1`` to match the state:
 
     ```
     /give @p minecraft:lime_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}},{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:purple_dye",count:1,components:{"minecraft:custom_name":{text:"State 2",italic:0b}}}],state:1}},minecraft:custom_name={text:"State 1",italic:0b}]
@@ -292,7 +292,7 @@ The *radiobutton* is a widget that changes between a disabled and an enabled sta
     /give @p minecraft:magenta_dye[minecraft:custom_data={ajjgui:{widget:"radiobutton",disabled:{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"Disabled",italic:0b}}},enabled:{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"Enabled",italic:0b}}},group:0b}},minecraft:custom_name={text:"Default",italic:0b}]
     ```
 
-3. A *radiobutton* on group 0 changing between a "Disabled" and an "Enabled" state, starting with "Enabled". The value of ``ajjgui.state`` is set to ``1`` to match the states:
+3. A *radiobutton* on group 0 changing between a "Disabled" and an "Enabled" state, starting with "Enabled". The value of ``ajjgui.state`` is set to ``1`` to match the state:
 
     ```
     /give @p minecraft:lime_dye[minecraft:custom_data={ajjgui:{widget:"radiobutton",disabled:{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"Disabled",italic:0b}}},enabled:{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"Enabled",italic:0b}}},group:0b,state:1}},minecraft:custom_name={text:"Enabled",italic:0b}]
