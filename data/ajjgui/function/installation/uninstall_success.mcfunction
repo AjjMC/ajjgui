@@ -8,7 +8,6 @@ execute as @a on vehicle if entity @s[type=minecraft:oak_chest_boat,tag=ajjgui.g
 kill @e[type=minecraft:marker,tag=ajjgui.box]
 kill @e[type=minecraft:marker,tag=ajjgui.gui_origin]
 
-scoreboard players reset #temp ajjgui
 scoreboard players reset #two ajjgui
 scoreboard players reset #x ajjgui
 scoreboard players reset #y ajjgui

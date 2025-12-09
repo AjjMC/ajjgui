@@ -1,107 +1,107 @@
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[0]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[0]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[0] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[0] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[1]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[1]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[1] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[1] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[2]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[2]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[2] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[2] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[3]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[3]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[3] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[3] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[4]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[4]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[4] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[4] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[5]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[5]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[5] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[5] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[6]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[6]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[6] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[6] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[7]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[7]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[7] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[7] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[8]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[8]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[8] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[8] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[9]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[9]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[9] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[9] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[10]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[10]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[10] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[10] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[11]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[11]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[11] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[11] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[12]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[12]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[12] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[12] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[13]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[13]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[13] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[13] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[14]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[14]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[14] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[14] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[15]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[15]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[15] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[15] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[16]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[16]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[16] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[16] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[17]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[17]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[17] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[17] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[18]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[18]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[18] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[18] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[19]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[19]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[19] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[19] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[20]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[20]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[20] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[20] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[21]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[21]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[21] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[21] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[22]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[22]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[22] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[22] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[23]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[23]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[23] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[23] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[24]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[24]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[24] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[24] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[25]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[25]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[25] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[25] set from storage ajjgui:data temp.var1
 
-data modify storage ajjgui:data temp1 set from storage ajjgui:data page[26]
+data modify storage ajjgui:data temp.var1 set from storage ajjgui:data page[26]
 function ajjgui:widget/radiobutton/different_group
-data modify storage ajjgui:data page[26] set from storage ajjgui:data temp1
+data modify storage ajjgui:data page[26] set from storage ajjgui:data temp.var1

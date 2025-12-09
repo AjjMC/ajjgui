@@ -1,8 +1,8 @@
 $execute unless data storage ajjgui:data database[{player:$(player),id:$(id)}] run return run function ajjgui:gui/ported/fail_silent
 execute at @e[type=minecraft:oak_chest_boat,tag=ajjgui.gui_boat] positioned ~-0.75 ~-0.5 ~-0.75 if entity @s[dx=0.5,dy=0,dz=0.5] run return run function ajjgui:gui/ported/fail_silent
 
-data modify storage ajjgui:data temp.rotation set from entity @s Rotation
-execute at @s align xyz positioned ~0.5 ~0.5 ~0.5 run function ajjgui:gui/ported/create with storage ajjgui:data temp
+data modify storage ajjgui:data temp.args.rotation set from entity @s Rotation
+execute at @s align xyz positioned ~0.5 ~0.5 ~0.5 run function ajjgui:gui/ported/create with storage ajjgui:data temp.args
 
 ride @s dismount
 ride @s mount @e[type=minecraft:oak_chest_boat,tag=ajjgui.gui_boat,tag=ajjgui.selected,limit=1]

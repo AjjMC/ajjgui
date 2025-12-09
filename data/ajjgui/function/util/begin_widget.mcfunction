@@ -4,6 +4,6 @@ execute as @e[type=minecraft:marker,tag=ajjgui.gui_ported] run function ajjgui:g
 execute as @e[type=minecraft:marker,tag=ajjgui.gui_active] run function ajjgui:gui/get_page
 
 function ajjgui:gui/get_item
-data modify storage ajjgui:data widget set from storage ajjgui:data temp1
+data modify storage ajjgui:data widget set from storage ajjgui:data temp.var1
 
 scoreboard players add @s ajjgui.cooldown 0

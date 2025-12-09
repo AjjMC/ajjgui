@@ -1,5 +1,5 @@
-data modify storage ajjgui:data temp.Slot set value 0b
-data modify block ~ ~ ~ Items[] set from storage ajjgui:data temp
+data modify storage ajjgui:data temp.var.Slot set value 0b
+data modify block ~ ~ ~ Items[] set from storage ajjgui:data temp.var
 
 execute if score @s ajjgui.slot_returned matches -1 run item replace entity @s player.cursor from block ~ ~ ~ container.0
 
