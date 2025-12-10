@@ -5,7 +5,7 @@ function ajjgui:installation/set_version
 
 scoreboard objectives add ajjgui.temp dummy
 
-execute store success score #bool ajjgui.temp run data modify storage ajjgui:data temp.var set from storage ajjgui:data version
+execute store success score #bool ajjgui.temp run data modify storage ajjgui:data temp.version set from storage ajjgui:data version
 execute if data storage ajjgui:data version if score #bool ajjgui.temp matches 1 at @e[type=minecraft:marker,tag=ajjgui.box] run function ajjgui:installation/install_success
 execute if data storage ajjgui:data version if score #bool ajjgui.temp matches 1 run tellraw @a [{text:"\nUpdated "},{text:"ajjgui",color:"gray"},{text:" to version "},{nbt:"version",storage:"ajjgui:data",color:"gray"}]
 

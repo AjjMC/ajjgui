@@ -1,1 +1,1 @@
-data modify storage ajjgui:data temp.var set value "25.0"
+data modify storage ajjgui:data temp.version set value "25.0"
