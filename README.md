@@ -83,7 +83,7 @@ An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_
 > [!TIP]
 > Some of the following commands are too long to fit in the chat box and need to be executed using a command block.
 
-> [!WARNING]
+> [!IMPORTANT]
 > For custom SNBT, it is important to check that the right data types are being used (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:1}}``), that values are within the specified range (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:2b}}``, where ``ajjgui.exit`` here can only be ``0b`` or ``1b``). The GUI compiler is only capable of initializing required SNBT with default values and does not correct errors. While there are cases where errors in custom SNBT, such as incorrect data types, may be internally resolved by the datapack at later stages, this behavior is inconsistent and must not be assumed.
 
 > [!NOTE]
@@ -504,6 +504,9 @@ A *button* exiting the GUI:
 /give @p minecraft:barrier[minecraft:custom_data={ajjgui:{widget:"button",exit:1b}},minecraft:custom_name={text:"Exit",italic:0b},minecraft:rarity=common]
 ```
 
+> [!IMPORTANT]
+> When this functionality is used in block entity GUIs, it causes the block above to be removed.
+
 ## Porting GUIs to Players
 
 Compiled GUIs can create copies for specific players. ``/function ajjgui:__port {player:<player_uuid>,id:<gui_id>}`` ports the nearest GUI to a player, to be accessed using ``/function ajjgui:__open {player:<player_uuid>,id:<gui_id>}``. Both commands receive two macro arguments: a player UUID "player", as an Int array, and a GUI ID "id", different for each GUI of the same player. The UUID of the executing player is instead used with ``/function ajjgui:__portself {id:<gui_id>}`` and ``/function ajjgui:__openself {id:<gui_id>}``, which only require a GUI ID.
@@ -634,13 +637,13 @@ There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for blo
 
     In this example, ``/function ajjgui:_reload`` is not required.
 
-> [!WARNING]
+> [!IMPORTANT]
 > If a GUI is not reloaded as specified above, the datapack assumes that a player is interacting indefinitely with it, causing other active GUIs to malfunction.
 
-> [!WARNING]
+> [!IMPORTANT]
 > The GUI compiler adds the ``ajjgui.meta`` SNBT to each widget. This must not be changed when modifying SNBT post-compilation.
 
-> [!WARNING]
+> [!IMPORTANT]
 > This section explains how widgets can be modified after compilation, when required SNBT have already been initialized with default values. Creating widget SNBT from scratch or changing the ``ajjgui.widget`` SNBT is therefore not recommended.
 
 > [!IMPORTANT]
