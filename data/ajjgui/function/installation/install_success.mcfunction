@@ -22,6 +22,20 @@ execute store result score #z ajjgui run data get block ~ ~ ~ z
 
 execute unless data storage ajjgui:data version run data modify storage ajjgui:data prompt set value '{text:"Open Inventory to View Menu | Dismount to Cancel"}'
 
+
+scoreboard objectives add ajjgui.compile trigger
+scoreboard objectives add ajjgui.decompile trigger
+scoreboard objectives add ajjgui.kit trigger
+scoreboard objectives add ajjgui.setup trigger
+scoreboard objectives add ajjgui.disable trigger
+scoreboard objectives add ajjgui.reload trigger
+scoreboard objectives add ajjgui.crediting trigger
+scoreboard objectives add ajjgui.help trigger
+scoreboard objectives add ajjgui.version trigger
+
+
+
+
 function ajjgui:installation/set_version
 data modify storage ajjgui:data version set from storage ajjgui:data temp.version
 
