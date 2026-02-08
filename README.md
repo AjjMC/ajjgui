@@ -1,7 +1,5 @@
 # A Data-Driven GUI Library for Minecraft Mapmaking
 
-**EN** · [TR](README.tr.md) 
-
 > **AVAILABLE ON 1.21.11**
 >
 > **Click [here](https://github.com/AjjMC/ajjgui/archive/refs/heads/main.zip) to download.**
