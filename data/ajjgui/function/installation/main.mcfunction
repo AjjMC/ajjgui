@@ -10,3 +10,5 @@ scoreboard players reset #length ajjgui
 scoreboard players reset #size ajjgui
 
 data remove storage ajjgui:data temp
+
+execute as @a[tag=ajjgui.editor] at @s run function ajjgui:installation/triggers
