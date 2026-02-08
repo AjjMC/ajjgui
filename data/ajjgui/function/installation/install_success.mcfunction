@@ -32,6 +32,8 @@ scoreboard objectives add ajjgui.reload trigger
 scoreboard objectives add ajjgui.crediting trigger
 scoreboard objectives add ajjgui.help trigger
 scoreboard objectives add ajjgui.version trigger
+scoreboard objectives add ajjgui.open trigger
+scoreboard objectives add ajjgui.port trigger
 
 
 
