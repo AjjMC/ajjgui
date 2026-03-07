@@ -1,5 +1,22 @@
 {
   "pack": {
-    "description": "A data-driven GUI library for mapmaking"
+    "description": "A data-driven GUI library for mapmaking",
+    "pack_format": 94,
+    "supported_formats": {
+      "min_inclusive": 94,
+      "max_inclusive": 94
+    }
+  },
+  "filter": {
+    "block": [
+      {
+        "namespace": "ajjgui",
+        "path": ".*\\.(js|jsx|ts|tsx|mjs|cjs|py|pyc|pyo|rb|php|java|class|jar|cs|cpp|c|h|go|rs|swift|kt|dart|r|pl|lua|sh|bash|zsh|bat|cmd|ps1|psm1|md|mdx|txt|rtf|rst|log|ini|cfg|conf|env|yml|yaml|toml|xml|html|htm|css|scss|sass|less|svg|png|jpg|jpeg|gif|webp|bmp|ico|tiff|psd|ai|eps|pdf|zip|tar|gz|rar|7z|war|ear|nbt|ogg|mp3|wav|flac|aac|mp4|webm|mov|avi|mkv|glsl|fsh|vsh|vert|frag|comp|geom|bin|dat|db|sqlite|sql|csv|tsv|parquet|proto|wasm|lock|sum|mod|gradle|maven|makefile|dockerfile|gitignore|gitattributes|editorconfig|prettierrc|eslintrc|babelrc)$"
+      },
+      {
+        "namespace": "minecraft",
+        "path": ".*\\.(js|jsx|ts|tsx|mjs|cjs|py|pyc|pyo|rb|php|java|class|jar|cs|cpp|c|h|go|rs|swift|kt|dart|r|pl|lua|sh|bash|zsh|bat|cmd|ps1|psm1|md|mdx|txt|rtf|rst|log|ini|cfg|conf|env|yml|yaml|toml|xml|html|htm|css|scss|sass|less|svg|png|jpg|jpeg|gif|webp|bmp|ico|tiff|psd|ai|eps|pdf|zip|tar|gz|rar|7z|war|ear|nbt|ogg|mp3|wav|flac|aac|mp4|webm|mov|avi|mkv|glsl|fsh|vsh|vert|frag|comp|geom|bin|dat|db|sqlite|sql|csv|tsv|parquet|proto|wasm|lock|sum|mod|gradle|maven|makefile|dockerfile|gitignore|gitattributes|editorconfig|prettierrc|eslintrc|babelrc)$"
+      }
+    ]
   }
 }

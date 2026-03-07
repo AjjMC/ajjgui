@@ -1,0 +1,1 @@
+give @s minecraft:bell[minecraft:custom_data={ajjgui:{widget:"button",sound:"minecraft:ui.button.click",command:"function ajjgui:demo/output/button/sound"}},minecraft:custom_name={text:"Sound Button",italic:0b},minecraft:rarity=common]

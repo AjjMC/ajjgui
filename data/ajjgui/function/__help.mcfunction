@@ -1,6 +1,7 @@
 tellraw @s {text:"/function ajjgui:__compile",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__compile"},hover_event:{action:"show_text",value:"Click Here"}}
 tellraw @s {text:"/function ajjgui:__crediting",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__crediting"},hover_event:{action:"show_text",value:"Click Here"}}
 tellraw @s {text:"/function ajjgui:__decompile",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__decompile"},hover_event:{action:"show_text",value:"Click Here"}}
+tellraw @s {text:"/function ajjgui:__feedback",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__feedback"},hover_event:{action:"show_text",value:"Click Here"}}
 tellraw @s {text:"/function ajjgui:__help",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__help"},hover_event:{action:"show_text",value:"Click Here"}}
 tellraw @s {text:"/function ajjgui:__install",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__install"},hover_event:{action:"show_text",value:"Click Here"}}
 tellraw @s {text:"/function ajjgui:__kit",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__kit"},hover_event:{action:"show_text",value:"Click Here"}}
