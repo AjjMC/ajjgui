@@ -33,3 +33,6 @@ execute as @a run function ajjgui:__crediting
 tellraw @a [{text:"\nType "},{text:"/function ajjgui:__help",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__help"},hover_event:{action:"show_text",value:"Click Here"}},{text:" for help\n"}]
 tellraw @a {text:"The yellow shulker box needs to be located in a loaded chunk and cannot be destroyed\n"}
 tellraw @a [{text:"To change its position, "},{text:"reinstall",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__install"},hover_event:{action:"show_text",value:"Click Here"}},{text:" at a different location"}]
+# Initialize feedback settings with defaults (only if not already set)
+execute unless data storage ajjgui:data settings.feedback.enabled run data modify storage ajjgui:data settings.feedback.enabled set value 1b
+execute unless data storage ajjgui:data settings.feedback.target run data modify storage ajjgui:data settings.feedback.target set value "@s"

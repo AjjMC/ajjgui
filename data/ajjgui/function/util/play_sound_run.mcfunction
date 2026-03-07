@@ -1,0 +1,1 @@
+$playsound $(sound) master @s

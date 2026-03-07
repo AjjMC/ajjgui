@@ -1,0 +1,1 @@
+give @s minecraft:nether_star[minecraft:custom_data={ajjgui:{widget:"button",fixed:1b,command:["playsound minecraft:entity.player.levelup master @s","tellraw @s {\"text\":\"Multi-command fixed button activated!\",\"color\":\"gold\"}"]}},minecraft:custom_name={text:"Multi-Command Button (Fixed)",italic:0b},minecraft:rarity=uncommon]
