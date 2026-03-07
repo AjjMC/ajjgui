@@ -124,11 +124,12 @@ The *button* is a widget that changes the GUI page, exits the GUI and/or runs a 
 
 | Item SNBT           | Default                 | Type           |
 |:--------------------|:------------------------|:---------------|
-| ``ajjgui.command``  | N/A                     | String         |
+| ``ajjgui.command``  | N/A                     | String or String List |
 | ``ajjgui.exit``     | ``0b``                  | Byte (Boolean) |
 | ``ajjgui.fixed``    | ``0b``                  | Byte (Boolean) |
 | ``ajjgui.page``     | N/A                     | Byte           |
 | ``ajjgui.relative`` | ``0b``                  | Byte (Boolean) |
+| ``ajjgui.sound``    | N/A                     | String         |
 | ``ajjgui.widget``   | Required (``"button"``) | String         |
 
 #### Usage
@@ -147,11 +148,12 @@ The *counter* is a widget that changes to a different count of the same item whe
 
 | Item SNBT           | Default                  | Type           |
 |:--------------------|:-------------------------|:---------------|
-| ``ajjgui.command``  | N/A                      | String         |
+| ``ajjgui.command``  | N/A                      | String or String List |
 | ``ajjgui.exit``     | ``0b``                   | Byte (Boolean) |
 | ``ajjgui.fixed``    | ``0b``                   | Byte (Boolean) |
 | ``ajjgui.page``     | N/A                      | Byte           |
 | ``ajjgui.relative`` | ``0b``                   | Byte (Boolean) |
+| ``ajjgui.sound``    | N/A                      | String         |
 | ``ajjgui.state``    | ``0``                    | Int            |
 | ``ajjgui.values``   | Required                 | Int List       |
 | ``ajjgui.widget``   | Required (``"counter"``) | String         |
@@ -204,11 +206,14 @@ The *switch* is a widget that changes to a different item when clicked, followin
 
 | Item SNBT           | Default                 | Type           |
 |:--------------------|:------------------------|:---------------|
-| ``ajjgui.command``  | N/A                     | String         |
+| ``ajjgui.command``  | N/A                     | String or String List |
 | ``ajjgui.exit``     | ``0b``                  | Byte (Boolean) |
 | ``ajjgui.fixed``    | ``0b``                  | Byte (Boolean) |
 | ``ajjgui.items``    | Required                | Compound List  |
 | ``ajjgui.page``     | N/A                     | Byte           |
+| ``ajjgui.relative`` | ``0b``                  | Byte (Boolean) |
+| ``ajjgui.sound``    | N/A                     | String         |
+| ``ajjgui.state``     | N/A                     | Byte           |
 | ``ajjgui.relative`` | ``0b``                  | Byte (Boolean) |
 | ``ajjgui.state``    | ``0``                   | Int            |
 | ``ajjgui.widget``   | Required (``"switch"``) | String         |
@@ -261,8 +266,16 @@ The *radiobutton* is a widget that changes between a disabled and an enabled sta
 
 | Item SNBT           | Default                      | Type           |
 |:--------------------|:-----------------------------|:---------------|
-| ``ajjgui.command``  | N/A                          | String         |
+| ``ajjgui.command``  | N/A                          | String or String List |
 | ``ajjgui.disabled`` | Required                     | Compound       |
+| ``ajjgui.enabled``  | Required                     | Compound       |
+| ``ajjgui.exit``     | ``0b``                       | Byte (Boolean) |
+| ``ajjgui.fixed``    | ``0b``                       | Byte (Boolean) |
+| ``ajjgui.group``    | ``0b``                       | Byte           |
+| ``ajjgui.page``     | N/A                          | Byte           |
+| ``ajjgui.relative`` | ``0b``                       | Byte (Boolean) |
+| ``ajjgui.sound``    | N/A                          | String         |
+| ``ajjgui.state`` | Required                     | Compound       |
 | ``ajjgui.enabled``  | Required                     | Compound       |
 | ``ajjgui.exit``     | ``0b``                       | Byte (Boolean) |
 | ``ajjgui.fixed``    | ``0b``                       | Byte (Boolean) |
@@ -312,12 +325,13 @@ The *itembin* is a widget that clears all items inserted by the player in a part
 
 | Item SNBT           | Default                  | Type           |
 |:--------------------|:-------------------------|:---------------|
-| ``ajjgui.command``  | N/A                      | String         |
+| ``ajjgui.command``  | N/A                      | String or String List |
 | ``ajjgui.exit``     | ``0b``                   | Byte (Boolean) |
 | ``ajjgui.fixed``    | ``0b``                   | Byte (Boolean) |
 | ``ajjgui.page``     | N/A                      | Byte           |
 | ``ajjgui.relative`` | ``0b``                   | Byte (Boolean) |
-| ``ajjgui.widget``   | Required (``"itembin"``) | String         |
+| ``ajjgui.sound``    | N/A                      | String         |
+| ``ajjgui.widget``   | Required (``"itembin"`` | String         |
 
 #### Usage
 
@@ -350,11 +364,15 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 
 | Item SNBT              | Default                   | Type           |
 |:-----------------------|:--------------------------|:---------------|
-| ``ajjgui.command``     | N/A                       | String         |
+| ``ajjgui.command``     | N/A                       | String or String List |
 | ``ajjgui.exit``        | ``0b``                    | Byte (Boolean) |
 | ``ajjgui.fixed``       | ``0b``                    | Byte (Boolean) |
 | ``ajjgui.page``        | N/A                       | Byte           |
 | ``ajjgui.placeholder`` | Required                  | Compound       |
+| ``ajjgui.relative``    | ``0b``                    | Byte (Boolean) |
+| ``ajjgui.size``        | ``99``                    | Int            |
+| ``ajjgui.sound``       | N/A                       | String         |
+| ``ajjgui.state`` | Required                  | Compound       |
 | ``ajjgui.relative``    | ``0b``                    | Byte (Boolean) |
 | ``ajjgui.size``        | ``99``                    | Int            |
 | ``ajjgui.state``       | ``0``                     | Int            |
@@ -409,10 +427,15 @@ The *scrollbutton* is a widget that cycles one or more lists of *static* widgets
 
 | Item SNBT           | Default                       | Type               |
 |:--------------------|:------------------------------|:-------------------|
-| ``ajjgui.command``  | N/A                           | String             |
+| ``ajjgui.command``  | N/A                           | String or String List |
 | ``ajjgui.exit``     | ``0b``                        | Byte (Boolean)     |
 | ``ajjgui.fixed``    | ``0b``                        | Byte (Boolean)     |
 | ``ajjgui.items``    | N/A                           | Compound List      |
+| ``ajjgui.page``     | N/A                           | Byte               |
+| ``ajjgui.relative`` | ``0b``                        | Byte (Boolean)     |
+| ``ajjgui.slots``    | Required                      | Byte List List     |
+| ``ajjgui.sound``    | N/A                           | String             |
+| ``ajjgui.state``    | N/A                           | Compound List      |
 | ``ajjgui.page``     | N/A                           | Byte               |
 | ``ajjgui.relative`` | ``0b``                        | Byte (Boolean)     |
 | ``ajjgui.slots``    | Required                      | Byte List List     |
@@ -543,6 +566,32 @@ Compiled GUIs can create copies for specific players. ``/function ajjgui:__port 
 > [!IMPORTANT]
 > These chest boats have an interaction entity surrounding their hitbox and preventing other players from accessing them. If other players come close enough to bypass this, the chest boat is removed (and the user needs to reopen the GUI). These measures are essential in ensuring that GUIs can only be accessed by their specified player.
 
+## Running GUI Sounds
+
+Each of the widgets discussed previously, excluding the *placeholder*, can play a sound when clicked. This is done by specifying a Minecraft sound event ID in the ``ajjgui.sound`` SNBT. The sound is played at the interacting player's position and heard only by them (``master`` channel). If ``ajjgui.sound`` is not specified, no sound is played.
+
+#### Examples
+
+1. A *button* that plays a click sound:
+
+    ```
+    /give @p minecraft:bell[minecraft:custom_data={ajjgui:{widget:"button",sound:"minecraft:ui.button.click"}},minecraft:custom_name={text:"Sound Button",italic:0b}]
+    ```
+
+2. A *switch* that plays a different sound per toggle state:
+
+    ```
+    /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[…],sound:"minecraft:block.lever.click",command:"function name:func"}},minecraft:custom_name={text:"State 0",italic:0b}]
+    ```
+
+3. A *button* combining sound with multiple commands:
+
+    ```
+    /give @p minecraft:nether_star[minecraft:custom_data={ajjgui:{widget:"button",sound:"minecraft:entity.player.levelup",command:["give @s minecraft:diamond","tellraw @s {\"text\":\"Ödül!\",\"color\":\"gold\"}"]}},minecraft:custom_name={text:"Reward",italic:0b}]
+    ```
+
+A demo widget is available at ``/function ajjgui:__widget/button/sound``.
+
 ## Running GUI Commands and Accessing Data
 
 ### Read-Only Data
@@ -578,6 +627,8 @@ Compiled GUIs can create copies for specific players. ``/function ajjgui:__port 
 
 Each of the widgets discussed previously, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.command`` SNBT. This command is executed by the player interacting with the widget. Within the command's execution, it is possible to access data exported from the GUI interaction (e.g., whether a *switch* is toggled on) and use it to make decisions.
 
+**Multi-Command Support:** ``ajjgui.command`` also accepts a list of strings to run multiple commands in sequence. The commands are executed in order, one after another, as the player who triggered the widget. This is fully backward compatible — single string commands continue to work exactly as before.
+
 #### Examples
 
 1. A *button* running a command referencing the player that pressed it:
@@ -586,7 +637,13 @@ Each of the widgets discussed previously, excluding the the *placeholder*, can b
     /give @p minecraft:pink_dye[minecraft:custom_data={ajjgui:{widget:"button",command:"say pressed button"}},minecraft:custom_name={text:"Command Button",italic:0b}]
     ```
 
-2. A *switch* running a command based on its current state:
+2. A *button* running **multiple commands** in sequence:
+
+    ```
+    /give @p minecraft:nether_star[minecraft:custom_data={ajjgui:{widget:"button",command:["playsound minecraft:entity.player.levelup master @s","give @s minecraft:apple","say collected reward!"]}},minecraft:custom_name={text:"Reward Button",italic:0b}]
+    ```
+
+3. A *switch* running a command based on its current state:
 
     ```
     /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}}],command:"function name:func"}},minecraft:custom_name={text:"State 0",italic:0b}]
@@ -597,6 +654,12 @@ Each of the widgets discussed previously, excluding the the *placeholder*, can b
     ```
     execute if score @s ajjgui.state matches 0 run say set switch to State 0
     execute if score @s ajjgui.state matches 1 run say set switch to State 1
+    ```
+
+4. A *switch* running **multiple commands** in sequence on toggle:
+
+    ```
+    /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"Off",italic:0b}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"On",italic:0b}}}],command:["playsound minecraft:ui.button.click master @s","function name:on_toggle"]}},minecraft:custom_name={text:"Off",italic:0b}]
     ```
 
 ## Advanced: Modifying GUIs Post-Compilation
