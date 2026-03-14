@@ -38,11 +38,11 @@ After this datapack has been added to the "datapacks" folder of a Minecraft worl
 | Function                                                       | Description                                           |
 |:---------------------------------------------------------------|:------------------------------------------------------|
 | ``/function ajjgui:__compile``                                 | Compiles GUI                                          |
-| ``/function ajjgui:__crediting``                               | Displays datapack crediting information               |
 | ``/function ajjgui:__decompile``                               | Decompiles nearest GUI                                |
 | ``/function ajjgui:__help``                                    | Displays datapack command list                        |
 | ``/function ajjgui:__install``                                 | Installs datapack                                     |
 | ``/function ajjgui:__kit``                                     | Gives GUI design and compilation kit                  |
+| ``/function ajjgui:__license``                                 | Displays datapack license information                 |
 | ``/function ajjgui:__manual``                                  | Displays datapack manual link                         |
 | ``/function ajjgui:__open {player:<player_uuid>,id:<gui_id>}`` | Opens ported GUI                                      |
 | ``/function ajjgui:__openself {id:<gui_id>}``                  | Opens ported GUI of executing player                  |
@@ -229,7 +229,7 @@ where N is the number of states.
     /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}}]}},minecraft:custom_name={text:"State 0",italic:0b}]
     ```
 
-2. A *switch* changing between a "State 0", a "State 1" and a "State 2" state, starting with "State 0". The default item is the same as the first item in ``ajjgui.items``:
+2. A *switch* changing between a "State 0", a "State 1", and a "State 2" state, starting with "State 0". The default item is the same as the first item in ``ajjgui.items``:
 
     ```
     /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}},{id:"minecraft:purple_dye",count:1,components:{"minecraft:custom_name":{text:"State 2",italic:0b}}}]}},minecraft:custom_name={text:"State 0",italic:0b}]
@@ -430,7 +430,7 @@ where L_x and M_y are the numbers of widgets and slots in each widget list and s
 
 #### Example
 
-A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each button leads to a different page when clicked. There is a single widget list of length 6 and a single slot list of length 4:
+A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13, and 14. Each button leads to a different page when clicked. There is a single widget list of length 6 and a single slot list of length 4:
 
 ```
 /give @p minecraft:spectral_arrow[minecraft:custom_data={ajjgui:{widget:"scrollbutton",widgets:[[{id:"minecraft:paper",count:1,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:0b}},"minecraft:custom_name":{text:"Select",italic:0b}}},{id:"minecraft:paper",count:2,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:1b}},"minecraft:custom_name":{text:"Select",italic:0b}}},{id:"minecraft:paper",count:3,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:2b}},"minecraft:custom_name":{text:"Select",italic:0b}}},{id:"minecraft:paper",count:4,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:3b}},"minecraft:custom_name":{text:"Select",italic:0b}}},{id:"minecraft:paper",count:5,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:4b}},"minecraft:custom_name":{text:"Select",italic:0b}}},{id:"minecraft:paper",count:6,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:5b}},"minecraft:custom_name":{text:"Select",italic:0b}}}]],slots:[[11b,12b,13b,14b]]}},minecraft:custom_name={text:"Next",italic:0b}]
@@ -567,14 +567,14 @@ Compiled GUIs can create copies for specific players. ``/function ajjgui:__port 
 |:-------------------------------------------------------|:------------|:-----|
 | ``@e[tag=ajjgui.gui_active,limit=1] ajjgui.page``      | Page number | Int  |
 
-| GUI Marker Entity SNBT                                 | Description        | Type                              |
-|:-------------------------------------------------------|:-------------------|:----------------------------------|
-| ``@e[tag=ajjgui.gui_active,limit=1] data.custom_name`` | GUI container name | String, Compound or Compound List |
-| ``@e[tag=ajjgui.gui_active,limit=1] data.gui``         | GUI page list      | Compound List                     |
+| GUI Marker Entity SNBT                                 | Description        | Type                               |
+|:-------------------------------------------------------|:-------------------|:-----------------------------------|
+| ``@e[tag=ajjgui.gui_active,limit=1] data.custom_name`` | GUI container name | String, Compound, or Compound List |
+| ``@e[tag=ajjgui.gui_active,limit=1] data.gui``         | GUI page list      | Compound List                      |
 
-| Data Storage SNBT      | Description                          | Type                      |
-|:-----------------------|:-------------------------------------|:--------------------------|
-| ``ajjgui:data prompt`` | Actionbar prompt for all ported GUIs | Compound or Compound List |
+| Data Storage SNBT      | Description                          | Type                               |
+|:-----------------------|:-------------------------------------|:-----------------------------------|
+| ``ajjgui:data prompt`` | Actionbar prompt for all ported GUIs | String, Compound, or Compound List |
 
 Each of the widgets discussed previously, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.command`` SNBT. This command is executed by the player interacting with the widget. Within the command's execution, it is possible to access data exported from the GUI interaction (e.g., whether a *switch* is toggled on) and use it to make decisions.
 
@@ -652,6 +652,6 @@ There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for blo
 > [!NOTE]
 > Decompiling a GUI resets it to its state before compilation.
 
-## Crediting
+## License
 
 Made by Ajj and published under the MIT license. Please share the repository link.

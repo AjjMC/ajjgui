@@ -5,7 +5,6 @@ execute as @e[type=minecraft:oak_chest_boat,tag=ajjgui.gui_boat] run function aj
 
 scoreboard players reset #bool ajjgui
 scoreboard players reset #count ajjgui
-scoreboard players reset #count1 ajjgui
 scoreboard players reset #length ajjgui
 scoreboard players reset #size ajjgui
 

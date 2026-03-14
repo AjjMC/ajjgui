@@ -1,0 +1,6 @@
+execute unless data storage ajjgui:data {temp:{scrollbutton:{widget:{components:{"minecraft:custom_data":{ajjgui:{widget:"placeholder"}}}}}}} unless data storage ajjgui:data temp.scrollbutton.widget.components.minecraft:custom_data.ajjgui.exit run data modify storage ajjgui:data temp.scrollbutton.widget.components.minecraft:custom_data.ajjgui.exit set value 0b
+execute unless data storage ajjgui:data temp.scrollbutton.widget.components.minecraft:custom_data.ajjgui.fixed run data modify storage ajjgui:data temp.scrollbutton.widget.components.minecraft:custom_data.ajjgui.fixed set value 0b
+execute if data storage ajjgui:data temp.scrollbutton.widget.components.minecraft:custom_data.ajjgui.page unless data storage ajjgui:data temp.scrollbutton.widget.components.minecraft:custom_data.ajjgui.relative run data modify storage ajjgui:data temp.scrollbutton.widget.components.minecraft:custom_data.ajjgui.relative set value 0b
+
+data modify storage ajjgui:data temp.scrollbutton.widget.components.minecraft:custom_data.ajjgui.meta.slot set from storage ajjgui:data temp.scrollbutton.slot
+data modify storage ajjgui:data temp.scrollbutton.widget.components.minecraft:custom_data.ajjgui.meta.compiled set value 1b

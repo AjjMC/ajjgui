@@ -14,13 +14,13 @@ scoreboard objectives add ajjgui.slot dummy
 scoreboard objectives add ajjgui.slot_returned dummy
 scoreboard objectives add ajjgui.state dummy
 
-scoreboard players set #two ajjgui 2
+scoreboard players set #2 ajjgui 2
 
 execute store result score #x ajjgui run data get block ~ ~ ~ x
 execute store result score #y ajjgui run data get block ~ ~ ~ y
 execute store result score #z ajjgui run data get block ~ ~ ~ z
 
-execute unless data storage ajjgui:data version run data modify storage ajjgui:data prompt set value '{text:"Open Inventory to View Menu | Dismount to Cancel"}'
+execute unless data storage ajjgui:data version run data modify storage ajjgui:data prompt set value {text:"E to View Menu | Left Shift to Cancel"}
 
 function ajjgui:installation/set_version
 data modify storage ajjgui:data version set from storage ajjgui:data temp.version
@@ -28,7 +28,7 @@ data modify storage ajjgui:data version set from storage ajjgui:data temp.versio
 tellraw @a [{text:"Installed "},{text:"ajjgui",color:"gray"},{text:" at "},{score:{name:"#x",objective:"ajjgui"}},{text:", "},{score:{name:"#y",objective:"ajjgui"}},{text:", "},{score:{name:"#z",objective:"ajjgui"}}]
 tellraw @a [{text:"Version: "},{nbt:"version",storage:"ajjgui:data",color:"gray"},{text:"\n"}]
 
-execute as @a run function ajjgui:__crediting
+execute as @a run function ajjgui:__license
 
 tellraw @a [{text:"\nType "},{text:"/function ajjgui:__help",color:"green",click_event:{action:"suggest_command",command:"/function ajjgui:__help"},hover_event:{action:"show_text",value:"Click Here"}},{text:" for help\n"}]
 tellraw @a {text:"The yellow shulker box needs to be located in a loaded chunk and cannot be destroyed\n"}
