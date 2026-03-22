@@ -1,3 +1,12 @@
+data modify storage ajjgui:data temp.args.lock set from storage ajjgui:data widget.components.minecraft:custom_data.ajjgui.lock
+
+function ajjgui:gui/check_lock with storage ajjgui:data temp.args
+
+execute if entity @s[tag=ajjgui.locked] run return run tag @s remove ajjgui.locked
+
+execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{widget:"itembin"}}}}} if score @s ajjgui.cooldown matches 1.. run return fail
+execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{widget:"itemslot"}}}}} if score @s ajjgui.cooldown matches 1.. run return fail
+
 execute if score @s ajjgui.slot matches 0 run data modify storage ajjgui:data page[{Slot:0b}] set from storage ajjgui:data widget
 execute if score @s ajjgui.slot matches 1 run data modify storage ajjgui:data page[{Slot:1b}] set from storage ajjgui:data widget
 execute if score @s ajjgui.slot matches 2 run data modify storage ajjgui:data page[{Slot:2b}] set from storage ajjgui:data widget

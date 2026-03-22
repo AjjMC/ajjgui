@@ -1,3 +1,11 @@
+data modify storage ajjgui:data temp.args.lock set from storage ajjgui:data widget.components.minecraft:custom_data.ajjgui.lock
+
+function ajjgui:gui/check_lock with storage ajjgui:data temp.args
+
+execute if entity @s[tag=ajjgui.locked] run return run tag @s remove ajjgui.locked
+
+execute if score @s ajjgui.cooldown matches 1.. run return fail
+
 data modify storage ajjgui:data temp.itemslot.out set from storage ajjgui:data widget
 
 execute at @e[type=minecraft:marker,tag=ajjgui.gui_origin,tag=ajjgui.gui_active] run data modify storage ajjgui:data page set from block ~ ~ ~ Items

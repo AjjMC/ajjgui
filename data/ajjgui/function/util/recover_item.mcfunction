@@ -1,3 +1,10 @@
+data modify storage ajjgui:data temp.args.lock set from storage ajjgui:data widget.components.minecraft:custom_data.ajjgui.lock
+
+function ajjgui:gui/check_lock with storage ajjgui:data temp.args
+
+execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{widget:"itembin"}}}}} if score @s[tag=!ajjgui.locked] ajjgui.cooldown matches 0 run return run tag @s remove ajjgui.locked
+execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{widget:"itemslot"}}}}} if score @s[tag=!ajjgui.locked] ajjgui.cooldown matches 0 run return run tag @s remove ajjgui.locked
+
 execute at @e[type=minecraft:marker,tag=ajjgui.gui_origin,tag=ajjgui.gui_active] run data modify storage ajjgui:data temp.page set from block ~ ~ ~ Items
 execute as @e[type=minecraft:marker,tag=ajjgui.gui_ported,tag=ajjgui.gui_active] on vehicle run data modify storage ajjgui:data temp.page set from entity @s Items
 

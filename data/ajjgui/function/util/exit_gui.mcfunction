@@ -1,2 +1,5 @@
+execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{widget:"itembin"}}}}} if score @s ajjgui.cooldown matches 1.. run return fail
+execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{widget:"itemslot"}}}}} if score @s ajjgui.cooldown matches 1.. run return fail
+
 execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{exit:1b}}}}} at @e[type=minecraft:marker,tag=ajjgui.gui_origin,tag=ajjgui.gui_active] run function ajjgui:gui/origin/close
 execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{exit:1b}}}}} on vehicle if entity @s[type=minecraft:oak_chest_boat,tag=ajjgui.gui_boat] run function ajjgui:gui/ported/close
