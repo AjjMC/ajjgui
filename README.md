@@ -140,7 +140,7 @@ The *button* is a widget that changes the GUI page, exits the GUI and/or runs a 
 
 #### Examples
 
-More information about [changing GUI pages](#changing-gui-pages), [exiting GUIs](#exiting-guis) and [running GUI commands](#running-gui-commands-and-accessing-data).
+More information about [changing GUI pages](#changing-gui-pages), [exiting GUIs](#exiting-guis), and [running GUI commands](#running-gui-commands-and-accessing-data).
 
 ### Counter
 
@@ -452,7 +452,7 @@ A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13, and 14. Each but
 </p>
 
 > [!IMPORTANT]
-> The *scrollbutton* only supports the *placeholder*, *button* and *itembin* widgets.
+> The *scrollbutton* only supports the *placeholder*, *button*, and *itembin* widgets.
 
 > [!TIP]
 > If the ``ajjgui.widget`` SNBT of any widget is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional. This, by extension, applies to a *placeholder* widget specified in the ``ajjgui.widgets`` SNBT of the *scrollbutton*.
@@ -572,7 +572,7 @@ Each of the widgets discussed previously, excluding the the *placeholder*, can b
 
 ## Locked GUI Widgets
 
-Each of the widgets discussed previously, excluding the *placeholder*, can be made to be partially unresponsive when clicked. This is done by setting the ``ajjgui.lock`` SNBT to a scoreboard tag associated with specific players. This blocks all functionality except for exiting GUIs or running commands.
+Each of the widgets discussed previously, excluding the *placeholder*, can be made to be partially unresponsive when clicked. This is done by setting the ``ajjgui.lock`` SNBT to a scoreboard tag associated with specific players. This blocks all functionality except for exiting GUIs or running GUI commands.
 
 ### Examples
 
