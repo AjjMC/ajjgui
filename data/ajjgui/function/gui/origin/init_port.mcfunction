@@ -1,8 +1,8 @@
 execute unless entity @e[type=minecraft:marker,tag=ajjgui.gui_origin] run return run function ajjgui:gui/origin/fail
 
 tellraw @a {text:"Ported GUI\n"}
-tellraw @a [{text:"Player UUID:\n"},{text:"[",color:"gray"},{nbt:"temp.args.player[0]",storage:"ajjgui:data",color:"gray"},{text:", ",color:"gray"},{nbt:"temp.args.player[1]",storage:"ajjgui:data",color:"gray"},{text:", ",color:"gray"},{nbt:"temp.args.player[2]",storage:"ajjgui:data",color:"gray"},{text:", ",color:"gray"},{nbt:"temp.args.player[3]",storage:"ajjgui:data",color:"gray"},{text:"]",color:"gray"},{text:"\n"}]
-tellraw @a [{text:"GUI ID:\n"},{nbt:"temp.args.id",storage:"ajjgui:data",color:"gray"},{text:"\n"}]
+tellraw @a [{text:"Player UUID:\n"},{text:"[",color:"gray"},{storage:"ajjgui:data",nbt:"temp.args.player[0]",interpret:true,color:"gray"},{text:", ",color:"gray"},{storage:"ajjgui:data",nbt:"temp.args.player[1]",interpret:true,color:"gray"},{text:", ",color:"gray"},{storage:"ajjgui:data",nbt:"temp.args.player[2]",interpret:true,color:"gray"},{text:", ",color:"gray"},{storage:"ajjgui:data",nbt:"temp.args.player[3]",interpret:true,color:"gray"},{text:"]",color:"gray"},{text:"\n"}]
+tellraw @a [{text:"GUI ID:\n"},{storage:"ajjgui:data",nbt:"temp.args.id",interpret:true,color:"gray"},{text:"\n"}]
 
 function ajjgui:_port with storage ajjgui:data temp.args
 
