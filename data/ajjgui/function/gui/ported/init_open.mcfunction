@@ -7,4 +7,4 @@ tellraw @a [{text:"GUI ID:\n"},{storage:"ajjgui:data",nbt:"temp.args.id",interpr
 
 function ajjgui:_open with storage ajjgui:data temp.args
 
-tellraw @a {text:"(Use a single underscore to hide feedback)",color:"yellow"}
+execute as @a run function ajjgui:general/display_feedback_message

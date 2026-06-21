@@ -1,6 +1,6 @@
 # A Data-Driven GUI Library for Minecraft Mapmaking
 
-> **AVAILABLE ON 26.1**
+> **AVAILABLE ON 26.2**
 >
 > **Click [here](https://github.com/AjjMC/ajjgui/archive/refs/heads/main.zip) to download.**
 >
@@ -29,7 +29,7 @@ Benefits:
 * Completely in-game workflow, with the entire datapack being a black box that the mapmaker can ignore.
 * Robust design, support for multiplayer, including personalized GUIs, and no interference with player inventories.
 * Complete documentation, in-game tutorial, and demos.
-* 4+ years of continuous maintenance, built with the most up-to-date practices, and powering prominent maps officially featured on Minecraft Realms.
+* 5+ years of continuous maintenance, built with the most up-to-date practices, and powering prominent maps officially featured on Minecraft Realms.
 
 ## Installing
 
@@ -171,25 +171,25 @@ where N is the number of states.
 1. A *counter* repeating the sequence 1 to 16, starting with 1. The default value is the same as the first value in ``ajjgui.values``:
 
     ```
-    /give @p minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"counter",values:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}},minecraft:custom_name={text:"Counter Value",italic:0b}] 1
+    /give @p minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"counter",values:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}},minecraft:item_name={text:"Counter Value"}] 1
     ```
 
 2. A *counter* repeating the sequence 1 to 4, starting with 1. The default value is the same as the first value in ``ajjgui.values``:
 
     ```
-    /give @p minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"counter",values:[1,2,3,4]}},minecraft:custom_name={text:"Counter Value",italic:0b}] 1
+    /give @p minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"counter",values:[1,2,3,4]}},minecraft:item_name={text:"Counter Value"}] 1
     ```
 
 3. A *counter* beginning with a default value of 64, followed by the sequence 2 to 16, that continues by repeating the sequence 1 to 16:
 
     ```
-    /give @p minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"counter",values:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}},minecraft:custom_name={text:"Counter Value",italic:0b}] 64
+    /give @p minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"counter",values:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}},minecraft:item_name={text:"Counter Value"}] 64
     ```
 
 4. A *counter* repeating the sequence 1 to 16, starting with 16. The default value is the same as the first value in ``ajjgui.values`` (now rearranged). The value of ``ajjgui.state`` is set to ``15`` to match the state:
 
     ```
-    /give @p minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"counter",values:[16,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],state:15}},minecraft:custom_name={text:"Counter Value",italic:0b}] 16
+    /give @p minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"counter",values:[16,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],state:15}},minecraft:item_name={text:"Counter Value"}] 16
     ```
 
 <p align = "center">
@@ -229,25 +229,25 @@ where N is the number of states.
 1. A *switch* changing between a "State 0" and a "State 1" state, starting with "State 0". The default item is the same as the first item in ``ajjgui.items``:
 
     ```
-    /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}}]}},minecraft:custom_name={text:"State 0",italic:0b}]
+    /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:item_name":{text:"State 0"}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:item_name":{text:"State 1"}}}]}},minecraft:item_name={text:"State 0"}]
     ```
 
 2. A *switch* changing between a "State 0", a "State 1", and a "State 2" state, starting with "State 0". The default item is the same as the first item in ``ajjgui.items``:
 
     ```
-    /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}},{id:"minecraft:purple_dye",count:1,components:{"minecraft:custom_name":{text:"State 2",italic:0b}}}]}},minecraft:custom_name={text:"State 0",italic:0b}]
+    /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:item_name":{text:"State 0"}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:item_name":{text:"State 1"}}},{id:"minecraft:purple_dye",count:1,components:{"minecraft:item_name":{text:"State 2"}}}]}},minecraft:item_name={text:"State 0"}]
     ```
 
 3. A *switch* beginning with a default state, "Default", that continues by changing between a "State 0" and a "State 1" state, starting with "State 1":
 
     ```
-    /give @p minecraft:magenta_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}}]}},minecraft:custom_name={text:"Default",italic:0b}]
+    /give @p minecraft:magenta_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:item_name":{text:"State 0"}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:item_name":{text:"State 1"}}}]}},minecraft:item_name={text:"Default"}]
     ```
 
 4. A *switch* changing between a "State 0" and a "State 1" state, starting with "State 1". The default item is the same as the first item in ``ajjgui.items`` (now rearranged). The value of ``ajjgui.state`` is set to ``1`` to match the state:
 
     ```
-    /give @p minecraft:lime_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}},{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:purple_dye",count:1,components:{"minecraft:custom_name":{text:"State 2",italic:0b}}}],state:1}},minecraft:custom_name={text:"State 1",italic:0b}]
+    /give @p minecraft:lime_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:lime_dye",count:1,components:{"minecraft:item_name":{text:"State 1"}}},{id:"minecraft:gray_dye",count:1,components:{"minecraft:item_name":{text:"State 0"}}},{id:"minecraft:purple_dye",count:1,components:{"minecraft:item_name":{text:"State 2"}}}],state:1}},minecraft:item_name={text:"State 1"}]
     ```
 
 <p align = "center">
@@ -287,19 +287,19 @@ The *radiobutton* is a widget that changes between a disabled and an enabled sta
 1. A *radiobutton* on group 0 changing between a "Disabled" and an "Enabled" state, starting with "Disabled":
 
     ```
-    /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"radiobutton",disabled:{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"Disabled",italic:0b}}},enabled:{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"Enabled",italic:0b}}},group:0b}},minecraft:custom_name={text:"Disabled",italic:0b}]
+    /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"radiobutton",disabled:{id:"minecraft:gray_dye",count:1,components:{"minecraft:item_name":{text:"Disabled"}}},enabled:{id:"minecraft:lime_dye",count:1,components:{"minecraft:item_name":{text:"Enabled"}}},group:0b}},minecraft:item_name={text:"Disabled"}]
     ```
 
 2. A *radiobutton* on group 0 beginning with a default state, "Default", that continues by changing between a "Disabled" and an "Enabled" state, starting with "Enabled":
 
     ```
-    /give @p minecraft:magenta_dye[minecraft:custom_data={ajjgui:{widget:"radiobutton",disabled:{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"Disabled",italic:0b}}},enabled:{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"Enabled",italic:0b}}},group:0b}},minecraft:custom_name={text:"Default",italic:0b}]
+    /give @p minecraft:magenta_dye[minecraft:custom_data={ajjgui:{widget:"radiobutton",disabled:{id:"minecraft:gray_dye",count:1,components:{"minecraft:item_name":{text:"Disabled"}}},enabled:{id:"minecraft:lime_dye",count:1,components:{"minecraft:item_name":{text:"Enabled"}}},group:0b}},minecraft:item_name={text:"Default"}]
     ```
 
 3. A *radiobutton* on group 0 changing between a "Disabled" and an "Enabled" state, starting with "Enabled". The value of ``ajjgui.state`` is set to ``1`` to match the state:
 
     ```
-    /give @p minecraft:lime_dye[minecraft:custom_data={ajjgui:{widget:"radiobutton",disabled:{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"Disabled",italic:0b}}},enabled:{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"Enabled",italic:0b}}},group:0b,state:1}},minecraft:custom_name={text:"Enabled",italic:0b}]
+    /give @p minecraft:lime_dye[minecraft:custom_data={ajjgui:{widget:"radiobutton",disabled:{id:"minecraft:gray_dye",count:1,components:{"minecraft:item_name":{text:"Disabled"}}},enabled:{id:"minecraft:lime_dye",count:1,components:{"minecraft:item_name":{text:"Enabled"}}},group:0b,state:1}},minecraft:item_name={text:"Enabled"}]
     ```
 
 <p align = "center">
@@ -335,7 +335,7 @@ The *itembin* is a widget that clears all items inserted by the player in a part
 An *itembin*:
 
 ```
-/give @p minecraft:bucket[minecraft:custom_data={ajjgui:{widget:"itembin"}},minecraft:custom_name={text:"Item Bin",italic:0b}]
+/give @p minecraft:bucket[minecraft:custom_data={ajjgui:{widget:"itembin"}},minecraft:item_name={text:"Item Bin"}]
 ```
 
 <p align = "center">
@@ -377,25 +377,25 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 1. An empty *itemslot* with a default placeholder item identical to the one specified in ``ajjgui.placeholder`` and a stack size of ``99``:
 
     ```
-    /give @p minecraft:gray_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:custom_name":{text:"Empty",italic:0b}}},size:99}},minecraft:custom_name={text:"Empty",italic:0b}]
+    /give @p minecraft:gray_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:item_name":{text:"Empty"}}},size:99}},minecraft:item_name={text:"Empty"}]
     ```
 
 2. An empty *itemslot* with a default placeholder item identical to the one specified in ``ajjgui.placeholder`` and a stack size of ``16``:
 
     ```
-    /give @p minecraft:gray_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:custom_name":{text:"Empty",italic:0b}}},size:16}},minecraft:custom_name={text:"Empty",italic:0b}]
+    /give @p minecraft:gray_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:item_name":{text:"Empty"}}},size:16}},minecraft:item_name={text:"Empty"}]
     ```
 
 3. An empty *itemslot* with a default placeholder item different from the one specified in ``ajjgui.placeholder`` and a stack size of ``99``:
 
     ```
-    /give @p minecraft:white_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:custom_name":{text:"Empty",italic:0b}}},size:99}},minecraft:custom_name={text:"Default",italic:0b}]
+    /give @p minecraft:white_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:item_name":{text:"Empty"}}},size:99}},minecraft:item_name={text:"Default"}]
     ```
 
 4. An *itemslot* with an item in it by default and a stack size of ``99``. The value of ``ajjgui.state`` is set to ``1`` as the slot is occupied:
 
     ```
-    /give @p minecraft:diamond[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:custom_name":{text:"Empty",italic:0b}}},size:99,state:1}}]
+    /give @p minecraft:diamond[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:item_name":{text:"Empty"}}},size:99,state:1}}]
     ```
 
 <p align = "center">
@@ -440,7 +440,7 @@ where L_x and M_y are the numbers of widgets and slots in each widget list and s
 A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13, and 14. Each button leads to a different page when clicked. There is a single widget list of length 6 and a single slot list of length 4:
 
 ```
-/give @p minecraft:spectral_arrow[minecraft:custom_data={ajjgui:{widget:"scrollbutton",widgets:[[{id:"minecraft:paper",count:1,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:0b}},"minecraft:custom_name":{text:"Select",italic:0b}}},{id:"minecraft:paper",count:2,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:1b}},"minecraft:custom_name":{text:"Select",italic:0b}}},{id:"minecraft:paper",count:3,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:2b}},"minecraft:custom_name":{text:"Select",italic:0b}}},{id:"minecraft:paper",count:4,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:3b}},"minecraft:custom_name":{text:"Select",italic:0b}}},{id:"minecraft:paper",count:5,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:4b}},"minecraft:custom_name":{text:"Select",italic:0b}}},{id:"minecraft:paper",count:6,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:5b}},"minecraft:custom_name":{text:"Select",italic:0b}}}]],slots:[[11b,12b,13b,14b]]}},minecraft:custom_name={text:"Next",italic:0b}]
+/give @p minecraft:spectral_arrow[minecraft:custom_data={ajjgui:{widget:"scrollbutton",widgets:[[{id:"minecraft:paper",count:1,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:0b}},"minecraft:item_name":{text:"Select"}}},{id:"minecraft:paper",count:2,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:1b}},"minecraft:item_name":{text:"Select"}}},{id:"minecraft:paper",count:3,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:2b}},"minecraft:item_name":{text:"Select"}}},{id:"minecraft:paper",count:4,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:3b}},"minecraft:item_name":{text:"Select"}}},{id:"minecraft:paper",count:5,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:4b}},"minecraft:item_name":{text:"Select"}}},{id:"minecraft:paper",count:6,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:5b}},"minecraft:item_name":{text:"Select"}}}]],slots:[[11b,12b,13b,14b]]}},minecraft:item_name={text:"Next"}]
 ```
 
 <p align = "center">
@@ -466,25 +466,25 @@ Each of the widgets discussed previously, excluding the *placeholder*, can be ma
 1. A *button* setting the GUI page to the first one:
 
     ```
-    /give @p minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:0b}},minecraft:custom_name={text:"Go to First Page",italic:0b}]
+    /give @p minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:0b}},minecraft:item_name={text:"Go to First Page"}]
     ```
 
 2. A *button* setting the GUI page to the last one:
 
     ```
-    /give @p minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:-1b}},minecraft:custom_name={text:"Go to Last Page",italic:0b}]
+    /give @p minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:-1b}},minecraft:item_name={text:"Go to Last Page"}]
     ```
 
 3. A *button* setting the GUI page to the next one:
 
     ```
-    /give @p minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:1b,relative:1b}},minecraft:custom_name={text:"Go to Next Page",italic:0b}]
+    /give @p minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:1b,relative:1b}},minecraft:item_name={text:"Go to Next Page"}]
     ```
 
 4. A *button* setting the GUI page to the previous one:
 
     ```
-    /give @p minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:-1b,relative:1b}},minecraft:custom_name={text:"Go to Previous Page",italic:0b}]
+    /give @p minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:-1b,relative:1b}},minecraft:item_name={text:"Go to Previous Page"}]
     ```
 
 ## Fixed GUI Widgets
@@ -496,7 +496,7 @@ Each of the widgets discussed previously can be made to stay on display when the
 A *button* staying fixed in its slot when the GUI page is changed:
 
 ```
-/give @p minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:1b,relative:1b,fixed:1b}},minecraft:custom_name={text:"Go to Next Page",italic:0b}]
+/give @p minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:1b,relative:1b,fixed:1b}},minecraft:item_name={text:"Go to Next Page"}]
 ```
 
 ## Exiting GUIs
@@ -508,7 +508,7 @@ Each of the widgets discussed previously, excluding the *placeholder*, can be ma
 A *button* exiting the GUI:
 
 ```
-/give @p minecraft:barrier[minecraft:custom_data={ajjgui:{widget:"button",exit:1b}},minecraft:custom_name={text:"Exit",italic:0b},minecraft:rarity=common]
+/give @p minecraft:barrier[minecraft:custom_data={ajjgui:{widget:"button",exit:1b}},minecraft:item_name={text:"Exit"},minecraft:rarity=common]
 ```
 
 > [!IMPORTANT]
@@ -554,13 +554,13 @@ Each of the widgets discussed previously, excluding the the *placeholder*, can b
 1. A *button* running a command referencing the player that pressed it:
 
     ```
-    /give @p minecraft:pink_dye[minecraft:custom_data={ajjgui:{widget:"button",command:"say pressed button"}},minecraft:custom_name={text:"Command Button",italic:0b}]
+    /give @p minecraft:pink_dye[minecraft:custom_data={ajjgui:{widget:"button",command:"say pressed button"}},minecraft:item_name={text:"Command Button"}]
     ```
 
 2. A *switch* running a command based on its current state:
 
     ```
-    /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}}],command:"function name:func"}},minecraft:custom_name={text:"State 0",italic:0b}]
+    /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:item_name":{text:"State 0"}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:item_name":{text:"State 1"}}}],command:"function name:func"}},minecraft:item_name={text:"State 0"}]
     ```
 
     where the following commands are located in a function ``name:func`` within a map's datapack:
@@ -579,25 +579,25 @@ Each of the widgets discussed previously, excluding the *placeholder*, can be ma
 1. A *button* that works only if clicked by a player with the ``name.tag`` scoreboard tag:
 
     ```
-    /give @p minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:1b,relative:1b,lock:"name.tag"}},minecraft:custom_name={text:"Go to Next Page",italic:0b}]
+    /give @p minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:1b,relative:1b,lock:"name.tag"}},minecraft:item_name={text:"Go to Next Page"}]
     ```
 
 2. A *switch* that works only if clicked by a player with the ``name.tag`` scoreboard tag:
 
     ```
-    /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}}],lock:"name.tag"}},minecraft:custom_name={text:"State 0",italic:0b}]
+    /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:item_name":{text:"State 0"}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:item_name":{text:"State 1"}}}],lock:"name.tag"}},minecraft:item_name={text:"State 0"}]
     ```
 
 3. An *itembin* that works only if clicked by a player with the ``name.tag`` scoreboard tag:
 
     ```
-    /give @p minecraft:bucket[minecraft:custom_data={ajjgui:{widget:"itembin",lock:"name.tag"}},minecraft:custom_name={text:"Item Bin",italic:0b}]
+    /give @p minecraft:bucket[minecraft:custom_data={ajjgui:{widget:"itembin",lock:"name.tag"}},minecraft:item_name={text:"Item Bin"}]
     ```
 
 4. An *itemslot* that only works if clicked by a player with the ``name.tag`` scoreboard tag:
 
     ```
-    /give @p minecraft:gray_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:custom_name":{text:"Empty",italic:0b}}},size:99,lock:"name.tag"}},minecraft:custom_name={text:"Empty",italic:0b}]
+    /give @p minecraft:gray_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:item_name":{text:"Empty"}}},size:99,lock:"name.tag"}},minecraft:item_name={text:"Empty"}]
     ```
 
 ## Porting GUIs to Players
@@ -669,7 +669,7 @@ There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for blo
 3. A button running a command setting its GUI's first page's first slot item's id to stone:
 
     ```
-    /give @p minecraft:pink_dye[minecraft:custom_data={ajjgui:{widget:"button",command:'data modify entity @e[type=minecraft:marker,tag=ajjgui.gui_active,limit=1] data.gui[0][{Slot:0b}].id set value "minecraft:stone"'}},minecraft:custom_name={text:"Command Button",italic:0b}]
+    /give @p minecraft:pink_dye[minecraft:custom_data={ajjgui:{widget:"button",command:'data modify entity @e[type=minecraft:marker,tag=ajjgui.gui_active,limit=1] data.gui[0][{Slot:0b}].id set value "minecraft:stone"'}},minecraft:item_name={text:"Command Button"}]
     ```
 
     In this example, ``/function ajjgui:_reload`` is not required.

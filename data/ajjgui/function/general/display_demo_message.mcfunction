@@ -1,0 +1,1 @@
+tellraw @s {text:"(For demo use only)",color:"yellow"}

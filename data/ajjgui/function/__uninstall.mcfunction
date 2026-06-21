@@ -1,1 +1,1 @@
-function ajjgui:installation/uninstall_success
+function ajjgui:general/uninstall_success

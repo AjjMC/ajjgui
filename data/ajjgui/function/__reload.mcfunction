@@ -2,4 +2,4 @@ function ajjgui:_reload
 
 tellraw @a {text:"Reloaded all GUIs"}
 
-tellraw @a {text:"(Use a single underscore to hide feedback)",color:"yellow"}
+execute as @a run function ajjgui:general/display_feedback_message

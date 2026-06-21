@@ -1,0 +1,1 @@
+tellraw @s {text:"(Use a single underscore to hide feedback)",color:"yellow"}
