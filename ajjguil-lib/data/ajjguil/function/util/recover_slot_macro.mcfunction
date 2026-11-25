@@ -1,0 +1,1 @@
+$execute if data storage ajjguil:data temp.page_target[{Slot:$(slot)b}] unless data storage ajjguil:data temp.page_target[{Slot:$(slot)b,components:{"minecraft:custom_data":{ajjguil:{meta:{compiled:1b}}}}}] run data modify storage ajjguil:data temp.return_item set from storage ajjguil:data temp.page_target[{Slot:$(slot)b}]

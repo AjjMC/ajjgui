@@ -1,12 +1,24 @@
 # A Data-Driven GUI Library for Minecraft Mapmaking
 
-> **AVAILABLE ON 26.2**
+> **AVAILABLE ON 26.3**
 >
-> **Click [here](https://github.com/AjjMC/ajjgui/archive/refs/heads/main.zip) to download.**
+> **Click [here](https://github.com/AjjMC/ajjgui/archive/refs/heads/main.zip) to download** (extract `ajjgui-ingame/`, `ajjguil-lib/`, and/or `ajjguil-example/` from the archive into your world's `datapacks/` folder; do not drop the repository root zip directly).
 >
 > **Also available on [Modrinth](https://modrinth.com/datapack/ajjgui).**
 >
 > **For any queries, please use the issues section.**
+
+## Repository Packages
+
+This repository now ships two core datapacks and a reference consumer example pack built for **Minecraft Java Edition `26.3`** (`pack_format` `[121, 0]`):
+
+| Datapack Folder | Namespace | Target Workflow | Documentation |
+|:---|:---|:---|:---|
+| [`ajjgui-ingame/`](ajjgui-ingame) | `ajjgui` | In-game shulker compilation workflow & mapmaking commands (`__install`, `__compile`, etc.) | Below (`ajjgui-ingame`) |
+| [`ajjguil-lib/`](ajjguil-lib) | `ajjguil` | Programmatic multi-container GUI engine, runtime mutation API & `#ajjguil:on_*` event callbacks | [`ajjguil-lib/README.md`](ajjguil-lib/README.md) |
+| [`ajjguil-example/`](ajjguil-example) | `example` | Minimal reference consumer datapack integrating with `ajjguil-lib` (load order, widgets, tags, runtime edits) | [`ajjguil-example/README.md`](ajjguil-example/README.md) |
+
+Both `ajjgui-ingame` and `ajjguil-lib` use separate namespaces (`ajjgui` and `ajjguil`), scoreboards, entity tags, and storages, so they can be used independently or co-loaded in the same world without conflict.
 
 <p align = "center">
   <img src="repo/gui.gif" width="350">
@@ -16,12 +28,15 @@
   <i>A GUI made entirely in-game in under 5 minutes.</i>
 </p>
 
-## Overview
+## Overview (`ajjgui-ingame`)
 
-This datapack allows mapmakers to create and maintain complex and robust item-based GUIs in-game. This is achieved by dragging and dropping items with custom SNBT in containers within a world, which the datapack can use to generate GUIs. It functions as a black box that treats each item as a graphical widget with predefined properties, and the user is not expected to modify any files. Two types of GUIs can be created:
+The `ajjgui-ingame` datapack allows mapmakers to create and maintain complex and robust item-based GUIs in-game. This is achieved by dragging and dropping items with custom SNBT in containers within a world, which the datapack can use to generate GUIs. It functions as a black box that treats each item as a graphical widget with predefined properties, and the user is not expected to modify any files. Two types of GUIs can be created:
 
 * **Block Entity GUIs:** Placed at a fixed position and shared by all players. These are generated upon compilation.
 * **Chest Boat GUIs:** Retrieved from a database and accessible anywhere by specified players only. These are obtained directly from the above by [porting GUIs to players](#porting-guis-to-players).
+
+> [!TIP]
+> Building GUIs from another datapack instead of in-game chests? Use [`ajjguil-lib/`](ajjguil-lib/README.md) for programmatic GUI registration (`ajjguil:api/register`, `ajjguil:api/define`), runtime slot/page/title APIs, copper chest & multi-container support, and `#ajjguil:on_*` event hooks.
 
 Benefits:
 
@@ -33,7 +48,7 @@ Benefits:
 
 ## Installing
 
-After this datapack has been added to the "datapacks" folder of a Minecraft world, ``/reload`` needs to be run in-game. A list of the datapack's commands is available via ``/function ajjgui:__help``. By convention, all functions run directly by the mapmaker start with two underscores. Functions starting with a single underscore are aliases that do not give any feedback messages in the chat. These are meant to be used by the mapmaker as part of their own map's datapack. Any functions not listed here are internal and are not meant to be used.
+Copy the `ajjgui-ingame/` directory (or `ajjguil-lib/`, or both) into the `datapacks/` folder of your Minecraft world, then run ``/reload`` in-game. A list of `ajjgui-ingame`'s commands is available via ``/function ajjgui:__help``. By convention, all functions run directly by the mapmaker start with two underscores. Functions starting with a single underscore are aliases that do not give any feedback messages in the chat. These are meant to be used by the mapmaker as part of their own map's datapack. Any functions not listed here are internal and are not meant to be used.
 
 | Function                                                       | Description                                           |
 |:---------------------------------------------------------------|:------------------------------------------------------|
@@ -688,6 +703,15 @@ There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for blo
 
 > [!NOTE]
 > Decompiling a GUI resets it to its state before compilation.
+
+## Programmatic Library (`ajjguil-lib`)
+
+For datapacks that generate and control GUIs dynamically in mcfunctions, see [`ajjguil-lib/`](ajjguil-lib/README.md):
+
+* **Programmatic Registry & Lifecycle API (`ajjguil:api/*`):** `register`, `define`, `undefine`, `open`, `open_page`, `open_block` / `port`, `unport`, `close`, `has_open`, `get_info`, `get_slot`, `set_slot`, `clear_slot`, `set_page`, `set_title`, `set_title_text`, `refresh`, `version`.
+* **Multi-Container Support:** Works with single/double chests, trapped chests, copper chests (`#minecraft:copper_chests`), barrels, shulker boxes, dispensers, droppers, crafters, hoppers, brewing stands, furnaces, blast furnaces, smokers, and ported `oak_chest_boat` GUIs.
+* **Event Hooks & Callbacks:** Supports global function tags (`#ajjguil:on_open`, `#ajjguil:on_close`, `#ajjguil:on_click`, `#ajjguil:on_page_change`, `#ajjguil:on_item_insert`, `#ajjguil:on_item_remove`, `#ajjguil:on_tick`), per-GUI callbacks, and per-widget callbacks with structured payloads in `storage ajjguil:event`.
+* **Full Documentation & Example Pack:** See [`ajjguil-lib/README.md`](ajjguil-lib/README.md) for the complete API and event payload schema, and [`ajjguil-example/`](ajjguil-example/README.md) for a ready-to-install consumer datapack using `ajjguil-lib`.
 
 ## License
 

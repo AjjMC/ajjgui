@@ -1,0 +1,7 @@
+{
+  "pack": {
+    "min_format": [121, 0],
+    "max_format": [121, 0],
+    "description": "AjjGUIL Example Pack - Reference consumer datapack using ajjguil-lib on Minecraft 26.3"
+  }
+}

@@ -1,0 +1,3 @@
+# Reads live metadata about the current Block GUI via ajjguil:api/get_info
+function ajjguil:api/get_info
+tellraw @s [{text:"[Block Example] ",color:"dark_purple"},{text:"mode=",color:"gray"},{storage:"ajjguil:data",nbt:"result.mode",color:"yellow"},{text:", container=",color:"gray"},{storage:"ajjguil:data",nbt:"result.container",color:"aqua"},{text:", size=",color:"gray"},{storage:"ajjguil:data",nbt:"result.size",color:"green"},{text:", page=",color:"gray"},{storage:"ajjguil:data",nbt:"result.page",color:"white"},{text:"/",color:"gray"},{storage:"ajjguil:data",nbt:"result.page_count",color:"white"}]

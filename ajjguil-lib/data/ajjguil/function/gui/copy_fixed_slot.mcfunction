@@ -1,0 +1,1 @@
+$execute if data storage ajjguil:data temp.prev_page[{Slot:$(slot)b,components:{"minecraft:custom_data":{ajjguil:{fixed:1b}}}}] run data modify storage ajjguil:data temp.page[{Slot:$(slot)b}] set from storage ajjguil:data temp.prev_page[{Slot:$(slot)b}]

@@ -1,0 +1,2 @@
+execute if entity @e[type=minecraft:marker,tag=ajjguil.gui_active,tag=ajjguil.gui_origin] as @n[type=minecraft:marker,tag=ajjguil.gui_active,tag=ajjguil.gui_origin] at @s run function ajjguil:gui/origin/close
+execute if entity @e[type=minecraft:marker,tag=ajjguil.gui_active,tag=ajjguil.gui_ported] as @n[type=minecraft:marker,tag=ajjguil.gui_active,tag=ajjguil.gui_ported] on vehicle run function ajjguil:gui/ported/close

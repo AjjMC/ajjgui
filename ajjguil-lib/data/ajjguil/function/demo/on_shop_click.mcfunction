@@ -1,0 +1,3 @@
+execute if data storage ajjguil:event {widget:{id:"buy_sword"}} run tellraw @s [{text:"[Demo Shop] ",color:"gold"},{text:"Clicked Buy Sword!",color:"aqua"}]
+execute if data storage ajjguil:event {widget:{id:"auto_equip"}} run tellraw @s [{text:"[Demo Shop] ",color:"gold"},{text:"Switch state = ",color:"gray"},{storage:"ajjguil:event",nbt:"widget.state",color:"green"}]
+execute if data storage ajjguil:event {widget:{id:"recycle"}} if data storage ajjguil:event in.id run tellraw @s [{text:"[Demo Shop] ",color:"gold"},{text:"Recycled ",color:"yellow"},{storage:"ajjguil:event",nbt:"in.id",color:"white"}]

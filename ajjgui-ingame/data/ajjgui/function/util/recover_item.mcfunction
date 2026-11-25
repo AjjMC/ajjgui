@@ -1,0 +1,40 @@
+data remove storage ajjgui:data temp.returned
+data modify storage ajjgui:data temp.args.lock set from storage ajjgui:data widget.components.minecraft:custom_data.ajjgui.lock
+
+function ajjgui:gui/check_lock with storage ajjgui:data temp.args
+
+execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{widget:"itembin"}}}}} if score @s[tag=!ajjgui.locked] ajjgui.cooldown matches 0 run return run tag @s remove ajjgui.locked
+execute if data storage ajjgui:data {widget:{components:{"minecraft:custom_data":{ajjgui:{widget:"itemslot"}}}}} if score @s[tag=!ajjgui.locked] ajjgui.cooldown matches 0 run return run tag @s remove ajjgui.locked
+
+execute at @e[type=minecraft:marker,tag=ajjgui.gui_origin,tag=ajjgui.gui_active] run data modify storage ajjgui:data temp.page set from block ~ ~ ~ Items
+execute as @e[type=minecraft:marker,tag=ajjgui.gui_ported,tag=ajjgui.gui_active] on vehicle run data modify storage ajjgui:data temp.page set from entity @s Items
+
+execute unless data storage ajjgui:data temp.page[0].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[0]
+execute unless data storage ajjgui:data temp.page[1].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[1]
+execute unless data storage ajjgui:data temp.page[2].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[2]
+execute unless data storage ajjgui:data temp.page[3].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[3]
+execute unless data storage ajjgui:data temp.page[4].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[4]
+execute unless data storage ajjgui:data temp.page[5].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[5]
+execute unless data storage ajjgui:data temp.page[6].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[6]
+execute unless data storage ajjgui:data temp.page[7].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[7]
+execute unless data storage ajjgui:data temp.page[8].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[8]
+execute unless data storage ajjgui:data temp.page[9].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[9]
+execute unless data storage ajjgui:data temp.page[10].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[10]
+execute unless data storage ajjgui:data temp.page[11].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[11]
+execute unless data storage ajjgui:data temp.page[12].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[12]
+execute unless data storage ajjgui:data temp.page[13].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[13]
+execute unless data storage ajjgui:data temp.page[14].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[14]
+execute unless data storage ajjgui:data temp.page[15].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[15]
+execute unless data storage ajjgui:data temp.page[16].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[16]
+execute unless data storage ajjgui:data temp.page[17].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[17]
+execute unless data storage ajjgui:data temp.page[18].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[18]
+execute unless data storage ajjgui:data temp.page[19].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[19]
+execute unless data storage ajjgui:data temp.page[20].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[20]
+execute unless data storage ajjgui:data temp.page[21].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[21]
+execute unless data storage ajjgui:data temp.page[22].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[22]
+execute unless data storage ajjgui:data temp.page[23].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[23]
+execute unless data storage ajjgui:data temp.page[24].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[24]
+execute unless data storage ajjgui:data temp.page[25].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[25]
+execute unless data storage ajjgui:data temp.page[26].components.minecraft:custom_data.ajjgui.meta.compiled run data modify storage ajjgui:data temp.returned set from storage ajjgui:data temp.page[26]
+
+execute if data storage ajjgui:data temp.returned.id at @e[type=minecraft:marker,tag=ajjgui.box] run function ajjgui:gui/return_item

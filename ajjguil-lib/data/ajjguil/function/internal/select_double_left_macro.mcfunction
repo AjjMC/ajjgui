@@ -1,0 +1,1 @@
+$execute positioned ~$(dx) ~ ~$(dz) align xyz positioned ~0.5 ~0.5 ~0.5 if entity @e[type=minecraft:marker,tag=ajjguil.gui_origin,distance=..0.6] run tag @n[type=minecraft:marker,tag=ajjguil.gui_origin,distance=..0.6] add ajjguil.target
